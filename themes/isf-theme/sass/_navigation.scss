@@ -96,19 +96,17 @@ a {
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+
+button.menu-toggle {
+	display: none;
 }
 
-@media screen and (min-width: 768px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
+.main-navigation ul{
+	display: block;
+
 }
+
+
 
 .comment-navigation,
 .posts-navigation,
