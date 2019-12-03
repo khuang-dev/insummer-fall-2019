@@ -667,7 +667,8 @@ object {
   display: block; }
 
 .site-footer {
-  width: 100%; }
+  width: 100%;
+  background: #191414; }
 
 /*--------------------------------------------------------------
 # Page Templates
