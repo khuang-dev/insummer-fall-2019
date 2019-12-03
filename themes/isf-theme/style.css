@@ -43,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -234,7 +235,7 @@ input,
 select,
 textarea {
   color: #191414;
-  font-family: sans-serif;
+  font-family: "Open Sans";
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -680,6 +681,8 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .link__footer a {
+    font-family: "Montserrat", sans-serif; }
 
 /*--------------------------------------------------------------
 # Page Templates
