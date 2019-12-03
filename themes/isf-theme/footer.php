@@ -11,6 +11,7 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
+					<h4>Sign up for our newsletter!</h4>
 					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
