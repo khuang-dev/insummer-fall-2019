@@ -19,6 +19,13 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
+h1, h2, h4 {
+	color: $color__white;
+}
+
+h3, h5 {
+	color: $color__black;
+}
 /* Copy */
 
 p {
@@ -54,12 +61,12 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted $color__grey;
+	border-bottom: 1px dotted $color__black;
 	cursor: help;
 }
 
 mark, ins {
-	background: $color__champagne;
+	background: $color__black;
 	text-decoration: none;
 }
 
