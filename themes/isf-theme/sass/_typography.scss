@@ -8,7 +8,7 @@ input,
 select,
 textarea {
 	color: $color__black;
-	font-family: $font__main;
+	font-family: $font__opensans;
 	@include font-size(1);
 	line-height: $font__line-height-body;
 }
