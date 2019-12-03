@@ -1,9 +1,9 @@
 /*!
-Theme Name: RED Starter Theme
+Theme Name: ISF Theme
 Theme URI: http://underscores.me/
-Author: RED Academy
+Author: Ken Huang
 Author URI: http://www.redacademy.com
-Description: A WordPress starter theme for RED Academy students.
+Description: A theme for Indian Summer Festival 2020
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -233,7 +233,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #CECECE;
   font-family: sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -257,7 +257,7 @@ address {
   margin: 0 0 1.5rem; }
 
 pre {
-  background: #eee;
+  background: #FFFFFF;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 0.9375rem;
@@ -273,11 +273,11 @@ code, kbd, tt, var {
   font-size: 0.9375rem; }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted #CECECE;
   cursor: help; }
 
 mark, ins {
-  background: #fff9c0;
+  background: #fff2f2;
   text-decoration: none; }
 
 big {
@@ -300,7 +300,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #FFFFFF;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
@@ -312,7 +312,7 @@ q {
     content: ''; }
 
 hr {
-  background-color: #ccc;
+  background-color: #FFFFFF;
   border: 0;
   height: 1px;
   margin-bottom: 1.5rem; }
@@ -508,12 +508,12 @@ a {
   width: 1px;
   overflow: hidden; }
   .screen-reader-text:focus {
-    background-color: #f1f1f1;
+    background-color: #FFFFFF;
     border-radius: 3px;
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
             box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #21759b;
+    color: #191414;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
