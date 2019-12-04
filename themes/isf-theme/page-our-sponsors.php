@@ -50,6 +50,29 @@ echo '</pre>';
 					<img class="sponsors-img" src="?php echo get_template_directory_uri() . '/assets/03_Sponsors/'?>" alt="Concord Pacific">
 					</div> -->
 
+
+					<?php
+					// check if the repeater field has rows of data
+					if( have_rows('sponsor_images') ):
+
+						// loop through the rows of data
+						while ( have_rows('sponsor_images') ) : the_row();
+
+						?>
+							<?php the_sub_field('sponsor_level')?>
+							<img src="<?php the_sub_field('sponsor_image'); ?>"/>
+
+							<?php
+
+						endwhile;
+
+					else :
+
+						// no rows found
+
+					endif;
+					?>
+
 					<p class="become-sponsor">Become a Sponsor</p>
 					<?php
 						wp_link_pages( array(
