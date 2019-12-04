@@ -1,8 +1,43 @@
 .icon-message-us-wrapper {
-  width: 3rem;
+  width: 50%;
   line-height: 4rem;
+}
+
+.phone-message-us,
+.gen-inquires,
+.med-inquires,
+.adr-messge-us {
+  display: flex;
+  width: 100%;
+}
+
+.mobile,
+.general-inquiries,
+.media-inquiries,
+.adress-message-us {
+  height: 37px;
+  width: 206px;
+  color: #000000;
+  font-family: 'Montserrat';
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 37px;
 }
 
 .send-us-message-form {
   width: 50%;
+}
+
+.send-us-message-form_wrapper .gform_footer {
+  display: flex;
+  justify-content: center;
+}
+
+.send-us-message-form_wrapper .gform_footer .gform_button {
+  height: 58px;
+  width: 263px;
+  border-radius: 12px;
+  background-color: #ed1651;
+  color: white;
+  font-size: 24px;
 }
