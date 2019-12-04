@@ -11,7 +11,7 @@
   margin-right: auto;
 }
 // Breakpoint
-@mixin desktopbp {
+@mixin desktop {
   @media (min-width: $breakpoint__desktop) {
     @content;
   }
