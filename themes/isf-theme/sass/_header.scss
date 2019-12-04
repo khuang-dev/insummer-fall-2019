@@ -1,0 +1,21 @@
+.menu__primary {
+    display: none;
+    @include desktop {
+        display: block;
+    }
+}
+.menu__event {
+    display: block;
+    @include desktop {
+        display: none;
+    }
+}
+.menu__getinvolved {
+    display: block;
+    @include desktop {
+        display: none;
+    }
+}
+.menu__hamburger {
+    display: none;
+}
