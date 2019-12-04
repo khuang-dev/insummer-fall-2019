@@ -29,6 +29,9 @@
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'event', 'menu_id' => 'events' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'getinvolved', 'menu_id' => 'get-involved' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'hamburger', 'menu_id' => 'hamburger' ) ); ?>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 
