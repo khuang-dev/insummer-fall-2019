@@ -1,21 +1,38 @@
 .menu__primary {
+    text-transform: uppercase;
     display: none;
     @include desktop {
         display: block;
     }
 }
+.menu__mobile {
+    display: flex;
+    justify-content: space-around;
+}
 .menu__event {
-    display: block;
+    text-transform: uppercase;
+    display: flex;
+    ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
     @include desktop {
         display: none;
     }
 }
 .menu__getinvolved {
-    display: block;
+    text-transform: uppercase;
+    ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
     @include desktop {
         display: none;
     }
 }
 .menu__hamburger {
+    text-transform: uppercase;
     display: none;
 }
