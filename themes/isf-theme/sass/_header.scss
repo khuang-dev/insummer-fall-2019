@@ -1,13 +1,47 @@
+.main-navigation {
+    @include desktop {
+    height: 150px;
+    min-width: 1000px;
+    ul ul {
+        display: flex;
+        text-transform: none;
+        font-weight: 600;
+        a {
+            margin: 0 2rem;
+            white-space: nowrap;
+        }
+    }
+}
+}
+
 .menu__primary {
     text-transform: uppercase;
     display: none;
     @include desktop {
-        display: block;
+        display: flex;
+        justify-content: center;
+        a {
+            margin: 0 2rem;
+            &:hover {
+                border-bottom: 2px $color__black solid;
+                color: $color__black;
+                font-weight: 600;
+            }
+            &:visited {
+                color: $color__black;
+            }
+        }
     }
 }
 .menu__mobile {
     display: flex;
     justify-content: space-around;
+}
+.menu__event-wrapper {
+    text-align: center;
+    h3 {
+        margin: 0;
+    }
 }
 .menu__event {
     text-transform: uppercase;
@@ -19,6 +53,12 @@
     }
     @include desktop {
         display: none;
+    }
+}
+.menu__getinvolved-wrapper {
+    text-align: center;
+    h3 {
+        margin: 0;
     }
 }
 .menu__getinvolved {

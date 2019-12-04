@@ -29,12 +29,24 @@
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
 					
-					<span class="menu__primary"><?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?></span>
-					<div class="menu__mobile">
-					<span class="menu__event"><?php wp_nav_menu( array( 'theme_location' => 'event', 'menu_id' => 'events' ) ); ?></span>
-					<span class="menu__getinvolved"><?php wp_nav_menu( array( 'theme_location' => 'getinvolved', 'menu_id' => 'get-involved' ) ); ?></span>
+					<span class="menu__primary"><!-- desktop navigation -->
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</span>
+					
+					<div class="menu__mobile"><!-- mobile navigations -->
+						<section class="menu__event-wrapper">
+							<h3><?php echo wp_get_nav_menu_name('event');?> EVENTS</h3>
+							<span class="menu__event"><?php wp_nav_menu( array( 'theme_location' => 'event', 'menu_id' => 'events' ) ); ?></span>
+						</section>
+						<section class="menu__getinvolved-wrapper">
+							<h3>GET INVOLVED</h3>
+							<span class="menu__getinvolved"><?php wp_nav_menu( array( 'theme_location' => 'getinvolved', 'menu_id' => 'get-involved' ) ); ?></span>
+						</section>
 					</div>
-					<span class="menu__hamburger"><?php wp_nav_menu( array( 'theme_location' => 'hamburger', 'menu_id' => 'hamburger' ) ); ?></span>
+					
+					<span class="menu__hamburger"><!-- hamburger menu -->
+						<?php wp_nav_menu( array( 'theme_location' => 'hamburger', 'menu_id' => 'hamburger' ) ); ?>
+					</span>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 
