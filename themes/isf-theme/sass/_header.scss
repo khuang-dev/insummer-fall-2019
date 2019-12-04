@@ -81,3 +81,10 @@
     text-transform: uppercase;
     display: none;
 }
+.wrapper__social-media {
+    display: flex;
+    i {
+        font-size: 1.5rem;
+        padding: 0 0.25rem;
+    }
+}
