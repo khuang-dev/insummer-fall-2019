@@ -457,15 +457,19 @@ a {
       .main-navigation ul ul ul {
         left: -999rem;
         top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
-      left: auto; }
+      left: 0;
+      right: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
   .main-navigation li {
     float: left;
-    position: relative; }
+    position: static; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
@@ -704,7 +708,8 @@ object {
       display: flex;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center; }
+              justify-content: center;
+      position: relative; }
       .menu__primary a {
         margin: 0 2rem; }
         .menu__primary a:hover {

@@ -20,6 +20,7 @@
     @include desktop {
         display: flex;
         justify-content: center;
+        position: relative;
         a {
             margin: 0 2rem;
             &:hover {
