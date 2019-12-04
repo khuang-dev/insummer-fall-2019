@@ -29,10 +29,12 @@
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
 					<?php get_search_form();?>
-					<a href="<?php the_field( 'facebook_url', 'options' ); ?>"></a>
-					<a href="<?php the_field( 'instagram_url', 'options' ); ?>"></a>
-					<a href="<?php the_field( 'twitter_url', 'options' ); ?>"></a>
-					<a href="<?php the_field( 'youtube_url', 'options' ); ?>"></a>
+					<section class="wrapper__social-media">
+						<a href="<?php the_field( 'facebook_url', 'options' ); ?>"><i class="fab fa-facebook-square"></i></a>
+						<a href="<?php the_field( 'instagram_url', 'options' ); ?>"><i class="fab fa-instagram"></i></a>
+						<a href="<?php the_field( 'twitter_url', 'options' ); ?>"><i class="fab fa-twitter"></i></a>
+						<a href="<?php the_field( 'youtube_url', 'options' ); ?>"><i class="fab fa-youtube"></i></a>
+					</section>
 
 					<span class="menu__primary"><!-- desktop navigation -->
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
