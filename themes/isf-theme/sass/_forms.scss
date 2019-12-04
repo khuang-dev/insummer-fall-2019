@@ -44,6 +44,7 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 textarea {
+<<<<<<< HEAD
   color: #666;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -51,6 +52,11 @@ textarea {
   &:focus {
     color: #111;
   }
+=======
+	&:focus {
+		color: #111;
+	}
+>>>>>>> c568a3f960b6256c4c21d7e79ab8b1aad3a26055
 }
 
 input[type='text'],
@@ -70,4 +76,19 @@ textarea {
   width: 100%;
   color: #000000;
   font-family: '.SF NS Display';
+}
+
+//search
+.search-submit {
+	border: none;
+	background: none;
+	box-shadow: none;
+	display: none;
+}
+.icon-search {
+	font-size: 1.5rem;
+}
+.search-field {
+	border: none;
+	display: none;
 }

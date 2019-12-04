@@ -28,18 +28,30 @@
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
-					
+					<?php get_search_form();?>
+					<a href="<?php the_field( 'facebook_url', 'options' ); ?>"></a>
+					<a href="<?php the_field( 'instagram_url', 'options' ); ?>"></a>
+					<a href="<?php the_field( 'twitter_url', 'options' ); ?>"></a>
+					<a href="<?php the_field( 'youtube_url', 'options' ); ?>"></a>
+
 					<span class="menu__primary"><!-- desktop navigation -->
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</span>
 					
 					<div class="menu__mobile"><!-- mobile navigations -->
 						<section class="menu__event-wrapper">
-							<!-- <h3><?php// echo wp_get_nav_menu_name('event');?> EVENTS</h3> -->
+							<h3><a>
+								<?php echo wp_get_nav_menu_name('event');?>
+								<i class="fas fa-chevron-down"></i>
+							</a></h3>
 							<span class="menu__event"><?php wp_nav_menu( array( 'theme_location' => 'event', 'menu_id' => 'events' ) ); ?></span>
 						</section>
+						
 						<section class="menu__getinvolved-wrapper">
-							<!-- <h3>GET INVOLVED</h3> -->
+							<h3><a>
+								<?php echo wp_get_nav_menu_name('getinvolved');?>
+								<i class="fas fa-chevron-down"></i>
+							</a></h3>
 							<span class="menu__getinvolved"><?php wp_nav_menu( array( 'theme_location' => 'getinvolved', 'menu_id' => 'get-involved' ) ); ?></span>
 						</section>
 					</div>

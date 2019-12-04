@@ -202,9 +202,13 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 fieldset {
+<<<<<<< HEAD
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
+=======
+  border: none !important; }
+>>>>>>> c568a3f960b6256c4c21d7e79ab8b1aad3a26055
 
 legend {
   border: 0;
@@ -361,9 +365,15 @@ table {
 --------------------------------------------------------------*/
 /* Buttons */
 button,
+<<<<<<< HEAD
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
+=======
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+>>>>>>> c568a3f960b6256c4c21d7e79ab8b1aad3a26055
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
@@ -374,27 +384,46 @@ input[type='submit'] {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
+<<<<<<< HEAD
   padding: 0.6rem 1rem 0.4rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
   button:hover,
   input[type='button']:hover,
   input[type='reset']:hover,
   input[type='submit']:hover {
+=======
+  padding: .6rem 1rem .4rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+>>>>>>> c568a3f960b6256c4c21d7e79ab8b1aad3a26055
     border-color: #ccc #bbb #aaa;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
   button:active, button:focus,
+<<<<<<< HEAD
   input[type='button']:active,
   input[type='button']:focus,
   input[type='reset']:active,
   input[type='reset']:focus,
   input[type='submit']:active,
   input[type='submit']:focus {
+=======
+  input[type="button"]:active,
+  input[type="button"]:focus,
+  input[type="reset"]:active,
+  input[type="reset"]:focus,
+  input[type="submit"]:active,
+  input[type="submit"]:focus {
+>>>>>>> c568a3f960b6256c4c21d7e79ab8b1aad3a26055
     border-color: #aaa #bbb #bbb;
     -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
             box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
 /* Fields */
+<<<<<<< HEAD
 input[type='text'],
 input[type='email'],
 input[type='url'],
@@ -428,6 +457,40 @@ textarea {
   width: 100%;
   color: #000000;
   font-family: '.SF NS Display'; }
+=======
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  color: #111; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+  padding: 3px; }
+
+textarea {
+  padding-left: 3px;
+  width: 100%; }
+
+.search-submit {
+  border: none;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: none; }
+
+.icon-search {
+  font-size: 1.5rem; }
+
+.search-field {
+  border: none;
+  display: none; }
+>>>>>>> c568a3f960b6256c4c21d7e79ab8b1aad3a26055
 
 /*--------------------------------------------------------------
 # Navigation
@@ -436,9 +499,15 @@ textarea {
 a {
   color: #191414; }
   a:visited {
+<<<<<<< HEAD
     color: purple; }
   a:hover, a:focus, a:active {
     color: midnightblue; }
+=======
+    color: #191414; }
+  a:hover, a:focus, a:active {
+    color: #191414; }
+>>>>>>> c568a3f960b6256c4c21d7e79ab8b1aad3a26055
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -696,6 +765,7 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 .icon-message-us-wrapper {
+<<<<<<< HEAD
   width: 100%;
   line-height: 4rem;
   display: -webkit-box;
@@ -782,6 +852,13 @@ iframe {
   iframe {
     width: 100%;
     max-width: 500px; } }
+=======
+  width: 3rem;
+  line-height: 4rem; }
+
+.send-us-message-form {
+  width: 50%; }
+>>>>>>> c568a3f960b6256c4c21d7e79ab8b1aad3a26055
 
 html {
   font-family: sans-serif;
@@ -940,9 +1017,7 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  border: none !important; }
 
 legend {
   border: 0;
@@ -1133,6 +1208,7 @@ input[type='submit'] {
             box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
 /* Fields */
+<<<<<<< HEAD
 input[type='text'],
 input[type='email'],
 input[type='url'],
@@ -1149,6 +1225,15 @@ textarea {
   input[type='search']:focus,
   textarea:focus {
     color: #111; }
+=======
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  color: #111; }
+>>>>>>> c568a3f960b6256c4c21d7e79ab8b1aad3a26055
 
 input[type='text'],
 input[type='email'],
@@ -1167,6 +1252,20 @@ textarea {
   color: #000000;
   font-family: '.SF NS Display'; }
 
+.search-submit {
+  border: none;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: none; }
+
+.icon-search {
+  font-size: 1.5rem; }
+
+.search-field {
+  border: none;
+  display: none; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -1174,9 +1273,9 @@ textarea {
 a {
   color: #191414; }
   a:visited {
-    color: purple; }
+    color: #191414; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #191414; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -1474,7 +1573,9 @@ object {
 .menu__event-wrapper {
   text-align: center; }
   .menu__event-wrapper h3 {
-    margin: 0; }
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 400; }
 
 .menu__event {
   text-transform: uppercase;
@@ -1497,7 +1598,9 @@ object {
 .menu__getinvolved-wrapper {
   text-align: center; }
   .menu__getinvolved-wrapper h3 {
-    margin: 0; }
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 400; }
 
 .menu__getinvolved {
   text-transform: uppercase; }
@@ -1517,6 +1620,14 @@ object {
 .menu__hamburger {
   text-transform: uppercase;
   display: none; }
+
+.wrapper__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .wrapper__social-media i {
+    font-size: 1.5rem;
+    padding: 0 0.25rem; }
 
 /*--------------------------------------------------------------
 # Page Templates

@@ -65,6 +65,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'footer';
 @import 'page-templates';
 @import 'message-us';
+<<<<<<< HEAD
 
 @import 'normalize';
 @import 'fonts';
@@ -79,3 +80,18 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'footer';
 @import 'header';
 @import 'page-templates';
+=======
+@import "normalize";
+@import "fonts";
+@import "typography";
+@import "elements";
+@import "forms";
+@import "navigation";
+@import "modules";
+@import "widgets";
+@import "content";
+@import "media";
+@import "footer";
+@import "header";
+@import "page-templates";
+>>>>>>> c568a3f960b6256c4c21d7e79ab8b1aad3a26055
