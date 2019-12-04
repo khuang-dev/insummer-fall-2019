@@ -1,14 +1,9 @@
 .icon-message-us-wrapper {
-  width: 50%;
-  line-height: 4rem;
-}
-
-.phone-message-us,
-.gen-inquires,
-.med-inquires,
-.adr-messge-us {
-  display: flex;
   width: 100%;
+  line-height: 4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .mobile,
@@ -19,13 +14,24 @@
   width: 206px;
   color: #000000;
   font-family: 'Montserrat';
-  font-size: 30px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 37px;
 }
 
-.send-us-message-form {
-  width: 50%;
+.mobile-svg,
+.email-svg,
+.location-tag {
+  max-width: 100px; //check you can remove it will make big
+}
+
+iframe {
+  max-width: 100%;
+  width: 100%;
+}
+
+.icon-message-us-wrapper {
+  line-height: 1.5rem;
 }
 
 .send-us-message-form_wrapper .gform_footer {
@@ -40,4 +46,55 @@
   background-color: #ed1651;
   color: white;
   font-size: 24px;
+}
+
+@include desktop {
+  .icon-message-us-wrapper {
+    width: 50%;
+    line-height: 4rem;
+  }
+
+  .phone-message-us,
+  .gen-inquires,
+  .med-inquires,
+  .adr-messge-us {
+    display: flex;
+    width: 100%;
+  }
+
+  .mobile,
+  .general-inquiries,
+  .media-inquiries,
+  .adress-message-us {
+    height: 37px;
+    width: 206px;
+    color: #000000;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 37px;
+  }
+
+  .send-us-message-form {
+    width: 50%;
+  }
+
+  //   .send-us-message-form_wrapper .gform_footer {
+  //     display: flex;
+  //     justify-content: center;
+  //   }
+
+  .send-us-message-form_wrapper .gform_footer .gform_button {
+    height: 58px;
+    width: 263px;
+    border-radius: 12px;
+    background-color: #ed1651;
+    color: white;
+    font-size: 24px;
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 500px;
+  }
 }

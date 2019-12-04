@@ -60,8 +60,14 @@ input[type='password'],
 input[type='search'] {
   padding: 3px;
 }
+input[type='text'] {
+  color: #000000;
+  font-family: '.SF NS Display';
+}
 
 textarea {
   padding-left: 3px;
   width: 100%;
+  color: #000000;
+  font-family: '.SF NS Display';
 }
