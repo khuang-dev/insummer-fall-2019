@@ -297,6 +297,10 @@ big {
   width: 1.5rem;
   height: 1.5rem; }
 
+.icon__dropdown {
+  width: 1rem;
+  height: 0.6rem; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -960,6 +964,10 @@ big {
   width: 1.5rem;
   height: 1.5rem; }
 
+.icon__dropdown {
+  width: 1rem;
+  height: 0.6rem; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -1403,20 +1411,22 @@ object {
       justify-content: space-around; }
 
 .menu__event-wrapper {
-  text-align: center; }
+  text-align: center;
+  width: 50%; }
   .menu__event-wrapper h3 {
-    margin: 0;
+    border-top: 2px solid #CECECE;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding: 0.5rem 0;
     text-transform: uppercase;
-    font-weight: 400; }
+    font-weight: 400;
+    font-size: 1rem; }
     @media (min-width: 480px) {
       .menu__event-wrapper h3 {
         display: none; } }
 
 .menu__event {
-  text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  text-transform: uppercase; }
   .menu__event ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1426,16 +1436,27 @@ object {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center; }
+    .menu__event ul a {
+      padding: 0.5rem 0;
+      text-transform: none; }
+    .menu__event ul li:hover {
+      background: #FFF2F2;
+      font-weight: 600; }
   @media (min-width: 480px) {
     .menu__event {
       display: none; } }
 
 .menu__getinvolved-wrapper {
-  text-align: center; }
+  text-align: center;
+  width: 50%; }
   .menu__getinvolved-wrapper h3 {
-    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding: 0.5rem 0;
     text-transform: uppercase;
-    font-weight: 400; }
+    font-weight: 400;
+    border-top: 2px solid #CECECE;
+    font-size: 1rem; }
     @media (min-width: 480px) {
       .menu__getinvolved-wrapper h3 {
         display: none; } }
@@ -1451,6 +1472,12 @@ object {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center; }
+    .menu__getinvolved ul a {
+      padding: 0.5rem 0;
+      text-transform: none; }
+    .menu__getinvolved ul li:hover {
+      background: #FFF2F2;
+      font-weight: 600; }
   @media (min-width: 480px) {
     .menu__getinvolved {
       display: none; } }
@@ -1474,6 +1501,13 @@ object {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 1rem; }
+
+.isf-logo {
+  display: block;
+  margin: 1.25rem auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.75rem; }
 
 /*--------------------------------------------------------------
 # Page Templates

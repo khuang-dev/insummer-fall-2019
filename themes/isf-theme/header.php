@@ -50,7 +50,9 @@
 							</a>
 						</span>
 					</section>
-
+					<a class= container__isflogo href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<img class="isf-logo" src="<?php the_field( 'isf_logo' , 'option'); ?>" alt="isf-logo">
+							</a>
 					<span class="menu__primary"><!-- desktop navigation -->
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</span>
@@ -59,7 +61,7 @@
 						<section class="menu__event-wrapper">
 							<h3><a>
 								<?php echo wp_get_nav_menu_name('event');?>
-								<i class="fas fa-chevron-down"></i>
+								<img class="icon__dropdown" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/2x/Drop_Down2x.png" alt="icon-dropdown">
 							</a></h3>
 							<span class="menu__event"><?php wp_nav_menu( array( 'theme_location' => 'event', 'menu_id' => 'events' ) ); ?></span>
 						</section>
@@ -67,7 +69,7 @@
 						<section class="menu__getinvolved-wrapper">
 							<h3><a>
 								<?php echo wp_get_nav_menu_name('getinvolved');?>
-								<i class="fas fa-chevron-down"></i>
+								<img class="icon__dropdown" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/3x/Drop_Down3x.png" alt="icon-dropdown">
 							</a></h3>
 							<span class="menu__getinvolved"><?php wp_nav_menu( array( 'theme_location' => 'getinvolved', 'menu_id' => 'get-involved' ) ); ?></span>
 						</section>
