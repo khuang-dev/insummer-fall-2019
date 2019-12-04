@@ -1,0 +1,24 @@
+.page-our-sponsors {
+    .hentry {
+        padding: 5rem;
+    }
+    h1 {
+        color: $color__black;
+    }
+    h2 {
+        color: $color__black;
+        font-size: 13px;
+        text-align: center;
+    }
+    .sponsors {        
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        padding: 50px;
+        img {
+            width: 226px;
+            height: 232px;
+        }
+    }
+}
+
