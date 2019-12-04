@@ -28,12 +28,27 @@
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
-					<?php get_search_form();?>
-					<section class="wrapper__social-media">
-						<a href="<?php the_field( 'facebook_url', 'options' ); ?>"><i class="fab fa-facebook-square"></i></a>
-						<a href="<?php the_field( 'instagram_url', 'options' ); ?>"><i class="fab fa-instagram"></i></a>
-						<a href="<?php the_field( 'twitter_url', 'options' ); ?>"><i class="fab fa-twitter"></i></a>
-						<a href="<?php the_field( 'youtube_url', 'options' ); ?>"><i class="fab fa-youtube"></i></a>
+					<section class="externallink__header">
+						<?php get_search_form();?>
+						<div class="wrapper__social-media">
+							<a href="<?php the_field( 'facebook_url', 'options' ); ?>">
+								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebook">
+							</a>
+							<a href="<?php the_field( 'instagram_url', 'options' ); ?>">
+								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/IG.svg" alt="icon-ig">
+							</a>
+							<a href="<?php the_field( 'twitter_url', 'options' ); ?>">
+								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Twitter.svg" alt="icon-twitter">
+							</a>
+							<a href="<?php the_field( 'youtube_url', 'options' ); ?>">
+								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Youtube.svg" alt="icon-youtube">
+							</a>
+						</div>
+						<span>
+							<a>	
+								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Burger.svg" alt="icon-hamburger">
+							</a>
+						</span>
 					</section>
 
 					<span class="menu__primary"><!-- desktop navigation -->
