@@ -9,17 +9,17 @@ input[type='button'],
 input[type='reset'],
 input[type='submit'] {
   border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 15px 17px rgba(255, 255, 255, 0.5),
-    inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  // border-color: #ccc #ccc #bbb;
+  // border-radius: 3px;
+  // background: #e6e6e6;
+  // box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
+  // inset 0 15px 17px rgba(255, 255, 255, 0.5),
+  // inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   @include font-size(0.75);
   line-height: 1;
   padding: 0.6rem 1rem 0.4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 
   &:hover {
     border-color: #ccc #bbb #aaa;
@@ -44,7 +44,6 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 textarea {
-<<<<<<< HEAD
   color: #666;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -52,11 +51,10 @@ textarea {
   &:focus {
     color: #111;
   }
-=======
-	&:focus {
-		color: #111;
-	}
->>>>>>> c568a3f960b6256c4c21d7e79ab8b1aad3a26055
+
+  &:focus {
+    color: #111;
+  }
 }
 
 input[type='text'],
@@ -66,29 +64,35 @@ input[type='password'],
 input[type='search'] {
   padding: 3px;
 }
+
+// THIS IS THE FORM MESSAGE US
 input[type='text'] {
   color: #000000;
-  font-family: '.SF NS Display';
+  border: solid 1px black;
+  width: 100%;
+  // font-family: '.SF NS Display';
 }
 
 textarea {
   padding-left: 3px;
   width: 100%;
   color: #000000;
-  font-family: '.SF NS Display';
+  border: solid 1px black;
+  // font-family: '.SF NS Display';
 }
 
-//search
+// END OF THE FORM MESSAGE US
+
 .search-submit {
-	border: none;
-	background: none;
-	box-shadow: none;
-	display: none;
+  border: none;
+  background: none;
+  box-shadow: none;
+  display: none;
 }
 .icon-search {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 .search-field {
-	border: none;
-	display: none;
+  border: none;
+  display: none;
 }
