@@ -247,7 +247,7 @@ h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
 h1, h2, h4 {
-  color: #FFFFFF; }
+  color: #ffffff; }
 
 h3, h5 {
   color: #191414; }
@@ -266,7 +266,7 @@ address {
   margin: 0 0 1.5rem; }
 
 pre {
-  background: #FFFFFF;
+  background: #ffffff;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 0.9375rem;
@@ -317,7 +317,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #FFFFFF;
+  background: #ffffff;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
@@ -329,7 +329,7 @@ q {
     content: ''; }
 
 hr {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 0;
   height: 1px;
   margin-bottom: 1.5rem; }
@@ -469,7 +469,6 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
   width: 100%; }
   .main-navigation ul {
     display: none;
@@ -477,7 +476,6 @@ a {
     margin: 0;
     padding-left: 0; }
     .main-navigation ul ul {
-      float: left;
       position: absolute;
       top: 1.5rem;
       left: -999rem;
@@ -496,7 +494,6 @@ a {
           -ms-flex-pack: center;
               justify-content: center; }
   .main-navigation li {
-    float: left;
     position: static; }
   .main-navigation a {
     display: block;
@@ -507,7 +504,9 @@ button.menu-toggle {
   display: none; }
 
 .main-navigation ul {
-  display: block; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -539,7 +538,7 @@ button.menu-toggle {
   width: 1px;
   overflow: hidden; }
   .screen-reader-text:focus {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 3px;
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
             box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -763,7 +762,7 @@ object {
     margin: 0; }
   .menu__event-wrapper h3 {
     margin: 0;
-    border-top: 2px solid #CECECE;
+    border-top: 2px solid #cecece;
     margin-top: 0.5rem;
     margin-bottom: 0;
     padding: 0.5rem 0;
@@ -797,7 +796,7 @@ object {
     .menu__event ul li {
       background: white; }
       .menu__event ul li:hover {
-        background: #FFF2F2;
+        background: #fff2f2;
         font-weight: 600; }
   @media (min-width: 480px) {
     .menu__event {
@@ -813,7 +812,7 @@ object {
     padding: 0.5rem 0;
     text-transform: uppercase;
     font-weight: 400;
-    border-top: 2px solid #CECECE;
+    border-top: 2px solid #cecece;
     font-size: 1rem; }
     .menu__getinvolved-wrapper h3:hover {
       cursor: pointer; }
@@ -842,7 +841,7 @@ object {
     .menu__getinvolved ul li {
       background: white; }
       .menu__getinvolved ul li:hover {
-        background: #FFF2F2;
+        background: #fff2f2;
         font-weight: 600; }
   @media (min-width: 480px) {
     .menu__getinvolved {
@@ -867,7 +866,7 @@ object {
         -ms-flex-direction: column;
             flex-direction: column;
     font-size: 1rem;
-    background: #FFF2F2;
+    background: #fff2f2;
     width: 15rem;
     height: 100vh;
     position: absolute;
@@ -1097,7 +1096,7 @@ iframe {
     margin: 0; }
   .menu__event-wrapper h3 {
     margin: 0;
-    border-top: 2px solid #CECECE;
+    border-top: 2px solid #cecece;
     margin-top: 0.5rem;
     margin-bottom: 0;
     padding: 0.5rem 0;
@@ -1131,7 +1130,7 @@ iframe {
     .menu__event ul li {
       background: white; }
       .menu__event ul li:hover {
-        background: #FFF2F2;
+        background: #fff2f2;
         font-weight: 600; }
   @media (min-width: 480px) {
     .menu__event {
@@ -1147,7 +1146,7 @@ iframe {
     padding: 0.5rem 0;
     text-transform: uppercase;
     font-weight: 400;
-    border-top: 2px solid #CECECE;
+    border-top: 2px solid #cecece;
     font-size: 1rem; }
     .menu__getinvolved-wrapper h3:hover {
       cursor: pointer; }
@@ -1176,7 +1175,7 @@ iframe {
     .menu__getinvolved ul li {
       background: white; }
       .menu__getinvolved ul li:hover {
-        background: #FFF2F2;
+        background: #fff2f2;
         font-weight: 600; }
   @media (min-width: 480px) {
     .menu__getinvolved {
@@ -1201,7 +1200,7 @@ iframe {
         -ms-flex-direction: column;
             flex-direction: column;
     font-size: 1rem;
-    background: #FFF2F2;
+    background: #fff2f2;
     width: 15rem;
     height: 100vh;
     position: absolute;
@@ -1240,19 +1239,19 @@ iframe {
 
 .page-our-sponsors h1 {
   color: #191414;
-  border-left: 8px solid #ED1651;
+  border-left: 8px solid #ed1651;
   padding-left: 5px; }
 
 .become-sponsor {
-  border: 3px solid #ED1651;
+  border: 3px solid #ed1651;
   margin: 85px;
   text-align: center;
   border-radius: 12px;
   padding: 0.5rem;
-  color: #ED1651; }
+  color: #ed1651; }
   .become-sponsor:hover {
-    border: 3px solid #F58220;
-    color: #F58220; }
+    border: 3px solid #f58220;
+    color: #f58220; }
 
 .sponsor-img {
   display: -webkit-box;
@@ -1286,9 +1285,9 @@ iframe {
       height: auto;
       margin: 40px; }
   .page-our-sponsors .become-sponsor {
-    color: #FFFFFF;
-    border: 3px solid #ED1651;
-    background-color: #ED1651;
+    color: #ffffff;
+    border: 3px solid #ed1651;
+    background-color: #ed1651;
     max-width: 17%;
     text-align: center;
     margin-left: 42%;
@@ -1298,8 +1297,8 @@ iframe {
     line-height: 38px;
     font-size: 20px; }
     .page-our-sponsors .become-sponsor:hover {
-      background-color: #F58220;
-      border: 3px solid #F58220; } }
+      background-color: #f58220;
+      border: 3px solid #f58220; } }
 
 .hide-mobile {
   display: none; }
