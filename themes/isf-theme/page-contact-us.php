@@ -13,34 +13,46 @@ get_header(); ?>
 				<div class ="icon-message-us-wrapper">
 
 				<div class="contact-us-title">
+
                        <h3><?php the_title();?></h3> 
 				</div>
-				
-					<div class="phone-message-us">
-						<img class="mobile-svg"src="<?php echo get_stylesheet_directory_uri();?>/assets/01_Icons/SVG/Mobile.svg">
-						<a class="mobile">604-283-9172 </a>
-					</div>
 
+				<?php
 
-					<div class ="gen-inquires">
-						<img class="email-svg"src="<?php echo get_stylesheet_directory_uri();?>/assets/01_Icons/SVG/Email.svg">
-						<a class="general-inquiries">General Inquiries 
-							info@indiansummerfest.ca </a>
-					</div>
+							// check if the repeater field has rows of data
+							if( have_rows('contact_info') ): ?>
 
+							<div class="contact-info-loop">
 
-					<div class ="med-inquires">
-						<img class="email-svg"src="<?php echo get_stylesheet_directory_uri();?>/assets/01_Icons/SVG/Email.svg">
-						<a class="media-inquiries"><span>Media Inquiries</span>
-								media@indiansummerfest.ca </a>
-					</div>
+							<?php
 
-					
-					<div class ="adr-messge-us">
+								// loop through the rows of data
+								while ( have_rows('contact_info') ) : the_row();
 
-						<img class="location-tag"src="<?php echo get_stylesheet_directory_uri();?>/assets/01_Icons/SVG/Location.svg">
-						<a class="adress-message-us">#201 - 1880 Fir Street Vancouver, B.C. V6J 3B1 </a>
+									// display a sub field value
+									?>
+								<div class="contact-info-item">
+									<img class="mobile-svg" src="<?php the_sub_field('contact_info_icon'); ?>"/>
+									<div class="contact-info-details"> <?php  the_sub_field('contact_info_details');?> </div>
+								</div>
+								
+								<?php endwhile;
+								
+								?>
+								</div>
+								<?php
 
+							else :
+
+								// no rows found
+
+							endif;
+
+							?>
+							
+
+				   <div class="map-wrapper">
+					   <?php the_field('map_iframe'); ?>
 				   </div>
 				 </div>
 								<?php while ( have_posts() ) : the_post(); ?>
