@@ -29,7 +29,6 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  // // float: left;
   width: 100%;
 
   ul {
@@ -39,7 +38,6 @@ a {
     padding-left: 0;
 
     ul {
-      // float: left;
       position: absolute;
       top: $base__space-unit;
       left: -999rem;
@@ -74,7 +72,6 @@ a {
     }
   }
   li {
-    // float: left;
     position: static;
 
     &:hover > a,
