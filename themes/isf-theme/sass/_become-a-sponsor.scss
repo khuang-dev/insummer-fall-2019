@@ -1,0 +1,44 @@
+.page-become-a-sponsor {
+    h1 {
+        color: $color__black;
+        border-left: 8px solid $color__pink;
+        padding-left: 1.5rem;
+    }
+}
+
+.testimony {
+    list-style: none;
+}
+
+.sponsor-package,
+.sponsor-info {
+    text-align: center;
+    margin-left: 7rem;
+    padding: 0.5rem;
+    border-radius: 16px;
+    margin-right: 7rem;
+}
+
+.sponsor-package {
+    border: 2px solid $color__pink;
+    color: $color__white;
+    background-color: $color__pink;
+    &:hover {
+        border-color: $color__orange;
+        background-color: $color__orange;
+    }
+}
+.sponsor-info {
+    border: 2px solid $color__pink;
+    color: $color__pink;
+    &:hover {
+        border-color: $color__orange; 
+        color: $color__orange;
+        ;  
+    }
+}
+
+.testimony-author,
+.author-title {
+    text-align: center;
+}
