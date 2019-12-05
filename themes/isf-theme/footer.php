@@ -12,7 +12,6 @@
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info content__footer">
 				<?php dynamic_sidebar( 'footer-1' ); ?>
-
 					<h4>Sign up for our newsletter!</h4>
 					<h4>Get in touch</h4>
 					<span class=link__footer>
