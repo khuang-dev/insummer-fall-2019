@@ -44,7 +44,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Front page
 --------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -202,7 +201,11 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 fieldset {
-  border: none !important; }
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-padding-after: 0 !important;
+          padding-block-end: 0 !important; }
 
 legend {
   border: 0;
@@ -288,6 +291,14 @@ mark, ins {
 
 big {
   font-size: 125%; }
+
+.icon__header {
+  width: 1.5rem;
+  height: 1.5rem; }
+
+.icon__dropdown {
+  width: 1rem;
+  height: 0.6rem; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -420,7 +431,8 @@ textarea {
   display: none; }
 
 .icon-search {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  line-height: 0; }
 
 .search-field {
   border: none;
@@ -699,6 +711,7 @@ object {
 .send-us-message-form {
   width: 50%; }
 
+<<<<<<< HEAD
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -856,7 +869,11 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 fieldset {
-  border: none !important; }
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-padding-after: 0 !important;
+          padding-block-end: 0 !important; }
 
 legend {
   border: 0;
@@ -942,6 +959,14 @@ mark, ins {
 
 big {
   font-size: 125%; }
+
+.icon__header {
+  width: 1.5rem;
+  height: 1.5rem; }
+
+.icon__dropdown {
+  width: 1rem;
+  height: 0.6rem; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -1074,7 +1099,8 @@ textarea {
   display: none; }
 
 .icon-search {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  line-height: 0; }
 
 .search-field {
   border: none;
@@ -1332,6 +1358,9 @@ object {
   background: #191414; }
 
 .link__footer {
+=======
+.ginput_container_email {
+>>>>>>> f2347b4408cc1239563bfb11c11d13d167257b57
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1339,6 +1368,7 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+<<<<<<< HEAD
   .link__footer a {
     font-family: "Montserrat", sans-serif; }
 
@@ -1385,17 +1415,29 @@ object {
       justify-content: space-around; }
 
 .menu__event-wrapper {
-  text-align: center; }
+  text-align: center;
+  width: 50%;
+  position: relative; }
   .menu__event-wrapper h3 {
-    margin: 0;
+    border-top: 2px solid #CECECE;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding: 0.5rem 0;
     text-transform: uppercase;
-    font-weight: 400; }
+    font-weight: 400;
+    font-size: 1rem; }
+    .menu__event-wrapper h3:hover {
+      cursor: pointer; }
+    @media (min-width: 480px) {
+      .menu__event-wrapper h3 {
+        display: none; } }
 
 .menu__event {
   text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0; }
   .menu__event ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1405,19 +1447,42 @@ object {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center; }
+    .menu__event ul a {
+      padding: 0.5rem 0;
+      text-transform: none; }
+    .menu__event ul li {
+      background: white; }
+      .menu__event ul li:hover {
+        background: #FFF2F2;
+        font-weight: 600; }
   @media (min-width: 480px) {
     .menu__event {
       display: none; } }
 
 .menu__getinvolved-wrapper {
-  text-align: center; }
+  text-align: center;
+  width: 50%;
+  position: relative; }
   .menu__getinvolved-wrapper h3 {
-    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding: 0.5rem 0;
     text-transform: uppercase;
-    font-weight: 400; }
+    font-weight: 400;
+    border-top: 2px solid #CECECE;
+    font-size: 1rem; }
+    .menu__getinvolved-wrapper h3:hover {
+      cursor: pointer; }
+    @media (min-width: 480px) {
+      .menu__getinvolved-wrapper h3 {
+        display: none; } }
 
 .menu__getinvolved {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  position: absolute;
+  width: 100%;
+  display: none;
+  left: 0; }
   .menu__getinvolved ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1427,26 +1492,73 @@ object {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center; }
+    .menu__getinvolved ul a {
+      padding: 0.5rem 0;
+      text-transform: none; }
+    .menu__getinvolved ul li {
+      background: white; }
+      .menu__getinvolved ul li:hover {
+        background: #FFF2F2;
+        font-weight: 600; }
   @media (min-width: 480px) {
     .menu__getinvolved {
       display: none; } }
 
+.show {
+  display: block; }
+
 .menu__hamburger {
   text-transform: uppercase;
-  display: none; }
+  width: 8rem;
+  height: 20rem; }
+  .menu__hamburger ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1rem;
+    background: #FFF2F2;
+    width: 15rem;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .menu__hamburger ul li {
+      margin: 1rem auto 1rem auto; }
+      .menu__hamburger ul li a:hover {
+        font-weight: 600; }
 
 .wrapper__social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .wrapper__social-media i {
-    font-size: 1.5rem;
-    padding: 0 0.25rem; }
+  .wrapper__social-media img {
+    margin: 0 0.75rem; }
+
+.externallink__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 1rem; }
+
+.isf-logo {
+  display: block;
+  margin: 1.25rem auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.75rem; }
 
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+<<<<<<< HEAD
 .page-our-sponsors .hentry {
   padding: 2rem; }
 
@@ -1524,3 +1636,19 @@ object {
   @media (min-width: 480px) {
     .hide-desktop {
       display: none; } }
+=======
+=======
+  .ginput_container_email .ginput_left,
+  .ginput_container_email .ginput_right {
+    width: 100%; }
+
+.gform_heading {
+  height: 49px;
+  width: 182px;
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 49px; }
+>>>>>>> f2347b4408cc1239563bfb11c11d13d167257b57
+>>>>>>> b020098f528230c5e6b74e33cddd4950c2b0f08a
