@@ -72,4 +72,8 @@ textarea {
 	border: none;
 	display: none;
 }
-
+.search__mobile {
+	@include desktop {
+		display: none;
+	}
+}

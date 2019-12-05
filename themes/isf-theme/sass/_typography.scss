@@ -82,5 +82,10 @@ big {
 	width: 1rem;
 	height: 0.6rem;
 }
+.icon__hamburger {
+	@include desktop {
+		display: none;
+	}
+}
 
 

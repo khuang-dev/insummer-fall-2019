@@ -3,6 +3,8 @@
   @include desktop {
     height: 150px;
     min-width: 1000px;
+    display: flex;
+    justify-content: space-between;
     ul ul {
       display: flex;
       text-transform: none;
@@ -23,13 +25,13 @@
 .menu__primary {
   text-transform: uppercase;
   display: none;
+  flex-basis: 50%;
   @include desktop {
     display: flex;
     justify-content: center;
     position: relative;
     a {
-      margin: 0 2rem;
-      padding-top: 0.5rem;
+      margin: 0 1.5rem;
       &:hover {
         border-bottom: 2px $color__black solid;
         color: $color__black;
@@ -187,6 +189,7 @@ right: 0px;
 }
 .wrapper__social-media {
   display: flex;
+  width: 200px;
   img {
     margin: 0 0.75rem;
   }
@@ -195,6 +198,9 @@ right: 0px;
     display: flex;
     justify-content: space-between;
     margin: 0 1rem;
+    @include desktop {
+        margin: 0;
+    }
 }
 .isf-logo {
     display: block;
@@ -228,9 +234,21 @@ right: 0px;
         height: 2.5rem;
         background-size: contain;
         display: block;
+        transform: translateY(-1rem);
         &:hover {
             font-weight: normal;
             border: none;
         }
     }
+}
+.externalform__header {
+    display: flex;
+    justify-content: space-between;
+}
+.desktop__search-login-wrapper {
+    display: flex;
+}
+.btn__donate {
+    width: 200px;
+    text-align: center;
 }
