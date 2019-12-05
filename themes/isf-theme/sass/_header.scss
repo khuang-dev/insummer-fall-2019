@@ -40,27 +40,53 @@
 }
 .menu__event-wrapper {
   text-align: center;
+  width: 50%;
+  position: relative;
   h3 {
     margin: 0;
-<<<<<<< HEAD
-=======
   }
 
   text-align: center;
   h3 {
     margin: 0;
->>>>>>> f2347b4408cc1239563bfb11c11d13d167257b57
+
+    border-top: 2px solid $color__grey;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding: 0.5rem 0;
+
     text-transform: uppercase;
     font-weight: 400;
+    font-size: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+    @include desktop {
+      display: none;
+    }
   }
 }
 .menu__event {
   text-transform: uppercase;
-  display: flex;
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
   ul {
     display: flex;
     flex-direction: column;
     text-align: center;
+    a {
+      padding: 0.5rem 0;
+      text-transform: none;
+    }
+    li {
+      background: white;
+      &:hover {
+        background: $bg__champagne;
+        font-weight: 600;
+      }
+    }
   }
   @include desktop {
     display: none;
@@ -68,37 +94,99 @@
 }
 .menu__getinvolved-wrapper {
   text-align: center;
+  width: 50%;
+  position: relative;
   h3 {
-    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding: 0.5rem 0;
     text-transform: uppercase;
     font-weight: 400;
+    border-top: 2px solid $color__grey;
+    font-size: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+    @include desktop {
+      display: none;
+    }
   }
 }
 .menu__getinvolved {
   text-transform: uppercase;
+  position: absolute;
+  width: 100%;
+  display: none;
+  left: 0;
   ul {
     display: flex;
     flex-direction: column;
     text-align: center;
+    a {
+      padding: 0.5rem 0;
+      text-transform: none;
+    }
+    li {
+      background: white;
+      &:hover {
+        background: $bg__champagne;
+        font-weight: 600;
+      }
+    }
   }
   @include desktop {
     display: none;
   }
 }
+.show {
+  display: block;
+}
 .menu__hamburger {
   text-transform: uppercase;
+
   display: none;
-<<<<<<< HEAD
-=======
 
   text-transform: uppercase;
   display: none;
->>>>>>> f2347b4408cc1239563bfb11c11d13d167257b57
+
+  //   display: none;
+  width: 8rem;
+  height: 20rem;
+  ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    background: $bg__champagne;
+    width: 15rem;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    li {
+      margin: 1rem auto 1rem auto;
+      a {
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
 .wrapper__social-media {
   display: flex;
-  i {
-    font-size: 1.5rem;
-    padding: 0 0.25rem;
+  img {
+    margin: 0 0.75rem;
   }
+}
+.externallink__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+.isf-logo {
+  display: block;
+  margin: 1.25rem auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.75rem;
 }

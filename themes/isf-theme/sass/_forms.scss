@@ -70,8 +70,6 @@ input[type='text'] {
   color: $color__black;
   border: solid 1px black;
   width: 100%;
-  // width: 100%;
-  // font-family: '.SF NS Display';
 }
 
 textarea {
@@ -92,6 +90,7 @@ textarea {
 }
 .icon-search {
   font-size: 1.5rem;
+  line-height: 0;
 }
 .search-field {
   border: none;

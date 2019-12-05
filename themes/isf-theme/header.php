@@ -28,29 +28,48 @@
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
-					<?php get_search_form();?>
-					<a href="<?php the_field( 'facebook_url', 'options' ); ?>"></a>
-					<a href="<?php the_field( 'instagram_url', 'options' ); ?>"></a>
-					<a href="<?php the_field( 'twitter_url', 'options' ); ?>"></a>
-					<a href="<?php the_field( 'youtube_url', 'options' ); ?>"></a>
-
+					<section class="externallink__header">
+						<?php get_search_form();?>
+						<div class="wrapper__social-media">
+							<a href="<?php the_field( 'facebook_url', 'options' ); ?>">
+								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebook">
+							</a>
+							<a href="<?php the_field( 'instagram_url', 'options' ); ?>">
+								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/IG.svg" alt="icon-ig">
+							</a>
+							<a href="<?php the_field( 'twitter_url', 'options' ); ?>">
+								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Twitter.svg" alt="icon-twitter">
+							</a>
+							<a href="<?php the_field( 'youtube_url', 'options' ); ?>">
+								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Youtube.svg" alt="icon-youtube">
+							</a>
+						</div>
+						<span>
+							<a>	
+								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Burger.svg" alt="icon-hamburger">
+							</a>
+						</span>
+					</section>
+					<a class= container__isflogo href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<img class="isf-logo" src="<?php the_field( 'isf_logo' , 'option'); ?>" alt="isf-logo">
+							</a>
 					<span class="menu__primary"><!-- desktop navigation -->
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</span>
 					
 					<div class="menu__mobile"><!-- mobile navigations -->
 						<section class="menu__event-wrapper">
-							<h3><a>
+							<h3 class="btn__event"><a>
 								<?php echo wp_get_nav_menu_name('event');?>
-								<i class="fas fa-chevron-down"></i>
+								<img class="icon__dropdown" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/2x/Drop_Down2x.png" alt="icon-dropdown">
 							</a></h3>
 							<span class="menu__event"><?php wp_nav_menu( array( 'theme_location' => 'event', 'menu_id' => 'events' ) ); ?></span>
 						</section>
 						
 						<section class="menu__getinvolved-wrapper">
-							<h3><a>
+							<h3 class="btn__getinvolved"><a>
 								<?php echo wp_get_nav_menu_name('getinvolved');?>
-								<i class="fas fa-chevron-down"></i>
+								<img class="icon__dropdown" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/3x/Drop_Down3x.png" alt="icon-dropdown">
 							</a></h3>
 							<span class="menu__getinvolved"><?php wp_nav_menu( array( 'theme_location' => 'getinvolved', 'menu_id' => 'get-involved' ) ); ?></span>
 						</section>
