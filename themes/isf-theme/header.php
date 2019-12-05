@@ -59,7 +59,7 @@
 					
 					<div class="menu__mobile"><!-- mobile navigations -->
 						<section class="menu__event-wrapper">
-							<h3><a>
+							<h3 class="btn__event"><a>
 								<?php echo wp_get_nav_menu_name('event');?>
 								<img class="icon__dropdown" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/2x/Drop_Down2x.png" alt="icon-dropdown">
 							</a></h3>
@@ -67,7 +67,7 @@
 						</section>
 						
 						<section class="menu__getinvolved-wrapper">
-							<h3><a>
+							<h3 class="btn__getinvolved"><a>
 								<?php echo wp_get_nav_menu_name('getinvolved');?>
 								<img class="icon__dropdown" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/3x/Drop_Down3x.png" alt="icon-dropdown">
 							</a></h3>
