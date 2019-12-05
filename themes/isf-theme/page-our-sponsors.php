@@ -19,7 +19,8 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
-					<?php the_content(); ?>
+
+					<div class="sponsors-content hide-mobile"><?php the_content(); ?></div>
 					<div class="sponsors">
 
 						<?php
@@ -32,7 +33,9 @@ get_header(); ?>
 							?>
 							<div class="sponsors_box">
 								<h2 class="sponsor_level"><?php the_sub_field('sponsor_level')?></h2>
-								<img src="<?php the_sub_field('sponsor_image'); ?>" alt=/>
+								<div class="sponsor-img">
+									<img src="<?php the_sub_field('sponsor_image'); ?>" />
+								</div>
 							</div>
 								<?php
 
