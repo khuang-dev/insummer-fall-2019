@@ -1,4 +1,5 @@
 .main-navigation {
+    margin-top: 2rem;
   @include desktop {
     height: 150px;
     min-width: 1000px;
@@ -9,9 +10,14 @@
       a {
         margin: 0 2rem;
         white-space: nowrap;
+        padding-top: 1.25rem;
       }
     }
   }
+}
+.site-header {
+    position: relative;
+    z-index: 30;
 }
 
 .menu__primary {
@@ -23,6 +29,7 @@
     position: relative;
     a {
       margin: 0 2rem;
+      padding-top: 0.5rem;
       &:hover {
         border-bottom: 2px $color__black solid;
         color: $color__black;
@@ -55,10 +62,10 @@
     }
     @include desktop {
       display: none;
-
     }
   }
 }
+
 .menu__event {
   text-transform: uppercase;
   display: none;
@@ -69,6 +76,9 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    @include desktop {
+        display: none;
+    }
     a {
         padding: 0.5rem 0;
         text-transform: none;
@@ -115,6 +125,9 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    @include desktop {
+        display: none;
+    }
     a {
         padding: 0.5rem 0;
         text-transform: none;
@@ -136,19 +149,31 @@
 }
 .menu__hamburger {
   text-transform: uppercase;
-//   display: none;
+  display: none;
   width: 8rem;
   height: 20rem;
+position: absolute;
+top: 0px;
+right: 0px;
+  .icon-cancel {
+      font-size: 2rem;
+      color: $bg__pink;
+      position: absolute;
+      right: 1rem;
+      top: 1.3rem;
+      z-index: 10;
+  }
   ul {
       display: flex;
       flex-direction: column;
       font-size: 1rem;
       background: $bg__champagne;
-      width: 15rem;
+      width: 50vw;
       height: 100vh;
       position: absolute;
       right: 0;
       top: 0;
+      padding-top: 3rem;
       li {
           margin: 1rem auto 1rem auto;
           a {
@@ -156,6 +181,7 @@
                 font-weight: 600;
             }
           }
+
       }
   }
 }
@@ -176,4 +202,35 @@
     width: 2.5rem;
     height: 2.5rem;
     margin-bottom: 0.75rem;
+    @include desktop {
+        display: none;
+    }
+}
+.menu-overlay-event {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.menu-overlay-getinvolved {
+    @extend .menu-overlay-event;
+}
+.menu-overlay-hamburger {
+    @extend .menu-overlay-event;
+}
+.menu__primary-home {
+    a {
+        font-size: 0;
+        background-image: url('../../assets/05_Logos/ISF_Orange_Spiral.png');
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: contain;
+        display: block;
+        &:hover {
+            font-weight: normal;
+            border: none;
+        }
+    }
 }

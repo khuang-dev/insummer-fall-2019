@@ -39,7 +39,6 @@ a {
     padding-left: 0;
 
     ul {
-      float: left;
       position: absolute;
       top: $base__space-unit;
       left: -999rem;
@@ -74,7 +73,6 @@ a {
 		justify-content: center;    }
   }
   li {
-    float: left;
     position: static;
 
     &:hover > a,
@@ -99,7 +97,7 @@ button.menu-toggle {
 }
 
 .main-navigation ul {
-  display: block;
+  display: flex;
 }
 
 .comment-navigation,

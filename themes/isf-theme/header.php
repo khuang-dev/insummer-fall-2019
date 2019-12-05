@@ -23,7 +23,6 @@
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-branding">
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
@@ -46,7 +45,7 @@
 						</div>
 						<span>
 							<a>	
-								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Burger.svg" alt="icon-hamburger">
+								<img class="icon__header icon__hamburger" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Burger.svg" alt="icon-hamburger">
 							</a>
 						</span>
 					</section>
@@ -75,9 +74,10 @@
 						</section>
 					</div>
 					
-					<span class="menu__hamburger"><!-- hamburger menu -->
+					<div class="menu__hamburger"><!-- hamburger menu -->
+						<a class="icon-cancel"><i class="fas fa-times"></i></a>
 						<?php wp_nav_menu( array( 'theme_location' => 'hamburger', 'menu_id' => 'hamburger' ) ); ?>
-					</span>
+					</div>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 
