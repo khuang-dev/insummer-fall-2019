@@ -5,16 +5,7 @@
  * @package RED_Starter_Theme
  */
 
-get_header(); 
-
-// $arrays=acf_get_fields('sponsors-image');
-$arrays=get_fields('sponsors-image');
- echo '<pre>';
- echo var_dump($arrays);
-    
-echo '</pre>';
-
-?>
+get_header(); ?>
 
 
 	<div id="primary" class="content-area">
@@ -27,60 +18,46 @@ echo '</pre>';
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				</header><!-- .entry-header -->
 
-				<!-- <div class="entry-content"> -->
-					<?php the_content(); ?>
+				<div class="entry-content">
 
-					<!-- <div class="our-sponsors"> 
-					<p>Founding Partner</p>
-					<img class="sponsors-img" src="<php echo get_template_directory_uri() . '/assets/03_Sponsors/SFU.jpg'?>" alt="SFU">
-					
-					<p>Major Partner</p>
-					<img class="sponsors-img" src="<php echo get_template_directory_uri() . '/assets/03_Sponsors/UBC.png'?>" alt="UBC">
+					<div class="sponsors-content hide-mobile"><?php the_content(); ?></div>
+					<div class="sponsors">
 
-					<p>Major Partner</p>
-					<img class="sponsors-img" src="<php echo get_template_directory_uri() . '/assets/03_Sponsors/Langara.png'?>" alt="Langara College">
+						<?php
+						// check if the repeater field has rows of data
+						if( have_rows('sponsor_images') ):
 
-					<p>Major Partner</p>
-					<img class="sponsors-img" src="<php echo get_template_directory_uri() . '/assets/03_Sponsors/'?>" alt="Vancity">
+							// loop through the rows of data
+							while ( have_rows('sponsor_images') ) : the_row();
 
-					<p>Major Partner</p>
-					<img class="sponsors-img" src="<php echo get_template_directory_uri() . '/assets/03_Sponsors/'?>" alt="Canda Post">
+							?>
+							<div class="sponsors_box">
+								<h2 class="sponsor_level"><?php the_sub_field('sponsor_level')?></h2>
+								<div class="sponsor-img">
+									<img src="<?php the_sub_field('sponsor_image'); ?>" />
+								</div>
+							</div>
+								<?php
 
-					<p>Major Partner</p>
-					<img class="sponsors-img" src="?php echo get_template_directory_uri() . '/assets/03_Sponsors/'?>" alt="Concord Pacific">
-					</div> -->
+							endwhile;
 
+						else :
 
-					<?php
-					// check if the repeater field has rows of data
-					if( have_rows('sponsor_images') ):
+							// no rows found
 
-						// loop through the rows of data
-						while ( have_rows('sponsor_images') ) : the_row();
-
+						endif;
 						?>
-							<?php the_sub_field('sponsor_level')?>
-							<img src="<?php the_sub_field('sponsor_image'); ?>"/>
-
-							<?php
-
-						endwhile;
-
-					else :
-
-						// no rows found
-
-					endif;
-					?>
-
+					</div>
+					
 					<p class="become-sponsor">Become a Sponsor</p>
+					
 					<?php
 						wp_link_pages( array(
 							'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
 							'after'  => '</div>',
 						) );
 					?>
-				<!-- </div>.entry-content -->
+				</div> <!-- entry-content -->
 			</article><!-- #post-## -->
 
 

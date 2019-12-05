@@ -42,6 +42,10 @@ get_header(); ?>
 						<a class="adress-message-us">#201 - 1880 Fir Street Vancouver, B.C. V6J 3B1 </a>
 
 				   </div>
+
+				   <div class="map-wrapper">
+					   <?php the_field('map_iframe'); ?>
+				   </div>
 				 </div>
 								<?php while ( have_posts() ) : the_post(); ?>
 

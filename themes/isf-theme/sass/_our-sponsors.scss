@@ -1,0 +1,85 @@
+
+.page-our-sponsors {
+    .hentry {
+        padding: 2rem;
+    }
+    h1 {
+        color: $color__black;
+        border-left: 8px solid $color__pink;
+        padding-left: 5px;
+    }
+}
+
+.become-sponsor {
+    border: 3px solid $color__pink;
+    margin: 85px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 0.5rem;
+    color: $color__pink;
+
+    &:hover {
+        border: 3px solid $color__orange;
+        color: $color__orange;
+    }
+}
+
+.sponsor-img {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// .sponsor-img {
+//     min-height: 300px;
+//     border: 1px solid black;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+
+    .page-our-sponsors {
+        @include desktop {
+            .hentry {
+                padding: 5rem;
+            }
+        h2 {
+            color: $color__black;
+            font-size: 13px;
+            text-align: center;
+        }        
+        .sponsors {        
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            padding: 50px;
+            img {
+                width: 226px;
+                height: auto;
+                margin: 40px;
+            }
+        }
+       
+        .become-sponsor {
+            color: $color__white;
+            border: 3px solid $btn__pink;
+            background-color: $bg__pink;
+            max-width: 17%;
+            text-align: center;
+            margin-left: 42%;
+            height: 58px;
+            width: 263px;
+            border-radius: 12px;
+            line-height: 38px;
+            font-size: 20px;
+
+            &:hover {
+                background-color: $color__orange;
+                border: 3px solid $color__orange;
+
+
+            }
+        }
+    }
+}
+

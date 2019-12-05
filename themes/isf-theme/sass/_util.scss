@@ -1,0 +1,14 @@
+
+.hide-mobile {
+    display: none;
+    @include desktop {
+        display: block;
+    }
+}
+
+.hide-desktop {
+    display: block;
+    @include desktop {
+        display: none;
+    }
+}
