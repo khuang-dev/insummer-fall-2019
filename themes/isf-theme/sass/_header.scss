@@ -52,15 +52,23 @@
   width: 50%;
   position: relative;
   h3 {
+    margin: 0;
+  }
+
+  text-align: center;
+  h3 {
+    margin: 0;
+
     border-top: 2px solid $color__grey;
     margin-top: 0.5rem;
     margin-bottom: 0;
     padding: 0.5rem 0;
+
     text-transform: uppercase;
     font-weight: 400;
     font-size: 1rem;
     &:hover {
-        cursor: pointer;
+      cursor: pointer;
     }
     @include desktop {
       display: none;
@@ -82,15 +90,15 @@
         display: none;
     }
     a {
-        padding: 0.5rem 0;
-        text-transform: none;
+      padding: 0.5rem 0;
+      text-transform: none;
     }
     li {
-        background: white;
-        &:hover {
-            background: $bg__champagne;
-            font-weight: 600;
-        }
+      background: white;
+      &:hover {
+        background: $bg__champagne;
+        font-weight: 600;
+      }
     }
   }
   @include desktop {
@@ -110,7 +118,7 @@
     border-top: 2px solid $color__grey;
     font-size: 1rem;
     &:hover {
-        cursor: pointer;
+      cursor: pointer;
     }
     @include desktop {
       display: none;
@@ -131,15 +139,15 @@
         display: none;
     }
     a {
-        padding: 0.5rem 0;
-        text-transform: none;
+      padding: 0.5rem 0;
+      text-transform: none;
     }
     li {
-        background: white;
-        &:hover {
-            background: $bg__champagne;
-            font-weight: 600;
-        }
+      background: white;
+      &:hover {
+        background: $bg__champagne;
+        font-weight: 600;
+      }
     }
   }
   @include desktop {
@@ -147,7 +155,7 @@
   }
 }
 .show {
-    display: block;
+  display: block;
 }
 .menu__hamburger {
   text-transform: uppercase;
@@ -185,8 +193,9 @@ right: 0px;
           }
 
       }
+    }
   }
-}
+
 .wrapper__social-media {
   display: flex;
   width: 200px;
