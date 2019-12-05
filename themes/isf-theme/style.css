@@ -1413,13 +1413,10 @@ h3 {
   width: 200px;
   text-align: center; }
 
-.page-our-sponsors .hentry {
-  padding: 2rem; }
-
 .page-our-sponsors h1 {
   color: #191414;
   border-left: 8px solid #ed1651;
-  padding-left: 5px; }
+  padding-left: 1.5rem; }
 
 .become-sponsor {
   border: 3px solid #ed1651;
@@ -1442,8 +1439,6 @@ h3 {
           flex-flow: row wrap; }
 
 @media (min-width: 480px) {
-  .page-our-sponsors .hentry {
-    padding: 5rem; }
   .page-our-sponsors h2 {
     color: #191414;
     font-size: 13px;
@@ -1474,7 +1469,7 @@ h3 {
     width: 263px;
     border-radius: 12px;
     line-height: 38px;
-    font-size: 20px; }
+    font-size: 18px; }
     .page-our-sponsors .become-sponsor:hover {
       background-color: #f58220;
       border: 3px solid #f58220; } }
@@ -1490,3 +1485,38 @@ h3 {
   @media (min-width: 480px) {
     .hide-desktop {
       display: none; } }
+
+.page-become-a-sponsor h1 {
+  color: #191414;
+  border-left: 8px solid #ed1651;
+  padding-left: 1.5rem; }
+
+.testimony {
+  list-style: none; }
+
+.sponsor-package,
+.sponsor-info {
+  text-align: center;
+  margin-left: 7rem;
+  padding: 0.5rem;
+  border-radius: 16px;
+  margin-right: 7rem; }
+
+.sponsor-package {
+  border: 2px solid #ed1651;
+  color: #ffffff;
+  background-color: #ed1651; }
+  .sponsor-package:hover {
+    border-color: #f58220;
+    background-color: #f58220; }
+
+.sponsor-info {
+  border: 2px solid #ed1651;
+  color: #ed1651; }
+  .sponsor-info:hover {
+    border-color: #f58220;
+    color: #f58220; }
+
+.testimony-author,
+.author-title {
+  text-align: center; }
