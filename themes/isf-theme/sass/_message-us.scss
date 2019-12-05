@@ -31,7 +31,7 @@
   max-width: 100px;
   margin: auto;
 }
-
+.map-wrapper,
 iframe {
   max-width: 100%;
   width: 100%;
@@ -84,6 +84,14 @@ iframe {
   //END OF FORM MESSAGE US
 }
 
+.contact-info-loop {
+  .contact-info-details {
+    a {
+      color: red;
+    }
+  }
+}
+
 @include desktop {
   .message-us-page {
     display: flex;
@@ -97,14 +105,14 @@ iframe {
 
   .contact-us-title {
     h3 {
-      font-size: 40px;
+      font-size: 2.5rem;
       padding-left: 1.5rem;
       text-transform: uppercase;
     }
   }
 
   .post-19 h3 {
-    padding-top: 5rem;
+    padding-top: 3rem;
   }
 
   .icon-message-us-wrapper {
@@ -113,14 +121,13 @@ iframe {
     text-align: unset;
 
     > div {
-      padding-top: 5rem;
+      padding-top: 3rem;
     }
 
     .contact-us-title {
       padding-top: 0;
     }
 
-    // .phone-message-us,
     .mobile,
     .general-inquiries,
     .media-inquiries,
@@ -145,7 +152,6 @@ iframe {
     align-items: center;
   }
 
-  //   .phone-message-us,
   .mobile,
   .general-inquiries,
   .media-inquiries,
@@ -159,14 +165,13 @@ iframe {
     text-align: unset;
   }
   //THIS IS THE MESSAGE US FORM
+
   .send-us-message-form {
+    line-height: 4.5rem;
+
     .gform_title {
       font-size: 1.875rem;
     }
-  }
-
-  .send-us-message-form {
-    // width: 50%;
   }
 
   .send-us-message-form_wrapper .gform_footer .gform_button {
@@ -178,6 +183,7 @@ iframe {
     font-size: 24px;
   }
 
+  .map-wrapper,
   iframe {
     width: 100%;
     max-width: 500px;

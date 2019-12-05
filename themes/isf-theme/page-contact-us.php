@@ -13,9 +13,44 @@ get_header(); ?>
 				<div class ="icon-message-us-wrapper">
 
 				<div class="contact-us-title">
+
                        <h3><?php the_title();?></h3> 
 				</div>
-				
+
+				<?php
+
+							// check if the repeater field has rows of data
+							if( have_rows('contact_info') ): ?>
+
+							<div class="contact-info-loop">
+
+							<?php
+
+								// loop through the rows of data
+								while ( have_rows('contact_info') ) : the_row();
+
+									// display a sub field value
+									?>
+								<div class="contact-info-item">
+									<img class="mobile-svg" src="<?php the_sub_field('contact_info_icon'); ?>"/>
+									<div class="contact-info-details"> <?php  the_sub_field('contact_info_details');?> </div>
+								</div>
+								
+								<?php endwhile;
+								
+								?>
+								</div>
+								<?php
+
+							else :
+
+								// no rows found
+
+							endif;
+
+							?>
+
+
 					<div class="phone-message-us">
 						<img class="mobile-svg"src="<?php echo get_stylesheet_directory_uri();?>/assets/01_Icons/SVG/Mobile.svg">
 						<a class="mobile">604-283-9172 </a>
