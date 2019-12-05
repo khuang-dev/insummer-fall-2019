@@ -44,9 +44,9 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  color: $color__black;
+  border: 1px solid $color__black;
+  // border-radius: 3px;
 
   &:focus {
     color: #111;
@@ -67,9 +67,10 @@ input[type='search'] {
 
 // THIS IS THE FORM MESSAGE US
 input[type='text'] {
-  color: #000000;
+  color: $color__black;
   border: solid 1px black;
   width: 100%;
+  // width: 100%;
   // font-family: '.SF NS Display';
 }
 

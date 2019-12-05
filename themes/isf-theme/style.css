@@ -388,9 +388,8 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
+  color: #191414;
+  border: 1px solid #191414; }
   input[type='text']:focus,
   input[type='email']:focus,
   input[type='url']:focus,
@@ -414,7 +413,7 @@ input[type='search'] {
   padding: 3px; }
 
 input[type='text'] {
-  color: #000000;
+  color: #191414;
   border: solid 1px black;
   width: 100%; }
 
@@ -819,7 +818,7 @@ object {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-.mobile,
+.phone-message-us,
 .general-inquiries,
 .media-inquiries,
 .adress-message-us {
@@ -828,12 +827,15 @@ object {
   font-family: 'Montserrat';
   font-size: 18px;
   font-weight: bold;
-  line-height: 37px; }
+  line-height: 37px;
+  text-align: center;
+  margin-bottom: 1rem; }
 
 .mobile-svg,
 .email-svg,
 .location-tag {
-  max-width: 100px; }
+  max-width: 100px;
+  margin: auto; }
 
 iframe {
   max-width: 100%;
@@ -897,7 +899,10 @@ iframe {
       padding-top: 5rem; }
     .icon-message-us-wrapper .contact-us-title {
       padding-top: 0; }
-    .icon-message-us-wrapper .phone-message-us {
+    .icon-message-us-wrapper .phone-message-us,
+    .icon-message-us-wrapper .general-inquiries,
+    .icon-message-us-wrapper .media-inquiries,
+    .icon-message-us-wrapper .adress-message-us {
       padding-top: 2.5rem; }
   .phone-message-us,
   .gen-inquires,
@@ -908,20 +913,25 @@ iframe {
     display: flex;
     width: 100%;
     display: inherit; }
+  .mobile-svg {
+    margin: unset; }
   .phone-message-us {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .mobile,
+  .phone-message-us,
   .general-inquiries,
   .media-inquiries,
   .adress-message-us {
     color: #000000;
     font-family: 'Montserrat';
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: bold;
     line-height: 37px;
-    padding-left: 1rem; }
+    padding-left: 1rem;
+    text-align: unset; }
+  .send-us-message-form .gform_title {
+    font-size: 1.875rem; }
   .send-us-message-form {
     width: 50%; }
   .send-us-message-form_wrapper .gform_footer .gform_button {
