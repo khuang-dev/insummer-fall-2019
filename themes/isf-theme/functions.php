@@ -102,6 +102,16 @@ function red_starter_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 
+add_action('init', 'setupOptions');
+
+function setupOptions() {
+	if( function_exists('acf_add_options_page') ) {
+		acf_add_options_page( array(
+			'page_title' => 'Options',
+		));
+	}
+}
+
 /**
  * Custom template tags for this theme.
  */

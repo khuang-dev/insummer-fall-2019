@@ -43,6 +43,13 @@
   h3 {
     margin: 0;
   }
+
+  text-align: center;
+  h3 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
 }
 .menu__event {
   text-transform: uppercase;
@@ -60,6 +67,8 @@
   text-align: center;
   h3 {
     margin: 0;
+    text-transform: uppercase;
+    font-weight: 400;
   }
 }
 .menu__getinvolved {
@@ -76,4 +85,14 @@
 .menu__hamburger {
   text-transform: uppercase;
   display: none;
+
+  text-transform: uppercase;
+  display: none;
+}
+.wrapper__social-media {
+  display: flex;
+  i {
+    font-size: 1.5rem;
+    padding: 0 0.25rem;
+  }
 }
