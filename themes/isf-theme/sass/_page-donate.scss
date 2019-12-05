@@ -1,0 +1,19 @@
+.ginput_container_email {
+  display: flex;
+  flex-direction: column;
+
+  .ginput_left,
+  .ginput_right {
+    width: 100%;
+  }
+}
+
+.gform_heading {
+  height: 49px;
+  width: 182px;
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 49px;
+}

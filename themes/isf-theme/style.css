@@ -44,7 +44,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Front page
 --------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -712,6 +711,7 @@ object {
 .send-us-message-form {
   width: 50%; }
 
+<<<<<<< HEAD
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -1358,6 +1358,9 @@ object {
   background: #191414; }
 
 .link__footer {
+=======
+.ginput_container_email {
+>>>>>>> f2347b4408cc1239563bfb11c11d13d167257b57
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1365,6 +1368,7 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+<<<<<<< HEAD
   .link__footer a {
     font-family: "Montserrat", sans-serif; }
 
@@ -1554,3 +1558,17 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+=======
+  .ginput_container_email .ginput_left,
+  .ginput_container_email .ginput_right {
+    width: 100%; }
+
+.gform_heading {
+  height: 49px;
+  width: 182px;
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 49px; }
+>>>>>>> f2347b4408cc1239563bfb11c11d13d167257b57
