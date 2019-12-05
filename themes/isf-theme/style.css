@@ -1466,6 +1466,15 @@ object {
     border: 3px solid #F58220;
     color: #F58220; }
 
+.sponsor-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+
 @media (min-width: 480px) {
   .page-our-sponsors .hentry {
     padding: 5rem; }
@@ -1498,7 +1507,7 @@ object {
     height: 58px;
     width: 263px;
     border-radius: 12px;
-    line-height: 50px;
+    line-height: 38px;
     font-size: 20px; }
     .page-our-sponsors .become-sponsor:hover {
       background-color: #F58220;

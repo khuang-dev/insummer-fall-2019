@@ -24,6 +24,11 @@
     }
 }
 
+.sponsor-img {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 // .sponsor-img {
 //     min-height: 300px;
 //     border: 1px solid black;
@@ -42,7 +47,7 @@
             color: $color__black;
             font-size: 13px;
             text-align: center;
-        }
+        }        
         .sponsors {        
             display: flex;
             justify-content: space-around;
@@ -65,7 +70,7 @@
             height: 58px;
             width: 263px;
             border-radius: 12px;
-            line-height: 50px;
+            line-height: 38px;
             font-size: 20px;
 
             &:hover {
