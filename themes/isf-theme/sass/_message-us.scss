@@ -9,9 +9,8 @@
   display: flex;
   flex-direction: column;
 }
-
+.contact-info-details,
 .mobile,
-// .phone-message-us,
 .general-inquiries,
 .media-inquiries,
 .adress-message-us {
@@ -127,7 +126,7 @@ iframe {
     .contact-us-title {
       padding-top: 0;
     }
-
+    .contact-info-details,
     .mobile,
     .general-inquiries,
     .media-inquiries,
@@ -135,14 +134,14 @@ iframe {
       padding-top: 2.5rem;
     }
   }
-
+  .contact-info-item,
   .phone-message-us,
   .gen-inquires,
   .med-inquires,
   .adr-messge-us {
     display: flex;
     width: 100%;
-    display: inherit;
+    // display: inherit;
   }
 
   .mobile-svg {
@@ -151,7 +150,7 @@ iframe {
   .phone-message-us {
     align-items: center;
   }
-
+  .contact-info-details,
   .mobile,
   .general-inquiries,
   .media-inquiries,

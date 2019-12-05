@@ -50,7 +50,7 @@ get_header(); ?>
 
 							?>
 
-
+<!-- 
 					<div class="phone-message-us">
 						<img class="mobile-svg"src="<?php echo get_stylesheet_directory_uri();?>/assets/01_Icons/SVG/Mobile.svg">
 						<a class="mobile">604-283-9172 </a>
@@ -76,7 +76,7 @@ get_header(); ?>
 						<img class="location-tag"src="<?php echo get_stylesheet_directory_uri();?>/assets/01_Icons/SVG/Location.svg">
 						<a class="adress-message-us">#201 - 1880 Fir Street Vancouver, B.C. V6J 3B1 </a>
 
-				   </div>
+				   </div> -->
 
 				   <div class="map-wrapper">
 					   <?php the_field('map_iframe'); ?>

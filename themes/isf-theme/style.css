@@ -918,6 +918,7 @@ object {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+.contact-info-details,
 .mobile,
 .general-inquiries,
 .media-inquiries,
@@ -1012,11 +1013,13 @@ iframe {
       padding-top: 3rem; }
     .icon-message-us-wrapper .contact-us-title {
       padding-top: 0; }
+    .icon-message-us-wrapper .contact-info-details,
     .icon-message-us-wrapper .mobile,
     .icon-message-us-wrapper .general-inquiries,
     .icon-message-us-wrapper .media-inquiries,
     .icon-message-us-wrapper .adress-message-us {
       padding-top: 2.5rem; }
+  .contact-info-item,
   .phone-message-us,
   .gen-inquires,
   .med-inquires,
@@ -1024,14 +1027,14 @@ iframe {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
-    display: inherit; }
+    width: 100%; }
   .mobile-svg {
     margin: unset; }
   .phone-message-us {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+  .contact-info-details,
   .mobile,
   .general-inquiries,
   .media-inquiries,
