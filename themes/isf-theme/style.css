@@ -1354,3 +1354,18 @@ iframe {
 .testimony-author,
 .author-title {
   text-align: center; }
+
+@media (min-width: 480px) {
+  .sponsors-author {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: -1rem;
+    margin-left: 50rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; } }

@@ -43,6 +43,15 @@
     text-align: center;
 }
 
+
 @include desktop {
-    
+  
+    .sponsors-author {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: -1rem;
+        margin-left: 50rem;
+        flex-flow: row wrap;
+    }
+
 }

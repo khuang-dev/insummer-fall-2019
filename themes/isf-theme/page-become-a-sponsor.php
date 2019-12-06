@@ -20,6 +20,7 @@ get_header(); ?>
 				<div class="entry-content">
 					
 					<div class="sponsor-thumbnail">
+						
 						<?php the_post_thumbnail() ?>
 						<div class="become_sponsor hide-mobile"><?php the_content(); ?></div>
 					</div>
@@ -33,10 +34,12 @@ get_header(); ?>
 
 							<li class="testimony"> 
 								<p class="testimony-quote"><?php the_sub_field('sponsor_testimony'); ?> </p>
-							
-								<p class="testimony-author"> <?php the_sub_field('testimony_author'); ?> </p>
 
-								<p class="author-title"> <?php the_sub_field('author_title'); ?> </p>
+								<div class="sponsors-author">								
+									<p class="testimony-author"> <?php the_sub_field('testimony_author'); ?> </p>
+
+									<p class="author-title"> <?php the_sub_field('author_title'); ?> </p>
+								</div>
 
 							</li>
 
@@ -65,5 +68,20 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
+	<!-- <php 
+	
+	if(is_page('become-a-sponsor')){
+			if ( has_post_thumbnail() ) { ?>
+				<section class="sponsor-img" style=" height: 100vh;
+				background:linear-gradient(180deg, rgba(0, 0, 0, 0.4) , rgba(0, 0, 0, 0.4)),
+				
+				url(<php echo the_post_thumbnail_url(); ?>); background-size:cover;background-position:50% 100%;">
+			<php
+				}
+			}
+			?> -->
+
+
 
 <?php get_footer(); ?>
