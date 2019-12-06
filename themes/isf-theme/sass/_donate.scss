@@ -33,14 +33,15 @@
   }
 }
 .donation-box {
-  height: 100px;
-  width: 100px;
+  justify-content: center;
+  height: 106px;
+  width: 66rem;
+  border: 1px solid #000;
+  display: flex;
 }
 
-// .first-name-field {
-// 	box-sizing: border-box;
-// 	height: 40px;
-// 	width: 400px;
-// 	border: 1px solid #191414;
-// 	background-color: #FFFFFF;
-// }
+.donation-first-last-name input {
+  box-sizing: border-box;
+  height: 40px;
+  width: 400px;
+}

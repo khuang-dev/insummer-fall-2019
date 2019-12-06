@@ -1193,8 +1193,21 @@ iframe {
     padding-left: 5px; }
 
 .donation-box {
-  height: 100px;
-  width: 100px; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 106px;
+  width: 66rem;
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.donation-first-last-name input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40px;
+  width: 400px; }
 
 .main-navigation {
   margin-top: 2rem; }
@@ -1545,9 +1558,6 @@ iframe {
   @media (min-width: 480px) {
     .hide-desktop {
       display: none; } }
-
-.gfield_label {
-  display: none; }
 
 .gform_fields {
   margin: 0;
