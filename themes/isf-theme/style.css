@@ -744,7 +744,7 @@ object {
   margin-top: 2rem; }
   @media (min-width: 480px) {
     .main-navigation {
-      height: 150px;
+      height: 75px;
       min-width: 1000px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -759,9 +759,9 @@ object {
         text-transform: none;
         font-weight: 600; }
         .main-navigation ul ul a {
-          margin: 0 2rem;
+          margin: 0 1.5rem;
           white-space: nowrap;
-          padding-top: 1.25rem; } }
+          padding-top: 0.8rem; } }
 
 .site-header {
   position: relative;
@@ -782,7 +782,8 @@ object {
               justify-content: center;
       position: relative; }
       .menu__primary a {
-        margin: 0 1.5rem; }
+        margin: 0 1rem;
+        white-space: nowrap; }
         .menu__primary a:hover {
           border-bottom: 2px #191414 solid;
           color: #191414;
@@ -905,8 +906,8 @@ object {
   display: none;
   width: 8rem;
   height: 20rem;
-  position: absolute;
-  top: 0px;
+  position: fixed;
+  top: 2.5rem;
   right: 0px; }
   .menu__hamburger .icon-cancel {
     font-size: 2rem;
@@ -974,6 +975,11 @@ object {
   width: 100%;
   height: 100%; }
 
+.menu-overlay-hamburger {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4));
+  z-index: 30; }
+
 .menu__primary-home a {
   font-size: 0;
   background-image: url("../../assets/05_Logos/ISF_Orange_Spiral.png");
@@ -988,12 +994,15 @@ object {
     border: none; }
 
 .externalform__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  display: none; }
+  @media (min-width: 480px) {
+    .externalform__header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
 
 .desktop__search-login-wrapper {
   display: -webkit-box;
@@ -1001,8 +1010,12 @@ object {
   display: flex; }
 
 .btn__donate {
-  width: 200px;
-  text-align: center; }
+  display: none !important; }
+  @media (min-width: 480px) {
+    .btn__donate {
+      display: block !important;
+      width: 200px;
+      text-align: center; } }
 
 /*--------------------------------------------------------------
 # Page Templates
@@ -1187,7 +1200,7 @@ iframe {
   margin-top: 2rem; }
   @media (min-width: 480px) {
     .main-navigation {
-      height: 150px;
+      height: 75px;
       min-width: 1000px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1202,9 +1215,9 @@ iframe {
         text-transform: none;
         font-weight: 600; }
         .main-navigation ul ul a {
-          margin: 0 2rem;
+          margin: 0 1.5rem;
           white-space: nowrap;
-          padding-top: 1.25rem; } }
+          padding-top: 0.8rem; } }
 
 .site-header {
   position: relative;
@@ -1225,7 +1238,8 @@ iframe {
               justify-content: center;
       position: relative; }
       .menu__primary a {
-        margin: 0 1.5rem; }
+        margin: 0 1rem;
+        white-space: nowrap; }
         .menu__primary a:hover {
           border-bottom: 2px #191414 solid;
           color: #191414;
@@ -1348,8 +1362,8 @@ iframe {
   display: none;
   width: 8rem;
   height: 20rem;
-  position: absolute;
-  top: 0px;
+  position: fixed;
+  top: 2.5rem;
   right: 0px; }
   .menu__hamburger .icon-cancel {
     font-size: 2rem;
@@ -1417,6 +1431,11 @@ iframe {
   width: 100%;
   height: 100%; }
 
+.menu-overlay-hamburger {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4));
+  z-index: 30; }
+
 .menu__primary-home a {
   font-size: 0;
   background-image: url("../../assets/05_Logos/ISF_Orange_Spiral.png");
@@ -1431,12 +1450,15 @@ iframe {
     border: none; }
 
 .externalform__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  display: none; }
+  @media (min-width: 480px) {
+    .externalform__header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
 
 .desktop__search-login-wrapper {
   display: -webkit-box;
@@ -1444,8 +1466,12 @@ iframe {
   display: flex; }
 
 .btn__donate {
-  width: 200px;
-  text-align: center; }
+  display: none !important; }
+  @media (min-width: 480px) {
+    .btn__donate {
+      display: block !important;
+      width: 200px;
+      text-align: center; } }
 
 .page-our-sponsors h1 {
   color: #191414;
