@@ -97,3 +97,16 @@ textarea {
   border: none;
   display: none;
 }
+.search__mobile {
+	@include desktop {
+		display: none;
+	}
+}
+.ginput_container_email {
+	width: 18rem;
+	position: relative;
+}
+.gform_button {
+	background: $btn__pink;
+	height: 40px;
+}

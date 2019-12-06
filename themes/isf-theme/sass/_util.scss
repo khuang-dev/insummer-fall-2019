@@ -12,3 +12,21 @@
         display: none;
     }
 }
+.gfield_label {
+    display: none;
+  }
+.gform_fields {
+    margin: 0;
+    padding: 0;
+}
+.gform_body {
+    display: inline-block;
+}
+.gform_footer {
+    display: inline-block;
+    position: absolute;
+    margin-right: 3rem;
+}
+.widget-title {
+    display: none;
+}

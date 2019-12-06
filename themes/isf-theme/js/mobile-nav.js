@@ -2,22 +2,71 @@
 
     const btnEvent = $('.btn__event');
     const btnGetInvolved = $('.btn__getinvolved');
-    const eventMenu = $('.menu__event');
-    const getInvolvedMenu = $('.menu__getinvolved');
-    // const hamburgerMe
+    const btnHamburger = $('.icon__hamburger');
+    const btnClose = $('.fa-times');
+    const menuEvent = $('.menu__event');
+    const menuGetInvolved = $('.menu__getinvolved');
+    const menuTitleEvent = $('.menu__event-wrapper h3')
+    const menuTitleGetInvolved = $('.menu__getinvolved-wrapper h3');
+    const menuHamburger = $('.menu__hamburger');
 
     btnEvent.on('click', function(event){
         event.preventDefault();
-        $(eventMenu).slideToggle(function(){
-            $(eventMenu).focus();
-        });
+        menuTitleEvent.css('font-weight', '600');
+        menuEvent.toggle();
+        $('.site').prepend('<div class="menu-overlay-event"></div>');
     });
-    // $(eventMenu).blur(function(){
-    //     $(eventMenu).slideToggle();
-    //     console.log('blurred');
-    // });
+
+    $(document).on('click', '.menu-overlay-event', function(){
+        removeActiveEvent();
+    });
+
     btnGetInvolved.on('click', function(event){
         event.preventDefault();
-        $(getInvolvedMenu).slideToggle();
+        menuTitleGetInvolved.css('font-weight', '600');
+        menuGetInvolved.toggle();
+        $('.site').prepend('<div class="menu-overlay-getinvolved"></div>');
+    });
+
+    $(document).on('click', '.menu-overlay-getinvolved', function(){
+        removeActiveGetInvolved();
+    });
+
+    btnHamburger.on('click', function(event){
+        event.preventDefault();
+        menuHamburger.toggle(200);
+
+        if( $('.menu-overlay-getinvolved').length > 0 ) {
+            removeActiveGetInvolved();
+        }
+
+        if( $('.menu-overlay-event').length > 0 ) {
+            removeActiveEvent();
+        }
+
+        $('.site').prepend('<div class="menu-overlay-hamburger"></div>');
     })
+    btnClose.on('click', function(event){
+        event.preventDefault();
+        menuHamburger.toggle();
+        $('.menu-overlay-hamburger').remove();
+    })
+
+    $(document).on('click', '.menu-overlay-hamburger', function(){
+        menuHamburger.toggle();
+        $('.menu-overlay-hamburger').remove();
+    });
+
+    function removeActiveGetInvolved() {
+        menuGetInvolved.toggle();
+        menuTitleGetInvolved.css('font-weight', '400');
+        $('.menu-overlay-getinvolved').remove();
+    }
+
+    function removeActiveEvent() {
+        menuEvent.toggle();
+        menuTitleEvent.css('font-weight', '400');
+        $('.menu-overlay-event').remove();
+    }
+
 })(jQuery);

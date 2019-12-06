@@ -23,13 +23,22 @@
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-branding">
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
+
+				<section class="externalform__header">
+						<a>Sign Up for Newsletter</a>
+						<div class="desktop__search-login-wrapper">
+						<span class="search__desktop"><?php get_search_form();?></span>
+						<a>Artist Login</a>
+						</div>
+					</section>
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
+					
 					<section class="externallink__header">
-						<?php get_search_form();?>
+						<span class="search__mobile"><?php get_search_form();?></span>
+
 						<div class="wrapper__social-media">
 							<a href="<?php the_field( 'facebook_url', 'options' ); ?>">
 								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebook">
@@ -46,17 +55,18 @@
 						</div>
 						<span>
 							<a>	
-								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Burger.svg" alt="icon-hamburger">
+								<img class="icon__header icon__hamburger" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Burger.svg" alt="icon-hamburger">
 							</a>
 						</span>
 					</section>
-					<a class= container__isflogo href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+
+					<a class="container__isflogo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 								<img class="isf-logo" src="<?php the_field( 'isf_logo' , 'option'); ?>" alt="isf-logo">
 							</a>
 					<span class="menu__primary"><!-- desktop navigation -->
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</span>
-					
+					<a class="btn__donate">DONATE</a>
 					<div class="menu__mobile"><!-- mobile navigations -->
 						<section class="menu__event-wrapper">
 							<h3 class="btn__event"><a>
@@ -75,9 +85,10 @@
 						</section>
 					</div>
 					
-					<span class="menu__hamburger"><!-- hamburger menu -->
+					<div class="menu__hamburger"><!-- hamburger menu -->
+						<a class="icon-cancel"><i class="fas fa-times"></i></a>
 						<?php wp_nav_menu( array( 'theme_location' => 'hamburger', 'menu_id' => 'hamburger' ) ); ?>
-					</span>
+					</div>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 
