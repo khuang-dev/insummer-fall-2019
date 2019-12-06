@@ -1,0 +1,45 @@
+.page-apply-here {
+  @include desktop {
+  }
+}
+.apply-here {
+  @include desktop {
+    max-width: 1100px;
+    margin: auto;
+  }
+}
+
+.apply-here .gform_title {
+  border-left: solid 8px $btn__pink;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  @include desktop {
+    font-size: 2.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+.volunteer-form {
+  li {
+    list-style-type: none;
+  }
+}
+
+.volunteer-form .gfield_label {
+  display: inline-block;
+}
+
+.first-name-volunteer,
+.name_last {
+  input {
+    width: 25rem;
+  }
+}
+
+.phone-volunteer,
+.email-form-volunteer {
+  input {
+    width: 30.0625rem;
+  }
+}

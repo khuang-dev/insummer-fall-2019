@@ -110,7 +110,7 @@ iframe {
 
   .contact-us-title {
     h3 {
-      border-left: solid 8px #ed1651;
+      border-left: solid 8px $btn__pink;
       border-bottom: unset;
       font-size: 2.5rem;
       padding-left: 1.5rem;
@@ -178,6 +178,8 @@ iframe {
     color: white;
     font-size: 24px;
   }
+
+  //END OF MESSAG US FORM
 
   .map-wrapper,
   iframe {
