@@ -24,6 +24,20 @@
   display: unset;
 }
 
+@include desktop {
+  .volunteer-form .ginput_complex {
+    display: flex;
+
+    .name_first {
+      width: 46%;
+    }
+    .name_last {
+      width: 54%;
+      padding-left: 4.5rem;
+    }
+  }
+}
+
 .volunteer-form {
   li {
     list-style-type: none;
@@ -43,7 +57,7 @@
 .first-name-volunteer,
 .name_last {
   input {
-    width: 25rem;
+    // width: 25rem;
   }
 }
 
@@ -52,6 +66,10 @@
   input {
     width: 30.0625rem;
   }
+}
+
+.phone-volunteer .ginput_complex {
+  display: flex;
 }
 
 .age-form-volunteer ul,

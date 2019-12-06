@@ -1631,6 +1631,17 @@ iframe {
 .volunteer-form .gform_body {
   display: unset; }
 
+@media (min-width: 480px) {
+  .volunteer-form .ginput_complex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .volunteer-form .ginput_complex .name_first {
+      width: 46%; }
+    .volunteer-form .ginput_complex .name_last {
+      width: 54%;
+      padding-left: 4.5rem; } }
+
 .volunteer-form li {
   list-style-type: none;
   line-height: 2.8rem; }
@@ -1642,13 +1653,14 @@ iframe {
 .volunteer-form .gfield_label {
   display: inline-block; }
 
-.first-name-volunteer input,
-.name_last input {
-  width: 25rem; }
-
 .phone-volunteer input,
 .email-form-volunteer input {
   width: 30.0625rem; }
+
+.phone-volunteer .ginput_complex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .age-form-volunteer ul,
 .gender-form-volunteer ul,
