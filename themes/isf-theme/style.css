@@ -1672,6 +1672,17 @@ iframe {
   height: 301px;
   width: 542px; }
 
+@media (min-width: 480px) {
+  .volunteer-form .gform_footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: unset;
+    margin-right: 0; } }
+
 .volunteer-form .gform_button {
   height: 58px;
   width: 263px;

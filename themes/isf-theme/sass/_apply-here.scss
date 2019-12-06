@@ -84,6 +84,15 @@
   width: 542px;
 }
 
+.volunteer-form .gform_footer {
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    position: unset;
+    margin-right: 0;
+  }
+}
+
 .volunteer-form .gform_button {
   height: 58px;
   width: 263px;
