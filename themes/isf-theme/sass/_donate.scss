@@ -23,6 +23,21 @@
 //   // margin: auto;
 // }
 
+.page-donate .content-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  main {
+    width: 80%;
+  }
+
+  // .gform_wrapper h3.gform_title {
+  //   display: none !important;
+  // }
+}
+
 .donate-title {
   padding: 2rem;
 
@@ -35,7 +50,7 @@
 .donation-box {
   justify-content: center;
   height: 106px;
-  width: 66rem;
+  // width: 66rem;
   border: 1px solid #000;
   display: flex;
 }
@@ -43,10 +58,18 @@
 .donation-first-last-name input {
   box-sizing: border-box;
   height: 40px;
-  width: 400px;
+  // width: 400px;
 }
 
 .donation-phone input {
   height: 40px;
-  width: 941px;
+  // width: 941px;
+}
+
+.donation-first-last-name .ginput_container {
+  display: flex;
+
+  span {
+    width: 100%;
+  }
 }
