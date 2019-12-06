@@ -9,11 +9,12 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main page-donate" role="main">
 		<div class ="donate-wrapper">
 
 		<div class="donate-title">
-                       <h3><?php the_title();?></h3> 
+					   <h3><?php the_title();?></h3> 
+					   <a class="donate-text"> We extend our heartfelt gratitude to our visionary circle of patrons for their commitment, support and generosity in making the festival what it is. </a>
 				</div>
 		</div>
 
