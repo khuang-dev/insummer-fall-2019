@@ -25,7 +25,7 @@ get_header(); ?>
 						<?php while(has_sub_field('about_membership')): ?>
 
 						
-							<h2><?php the_sub_field('members'); ?></h2>
+							<h1><?php the_sub_field('members'); ?></h1>
 							<p><?php the_sub_field('role_of_members'); ?></p>
 							
 

@@ -9,32 +9,30 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<?php the_post_thumbnail(); ?>
-			<?php the_field( 'banner_title' ); ?>
-			<?php the_field( 'banner_date' ); ?>
+
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
+
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
 					<?php the_content(); ?>
 
-					<?php if(get_field('year_events')): ?>
+					<?php if(get_field('history')): ?>
 
-						<?php while(has_sub_field('year_events')): ?>
 
-							<h1><?php the_sub_field('event_year'); ?></h1>
-							<p><?php the_sub_field('year_event_about'); ?></p>
-							
+						<?php while(has_sub_field('history')): ?>
+
+							<h1><?php the_sub_field('history_title'); ?> </h1>
+							<p><?php the_sub_field('history_content'); ?></p>
 
 						<?php endwhile; ?>
 
+
 						<?php endif; ?>
-					
-					
-					<?php
+											<?php
 						wp_link_pages( array(
 							'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
 							'after'  => '</div>',
