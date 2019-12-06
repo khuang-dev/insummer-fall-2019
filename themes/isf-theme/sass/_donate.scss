@@ -26,9 +26,21 @@
 .donate-title {
   padding: 2rem;
 
-h3 {
-  color: $color__black;
-  border-left: 8px solid $color__pink;
-  padding-left: 5px;
+  h3 {
+    color: $color__black;
+    border-left: 8px solid $color__pink;
+    padding-left: 5px;
+  }
 }
+.donation-box {
+  height: 100px;
+  width: 100px;
 }
+
+// .first-name-field {
+// 	box-sizing: border-box;
+// 	height: 40px;
+// 	width: 400px;
+// 	border: 1px solid #191414;
+// 	background-color: #FFFFFF;
+// }
