@@ -14,7 +14,7 @@
         event.preventDefault();
         menuTitleEvent.css('font-weight', '600');
         menuEvent.toggle();
-        $('.site').prepend('<div class="menu-overlay-event"></div>');
+        $('.menu-overlay-event').show();
     });
 
     $(document).on('click', '.menu-overlay-event', function(){
@@ -25,7 +25,8 @@
         event.preventDefault();
         menuTitleGetInvolved.css('font-weight', '600');
         menuGetInvolved.toggle();
-        $('.site').prepend('<div class="menu-overlay-getinvolved"></div>');
+        $('.menu-overlay-getinvolved').show();
+
     });
 
     $(document).on('click', '.menu-overlay-getinvolved', function(){
@@ -35,38 +36,39 @@
     btnHamburger.on('click', function(event){
         event.preventDefault();
         menuHamburger.toggle(200);
+        $('.menu-overlay-hamburger').show();
 
-        if( $('.menu-overlay-getinvolved').length > 0 ) {
-            removeActiveGetInvolved();
-        }
+    //     if( $('.menu-overlay-getinvolved').length > 0 ) {
+    //         removeActiveGetInvolved();
+    //     }
 
-        if( $('.menu-overlay-event').length > 0 ) {
-            removeActiveEvent();
-        }
+    //     if( $('.menu-overlay-event').length > 0 ) {
+    //         removeActiveEvent();
+    //     }
 
-        $('.site').prepend('<div class="menu-overlay-hamburger"></div>');
-    })
+    //     $('.site').prepend('<div class="menu-overlay-hamburger"></div>');
+    });
     btnClose.on('click', function(event){
         event.preventDefault();
         menuHamburger.toggle();
-        $('.menu-overlay-hamburger').remove();
+        $('.menu-overlay-hamburger').hide();
     })
 
     $(document).on('click', '.menu-overlay-hamburger', function(){
         menuHamburger.toggle();
-        $('.menu-overlay-hamburger').remove();
+        $('.menu-overlay-hamburger').hide();
     });
 
     function removeActiveGetInvolved() {
         menuGetInvolved.toggle();
         menuTitleGetInvolved.css('font-weight', '400');
-        $('.menu-overlay-getinvolved').remove();
+        $('.menu-overlay-getinvolved').hide();
     }
 
     function removeActiveEvent() {
         menuEvent.toggle();
         menuTitleEvent.css('font-weight', '400');
-        $('.menu-overlay-event').remove();
+        $('.menu-overlay-event').hide();
     }
 
 })(jQuery);

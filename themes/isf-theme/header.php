@@ -99,5 +99,7 @@
 					</div>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
-
+					<div class="menu-overlay-event"></div>
+					<div class="menu-overlay-getinvolved"></div>
+					<div class="menu-overlay-hamburger"></div>
 			<div id="content" class="site-content">

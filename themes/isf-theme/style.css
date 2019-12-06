@@ -472,13 +472,19 @@ textarea {
   .search__mobile {
     display: none; } }
 
-.ginput_container_email {
-  width: 18rem;
+.form__signup {
+  width: 100%;
   position: relative; }
-
-.gform_button {
-  background: #ed1651;
-  height: 40px; }
+  .form__signup .gform_heading h3 {
+    color: #ffffff; }
+  .form__signup .gform_body {
+    width: 80%; }
+  .form__signup .gform_button {
+    background: #ed1651;
+    height: 40px;
+    font-size: 0;
+    width: 20%;
+    background-image: url("../../assets/01_Icons/SVG/Signup.svg"); }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -936,7 +942,8 @@ object {
   height: 20rem;
   position: fixed;
   top: 2.5rem;
-  right: 0px; }
+  right: 0px;
+  z-index: 999; }
   .menu__hamburger .icon-cancel {
     font-size: 2rem;
     color: #ed1651;
@@ -1006,12 +1013,12 @@ object {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: none; }
 
 .menu-overlay-hamburger {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4));
-  z-index: 30; }
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4)); }
 
 .menu__primary-home a {
   font-size: 0;
@@ -1433,7 +1440,8 @@ iframe {
   height: 20rem;
   position: fixed;
   top: 2.5rem;
-  right: 0px; }
+  right: 0px;
+  z-index: 999; }
   .menu__hamburger .icon-cancel {
     font-size: 2rem;
     color: #ed1651;
@@ -1503,12 +1511,12 @@ iframe {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: none; }
 
 .menu-overlay-hamburger {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4));
-  z-index: 30; }
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4)); }
 
 .menu__primary-home a {
   font-size: 0;

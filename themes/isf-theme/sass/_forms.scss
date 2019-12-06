@@ -98,15 +98,26 @@ textarea {
   display: none;
 }
 .search__mobile {
-	@include desktop {
-		display: none;
-	}
+  @include desktop {
+    display: none;
+  }
 }
-.ginput_container_email {
-	width: 18rem;
+.form__signup {
+	width: 100%;
 	position: relative;
-}
-.gform_button {
-	background: $btn__pink;
+   .gform_heading {
+	   h3 {
+	   color: $color__white;
+   }
+   }
+  .gform_body {
+	  width: 80%;
+  }
+  .gform_button {
+    background: $btn__pink;
 	height: 40px;
+	font-size: 0;
+	width: 20%;
+	background-image: url('../../assets/01_Icons/SVG/Signup.svg');
+  }
 }
