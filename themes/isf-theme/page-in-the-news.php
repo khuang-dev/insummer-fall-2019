@@ -19,6 +19,7 @@ get_header(); ?>
 
 				<div class="entry-content">
 
+				
 				<?php if(get_field('news_festivals')): ?>
 
 					<ul>
@@ -26,7 +27,7 @@ get_header(); ?>
 					<?php while(has_sub_field('news_festivals')): ?>
 
 						<li>
-							<p> <?php the_sub_field('img_news'); ?></p>
+							<p><?php the_sub_field('img_news'); ?></p>
 							<p><?php the_sub_field('season_news'); ?></p>
 							<p><?php the_sub_field('news_source'); ?></p>
 						</li>
@@ -36,7 +37,7 @@ get_header(); ?>
 
 					</ul>
 
-				<?php endif; ?>
+				<?php endif; ?> 
 					
 					<!-- <php the_content(); ?> -->
 					<?php
