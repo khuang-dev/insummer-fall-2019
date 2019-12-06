@@ -9,33 +9,41 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<?php the_post_thumbnail(); ?>
-        	<?php the_field( 'banner_title' ); ?>
-        	<?php the_field( 'banner_date' ); ?>
+
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
 					<?php the_content(); ?>
 
-					<?php if(get_field('isf_events')): ?>
+					<?php if(get_field('about_membership')): ?>
+
+						<?php while(has_sub_field('about_membership')): ?>
 
 						
-
-						<?php while(has_sub_field('isf_events')): ?>
-
-								<h2><?php the_sub_field('current_event'); ?></h2>
-								<p><?php the_sub_field('event_information'); ?></p>
+							<h2><?php the_sub_field('members'); ?></h2>
+							<p><?php the_sub_field('role_of_members'); ?></p>
 							
 
 						<?php endwhile; ?>
 
 						<?php endif; ?>
 
+						<?php if(get_field('membership_package')): ?>
+
+							<?php while(has_sub_field('membership_package')): ?>
+
+								<h3><?php the_sub_field('membership_title'); ?></h3>
+								<p><?php the_sub_field('membership_price'); ?></p>
+								<p><?php the_sub_field('membership_information'); ?></p>
+
+							<?php endwhile; ?>
+
+							<?php endif; ?>
 
 
 					<?php
