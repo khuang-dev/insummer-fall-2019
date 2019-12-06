@@ -1354,3 +1354,14 @@ iframe {
 .testimony-author,
 .author-title {
   text-align: center; }
+
+.donate-title {
+  padding: 2rem; }
+  .donate-title h3 {
+    color: #191414;
+    border-left: 8px solid #ed1651;
+    padding-left: 5px; }
+
+.donation-box {
+  height: 100px;
+  width: 100px; }
