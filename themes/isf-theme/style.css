@@ -1008,6 +1008,15 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+@media (min-width: 480px) {
+  .message-us-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+
 .contact-us-title h3 {
   border-bottom: solid 2px #ed1651;
   display: -webkit-box;
@@ -1097,6 +1106,9 @@ iframe {
 
 @media (min-width: 480px) {
   .message-us-page {
+<<<<<<< HEAD
+    max-width: 1100px;
+=======
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1104,6 +1116,7 @@ iframe {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .site-main {
+>>>>>>> f99f72f31ff0c4e777850bdd726d1268f85567f6
     margin: auto; }
   .contact-us-title h3 {
     border-left: solid 8px #ed1651;
@@ -1115,7 +1128,8 @@ iframe {
         -ms-flex-pack: unset;
             justify-content: unset; }
   .post-19 h3 {
-    padding-top: 3rem; }
+    padding-top: 3rem;
+    border-left: none; }
   .icon-message-us-wrapper {
     width: 50%;
     line-height: 4rem;
