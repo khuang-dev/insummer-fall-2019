@@ -1,3 +1,10 @@
+.message-us-page {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .contact-us-title {
   h3 {
     border-bottom: solid 2px #ed1651;
@@ -92,12 +99,12 @@ iframe {
 
 @include desktop {
   .message-us-page {
+    max-width: 1100px;
     display: flex;
     justify-content: space-between;
   }
 
   .site-main {
-    max-width: 1100px;
     margin: auto;
   }
 
@@ -114,6 +121,7 @@ iframe {
 
   .post-19 h3 {
     padding-top: 3rem;
+    border-left: none;
   }
 
   .icon-message-us-wrapper {

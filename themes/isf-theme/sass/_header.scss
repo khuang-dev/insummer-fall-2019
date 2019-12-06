@@ -1,7 +1,10 @@
 .main-navigation {
+    margin-top: 2rem;
   @include desktop {
     height: 150px;
     min-width: 1000px;
+    display: flex;
+    justify-content: space-between;
     ul ul {
       display: flex;
       text-transform: none;
@@ -9,20 +12,26 @@
       a {
         margin: 0 2rem;
         white-space: nowrap;
+        padding-top: 1.25rem;
       }
     }
   }
+}
+.site-header {
+    position: relative;
+    z-index: 30;
 }
 
 .menu__primary {
   text-transform: uppercase;
   display: none;
+  flex-basis: 60%;
   @include desktop {
     display: flex;
     justify-content: center;
     position: relative;
     a {
-      margin: 0 2rem;
+      margin: 0 1.5rem;
       &:hover {
         border-bottom: 2px $color__black solid;
         color: $color__black;
@@ -49,12 +58,10 @@
   text-align: center;
   h3 {
     margin: 0;
-
     border-top: 2px solid $color__grey;
     margin-top: 0.5rem;
     margin-bottom: 0;
     padding: 0.5rem 0;
-
     text-transform: uppercase;
     font-weight: 400;
     font-size: 1rem;
@@ -66,6 +73,7 @@
     }
   }
 }
+
 .menu__event {
   text-transform: uppercase;
   display: none;
@@ -76,6 +84,9 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    @include desktop {
+        display: none;
+    }
     a {
       padding: 0.5rem 0;
       text-transform: none;
@@ -122,6 +133,9 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    @include desktop {
+        display: none;
+    }
     a {
       padding: 0.5rem 0;
       text-transform: none;
@@ -143,50 +157,105 @@
 }
 .menu__hamburger {
   text-transform: uppercase;
-
   display: none;
-
-  text-transform: uppercase;
-  display: none;
-
-  //   display: none;
   width: 8rem;
   height: 20rem;
+position: absolute;
+top: 0px;
+right: 0px;
+  .icon-cancel {
+      font-size: 2rem;
+      color: $bg__pink;
+      position: absolute;
+      right: 1rem;
+      top: 1.3rem;
+      z-index: 10;
+  }
   ul {
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-    background: $bg__champagne;
-    width: 15rem;
-    height: 100vh;
-    position: absolute;
-    right: 0;
-    top: 0;
-    li {
-      margin: 1rem auto 1rem auto;
-      a {
-        &:hover {
-          font-weight: 600;
-        }
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      background: $bg__champagne;
+      width: 50vw;
+      height: 100vh;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding-top: 3rem;
+      li {
+          margin: 1rem auto 1rem auto;
+          a {
+            &:hover {
+                font-weight: 600;
+            }
+          }
+
       }
     }
   }
-}
+
 .wrapper__social-media {
   display: flex;
+  width: 200px;
   img {
     margin: 0 0.75rem;
   }
 }
 .externallink__header {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem;
+    @include desktop {
+        margin: 0;
+    }
 }
 .isf-logo {
-  display: block;
-  margin: 1.25rem auto;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-bottom: 0.75rem;
+    display: block;
+    margin: 1.25rem auto;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.75rem;
+    @include desktop {
+        display: none;
+    }
+}
+.menu-overlay-event {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.menu-overlay-getinvolved {
+    @extend .menu-overlay-event;
+}
+.menu-overlay-hamburger {
+    @extend .menu-overlay-event;
+}
+.menu__primary-home {
+    a {
+        font-size: 0;
+        background-image: url('../../assets/05_Logos/ISF_Orange_Spiral.png');
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: contain;
+        display: block;
+        transform: translateY(-1rem);
+        &:hover {
+            font-weight: normal;
+            border: none;
+        }
+    }
+}
+.externalform__header {
+    display: flex;
+    justify-content: space-between;
+}
+.desktop__search-login-wrapper {
+    display: flex;
+}
+.btn__donate {
+    width: 200px;
+    text-align: center;
 }
