@@ -252,9 +252,21 @@ h1, h2, h4 {
 h3, h5 {
   color: #191414; }
 
+.h3__white {
+  color: #ffffff; }
+
+.h3__black {
+  color: #191414; }
+
 /* Copy */
 p {
   margin-bottom: 1.5rem; }
+
+.p__white {
+  color: #ffffff; }
+
+.p__black {
+  color: #191414; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -459,6 +471,14 @@ textarea {
 @media (min-width: 480px) {
   .search__mobile {
     display: none; } }
+
+.ginput_container_email {
+  width: 18rem;
+  position: relative; }
+
+.gform_button {
+  background: #ed1651;
+  height: 40px; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -717,7 +737,8 @@ object {
       -ms-flex-direction: column;
           flex-direction: column; }
   .link__footer a {
-    font-family: "Montserrat", sans-serif; }
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff; }
 
 .main-navigation {
   margin-top: 2rem; }
@@ -1143,11 +1164,10 @@ iframe {
 
 .donate-title {
   padding: 2rem; }
-
-h3 {
-  color: #191414;
-  border-left: 8px solid #ed1651;
-  padding-left: 5px; }
+  .donate-title h3 {
+    color: #191414;
+    border-left: 8px solid #ed1651;
+    padding-left: 5px; }
 
 .main-navigation {
   margin-top: 2rem; }
@@ -1485,6 +1505,24 @@ h3 {
   @media (min-width: 480px) {
     .hide-desktop {
       display: none; } }
+
+.gfield_label {
+  display: none; }
+
+.gform_fields {
+  margin: 0;
+  padding: 0; }
+
+.gform_body {
+  display: inline-block; }
+
+.gform_footer {
+  display: inline-block;
+  position: absolute;
+  margin-right: 3rem; }
+
+.widget-title {
+  display: none; }
 
 .page-become-a-sponsor h1 {
   color: #191414;
