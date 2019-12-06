@@ -14,6 +14,17 @@ get_header(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
+				<?php
+					if( have_rows('banners') ):
+						while ( have_rows('banners') ) : the_row(); ?>
+							<?php the_sub_field('banner_title'); ?>
+							<?php the_sub_field('banner_description'); ?>
+							<img src="<?php the_sub_field('image'); ?>">
+						<?php endwhile;
+					else :
+						// no rows found
+					endif;
+				?>
 					
 				</header><!-- .entry-header -->
 
