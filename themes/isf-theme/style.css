@@ -1109,10 +1109,9 @@ iframe {
 
 .send-us-message-form_wrapper li {
   list-style-type: none; }
-
-.send-us-message-form_wrapper ul {
-  margin: 0;
-  padding: 0px; }
+  .send-us-message-form_wrapper li ul {
+    margin: 0;
+    padding: 0px; }
 
 .contact-info-loop .contact-info-details a {
   color: red; }
@@ -1629,8 +1628,16 @@ iframe {
       font-size: 2.5rem;
       padding-left: 1.5rem; } }
 
+.volunteer-form .gform_body {
+  display: unset; }
+
 .volunteer-form li {
-  list-style-type: none; }
+  list-style-type: none;
+  line-height: 2.8rem; }
+
+.volunteer-form .gform_fields {
+  margin-left: 4rem;
+  padding: unset; }
 
 .volunteer-form .gfield_label {
   display: inline-block; }
@@ -1642,3 +1649,22 @@ iframe {
 .phone-volunteer input,
 .email-form-volunteer input {
   width: 30.0625rem; }
+
+.age-form-volunteer ul,
+.gender-form-volunteer ul,
+.checkbox-volunteer-form ul {
+  padding: 0;
+  line-height: 1.3125rem; }
+
+.tell-us-form-volunteer {
+  height: 301px;
+  width: 542px; }
+
+.volunteer-form .gform_button {
+  height: 58px;
+  width: 263px;
+  border-radius: 12px;
+  background-color: #ed1651;
+  color: white;
+  font-size: 24px;
+  border: #ed1651; }
