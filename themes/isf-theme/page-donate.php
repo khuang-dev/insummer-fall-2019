@@ -19,7 +19,7 @@ get_header(); ?>
 		</div>
 
 		<div class="donation-box">
-		<img class="donate1-svg"src="<?php echo get_stylesheet_directory_uri();?>/assets/01_Icons/svg/donate1.svg">
+		<img class="donate1-svg"src="<?php echo get_stylesheet_directory_uri();?>/assets/01_Icons/SVG/Donate1.svg">
 		<a class="donation-amount">Donation Amount </a>
 		</div>
 	
@@ -36,5 +36,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+	<?php // get_sidebar(); ?>
 <?php get_footer(); ?>
