@@ -33,6 +33,9 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    @include desktop {
+        flex-wrap: nowrap;
+    }
 }
 .site-header {
     position: relative;

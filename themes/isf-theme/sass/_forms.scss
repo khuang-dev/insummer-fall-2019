@@ -104,7 +104,22 @@ textarea {
 }
 .form__signup {
 	width: 100%;
+	max-width: 480px;
 	position: relative;
+	input[type=email] {
+		border: none;
+	}
+	input[type=text]{
+		border: none;
+		outline: none;
+		&::placeholder {
+			padding-left: 1rem;
+		}
+	}
+	input[type=submit] {
+		box-shadow: none;
+		border: none;
+	}
    .gform_heading {
 	   h3 {
 	   color: $color__white;
@@ -113,11 +128,16 @@ textarea {
   .gform_body {
 	  width: 80%;
   }
+  .gform_footer {
+	  width: 20%;
+  }
   .gform_button {
     background: $btn__pink;
 	height: 40px;
 	font-size: 0;
-	width: 20%;
+	width: 100%;
 	background-image: url('../../assets/01_Icons/SVG/Signup.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
   }
 }
