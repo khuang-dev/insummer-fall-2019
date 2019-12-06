@@ -100,6 +100,11 @@ iframe {
 @include desktop {
   .message-us-page {
     max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site-main {
     margin: auto;
   }
 
