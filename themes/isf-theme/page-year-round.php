@@ -25,8 +25,8 @@ get_header(); ?>
 
 						<?php while(has_sub_field('year_events')): ?>
 
-							<?php the_sub_field('event_year'); ?>
-							<?php the_sub_field('year_event_about'); ?>
+							<h2><?php the_sub_field('event_year'); ?></h2>
+							<p><?php the_sub_field('year_event_about'); ?></p>
 							
 
 						<?php endwhile; ?>
