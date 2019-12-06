@@ -12,9 +12,6 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-<<<<<<< HEAD
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
-=======
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
 					
@@ -60,7 +57,6 @@ get_header(); ?>
 
 
 				<!-- <php get_template_part( 'template-parts/content', 'page' ); ?> -->
->>>>>>> 6845bb51ae0914b42e75b038666c1b141a2c44ed
 
 			<?php endwhile; // End of the loop. ?>
 
