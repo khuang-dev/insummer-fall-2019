@@ -1106,9 +1106,7 @@ iframe {
 
 @media (min-width: 480px) {
   .message-us-page {
-<<<<<<< HEAD
     max-width: 1100px;
-=======
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1116,7 +1114,6 @@ iframe {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .site-main {
->>>>>>> f99f72f31ff0c4e777850bdd726d1268f85567f6
     margin: auto; }
   .contact-us-title h3 {
     border-left: solid 8px #ed1651;
@@ -1181,6 +1178,10 @@ iframe {
     color: #191414;
     border-left: 8px solid #ed1651;
     padding-left: 5px; }
+
+.donation-box {
+  height: 100px;
+  width: 100px; }
 
 .main-navigation {
   margin-top: 2rem; }
@@ -1586,10 +1587,3 @@ iframe {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap; } }
-
-.donate-title {
-  padding: 2rem; }
-  .donate-title h3 {
-    color: #191414;
-    border-left: 8px solid #ed1651;
-    padding-left: 5px; }
