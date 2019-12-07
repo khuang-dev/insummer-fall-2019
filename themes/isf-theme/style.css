@@ -1932,11 +1932,3 @@ iframe {
   color: white;
   font-size: 24px;
   border: #ed1651; }
-
-.btn__round-orange {
-  border: #f58220 3px solid;
-  border-radius: 50px;
-  padding: 0.25rem 3rem; }
-  .btn__round-orange:hover {
-    background: #f58220;
-    color: white; }
