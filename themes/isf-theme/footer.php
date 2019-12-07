@@ -11,8 +11,8 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info content__footer">
+				<div class="icon__scroll-up-bg"><a><i class="fas fa-chevron-up icon__scroll-up"></i></a></div>
 				<?php dynamic_sidebar( 'footer-1' ); ?>
-				<?php do_shortcode('[gravityform id=1]');?>
 				<div class="wrapper__social-media">
 							<a href="<?php the_field( 'facebook_url', 'options' ); ?>">
 								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebook">
@@ -42,7 +42,7 @@
 					<p class="p__white"><?php the_field('additional_information', 'option'); ?></p>
 
 				</div><!-- .site-info -->
-				<div class="copyright p__white">© 2017 | All rights reserved.</div>
+				<p class="copyright p__white">© 2017 | All rights reserved.</p>
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 

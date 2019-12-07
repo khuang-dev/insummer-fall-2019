@@ -29,7 +29,9 @@
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
-					
+					<div class="menu-overlay-event"></div>
+					<div class="menu-overlay-getinvolved"></div>
+					<div class="menu-overlay-hamburger"></div>
 
 					<section class="wrapper__desktop-header">
 					<div class="externalform__header">
@@ -99,7 +101,5 @@
 					</div>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
-					<div class="menu-overlay-event"></div>
-					<div class="menu-overlay-getinvolved"></div>
-					<div class="menu-overlay-hamburger"></div>
+
 			<div id="content" class="site-content">
