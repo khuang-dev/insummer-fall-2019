@@ -7,13 +7,24 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area page-membership">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
+				<?php
+					if( have_rows('banners') ):
+						while ( have_rows('banners') ) : the_row(); ?>
+							<?php the_sub_field('banner_title'); ?>
+							<?php the_sub_field('banner_description'); ?>
+							<img src="<?php the_sub_field('image'); ?>">
+						<?php endwhile;
+					else :
+						// no rows found
+					endif;
+				?>
 					
 				</header><!-- .entry-header -->
 
@@ -25,8 +36,13 @@ get_header(); ?>
 						<?php while(has_sub_field('about_membership')): ?>
 
 						
+<<<<<<< HEAD
 							<h1><?php the_sub_field('members'); ?></h1>
 							<?php the_sub_field('role_of_members'); ?>
+=======
+							<h2><?php the_sub_field('members'); ?></h2>
+							<p class="member-text"><?php the_sub_field('role_of_members'); ?></p>
+>>>>>>> a744a398f0cc8b4ffe7fcb6aa05a378e44d549e6
 							
 
 						<?php endwhile; ?>
@@ -63,4 +79,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

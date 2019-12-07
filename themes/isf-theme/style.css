@@ -1109,10 +1109,9 @@ iframe {
 
 .send-us-message-form_wrapper li {
   list-style-type: none; }
-
-.send-us-message-form_wrapper ul {
-  margin: 0;
-  padding: 0px; }
+  .send-us-message-form_wrapper li ul {
+    margin: 0;
+    padding: 0px; }
 
 .contact-info-loop .contact-info-details a {
   color: red; }
@@ -1185,6 +1184,21 @@ iframe {
     width: 100%;
     max-width: 500px; } }
 
+.page-donate .content-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%; }
+  .page-donate .content-area main {
+    width: 80%; }
+
 .donate-title {
   padding: 2rem; }
   .donate-title h3 {
@@ -1193,8 +1207,29 @@ iframe {
     padding-left: 5px; }
 
 .donation-box {
-  height: 100px;
-  width: 100px; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 106px;
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.donation-first-last-name input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40px; }
+
+.donation-phone input {
+  height: 40px; }
+
+.donation-first-last-name .ginput_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .donation-first-last-name .ginput_container span {
+    width: 100%; }
 
 .main-navigation {
   margin-top: 2rem; }
@@ -1546,9 +1581,6 @@ iframe {
     .hide-desktop {
       display: none; } }
 
-.gfield_label {
-  display: none; }
-
 .gform_fields {
   margin: 0;
   padding: 0; }
@@ -1613,3 +1645,99 @@ iframe {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap; } }
+
+.page-membership .entry-content {
+  margin: 0 12rem; }
+  .page-membership .entry-content h2 {
+    color: #191414;
+    border-left: 8px solid #ed1651;
+    padding-left: 1.5rem; }
+
+@media (min-width: 480px) {
+  .apply-here {
+    max-width: 1100px;
+    margin: auto; } }
+
+.apply-here .gform_title {
+  border-left: solid 8px #ed1651;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-size: 18px; }
+  @media (min-width: 480px) {
+    .apply-here .gform_title {
+      font-size: 2.5rem;
+      padding-left: 1.5rem; } }
+
+.volunteer-form .gform_body {
+  display: unset; }
+
+@media (min-width: 480px) {
+  .volunteer-form .ginput_complex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .volunteer-form .ginput_complex .name_first {
+      width: 46%; }
+    .volunteer-form .ginput_complex .name_last {
+      width: 54%;
+      padding-left: 4.5rem; } }
+
+.volunteer-form li {
+  list-style-type: none;
+  line-height: 2.8rem; }
+
+.volunteer-form .gform_fields {
+  margin-left: 4rem;
+  padding: unset; }
+
+.volunteer-form .gfield_label {
+  display: inline-block; }
+
+.volunteer-form .name_last label,
+.volunteer-form .name_first label,
+.volunteer-form .age-form-volunteer .gfield_label,
+.volunteer-form .gender-form-volunteer .gfield_label,
+.volunteer-form .tell-us-form-volunteer .gfield_label {
+  font-weight: bold; }
+
+.volunteer-form textarea {
+  height: 16.875rem; }
+
+.phone-volunteer input,
+.email-form-volunteer input {
+  width: 30.0625rem; }
+
+.phone-volunteer .ginput_complex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.age-form-volunteer ul,
+.gender-form-volunteer ul,
+.checkbox-volunteer-form ul {
+  padding: 0;
+  line-height: 1.3125rem; }
+
+.tell-us-form-volunteer {
+  height: 301px;
+  width: 542px; }
+
+@media (min-width: 480px) {
+  .volunteer-form .gform_footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: unset;
+    margin-right: 0; } }
+
+.volunteer-form .gform_button {
+  height: 58px;
+  width: 263px;
+  border-radius: 12px;
+  background-color: #ed1651;
+  color: white;
+  font-size: 24px;
+  border: #ed1651; }
