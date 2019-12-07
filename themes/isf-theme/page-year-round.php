@@ -21,6 +21,7 @@ get_header(); ?>
 				<div class="entry-content">
 					<?php the_content(); ?>
 
+					<div class="year-events">
 					<?php if(get_field('year_events')): ?>
 
 						<?php while(has_sub_field('year_events')): ?>
@@ -32,6 +33,7 @@ get_header(); ?>
 						<?php endwhile; ?>
 
 						<?php endif; ?>
+						</div>
 					
 					
 					<?php
