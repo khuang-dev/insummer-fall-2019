@@ -38,14 +38,16 @@
 						<a class="link__header-signup">Sign Up for Newsletter</a>
 						<div class="desktop__search-login-wrapper">
 						<span class="search__desktop"><?php get_search_form();?></span>
+						<img class="icon__header btn__search-desktop" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Search.svg" alt="icon-search">
 						<a class="link__header-login">Artist Login</a>
 						</div>
 					</div>
 					<div class="wrapper__primary-menu">
 					<div class="externallink__header">
+						<span class="searchbar btn__search-mobile"><?php get_search_form();?></span>
 						<span class="search__mobile"><?php get_search_form();?></span>
 
-						<div class="wrapper__social-media">
+						<div class="wrapper__social-media search-toggle">
 							<a href="<?php the_field( 'facebook_url', 'options' ); ?>">
 								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebook">
 							</a>
@@ -61,7 +63,7 @@
 						</div>
 						<span>
 							<a>	
-								<img class="icon__header icon__hamburger" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Burger.svg" alt="icon-hamburger">
+								<img class="icon__header icon__hamburger search-toggle" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Burger.svg" alt="icon-hamburger">
 							</a>
 						</span>
 					</div>
@@ -76,7 +78,6 @@
 					</div>
 					</section>
 					
-
 					<div class="menu__mobile"><!-- mobile navigations -->
 						<section class="menu__event-wrapper">
 							<h3 class="btn__event"><a>

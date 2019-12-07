@@ -38,9 +38,9 @@
 						<a style="color: white;">In the News</a>
 						<a style="color: white;">Contact Us</a>
 						
-						<a><img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Phone.svg" alt="icon-phone">
+						<a><img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/white-icon/Phone.png" alt="icon-phone">
 							<?php the_field('phone_number', 'option'); ?></a>
-						<a><img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Signup.svg" alt="icon-envelope">
+						<a><img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/white-icon/Mail.png" alt="icon-envelope">
 							<?php the_field('email_link', 'option'); ?></a>
 					</span>
 					</section>	
