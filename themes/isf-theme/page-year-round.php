@@ -22,17 +22,17 @@ get_header(); ?>
 					<?php the_content(); ?>
 
 					<div class="year-events">
-					<?php if(get_field('year_events')): ?>
+						<?php if(get_field('year_events')): ?>
 
-						<?php while(has_sub_field('year_events')): ?>
+							<?php while(has_sub_field('year_events')): ?>
 
-							<h1><?php the_sub_field('event_year'); ?></h1>
-							<?php the_sub_field('year_event_about'); ?>
-							
+								<h1><?php the_sub_field('event_year'); ?></h1>
+								<?php the_sub_field('year_event_about'); ?>
+								
 
-						<?php endwhile; ?>
+							<?php endwhile; ?>
 
-						<?php endif; ?>
+							<?php endif; ?>
 						</div>
 					
 					
