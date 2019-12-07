@@ -1,0 +1,116 @@
+.page-apply-here {
+  @include desktop {
+  }
+}
+.apply-here {
+  @include desktop {
+    max-width: 1100px;
+    margin: auto;
+  }
+}
+
+.apply-here .gform_title {
+  border-left: solid 8px $btn__pink;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  @include desktop {
+    font-size: 2.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+.volunteer-form .gform_body {
+  display: unset;
+}
+
+@include desktop {
+  .volunteer-form .ginput_complex {
+    display: flex;
+
+    .name_first {
+      width: 46%;
+    }
+    .name_last {
+      width: 54%;
+      padding-left: 4.5rem;
+    }
+  }
+}
+
+.volunteer-form {
+  li {
+    list-style-type: none;
+    line-height: 2.8rem;
+  }
+}
+
+.volunteer-form .gform_fields {
+  margin-left: 4rem;
+  padding: unset;
+}
+
+.volunteer-form .gfield_label {
+  display: inline-block;
+}
+
+.volunteer-form {
+  .name_last label,
+  .name_first label,
+  .age-form-volunteer .gfield_label,
+  .gender-form-volunteer .gfield_label,
+  .tell-us-form-volunteer .gfield_label {
+    font-weight: bold;
+  }
+  textarea {
+    height: 16.875rem;
+  }
+}
+.first-name-volunteer,
+.name_last {
+  input {
+    // width: 25rem;
+  }
+}
+
+.phone-volunteer,
+.email-form-volunteer {
+  input {
+    width: 30.0625rem;
+  }
+}
+
+.phone-volunteer .ginput_complex {
+  display: flex;
+}
+
+.age-form-volunteer ul,
+.gender-form-volunteer ul,
+.checkbox-volunteer-form ul {
+  padding: 0;
+  line-height: 1.3125rem;
+}
+
+.tell-us-form-volunteer {
+  height: 301px;
+  width: 542px;
+}
+
+.volunteer-form .gform_footer {
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    position: unset;
+    margin-right: 0;
+  }
+}
+
+.volunteer-form .gform_button {
+  height: 58px;
+  width: 263px;
+  border-radius: 12px;
+  background-color: #ed1651;
+  color: white;
+  font-size: 24px;
+  border: $btn__pink;
+}
