@@ -22,58 +22,56 @@ get_header(); ?>
 				<div class="entry-content">
 					<?php the_content(); ?>
 
-					<?php
-
-						// check if the repeater field has rows of data
-						if( have_rows('accessibility') ):
-
-							// loop through the rows of data
-							while ( have_rows('accessibility') ) : the_row();
-							?>
-
-							<h1><?php echo the_sub_field('title_accessibility');?></h1>
-							<img src="<?php the_sub_field('image_accessibility');?>" />
-							<p><?php the_sub_field('contact_information');?></p>
-
-							<?php
-							endwhile;
-
-						else :
-							// no rows found
-						endif;
-
-						?>
-
+					<div class="accessibility">
 						<?php
+							if( have_rows('accessibility') ):
 
-						// check if the repeater field has rows of data
-						if( have_rows('about_accessibility') ):
+								while ( have_rows('accessibility') ) : the_row();
+								?>
 
-							// loop through the rows of data
-							while ( have_rows('about_accessibility') ) : the_row();
+								<h1><?php echo the_sub_field('title_accessibility');?></h1>
+								<img src="<?php the_sub_field('image_accessibility');?>" />
+								<p><?php the_sub_field('contact_information');?></p>
+
+								<?php
+								endwhile;
+
+							else :
+								// no rows found
+							endif;
+
 							?>
-							<img src="<?php the_sub_field('accessibility_image'); ?>" ?>
-							<h3><?php the_sub_field('information_title'); ?></h3>
-							<p><?php the_sub_field('information_details'); ?></p>
+					</div>
 
-
+					<div class="about-accessibility1">
 							<?php
 
-							endwhile;
-						else :
-							// no rows found
-						endif;
+							if( have_rows('about_accessibility') ):
 
-						?>
+								while ( have_rows('about_accessibility') ) : the_row();
+								?>
+								<img src="<?php the_sub_field('accessibility_image'); ?>" ?>
+								<h3><?php the_sub_field('information_title'); ?></h3>
+								<p><?php the_sub_field('information_details'); ?></p>
+
+
+								<?php
+
+								endwhile;
+							else :
+								// no rows found
+							endif;
+
+							?>
+					</div>
 
 						<img src="<?php echo get_field ('image_file')?> "/>
 
+					<div class="about-accessibility2">
 						<?php
 
-							// check if the repeater field has rows of data
 							if( have_rows('about_accessibility_2') ):
 
-								// loop through the rows of data
 								while ( have_rows('about_accessibility_2') ) : the_row();
 								?>
 								<img src="<?php the_sub_field('accessibility_image'); ?>" ?>
@@ -89,6 +87,7 @@ get_header(); ?>
 							endif;
 
 							?>
+					</div>
 
 
 					<?php

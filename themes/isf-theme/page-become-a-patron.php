@@ -52,7 +52,7 @@ get_header(); ?>
 								// no rows found
 							endif;
 							?>
-							</div>
+						</div>
 
 					<?php
 						wp_link_pages( array(
