@@ -1829,17 +1829,6 @@ iframe {
         -ms-flex-flow: row wrap;
             flex-flow: row wrap; } }
 
-<<<<<<< HEAD
-=======
-.btn__round-orange {
-  border: #f58220 3px solid;
-  border-radius: 50px;
-  padding: 0.25rem 3rem; }
-  .btn__round-orange:hover {
-    background: #f58220;
-    color: white; }
-
->>>>>>> 175561dcaff4578f9c42d39a4a7b005e1aa1d549
 .page-membership .entry-content {
   margin: 0 12rem; }
   .page-membership .entry-content h2 {
