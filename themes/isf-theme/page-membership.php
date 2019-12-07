@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area page-membership">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -37,7 +37,7 @@ get_header(); ?>
 
 						
 							<h2><?php the_sub_field('members'); ?></h2>
-							<p><?php the_sub_field('role_of_members'); ?></p>
+							<p class="member-text"><?php the_sub_field('role_of_members'); ?></p>
 							
 
 						<?php endwhile; ?>
@@ -74,8 +74,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<<<<<<< HEAD
 <?php get_sidebar(); ?>
-=======
->>>>>>> 6845bb51ae0914b42e75b038666c1b141a2c44ed
 <?php get_footer(); ?>
