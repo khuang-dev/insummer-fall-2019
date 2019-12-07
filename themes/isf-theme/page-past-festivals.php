@@ -23,7 +23,8 @@ get_header(); ?>
 				<div class="entry-content">
 					<?php the_content(); ?>
 
-					<?php if(get_field('past_festival_testimonials')): ?>
+					<div class="past-testimony"> 
+						<?php if(get_field('past_festival_testimonials')): ?>
 
 						<?php while(has_sub_field('past_festival_testimonials')): ?>
 
@@ -35,7 +36,9 @@ get_header(); ?>
 						<?php endwhile; ?>
 
 						<?php endif; ?>
+					</div>
 
+					<div class="award-title">
 						<?php
 							if( have_rows('awards') ):
 								while ( have_rows('awards') ) : the_row();
@@ -51,7 +54,9 @@ get_header(); ?>
 							endif;
 
 							?>
+					</div>
 
+					<div class="award-list">
 						<?php
 						if( have_rows('award_list') ):
 
@@ -70,6 +75,7 @@ get_header(); ?>
 							// no rows found
 						endif;
 						?>
+					</div>
 
 					<?php
 						wp_link_pages( array(
