@@ -13,33 +13,26 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
+			<header class="entry-header">
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			</header><!-- .entry-header -->
 
-				</header><!-- .entry-header -->
+			<div class="entry-content">
+				<!-- <php the_content(); ?> -->
 
-				<div class="entry-content">
-					<?php the_content(); ?>
-
-					<?php if(get_field('history')): ?>
-
-
-						<?php while(has_sub_field('history')): ?>
-
-							<h1><?php the_sub_field('history_title'); ?> </h1>
-							<p><?php the_sub_field('history_content'); ?></p>
-
-						<?php endwhile; ?>
+				<h1><?php  echo get_field ('page_title'); ?></h1>
+				<?php  echo get_field ('page_content'); ?>
 
 
-						<?php endif; ?>
-											<?php
-						wp_link_pages( array(
-							'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-							'after'  => '</div>',
-						) );
-					?>
-				</div><!-- .entry-content -->
-			</article><!-- #post-## -->
+
+				<?php
+					wp_link_pages( array(
+						'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+						'after'  => '</div>',
+					) );
+				?>
+			</div><!-- .entry-content -->
+		</article><!-- #post-## -->
 
 
 				<!-- <php get_template_part( 'template-parts/content', 'page' ); ?> -->

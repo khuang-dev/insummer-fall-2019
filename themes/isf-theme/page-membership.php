@@ -26,7 +26,7 @@ get_header(); ?>
 
 						
 							<h1><?php the_sub_field('members'); ?></h1>
-							<p><?php the_sub_field('role_of_members'); ?></p>
+							<?php the_sub_field('role_of_members'); ?>
 							
 
 						<?php endwhile; ?>
