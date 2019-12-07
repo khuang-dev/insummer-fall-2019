@@ -1653,6 +1653,16 @@ iframe {
 .volunteer-form .gfield_label {
   display: inline-block; }
 
+.volunteer-form .name_last label,
+.volunteer-form .name_first label,
+.volunteer-form .age-form-volunteer .gfield_label,
+.volunteer-form .gender-form-volunteer .gfield_label,
+.volunteer-form .tell-us-form-volunteer .gfield_label {
+  font-weight: bold; }
+
+.volunteer-form textarea {
+  height: 16.875rem; }
+
 .phone-volunteer input,
 .email-form-volunteer input {
   width: 30.0625rem; }

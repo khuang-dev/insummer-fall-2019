@@ -54,6 +54,18 @@
   display: inline-block;
 }
 
+.volunteer-form {
+  .name_last label,
+  .name_first label,
+  .age-form-volunteer .gfield_label,
+  .gender-form-volunteer .gfield_label,
+  .tell-us-form-volunteer .gfield_label {
+    font-weight: bold;
+  }
+  textarea {
+    height: 16.875rem;
+  }
+}
 .first-name-volunteer,
 .name_last {
   input {
