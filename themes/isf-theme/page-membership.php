@@ -36,8 +36,13 @@ get_header(); ?>
 						<?php while(has_sub_field('about_membership')): ?>
 
 						
+<<<<<<< HEAD
+							<h1><?php the_sub_field('members'); ?></h1>
+							<?php the_sub_field('role_of_members'); ?>
+=======
 							<h2><?php the_sub_field('members'); ?></h2>
 							<p class="member-text"><?php the_sub_field('role_of_members'); ?></p>
+>>>>>>> a744a398f0cc8b4ffe7fcb6aa05a378e44d549e6
 							
 
 						<?php endwhile; ?>
