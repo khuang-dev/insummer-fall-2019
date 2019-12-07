@@ -25,18 +25,24 @@
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				</div><!-- .site-branding -->
 
-				<section class="externalform__header">
-						<a>Sign Up for Newsletter</a>
-						<div class="desktop__search-login-wrapper">
-						<span class="search__desktop"><?php get_search_form();?></span>
-						<a>Artist Login</a>
-						</div>
-					</section>
+
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
-					
-					<section class="externallink__header">
+					<div class="menu-overlay-event"></div>
+					<div class="menu-overlay-getinvolved"></div>
+					<div class="menu-overlay-hamburger"></div>
+
+					<section class="wrapper__desktop-header">
+					<div class="externalform__header">
+						<a class="link__header-signup">Sign Up for Newsletter</a>
+						<div class="desktop__search-login-wrapper">
+						<span class="search__desktop"><?php get_search_form();?></span>
+						<a class="link__header-login">Artist Login</a>
+						</div>
+					</div>
+					<div class="wrapper__primary-menu">
+					<div class="externallink__header">
 						<span class="search__mobile"><?php get_search_form();?></span>
 
 						<div class="wrapper__social-media">
@@ -58,7 +64,7 @@
 								<img class="icon__header icon__hamburger" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Burger.svg" alt="icon-hamburger">
 							</a>
 						</span>
-					</section>
+					</div>
 
 					<a class="container__isflogo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 								<img class="isf-logo" src="<?php the_field( 'isf_logo' , 'option'); ?>" alt="isf-logo">
@@ -66,7 +72,11 @@
 					<span class="menu__primary"><!-- desktop navigation -->
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</span>
-					<a class="btn__donate">DONATE</a>
+					<a class="btn__donate btn__round-orange">DONATE</a>
+					</div>
+					</section>
+					
+
 					<div class="menu__mobile"><!-- mobile navigations -->
 						<section class="menu__event-wrapper">
 							<h3 class="btn__event"><a>

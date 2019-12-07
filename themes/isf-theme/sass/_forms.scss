@@ -102,11 +102,49 @@ textarea {
     display: none;
   }
 }
-.ginput_container_email {
-  width: 18rem;
-  position: relative;
-}
-.gform_button {
-  background: $btn__pink;
-  height: 40px;
+.form__signup {
+	width: 100%;
+	max-width: 480px;
+	position: relative;
+	@include desktop {
+		width: 300px;
+	}
+	input[type=email] {
+		border: none;
+	}
+	input[type=text]{
+		border: none;
+		outline: none;
+		height: 50px;
+		&::placeholder {
+			padding-left: 1rem;
+		}
+	}
+	input[type=submit] {
+		box-shadow: none;
+		border: none;
+		height: 50px;
+	}
+   .gform_heading {
+	   h3 {
+	   color: $color__white;
+   }
+   }
+  .gform_body {
+	  width: 75%;
+	  height: 60px;
+  }
+  .gform_footer {
+	  width: 25%;
+  }
+  .gform_button {
+    background: $btn__pink;
+	height: 40px;
+	font-size: 0;
+	width: 100%;
+	background-image: url('../../assets/white-icon/Mail.png');
+	background-size: 55px;
+	background-repeat: no-repeat;
+	background-position: center;
+  }
 }
