@@ -1705,15 +1705,6 @@ iframe {
     border: 3px solid #f58220;
     color: #f58220; }
 
-.sponsor-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
-
 @media (min-width: 480px) {
   .page-our-sponsors h2 {
     color: #191414;
@@ -1736,6 +1727,17 @@ iframe {
       width: 226px;
       height: auto;
       margin: 40px; }
+    .page-our-sponsors .sponsors .sponsor-img {
+      min-height: 300px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
   .page-our-sponsors .become-sponsor {
     color: #ffffff;
     border: 3px solid #ed1651;

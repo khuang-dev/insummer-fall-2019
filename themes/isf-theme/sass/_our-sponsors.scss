@@ -22,18 +22,11 @@
     }
 }
 
-.sponsor-img {
-    display: flex;
-    flex-flow: row wrap;
-}
-
 // .sponsor-img {
-//     min-height: 300px;
-//     border: 1px solid black;
 //     display: flex;
-//     justify-content: center;
-//     align-items: center;
+//     flex-flow: row wrap;
 // }
+
 
 
     .page-our-sponsors {
@@ -57,6 +50,13 @@
                 height: auto;
                 margin: 40px;
             }
+            .sponsor-img {
+                min-height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
         }
        
         .become-sponsor {
