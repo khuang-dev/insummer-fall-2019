@@ -1155,6 +1155,9 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.message-us-page .entry-title {
+  display: none; }
+
 @media (min-width: 480px) {
   .message-us-page {
     display: -webkit-box;
@@ -1172,6 +1175,16 @@ object {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  @media (min-width: 480px) {
+    .contact-us-title h3 {
+      border-left: solid 8px #ed1651;
+      border-bottom: unset;
+      font-size: 2.5rem;
+      padding-left: 1.5rem;
+      text-transform: uppercase;
+      -webkit-box-pack: unset;
+          -ms-flex-pack: unset;
+              justify-content: unset; } }
 
 .icon-message-us-wrapper {
   width: 100%;
@@ -1188,9 +1201,9 @@ object {
   height: auto;
   color: #000000;
   font-family: 'Montserrat';
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
-  line-height: 37px;
+  line-height: 2.3125rem;
   text-align: center;
   margin-bottom: 1rem; }
 
@@ -1216,7 +1229,9 @@ iframe {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  position: unset;
+  margin-right: unset; }
 
 .send-us-message-form_wrapper .gform_footer .gform_button {
   height: 58px;
@@ -1224,7 +1239,10 @@ iframe {
   border-radius: 12px;
   background-color: #ed1651;
   color: white;
-  font-size: 24px; }
+  font-size: 1.5rem; }
+  @media (min-width: 480px) {
+    .send-us-message-form_wrapper .gform_footer .gform_button {
+      font-size: 24px; } }
 
 .send-us-message-form {
   display: -webkit-box;
@@ -1261,15 +1279,6 @@ iframe {
             justify-content: space-between; }
   .site-main {
     margin: auto; }
-  .contact-us-title h3 {
-    border-left: solid 8px #ed1651;
-    border-bottom: unset;
-    font-size: 2.5rem;
-    padding-left: 1.5rem;
-    text-transform: uppercase;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset; }
   .post-19 h3 {
     padding-top: 3rem;
     border-left: none; }
@@ -1299,20 +1308,13 @@ iframe {
     font-family: 'Montserrat';
     font-size: 1.875rem;
     font-weight: bold;
-    line-height: 37px;
+    line-height: 2.3125rem;
     padding-left: 1rem;
     text-align: unset; }
   .send-us-message-form {
     line-height: 4.5rem; }
     .send-us-message-form .gform_title {
       font-size: 1.875rem; }
-  .send-us-message-form_wrapper .gform_footer .gform_button {
-    height: 58px;
-    width: 263px;
-    border-radius: 12px;
-    background-color: #ed1651;
-    color: white;
-    font-size: 24px; }
   .map-wrapper,
   iframe {
     width: 100%;
@@ -1878,8 +1880,11 @@ iframe {
   line-height: 2.8rem; }
 
 .volunteer-form .gform_fields {
-  margin-left: 4rem;
-  padding: unset; }
+  margin-left: 1rem; }
+  @media (min-width: 480px) {
+    .volunteer-form .gform_fields {
+      margin-left: 4rem;
+      padding: unset; } }
 
 .volunteer-form .gfield_label {
   display: inline-block; }
@@ -1896,12 +1901,19 @@ iframe {
 
 .phone-volunteer input,
 .email-form-volunteer input {
-  width: 30.0625rem; }
+  width: 100%; }
+  @media (min-width: 480px) {
+    .phone-volunteer input,
+    .email-form-volunteer input {
+      width: 30.0625rem; } }
 
 .phone-volunteer .ginput_complex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  display: unset; }
+  @media (min-width: 480px) {
+    .phone-volunteer .ginput_complex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .age-form-volunteer ul,
 .gender-form-volunteer ul,
@@ -1909,20 +1921,29 @@ iframe {
   padding: 0;
   line-height: 1.3125rem; }
 
-.tell-us-form-volunteer {
-  height: 301px;
-  width: 542px; }
+.gfield_radio li label {
+  margin-left: 1rem; }
 
-@media (min-width: 480px) {
-  .volunteer-form .gform_footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: unset;
-    margin-right: 0; } }
+.tell-us-form-volunteer {
+  width: 100%; }
+  @media (min-width: 480px) {
+    .tell-us-form-volunteer {
+      height: 301px;
+      width: 542px; } }
+
+.volunteer-form .gform_footer {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+  @media (min-width: 480px) {
+    .volunteer-form .gform_footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      position: unset;
+      margin-right: 0; } }
 
 .volunteer-form .gform_button {
   height: 58px;
