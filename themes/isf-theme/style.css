@@ -395,9 +395,7 @@ input[type='submit'] {
   input[type='button']:hover,
   input[type='reset']:hover,
   input[type='submit']:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+    border-color: #ccc #bbb #aaa; }
   button:active, button:focus,
   input[type='button']:active,
   input[type='button']:focus,
@@ -1194,7 +1192,7 @@ object {
 --------------------------------------------------------------*/
 .banner {
   position: relative;
-  height: 25rem;
+  height: 30rem;
   width: 100%; }
 
 .banner__image-wrapper {
@@ -1202,7 +1200,31 @@ object {
   z-index: -10; }
 
 .banner__content {
-  position: absolute; }
+  position: absolute;
+  text-align: right;
+  right: 8rem;
+  top: 6rem; }
+  .banner__content .banner__title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    max-width: 35rem; }
+
+.banner__btn {
+  border: #ed1651 3px solid;
+  border-radius: 50px;
+  background-color: transparent; }
+  .banner__btn:hover {
+    background-color: #ed1651;
+    border: #ed1651 3px solid; }
+  .banner__btn a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600; }
+
+.flickity-page-dots {
+  display: block; }
 
 /* Front page */
 @media (min-width: 480px) {
@@ -1884,13 +1906,17 @@ iframe {
         -ms-flex-flow: row wrap;
             flex-flow: row wrap; } }
 
-.btn__round-orange {
+.btn__round-orange, .btn__round-pink {
   border: #f58220 3px solid;
   border-radius: 50px;
   padding: 0.25rem 3rem; }
-  .btn__round-orange:hover {
+  .btn__round-orange:hover, .btn__round-pink:hover {
     background: #f58220;
     color: white; }
+
+.btn__round-pink {
+  border: #ed1651 3px solid;
+  background: none; }
 
 .page-membership .entry-content {
   margin: 0 12rem; }

@@ -18,18 +18,19 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
-			<?php /* Start the Loop */ ?>
+            <?php /* Start the Loop */ ?>
+            <div class="main-carousel">    
+
             <?php while ( have_rows('banner_content') ) : the_row(); ?>
-                <section class="banner">
+            <section class="banner carousel-cell">
 
                     <div class="banner__content">
-                    <h3 class="banner__title"><?php the_sub_field('banner_title');?></h3>
-                    <p class="banner__description"><?php the_sub_field('banner_description');?></p>
+                    <h1 class="banner__title"><?php the_sub_field('banner_title');?></h1>
+                    <p class="banner__description p__white"><?php the_sub_field('banner_description');?></p>
                     <?php if ( have_rows('banner_button')):?>
                         <?php while ( have_rows('banner_button')) : the_row(); ?>
                             <button class="banner__btn">
-                            <a class="banner__btn-label" href=""><?php the_sub_field('banner_button_label');?></a>
-                            <a href="<?php the_sub_field('banner_button_url');?>"></a>
+                            <a class="banner__btn-label" href="<?php the_sub_field('banner_button_url');?>"><?php the_sub_field('banner_button_label');?></a>
                             </button>
                         <?php endwhile; ?>
                         <?php else : ?>
@@ -38,16 +39,15 @@ get_header(); ?>
 
                     <div class="banner__image-wrapper">
                         <img class="banner__image" src="<?php the_sub_field('banner_image'); ?>"/>
-                    </div>
-                    
+                        </div>
                 </section>
 			<?php endwhile; ?>
-
 
 		<?php else : ?>
 
 
 		<?php endif; ?>
+        </div>
 
 		</main><!-- #main -->
     </div><!-- #primary -->
