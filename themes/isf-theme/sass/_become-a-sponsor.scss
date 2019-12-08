@@ -3,6 +3,7 @@
         color: $color__black;
         border-left: 8px solid $color__pink;
         padding-left: 1.5rem;
+        text-transform: uppercase;
     }
 }
 
@@ -54,4 +55,7 @@
         flex-flow: row wrap;
     }
 
+    .become-a-sponsor {
+        max-width: 1110px;
+    }
 }
