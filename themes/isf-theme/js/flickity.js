@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         cellAlign: 'left',
         wrapAround: true,
         freeScroll: false,
-        autoPlay: false,
+        autoPlay: true,
         pageDots: true
     });
 });

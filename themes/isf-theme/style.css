@@ -1198,6 +1198,8 @@ object {
 .banner__image-wrapper {
   position: relative;
   z-index: -10; }
+  .banner__image-wrapper img {
+    position: absolute; }
 
 .banner__content {
   position: absolute;
@@ -1225,6 +1227,9 @@ object {
 
 .flickity-page-dots {
   display: block; }
+
+.flickity-prev-next-button {
+  display: none; }
 
 /* Front page */
 @media (min-width: 480px) {
