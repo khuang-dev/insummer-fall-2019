@@ -14,10 +14,11 @@ get_header(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
+				<?php the_content( '<h1 class="news-title">', '</h1>');?>
 
 				
 				<?php if(get_field('news_festivals')): ?>
