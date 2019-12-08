@@ -1691,7 +1691,8 @@ iframe {
 .page-our-sponsors h1 {
   color: #191414;
   border-left: 8px solid #ed1651;
-  padding-left: 1.5rem; }
+  padding-left: 1.5rem;
+  text-transform: uppercase; }
 
 .become-sponsor {
   border: 3px solid #ed1651;
@@ -1718,6 +1719,8 @@ iframe {
     color: #191414;
     font-size: 13px;
     text-align: center; }
+  .page-our-sponsors .our-sponsors {
+    max-width: 1110px; }
   .page-our-sponsors .sponsors {
     display: -webkit-box;
     display: -ms-flexbox;

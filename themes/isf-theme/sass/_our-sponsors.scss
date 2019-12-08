@@ -4,6 +4,7 @@
         color: $color__black;
         border-left: 8px solid $color__pink;
         padding-left: 1.5rem;
+        text-transform: uppercase;
     }
 }
 
@@ -41,7 +42,11 @@
             color: $color__black;
             font-size: 13px;
             text-align: center;
-        }        
+        } 
+        
+        .our-sponsors {
+            max-width: 1110px;
+        }
         .sponsors {        
             display: flex;
             justify-content: space-around;
