@@ -1,5 +1,26 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-
+// Banner
+.banner {
+    position: relative;
+    height: 25rem;
+    width: 100%;
+}
+.banner__image-wrapper {
+    position: relative;
+    z-index: -10;
+}
+.banner__content {
+    position: absolute;
+}
+// .banner__title {
+//     position: absolute;
+// }
+// .banner__description {
+//     position: absolute;
+// }
+// .banner__btn {
+//     position: absolute;
+// }
 /* Front page */
