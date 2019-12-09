@@ -1,0 +1,46 @@
+.accessibility-info-loop {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  @include desktop {
+    max-width: 1100px;
+    margin: auto;
+  }
+}
+.accessibility-info-item {
+  @include desktop {
+    width: 50%;
+  }
+}
+.accessibility-about-img {
+  @include desktop {
+    height: 507px;
+    width: 830px;
+  }
+}
+
+.accessibility-icon-svg {
+  @include desktop {
+    height: 87px;
+    width: 68px;
+  }
+}
+
+.accessibility-title {
+  font-weight: bold;
+  line-height: 37px;
+  font-family: 'Montserrat';
+  @include desktop {
+    font-size: 30px;
+    width: 67%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.accessibility-info-details {
+  font-family: 'Montserrat';
+  @include desktop {
+    font-size: 24px;
+    width: 353px;
+  }
+}
