@@ -7,7 +7,8 @@
   }
 }
 
-.member-text {
+p.member-text {
+  margin-bottom: 50px;
 }
 
 // Memebership Pakages
@@ -17,4 +18,5 @@
   width: 532px;
   box-shadow: 0 2px 2px 0px $color__grey, -12px 12px 0 0 $color__pink;
   margin-bottom: 50px;
+  display: flex;
 }

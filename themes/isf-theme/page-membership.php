@@ -60,10 +60,12 @@ get_header(); ?>
 						<?php if(get_field('membership_package')): ?>
 						
 							<div class="curator">
-										<?php while(has_sub_field('membership_package')): ?>		
+										<?php while(has_sub_field('membership_package')): ?> 
+										<div class="member-title">		
 										<h3><?php the_sub_field('membership_title'); ?></h3>
 										<p><?php the_sub_field('membership_price'); ?></p>
-										<div>
+										</div>
+										<div class="package-text">
 										<p><?php the_sub_field('membership_information'); ?></p>
 										</div>
 									</div>
