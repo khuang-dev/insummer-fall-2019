@@ -17,6 +17,8 @@
   font-family: 'Montserrat';
   font-size: 18px;
   @include desktop {
+    border-bottom: unset;
+    display: unset;
     border-left: solid 8px $btn__pink;
     font-size: 2.5rem;
     padding-left: 1.5rem;
@@ -72,17 +74,12 @@
     height: 16.875rem;
   }
 }
-.first-name-volunteer,
-.name_last {
-  input {
-    // width: 25rem;
-  }
-}
 
 .phone-volunteer,
 .email-form-volunteer {
   input {
     width: 100%;
+    max-width: 100%;
 
     @include desktop {
       width: 30.0625rem;
@@ -119,12 +116,10 @@
 .volunteer-form .gform_footer {
   margin-top: 3rem;
   margin-bottom: 3rem;
-  @include desktop {
-    display: flex;
-    justify-content: center;
-    position: unset;
-    margin-right: 0;
-  }
+  display: flex;
+  justify-content: center;
+  position: unset;
+  margin-right: 0;
 }
 
 .volunteer-form .gform_button {
