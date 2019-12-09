@@ -45,78 +45,7 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
-<<<<<<< HEAD
 					<?php //the_content(); ?>
-=======
-
-					<div class="accessibility">
-						<?php
-							if( have_rows('accessibility') ):
-
-								while ( have_rows('accessibility') ) : the_row();
-								?>
-
-								<h1><?php echo the_sub_field('title_accessibility');?></h1>
-								<img src="<?php the_sub_field('image_accessibility');?>" />
-								<p><?php the_sub_field('contact_information');?></p>
-
-								<?php
-								endwhile;
-
-							else :
-								// no rows found
-							endif;
-
-							?>
-					</div>
-
-					<div class="about-accessibility1">
-							<?php
-
-							if( have_rows('about_accessibility') ):
-
-								while ( have_rows('about_accessibility') ) : the_row();
-								?>
-								<img src="<?php the_sub_field('accessibility_image'); ?>" ?>
-								<h3><?php the_sub_field('information_title'); ?></h3>
-								<p><?php the_sub_field('information_details'); ?></p>
-
-
-								<?php
-
-								endwhile;
-							else :
-								// no rows found
-							endif;
-
-							?>
-					</div>
-
-						<img src="<?php echo get_field ('image_file')?> "/>
-
-					<div class="about-accessibility2">
-						<?php
-
-							if( have_rows('about_accessibility_2') ):
-
-								while ( have_rows('about_accessibility_2') ) : the_row();
-								?>
-								<img src="<?php the_sub_field('accessibility_image'); ?>" ?>
-								<h3><?php the_sub_field('information_title'); ?></h3>
-								<p><?php the_sub_field('information_details'); ?></p>
-
-
-								<?php
-
-								endwhile;
-							else :
-								// no rows found
-							endif;
-
-							?>
-					</div>
-
->>>>>>> bd1a18e575fbb4d4a0b9582c0c7173efd87c194f
 
 					<?php
 						wp_link_pages( array(
@@ -201,6 +130,21 @@ get_header(); ?>
 
 						</div>
 
+						<?php
+	$img=get_sub_field('accessibility_image');
+	// var_dump($img);
+
+	$title=get_sub_field('information_title' );
+	$details=get_sub_field('information_details');
+?>
+					<button class="accordion" style="background-image:url('<?=$img?>')"><?=$title?></button>
+
+
+						<div class="panel">
+						<p><?=$details?></p>
+						</div>
+
+
 										<?php endwhile;
 										?>
 
@@ -244,6 +188,23 @@ if( have_rows('about_accessibility_2', ) ):   ?>
 		<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
 	</div>
 
+
+	<?php
+	$img=get_sub_field('accessibility_image');
+	// var_dump($img);
+
+	$title=get_sub_field('information_title' );
+	$details=get_sub_field('information_details');
+?>
+					<button class="accordion" style="background-image:url('<?=$img?>')"><?=$title?></button>
+
+
+						<div class="panel">
+						<p><?=$details?></p>
+						</div>
+
+						
+
 					<?php endwhile;
 					?>
 
@@ -257,6 +218,10 @@ if( have_rows('about_accessibility_2', ) ):   ?>
 			?>
 									<!-- END OF THE LOOP ICONS NR.2 -->
 
+
+
+
+									
 
 
 										</main><!-- #main -->
