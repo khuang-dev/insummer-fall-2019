@@ -1,0 +1,10 @@
+.single-artist {
+    background-color: $bg__champagne;
+
+    h1 {
+        color: $color__black;
+        border-left: 8px solid $color__pink;
+        padding-left: 1.5rem;
+        text-transform: uppercase;
+    }
+}

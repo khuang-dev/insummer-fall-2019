@@ -18,38 +18,42 @@ get_header(); ?>
 					<?php if ( has_post_thumbnail() ) : ?>
 						<?php the_post_thumbnail( 'large' ); ?>
 					<?php endif; ?>
-
-					<a href="<?php the_field ('facebook_url', 'options'); ?>">
-						<img src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebok">
-					</a>
-					<a href="<?php get_field ('instagram_url', 'options'); ?>">
-						<img src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/IG.svg" alt="icon-instagram">
-					</a>
-					<a href="<?php get_field ('twitter_url', 'options'); ?>">
-						<img src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Twitter.svg" alt="icon-twitter">
-					</a>
-					<a href="<?php get_field ('youtube_url', 'options'); ?>">
-						<img src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Youtube.svg" alt="icon-youtube">
-					</a>
+					
+					<div class="artist-social hide-mobile">
+						<a href="<?php the_field ('facebook_url', 'options'); ?>">
+							<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebok">
+						</a>
+						<a href="<?php get_field ('instagram_url', 'options'); ?>">
+							<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/IG.svg" alt="icon-instagram">
+						</a>
+						<a href="<?php get_field ('twitter_url', 'options'); ?>">
+							<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Twitter.svg" alt="icon-twitter">
+						</a>
+						<a href="<?php get_field ('youtube_url', 'options'); ?>">
+							<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Youtube.svg" alt="icon-youtube">
+						</a>
+					</div>
 				</div>
 
 				<div class="artist-info">
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-					<?php
-						if( have_rows('testimonials') ):
-							while ( have_rows('testimonials') ) : the_row();
-					?>
+					<div class="artist-testimonial hide-mobile">
+						<?php
+							if( have_rows('testimonials') ):
+								while ( have_rows('testimonials') ) : the_row();
+						?>
 
-								<p><?php the_sub_field('testimony'); ?></p>
-								<p><?php the_sub_field('authors_name'); ?></p>
+									<p><?php the_sub_field('testimony'); ?></p>
+									<p><?php the_sub_field('authors_name'); ?></p>
 
-					<?php
-							endwhile;
-						else :
-							// no rows found
-						endif;
-					?>
+						<?php
+								endwhile;
+							else :
+								// no rows found
+							endif;
+						?>
+					</div>
 				</div>
 
 				<div class="entry-meta">
