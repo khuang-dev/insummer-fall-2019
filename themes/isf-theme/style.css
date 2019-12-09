@@ -1942,17 +1942,20 @@ iframe {
   font-size: 24px;
   border: #ed1651; }
 
-.page-in-the-news h1 {
+.news-page h1 {
   color: #191414;
   border-left: 8px solid #ed1651;
   padding-left: 1.5rem;
   text-transform: uppercase;
   font-size: 20px; }
+  @media (min-width: 480px) {
+    .news-page h1 {
+      min-width: 1110px; } }
 
-.page-in-the-news h2, .page-in-the-news h3 {
+.news-page h2, .news-page h3 {
   color: #191414; }
 
-.page-in-the-news h3, .page-in-the-news p {
+.news-page h3, .news-page p {
   line-height: 1rem; }
 
 .news-source {

@@ -21,9 +21,9 @@ get_header(); ?>
 				<div class="entry-content">
 
 				<div class="news-source">
-				<?php if(get_field('news_festivals')): ?>
+					<?php if(get_field('news_festivals')): ?>
 
-					<?php while(has_sub_field('news_festivals')): ?>
+						<?php while(has_sub_field('news_festivals')): ?>
 
 							<div class="source-box">
 								<img class="news-img" src="<?php the_sub_field('img_news'); ?>"/>
@@ -31,9 +31,9 @@ get_header(); ?>
 								<p><?php the_sub_field('news_source'); ?></p>
 							</div>
 
-					<?php endwhile; ?>
+						<?php endwhile; ?>
 
-				<?php endif; ?> 
+					<?php endif; ?> 
 				</div>
 
 				<div class="news-contact">
