@@ -6,13 +6,38 @@
  */
 
 get_header(); ?>
+		<?php if ( have_rows('banner_content') ) : ?>
+			<?php /* Start the Loop */ ?>
+			<div class="main-carousel">    
 
+				<?php while ( have_rows('banner_content') ) : the_row(); ?>
+				<section class="banner carousel-cell">
+
+				<div class="banner__content">
+					<h1 class="banner__title"><?php the_sub_field('banner_title');?></h1>
+					<p class="banner__description p__white"><?php the_sub_field('banner_description');?></p>
+				
+							<?php if ( have_rows('banner_button')):?>
+							<?php while ( have_rows('banner_button')) : the_row(); ?>
+							<button class="banner__btn">
+							<a class="banner__btn-label" href="<?php the_sub_field('banner_button_url');?>"><?php the_sub_field('banner_button_label');?></a>
+							</button>
+							<?php endwhile; ?>
+							<?php else : ?>
+							<?php endif; ?>
+				</div>
+
+		<div class="banner__image-wrapper">
+			<img class="banner__image" src="<?php the_sub_field('banner_image'); ?>"/>
+		</div>
+	</section>
+<?php endwhile; ?>
+<?php else : ?>
+<?php endif; ?>
+</div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php the_post_thumbnail(); ?>
-        <?php the_field( 'banner_title' ); ?>
-        <?php the_field( 'banner_date' ); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -20,7 +45,78 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
+<<<<<<< HEAD
 					<?php //the_content(); ?>
+=======
+
+					<div class="accessibility">
+						<?php
+							if( have_rows('accessibility') ):
+
+								while ( have_rows('accessibility') ) : the_row();
+								?>
+
+								<h1><?php echo the_sub_field('title_accessibility');?></h1>
+								<img src="<?php the_sub_field('image_accessibility');?>" />
+								<p><?php the_sub_field('contact_information');?></p>
+
+								<?php
+								endwhile;
+
+							else :
+								// no rows found
+							endif;
+
+							?>
+					</div>
+
+					<div class="about-accessibility1">
+							<?php
+
+							if( have_rows('about_accessibility') ):
+
+								while ( have_rows('about_accessibility') ) : the_row();
+								?>
+								<img src="<?php the_sub_field('accessibility_image'); ?>" ?>
+								<h3><?php the_sub_field('information_title'); ?></h3>
+								<p><?php the_sub_field('information_details'); ?></p>
+
+
+								<?php
+
+								endwhile;
+							else :
+								// no rows found
+							endif;
+
+							?>
+					</div>
+
+						<img src="<?php echo get_field ('image_file')?> "/>
+
+					<div class="about-accessibility2">
+						<?php
+
+							if( have_rows('about_accessibility_2') ):
+
+								while ( have_rows('about_accessibility_2') ) : the_row();
+								?>
+								<img src="<?php the_sub_field('accessibility_image'); ?>" ?>
+								<h3><?php the_sub_field('information_title'); ?></h3>
+								<p><?php the_sub_field('information_details'); ?></p>
+
+
+								<?php
+
+								endwhile;
+							else :
+								// no rows found
+							endif;
+
+							?>
+					</div>
+
+>>>>>>> bd1a18e575fbb4d4a0b9582c0c7173efd87c194f
 
 					<?php
 						wp_link_pages( array(
