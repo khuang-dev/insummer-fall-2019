@@ -1956,10 +1956,10 @@ p.member-text {
   width: 464px;
   -webkit-box-shadow: 0 2px 2px 0px #cecece, -12px 12px 0 0 #ed1651;
           box-shadow: 0 2px 2px 0px #cecece, -12px 12px 0 0 #ed1651;
-  margin-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin: 0 auto 50px auto; }
 
 .member-title {
   padding-left: 20px;
