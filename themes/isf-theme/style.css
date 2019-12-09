@@ -1948,6 +1948,13 @@ iframe {
     border-left: 8px solid #ed1651;
     padding-left: 1.5rem; }
 
+.curator {
+  height: 363px;
+  width: 532px;
+  -webkit-box-shadow: 0 2px 2px 0px #cecece, -12px 12px 0 0 #ed1651;
+          box-shadow: 0 2px 2px 0px #cecece, -12px 12px 0 0 #ed1651;
+  margin-bottom: 50px; }
+
 @media (min-width: 480px) {
   .apply-here {
     max-width: 1100px;

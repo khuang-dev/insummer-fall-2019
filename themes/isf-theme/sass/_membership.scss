@@ -15,5 +15,6 @@
 .curator {
   height: 363px;
   width: 532px;
-  box-shadow: -12px 12px 0px 9px $color__pink(237, 22, 81, 1);
+  box-shadow: 0 2px 2px 0px $color__grey, -12px 12px 0 0 $color__pink;
+  margin-bottom: 50px;
 }
