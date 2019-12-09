@@ -24,19 +24,14 @@ get_header(); ?>
 
 					<?php if(get_field('isf_events')): ?>
 
-						
-
 						<?php while(has_sub_field('isf_events')): ?>
 
-								<h2><?php the_sub_field('current_event'); ?></h2>
-								<p><?php the_sub_field('event_information'); ?></p>
+								<h1><?php the_sub_field('current_event'); ?></h1>
+								<?php the_sub_field('event_information'); ?>
 							
-
 						<?php endwhile; ?>
 
 						<?php endif; ?>
-
-
 
 					<?php
 						wp_link_pages( array(

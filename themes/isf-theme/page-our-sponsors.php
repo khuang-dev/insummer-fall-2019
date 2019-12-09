@@ -24,27 +24,23 @@ get_header(); ?>
 					<div class="sponsors">
 
 						<?php
-						// check if the repeater field has rows of data
 						if( have_rows('sponsor_images') ):
-
-							// loop through the rows of data
 							while ( have_rows('sponsor_images') ) : the_row();
 
 							?>
 							<div class="sponsors_box">
 								<h2 class="sponsor_level"><?php the_sub_field('sponsor_level')?></h2>
+								
 								<div class="sponsor-img">
 									<img src="<?php the_sub_field('sponsor_image'); ?>" />
 								</div>
 							</div>
-								<?php
-
+								
+						<?php
 							endwhile;
 
 						else :
-
 							// no rows found
-
 						endif;
 						?>
 					</div>

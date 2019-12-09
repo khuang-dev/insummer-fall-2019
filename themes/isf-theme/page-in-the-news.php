@@ -22,20 +22,13 @@ get_header(); ?>
 				
 				<?php if(get_field('news_festivals')): ?>
 
-					<ul>
-
 					<?php while(has_sub_field('news_festivals')): ?>
 
-						<li>
-							<p><?php the_sub_field('img_news'); ?></p>
+							<img src="<?php the_sub_field('img_news'); ?>"/>
 							<p><?php the_sub_field('season_news'); ?></p>
 							<p><?php the_sub_field('news_source'); ?></p>
-						</li>
-
 
 					<?php endwhile; ?>
-
-					</ul>
 
 				<?php endif; ?> 
 					
