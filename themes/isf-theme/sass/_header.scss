@@ -102,10 +102,12 @@
   position: absolute;
   width: 100%;
   left: 0;
+  z-index: 30;
   ul {
     display: flex;
     flex-direction: column;
     text-align: center;
+    z-index: 30;
     @include desktop {
         display: none;
     }
@@ -151,10 +153,12 @@
   width: 100%;
   display: none;
   left: 0;
+  z-index: 30;
   ul {
     display: flex;
     flex-direction: column;
     text-align: center;
+    z-index: 30;
     @include desktop {
         display: none;
     }
