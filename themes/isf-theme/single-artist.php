@@ -19,17 +19,18 @@ get_header(); ?>
 						<?php the_post_thumbnail( 'large' ); ?>
 					<?php endif; ?>
 
-					<a href="<?php the_field ('facebook_url', 'options'); ?>"><i class="fab fa-facebook-square"></i></a>
-					<a href="<?php get_field ('instagram_url', 'options'); ?>"></a><i class="fab fa-instagram"></i>
-					<a href="<?php get_field ('twitter_url', 'options'); ?>"></a><i class="fab fa-twitter"></i>
-					<a href="<?php get_field ('youtube_url', 'options'); ?>"></a><i class="fab fa-youtube"></i>
-
-
-					<!-- <i class="fab fa-facebook-square"></i>
-					<i class="fab fa-instagram"></i>
-					<i class="fab fa-twitter"></i>
-					<i class="fab fa-youtube"></i>
- -->
+					<a href="<?php the_field ('facebook_url', 'options'); ?>">
+						<img src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebok">
+					</a>
+					<a href="<?php get_field ('instagram_url', 'options'); ?>">
+						<img src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/IG.svg" alt="icon-instagram">
+					</a>
+					<a href="<?php get_field ('twitter_url', 'options'); ?>">
+						<img src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Twitter.svg" alt="icon-twitter">
+					</a>
+					<a href="<?php get_field ('youtube_url', 'options'); ?>">
+						<img src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Youtube.svg" alt="icon-youtube">
+					</a>
 				</div>
 
 				<div class="artist-info">
