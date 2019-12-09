@@ -2157,11 +2157,13 @@ iframe {
       flex-flow: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  border: solid 2px black; }
   @media (min-width: 480px) {
     .accessibility-info-loop {
       max-width: 1100px;
-      margin: auto; } }
+      margin: auto;
+      border: none; } }
 
 @media (min-width: 480px) {
   .title-vs-img {
@@ -2278,7 +2280,8 @@ iframe {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around; }
+      justify-content: space-around;
+  background-color: white; }
   @media (min-width: 480px) {
     .accordion {
       display: none; } }

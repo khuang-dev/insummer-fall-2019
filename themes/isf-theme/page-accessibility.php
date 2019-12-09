@@ -107,7 +107,7 @@ get_header(); ?>
 					// check if the repeater field has rows of data
 					if( have_rows('about_accessibility', ) ):   ?>
 
-						<div class="accessibility-info-loop">						
+						<divc class="accessibility-info-loop">						
 
 						<?php
 									// loop through the rows of data
@@ -131,19 +131,19 @@ get_header(); ?>
 						</div>
 
 						<?php
-	$img=get_sub_field('accessibility_image');
-	// var_dump($img);
+					$img=get_sub_field('accessibility_image');
+					// var_dump($img);
 
-	$title=get_sub_field('information_title' );
-	$details=get_sub_field('information_details');
-?>
-					<button class="accordion" style="background-image:url('<?=$img?>')"><?=$title?></button>
+					$title=get_sub_field('information_title' );
+					$details=get_sub_field('information_details');
+						?>
+								
+										<button class="accordion" style="background-image:url('<?=$img?>')"><?=$title?></button>
 
-
-						<div class="panel">
-						<p><?=$details?></p>
-						</div>
-
+											<div class="panel">
+											<p><?=$details?></p>
+											</div>
+								
 
 										<?php endwhile;
 										?>

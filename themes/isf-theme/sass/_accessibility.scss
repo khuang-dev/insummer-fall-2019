@@ -2,9 +2,11 @@
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
+  border: solid 2px black;
   @include desktop {
     max-width: 1100px;
     margin: auto;
+    border: none;
   }
 }
 
@@ -127,6 +129,7 @@
   max-width: 100%;
   display: flex;
   justify-content: space-around;
+  background-color: white;
   @include desktop {
     display: none;
   }
