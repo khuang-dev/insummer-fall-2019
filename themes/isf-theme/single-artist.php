@@ -14,55 +14,54 @@ get_header(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
-				<div class="artist-img">
-					<?php if ( has_post_thumbnail() ) : ?>
-						<?php the_post_thumbnail( 'large' ); ?>
-					<?php endif; ?>
-					
-					<div class="artist-social hide-mobile">
-						<a href="<?php the_field ('facebook_url', 'options'); ?>">
-							<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebok">
-						</a>
-						<a href="<?php get_field ('instagram_url', 'options'); ?>">
-							<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/IG.svg" alt="icon-instagram">
-						</a>
-						<a href="<?php get_field ('twitter_url', 'options'); ?>">
-							<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Twitter.svg" alt="icon-twitter">
-						</a>
-						<a href="<?php get_field ('youtube_url', 'options'); ?>">
-							<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Youtube.svg" alt="icon-youtube">
-						</a>
+				<div class="artist-container">
+					<div class="artist-img">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<?php the_post_thumbnail( 'large' ); ?>
+						<?php endif; ?>
+						
+						<div class="artist-social hide-mobile">
+							<a href="<?php the_field ('facebook_url', 'options'); ?>">
+								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebok">
+							</a>
+							<a href="<?php get_field ('instagram_url', 'options'); ?>">
+								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/IG.svg" alt="icon-instagram">
+							</a>
+							<a href="<?php get_field ('twitter_url', 'options'); ?>">
+								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Twitter.svg" alt="icon-twitter">
+							</a>
+							<a href="<?php get_field ('youtube_url', 'options'); ?>">
+								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Youtube.svg" alt="icon-youtube">
+							</a>
+						</div>
+					</div>
+
+					<div class="artist-info">
+						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+						<div class="artist-testimonial hide-mobile">
+							<?php
+								if( have_rows('testimonials') ):
+									while ( have_rows('testimonials') ) : the_row();
+							?>
+
+										<p><?php the_sub_field('testimony'); ?></p>
+										<p><?php the_sub_field('authors_name'); ?></p>
+
+							<?php
+									endwhile;
+								else :
+									// no rows found
+								endif;
+							?>
+						</div>
+						<?php the_content(); ?>
 					</div>
 				</div>
 
-				<div class="artist-info">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-					<div class="artist-testimonial hide-mobile">
-						<?php
-							if( have_rows('testimonials') ):
-								while ( have_rows('testimonials') ) : the_row();
-						?>
-
-									<p><?php the_sub_field('testimony'); ?></p>
-									<p><?php the_sub_field('authors_name'); ?></p>
-
-						<?php
-								endwhile;
-							else :
-								// no rows found
-							endif;
-						?>
-					</div>
-				</div>
-
-				<div class="entry-meta">
-					<!-- <php red_starter_posted_on(); ?> / <php red_starter_comment_count(); ?> / <php red_starter_posted_by(); ?> -->
-				</div><!-- .entry-meta -->
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<?php the_content(); ?>
 				<?php
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html( 'Pages:' ),

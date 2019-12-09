@@ -2194,10 +2194,32 @@ iframe {
       font-size: 24px;
       width: 353px; } }
 
-.single-artist {
+.single-artist h1 {
+  color: #191414;
+  border-left: 8px solid #ed1651;
+  padding-left: 1.5rem;
+  text-transform: uppercase; }
+
+.artist-container {
   background-color: #fff2f2; }
-  .single-artist h1 {
-    color: #191414;
-    border-left: 8px solid #ed1651;
-    padding-left: 1.5rem;
-    text-transform: uppercase; }
+  @media (min-width: 480px) {
+    .artist-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; } }
+
+@media (min-width: 480px) {
+  .artist-img {
+    padding: 3rem; }
+    .artist-img img {
+      max-width: none; } }
+
+.artist-social {
+  padding-top: 1rem; }
+  .artist-social .artist-icon {
+    margin-right: 1rem;
+    text-decoration: none; }

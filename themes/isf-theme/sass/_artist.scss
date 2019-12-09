@@ -1,10 +1,33 @@
 .single-artist {
-    background-color: $bg__champagne;
-
     h1 {
         color: $color__black;
         border-left: 8px solid $color__pink;
         padding-left: 1.5rem;
         text-transform: uppercase;
+    }
+}
+
+.artist-container {
+    background-color: $bg__champagne;
+    @include desktop {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.artist-img {
+    @include desktop {
+        padding: 3rem;
+        img {
+            max-width: none;
+        }
+    }
+}
+
+.artist-social {
+    padding-top: 1rem;
+    .artist-icon {
+        margin-right: 1rem;
+        text-decoration: none;
     }
 }
