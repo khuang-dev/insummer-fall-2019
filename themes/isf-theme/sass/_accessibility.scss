@@ -12,13 +12,31 @@
     width: 50%;
   }
 }
+
+.icon-vs-title {
+  @include desktop {
+    display: flex;
+    align-items: center;
+    margin-left: -5rem;
+  }
+}
 .accessibility-about-img {
   @include desktop {
     height: 507px;
     width: 830px;
   }
 }
-
+.accessibility-about-info {
+  @include desktop {
+    height: 192px;
+    width: 830px;
+    color: #000000;
+    font-family: '.SF NS Display';
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+}
 .accessibility-icon-svg {
   @include desktop {
     height: 87px;
@@ -34,6 +52,8 @@
     font-size: 30px;
     width: 67%;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
   }
 }
 
@@ -42,5 +62,6 @@
   @include desktop {
     font-size: 24px;
     width: 353px;
+    margin-bottom: 2rem;
   }
 }

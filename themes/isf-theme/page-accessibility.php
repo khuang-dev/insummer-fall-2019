@@ -20,75 +20,7 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
-					<?php the_content(); ?>
-
-					<div class="accessibility">
-						<?php
-							if( have_rows('accessibility') ):
-
-								while ( have_rows('accessibility') ) : the_row();
-								?>
-
-								<h1><?php echo the_sub_field('title_accessibility');?></h1>
-								<img src="<?php the_sub_field('image_accessibility');?>" />
-								<p><?php the_sub_field('contact_information');?></p>
-
-								<?php
-								endwhile;
-
-							else :
-								// no rows found
-							endif;
-
-							?>
-					</div>
-
-					<div class="about-accessibility1">
-							<?php
-
-							if( have_rows('about_accessibility') ):
-
-								while ( have_rows('about_accessibility') ) : the_row();
-								?>
-								<img src="<?php the_sub_field('accessibility_image'); ?>" ?>
-								<h3><?php the_sub_field('information_title'); ?></h3>
-								<p><?php the_sub_field('information_details'); ?></p>
-
-
-								<?php
-
-								endwhile;
-							else :
-								// no rows found
-							endif;
-
-							?>
-					</div>
-
-						<img src="<?php echo get_field ('image_file')?> "/>
-
-					<div class="about-accessibility2">
-						<?php
-
-							if( have_rows('about_accessibility_2') ):
-
-								while ( have_rows('about_accessibility_2') ) : the_row();
-								?>
-								<img src="<?php the_sub_field('accessibility_image'); ?>" ?>
-								<h3><?php the_sub_field('information_title'); ?></h3>
-								<p><?php the_sub_field('information_details'); ?></p>
-
-
-								<?php
-
-								endwhile;
-							else :
-								// no rows found
-							endif;
-
-							?>
-					</div>
-
+					<?php //the_content(); ?>
 
 					<?php
 						wp_link_pages( array(
@@ -120,7 +52,7 @@ get_header(); ?>
 										// display a sub field value
 										?>
 
-							<div class="accessibility-about-info">
+							<div class="accessibility-about">
 							<div class="accessibility-about-title"> <?php  the_sub_field('title_accessibility', );?> </div>
 								<img class="accessibility-about-img" src="<?php the_sub_field('image_accessibility'); ?>"/>
 								<div class="accessibility-about-info"> <?php  the_sub_field('contact_information');?> </div>
@@ -138,11 +70,7 @@ get_header(); ?>
 
 									?>
 
-									<!-- END OF THE LOOP VIDEO NR.1 -->
-
-
-
-
+						<!-- END OF THE LOOP VIDEO NR.1 -->
 
 			<!-- THIS IS THE LOOP FOR ICONS NR.1 -->
 			<?php
@@ -161,9 +89,16 @@ get_header(); ?>
 
 						<div class="accessibility-info-item">
 						
+						<div class ="icon-vs-title">
 							<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
+								
+						
 							<div class="accessibility-title"> <?php  the_sub_field('information_title', );?> </div>
+						</div>
+
 							<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
+						
+
 						</div>
 
 										<?php endwhile;
@@ -180,6 +115,7 @@ get_header(); ?>
 
 								<!-- END OF THE LOOP ICONS NR.1 -->
 
+								<img src="<?php echo get_field ('image_file')?> "/>
 
 									<!-- THIS IS THE LOOP FOR ICONS NR.2 -->
 
@@ -199,8 +135,11 @@ if( have_rows('about_accessibility_2', ) ):   ?>
 
 	<div class="accessibility-info-item">
 	
+	<div class ="icon-vs-title">
 		<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
 		<div class="accessibility-title"> <?php  the_sub_field('information_title', );?> </div>
+							</div>
+
 		<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
 	</div>
 
@@ -215,13 +154,6 @@ if( have_rows('about_accessibility_2', ) ):   ?>
 			endif;
 
 			?>
-
-
-
-
-
-									
-
 									<!-- END OF THE LOOP ICONS NR.2 -->
 
 
