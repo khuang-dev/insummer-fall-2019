@@ -8,18 +8,17 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main news-page" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
-					
+				<h1><?php echo get_field ('page_headline');?></h1>
+
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
-				<?php the_content( '<h1 class="news-title">', '</h1>');?>
-
 				
 				<?php if(get_field('news_festivals')): ?>
 
@@ -32,6 +31,22 @@ get_header(); ?>
 					<?php endwhile; ?>
 
 				<?php endif; ?> 
+
+				<?php
+					if( have_rows('media_contact') ):
+						while ( have_rows('media_contact') ) : the_row();
+						?>
+
+							<h3><?php the_sub_field('contact'); ?></h3>
+							<p><?php the_sub_field('contact_name'); ?></p>
+							<p><?php the_sub_field('contact_information'); ?></p>
+
+					<?php
+						endwhile;
+					else :
+						// no rows found
+					endif;
+					?>
 					
 					<!-- <php the_content(); ?> -->
 					<?php
