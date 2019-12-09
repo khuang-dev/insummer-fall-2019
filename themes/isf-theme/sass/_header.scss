@@ -220,6 +220,9 @@ z-index: 999;
 .wrapper__social-media {
   display: flex;
   width: 200px;
+  @include desktop {
+      display: flex !important;
+  }
   img {
     margin: 0 0.75rem;
   }

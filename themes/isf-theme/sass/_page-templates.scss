@@ -1,5 +1,53 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+// Banner
+.banner {
+    position: relative;
+    height: 30rem;
+    width: 100%;
+}
+.banner__image-wrapper {
+    position: relative;
+    z-index: -10;
+    img {
+        position: absolute;
+    }
+}
+.banner__content {
+    position: absolute;
+    text-align: right;
+    right: 8rem;
+    top: 6rem;
+    .banner__title {
+        text-transform: uppercase;
+        font-size: 3rem;
+        max-width: 35rem;
+    }
+}
+
+.banner__btn {
+    border: $btn__pink 3px solid;
+    border-radius: 50px;
+    background-color: transparent;
+        &:hover {
+        background-color: $btn__pink;
+        border: $btn__pink 3px solid;
+        }
+        a {
+            color: $color__white; 
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+.flickity-page-dots {
+    display: block;
+}
+.flickity-prev-next-button {
+    display: none;
+}
+
 
 /* Front page */
