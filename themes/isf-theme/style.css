@@ -2205,7 +2205,10 @@ iframe {
   font-size: 18px; }
 
 .artist-info {
-  padding-left: 8rem; }
+  padding-left: 1rem; }
+  @media (min-width: 480px) {
+    .artist-info {
+      padding-left: 8rem; } }
 
 .artist-container {
   background-color: #fff2f2; }

@@ -13,7 +13,10 @@
 }
 
 .artist-info {
+    padding-left: 1rem;
+    @include desktop {
     padding-left: 8rem;
+    }
 }
 
 .artist-container {
