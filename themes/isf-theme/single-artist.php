@@ -14,14 +14,45 @@ get_header(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
-				<?php if ( has_post_thumbnail() ) : ?>
-					<?php the_post_thumbnail( 'large' ); ?>
-				<?php endif; ?>
+				<div class="artist-img">
+					<?php if ( has_post_thumbnail() ) : ?>
+						<?php the_post_thumbnail( 'large' ); ?>
+					<?php endif; ?>
 
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					<a href="<?php the_field ('facebook_url', 'options'); ?>"><i class="fab fa-facebook-square"></i></a>
+					<a href="<?php get_field ('instagram_url', 'options'); ?>"></a><i class="fab fa-instagram"></i>
+					<a href="<?php get_field ('twitter_url', 'options'); ?>"></a><i class="fab fa-twitter"></i>
+					<a href="<?php get_field ('youtube_url', 'options'); ?>"></a><i class="fab fa-youtube"></i>
+
+
+					<!-- <i class="fab fa-facebook-square"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-twitter"></i>
+					<i class="fab fa-youtube"></i>
+ -->
+				</div>
+
+				<div class="artist-info">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+					<?php
+						if( have_rows('testimonials') ):
+							while ( have_rows('testimonials') ) : the_row();
+					?>
+
+								<p><?php the_sub_field('testimony'); ?></p>
+								<p><?php the_sub_field('authors_name'); ?></p>
+
+					<?php
+							endwhile;
+						else :
+							// no rows found
+						endif;
+					?>
+				</div>
 
 				<div class="entry-meta">
-					<?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
+					<!-- <php red_starter_posted_on(); ?> / <php red_starter_comment_count(); ?> / <php red_starter_posted_by(); ?> -->
 				</div><!-- .entry-meta -->
 			</header><!-- .entry-header -->
 
@@ -43,7 +74,6 @@ get_header(); ?>
 
 			<!-- <php get_template_part( 'template-parts/content', 'single' ); ?> -->
 
-			<?php the_post_navigation(); ?>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
@@ -57,5 +87,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
