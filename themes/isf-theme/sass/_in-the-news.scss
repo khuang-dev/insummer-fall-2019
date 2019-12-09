@@ -55,10 +55,12 @@
     }
 }
 
-
-
-
 .news-contact {
     padding-left: 2rem;
     background: $bg__champagne;
+    @include desktop {
+        height: 12rem;
+        padding-left: 10rem;
+        padding-top: 1.25rem;
+    }
 }
