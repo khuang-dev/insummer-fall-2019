@@ -74,8 +74,9 @@ get_header(); ?>
 									?>
 
 						<div class="accessibility-info-item">
-						<div class="accessibility-title"> <?php  the_sub_field('information_title', );?> </div>
+						
 							<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
+							<div class="accessibility-title"> <?php  the_sub_field('information_title', );?> </div>
 							<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
 						</div>
 
@@ -93,6 +94,49 @@ get_header(); ?>
 
 								<!-- END OF THE LOOP ICONS NR.1 -->
 
+
+									<!-- THIS IS THE LOOP FOR ICONS NR.2 -->
+
+									<?php
+
+// check if the repeater field has rows of data
+if( have_rows('about_accessibility_2', ) ):   ?>
+
+	<div class="accessibility-info-loop">						
+
+	<?php
+				// loop through the rows of data
+				while ( have_rows('about_accessibility_2', ) ) : the_row();
+
+				// display a sub field value
+				?>
+
+	<div class="accessibility-info-item">
+	
+		<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
+		<div class="accessibility-title"> <?php  the_sub_field('information_title', );?> </div>
+		<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
+	</div>
+
+					<?php endwhile;
+					?>
+
+				</div>
+
+					<?php
+			else :
+				// no rows found
+			endif;
+
+			?>
+
+
+
+
+
+									
+
+									<!-- END OF THE LOOP ICONS NR.2 -->
 
 
 

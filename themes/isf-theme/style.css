@@ -1961,3 +1961,46 @@ iframe {
   color: white;
   font-size: 24px;
   border: #ed1651; }
+
+.accessibility-info-loop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (min-width: 480px) {
+    .accessibility-info-loop {
+      max-width: 1100px;
+      margin: auto; } }
+
+@media (min-width: 480px) {
+  .accessibility-info-item {
+    width: 50%; } }
+
+@media (min-width: 480px) {
+  .accessibility-about-img {
+    height: 507px;
+    width: 830px; } }
+
+@media (min-width: 480px) {
+  .accessibility-icon-svg {
+    height: 87px;
+    width: 68px; } }
+
+.accessibility-title {
+  font-weight: bold;
+  line-height: 37px;
+  font-family: 'Montserrat'; }
+  @media (min-width: 480px) {
+    .accessibility-title {
+      font-size: 30px; } }
+
+.accessibility-info-details {
+  font-family: 'Montserrat'; }
+  @media (min-width: 480px) {
+    .accessibility-info-details {
+      font-size: 24px;
+      width: 353px; } }
