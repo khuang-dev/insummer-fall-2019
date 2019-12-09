@@ -6,4 +6,37 @@
         text-transform: uppercase;
         font-size: 20px;
     }
+
+    h2, h3 {
+        color: $color__black;
+    }
+
+    h3, p {
+        line-height: 1rem;
+    }
+}
+
+.news-source {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.source-box {
+    margin: 1rem;
+    // padding-left: 2.5rem;
+    // padding-right: 2.5rem;
+}
+.news-img {
+    width: 10rem;
+    height: 250px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.news-contact {
+    padding-left: 2rem;
+    background: $bg__champagne;
 }

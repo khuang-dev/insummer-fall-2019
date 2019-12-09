@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: ISF Theme
 Theme URI: http://underscores.me/
@@ -1947,3 +1948,42 @@ iframe {
   padding-left: 1.5rem;
   text-transform: uppercase;
   font-size: 20px; }
+
+.page-in-the-news h2, .page-in-the-news h3 {
+  color: #191414; }
+
+.page-in-the-news h3, .page-in-the-news p {
+  line-height: 1rem; }
+
+.news-source {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.source-box {
+  margin: 1rem; }
+
+.news-img {
+  width: 10rem;
+  height: 250px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.news-contact {
+  padding-left: 2rem;
+  background: #fff2f2; }

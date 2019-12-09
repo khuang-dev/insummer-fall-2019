@@ -19,25 +19,30 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
-				
+
+				<div class="news-source">
 				<?php if(get_field('news_festivals')): ?>
 
 					<?php while(has_sub_field('news_festivals')): ?>
 
-							<img src="<?php the_sub_field('img_news'); ?>"/>
-							<p><?php the_sub_field('season_news'); ?></p>
-							<p><?php the_sub_field('news_source'); ?></p>
+							<div class="source-box">
+								<img class="news-img" src="<?php the_sub_field('img_news'); ?>"/>
+								<h3><?php the_sub_field('season_news'); ?></h3>
+								<p><?php the_sub_field('news_source'); ?></p>
+							</div>
 
 					<?php endwhile; ?>
 
 				<?php endif; ?> 
+				</div>
 
+				<div class="news-contact">
 				<?php
 					if( have_rows('media_contact') ):
 						while ( have_rows('media_contact') ) : the_row();
 						?>
 
-							<h3><?php the_sub_field('contact'); ?></h3>
+							<h2><?php the_sub_field('contact'); ?></h2>
 							<p><?php the_sub_field('contact_name'); ?></p>
 							<p><?php the_sub_field('contact_information'); ?></p>
 
@@ -47,6 +52,7 @@ get_header(); ?>
 						// no rows found
 					endif;
 					?>
+					</div>
 					
 					<!-- <php the_content(); ?> -->
 					<?php
