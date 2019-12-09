@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
-				<h1><?php echo get_field ('page_headline');?></h1>
+				<h1 class="news-headline"><?php echo get_field ('page_headline');?></h1>
 
 				</header><!-- .entry-header -->
 
