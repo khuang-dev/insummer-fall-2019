@@ -2056,7 +2056,6 @@ iframe {
   font-size: 24px;
   border: #ed1651; }
 
-<<<<<<< HEAD
 .news-page .news-headline {
   color: #191414;
   border-left: 8px solid #ed1651;
@@ -2141,7 +2140,7 @@ iframe {
       height: 12rem;
       padding-left: 10rem;
       padding-top: 1.25rem; } }
-=======
+
 .accessibility-info-loop {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2186,4 +2185,3 @@ iframe {
     .accessibility-info-details {
       font-size: 24px;
       width: 353px; } }
->>>>>>> 5e41cc65d1310bbbd156b3ad85479d46f6d8e12f
