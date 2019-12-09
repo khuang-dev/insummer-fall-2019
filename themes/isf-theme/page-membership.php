@@ -45,12 +45,17 @@ get_header(); ?>
 						<?php endif; ?>
 
 						<?php if(get_field('membership_package')): ?>
-
-							<?php while(has_sub_field('membership_package')): ?>
-
-								<h3><?php the_sub_field('membership_title'); ?></h3>
-								<p><?php the_sub_field('membership_price'); ?></p>
-								<p><?php the_sub_field('membership_information'); ?></p>
+						
+							<div>
+								<div>
+									<div>
+										<?php while(has_sub_field('membership_package')): ?>		
+										<h3><?php the_sub_field('membership_title'); ?></h3>
+										<p><?php the_sub_field('membership_price'); ?></p>
+										<p><?php the_sub_field('membership_information'); ?></p>
+									</div>
+								</div>
+							</div>
 
 							<?php endwhile; ?>
 
