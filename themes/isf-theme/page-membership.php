@@ -46,7 +46,7 @@ get_header(); ?>
 
 						<?php if(get_field('membership_package')): ?>
 						
-							<div>
+							<div class="curator">
 								<div>
 									<div>
 										<?php while(has_sub_field('membership_package')): ?>		
