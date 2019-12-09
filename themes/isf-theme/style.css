@@ -1230,7 +1230,13 @@ object {
     font-weight: 600; }
 
 .flickity-page-dots {
-  display: block; }
+  margin-bottom: 2.5rem !important; }
+  .flickity-page-dots .dot {
+    background: white !important;
+    opacity: 0.5 !important; }
+  .flickity-page-dots .is-selected {
+    background: #ffffff !important;
+    opacity: 1 !important; }
 
 .flickity-prev-next-button {
   display: none; }
