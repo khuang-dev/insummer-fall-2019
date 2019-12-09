@@ -14,9 +14,19 @@ p.member-text {
 // Memebership Pakages
 
 .curator {
-  height: 363px;
-  width: 532px;
+  height: 339px;
+  width: 464px;
   box-shadow: 0 2px 2px 0px $color__grey, -12px 12px 0 0 $color__pink;
   margin-bottom: 50px;
   display: flex;
+}
+
+.member-title {
+  padding-left: 20px;
+  padding-top: 50px;
+}
+
+.package-text {
+  padding-left: 20px;
+  padding-top: 50px;
 }
