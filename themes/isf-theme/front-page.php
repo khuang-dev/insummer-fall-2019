@@ -46,7 +46,38 @@ get_header(); ?>
 </div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+            <section class="wrapper__upcoming-events">
+                <h2>Upcoming Events</h2>
+                <?php 
+				$args = array( 'post_type' => 'isf_event', 'order' => 'DSC', 'posts_per_page' => 3);
+   				$event_posts = get_posts( $args ); // returns an array of posts
+			?>
+			<div class="">
 
+			<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>
+   				<?php /* Content from your array of post results goes here */ ?>
+					   <div class="">
+                        <img src="<?php the_field('event_image'); ?>">
+                        <?php $date = new DateTime(get_field('event_date')); ?>
+                        <div>
+                        <?php echo $date->format('M'); ?>
+                        <?php echo $date->format('d'); ?>
+                        </div>
+                        <?php the_title(); ?>
+                        <?php the_field('event_date'); ?>
+                        <?php if ( have_rows('event_time')):?>
+                            <?php while ( have_rows('event_time')) : the_row(); ?>
+                                <?php the_sub_field('start_time');?> - <?php the_sub_field('end_time');?>
+                            <?php endwhile; ?>
+                            <?php else : ?>
+                            <?php endif; ?>
+			<?php endforeach; wp_reset_postdata(); ?>
+			</div>
+            </section>
+            <section class="wrapper__testimony">
+            </section>
+            <section class="wrapper__highlight-page">
+            </section>
 
 
 		</main><!-- #main -->
