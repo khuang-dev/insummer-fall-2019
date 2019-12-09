@@ -2156,6 +2156,31 @@ iframe {
       margin: auto; } }
 
 @media (min-width: 480px) {
+  .title-vs-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; } }
+
+.accessibility-about-title h3 {
+  text-transform: uppercase; }
+  @media (min-width: 480px) {
+    .accessibility-about-title h3 {
+      border-right: solid 8px #ed1651;
+      height: 49px;
+      width: 256px;
+      height: 49px;
+      width: 236.4px;
+      color: #000000;
+      font-family: 'Montserrat';
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 49px; } }
+
+@media (min-width: 480px) {
   .accessibility-info-item {
     width: 50%; } }
 
@@ -2175,14 +2200,15 @@ iframe {
     width: 830px; } }
 
 @media (min-width: 480px) {
-  .accessibility-about-info {
+  .accessibility-about-info h5 {
     height: 192px;
     width: 830px;
     color: #000000;
     font-family: '.SF NS Display';
     font-size: 18px;
     line-height: 21px;
-    text-align: center; } }
+    text-align: center;
+    margin: auto; } }
 
 @media (min-width: 480px) {
   .accessibility-icon-svg {

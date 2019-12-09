@@ -7,6 +7,31 @@
     margin: auto;
   }
 }
+
+.title-vs-img {
+  @include desktop {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    justify-content: space-around;
+  }
+}
+
+.accessibility-about-title h3 {
+  text-transform: uppercase;
+  @include desktop {
+    border-right: solid 8px $btn__pink;
+    height: 49px;
+    width: 256px;
+    height: 49px;
+    width: 236.4px;
+    color: #000000;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 49px;
+  }
+}
 .accessibility-info-item {
   @include desktop {
     width: 50%;
@@ -26,7 +51,7 @@
     width: 830px;
   }
 }
-.accessibility-about-info {
+.accessibility-about-info h5 {
   @include desktop {
     height: 192px;
     width: 830px;
@@ -35,6 +60,7 @@
     font-size: 18px;
     line-height: 21px;
     text-align: center;
+    margin: auto;
   }
 }
 .accessibility-icon-svg {

@@ -53,9 +53,13 @@ get_header(); ?>
 										?>
 
 							<div class="accessibility-about">
-							<div class="accessibility-about-title"> <?php  the_sub_field('title_accessibility', );?> </div>
+
+							<div class ="title-vs-img">
+							<div class="accessibility-about-title"> <h3><?php  the_sub_field('title_accessibility', );?> </h3></div>
 								<img class="accessibility-about-img" src="<?php the_sub_field('image_accessibility'); ?>"/>
-								<div class="accessibility-about-info"> <?php  the_sub_field('contact_information');?> </div>
+						</div>
+
+								<div class="accessibility-about-info"> <h5><?php  the_sub_field('contact_information');?> </h5></div>
 							</div>
 
 											<?php endwhile;
@@ -93,7 +97,7 @@ get_header(); ?>
 							<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
 								
 						
-							<div class="accessibility-title"> <?php  the_sub_field('information_title', );?> </div>
+							<div class="accessibility-title"><h3> <?php  the_sub_field('information_title', );?></h3> </div>
 						</div>
 
 							<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
@@ -137,7 +141,8 @@ if( have_rows('about_accessibility_2', ) ):   ?>
 	
 	<div class ="icon-vs-title">
 		<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
-		<div class="accessibility-title"> <?php  the_sub_field('information_title', );?> </div>
+
+		<div class="accessibility-title"><h3> <?php  the_sub_field('information_title', );?></h3> </div>
 							</div>
 
 		<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
