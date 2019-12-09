@@ -32,6 +32,8 @@
   font-family: 'Montserrat';
   @include desktop {
     font-size: 30px;
+    width: 67%;
+    margin-bottom: 1.5rem;
   }
 }
 
