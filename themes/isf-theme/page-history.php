@@ -23,8 +23,6 @@ get_header(); ?>
 				<h1><?php  echo get_field ('page_title'); ?></h1>
 				<?php  echo get_field ('page_content'); ?>
 
-
-
 				<?php
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html( 'Pages:' ),

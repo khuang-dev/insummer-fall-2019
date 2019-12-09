@@ -8,7 +8,9 @@ padding: 0.25rem 3rem;
 }
 }
 .btn__round-pink {
-
+@extend .btn__round-orange;
+border: $btn__pink 3px solid;
+background: none;
 }
 .btn__square-pink {
 
