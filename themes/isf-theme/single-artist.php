@@ -44,9 +44,10 @@ get_header(); ?>
 								if( have_rows('testimonials') ):
 									while ( have_rows('testimonials') ) : the_row();
 							?>
-
+										<div class="testimonail-container">
 										<p><?php the_sub_field('testimony'); ?></p>
 										<p><?php the_sub_field('authors_name'); ?></p>
+										</div>
 
 							<?php
 									endwhile;
