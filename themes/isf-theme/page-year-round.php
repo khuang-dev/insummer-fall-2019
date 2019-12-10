@@ -58,6 +58,8 @@ get_header(); ?>
 
 					<section class="yearly-events">
 						<h2 class="events-title">Check out our Events</h2>
+
+						<!-- <php get_category('');?> -->
 						
 						<div class="event-container">
 						<?php
