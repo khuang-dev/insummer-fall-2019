@@ -27,15 +27,16 @@ get_header(); ?>
 							<?php endif; ?>
 				</div>
 
-		<div class="banner__image-wrapper hide-mobile">
-			<img class="banner__image" src="<?php the_sub_field('banner_image'); ?>"/>
+				<div class="banner__image-wrapper hide-mobile">
+					<img class="banner__image" src="<?php the_sub_field('banner_image'); ?>"/>
+				</div>
+				</section>
+					<?php endwhile; ?>
+					<?php else : ?>
+					<?php endif; ?>
 		</div>
-	</section>
-<?php endwhile; ?>
-<?php else : ?>
-<?php endif; ?>
-</div>
-	<div id="primary" class="content-area">
+	
+		<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -51,8 +52,8 @@ get_header(); ?>
 
 							<?php while(has_sub_field('year_events')): ?>
 
-								<h1><?php the_sub_field('event_year'); ?></h1>
-								<?php the_sub_field('year_event_about'); ?>
+								<h1 class="year-round-head"><?php the_sub_field('event_year'); ?></h1>
+								<p class="year-content"><?php the_sub_field('year_event_about'); ?></p>
 								
 
 							<?php endwhile; ?>

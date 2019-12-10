@@ -2274,6 +2274,15 @@ p.member-text {
       font-size: 24px;
       width: 353px; } }
 
+.page-year-round h1 {
+  text-align: center;
+  color: #ed1651;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px; }
+
 .single-artist h1 {
   color: #191414;
   border-left: 8px solid #ed1651;
