@@ -7,6 +7,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 6rem;
 }
 .wrapper__single-event {
     width: 370px;
@@ -28,17 +29,27 @@
     width: 5rem;
     height: 5rem;
     position: absolute;
-    top: 0;
-    border-radius: 25px;
+    top: 1.2rem;
+    left: 1.2rem;
+    border-radius: 15px;
     text-align: center;
+    .thumbnail__date-day {
+        font-weight: 700;
+        font-size: 2rem;
+        transform: translateY(-0.5rem);
+    }
+    .thumbnail__date-month {
+        padding-top: 0.6rem;
+    }
     p {
         padding: 0;
         margin: 0;
-
+        text-transform: uppercase;
     }
 }
 .wrapper__testimony {
     background-color: $bg__champagne;
+    padding: 0 6rem;
 }
 .wrapper__testimony-text {
     display: flex;
@@ -73,4 +84,15 @@
 }
 .featured-right {
     background-color: $bg__orange;
+}
+.wrapper__fp-sponsor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 6rem;
+}
+.wrapper__single-sponsor-img {
+    width: 300px;
+    flex-basis: 30%;
+    
 }

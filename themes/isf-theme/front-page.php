@@ -63,8 +63,8 @@ get_header(); ?>
                             <img src="<?php the_field('event_image'); ?>">
                             <div class="thumbnail__date">
                                 <?php $date = new DateTime(get_field('event_date')); ?>
-                                <p class="thumbnail__date-day"><?php echo $date->format('d'); ?></p>
                                 <p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
+                                <p class="thumbnail__date-day"><?php echo $date->format('d'); ?></p>
                             </div>
                         </div>
                         
@@ -105,7 +105,11 @@ get_header(); ?>
                             <?php while ( have_rows('featured_page')) : the_row(); ?>
                                 <div class="wrapper__featured-content" style="background-image: url(<?php the_sub_field('featured_page_image');?>); background-size: cover;">
                                 <div class="wrapper__featured-text featured-left featured-right">
-                                <h2><?php the_sub_field('featured_page_title');?></h2>
+                                <?php $field = get_field_objects('featured_page'); 
+                                var_dump($field);?> 
+
+                                <h2><?php echo $field['label']; ?></h2>
+                                <?php the_field('fp_title'); ?>
                                 <?php if ( have_rows('featured_page_description')):?>
                                     <?php while ( have_rows('featured_page_description')) : the_row(); ?>
                                     <p class="p__white"><?php the_sub_field('line_one');?></p>
@@ -119,7 +123,20 @@ get_header(); ?>
                             <?php else : ?>
                             <?php endif; ?> 
             </section>
-
+            
+            <section>
+                <div class="wrapper__fp-sponsor">
+                <?php echo get_the_title(21); ?>
+                <?php if ( have_rows('sponsor_images', 21)):?>
+                                    <?php while ( have_rows('sponsor_images', 21)) : the_row(); ?>
+                                    <div class="wrapper__single-sponsor-img">
+                                    <img src="<?php the_sub_field('sponsor_image', 21);?>">
+                </div>
+                                <?php endwhile; ?>
+                                <?php else : ?>
+                                <?php endif; ?> 
+                </div>
+            </section>
 
 		</main><!-- #main -->
     </div><!-- #primary -->
