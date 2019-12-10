@@ -1,0 +1,33 @@
+.volunteer-about-main {
+  @include desktop {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+  }
+}
+
+.volunteer-title {
+  @include desktop {
+    border-bottom: unset;
+    border-right: solid 8px $btn__pink;
+    //   height: 49px;
+    // width: 256px;
+    //   height: 49px;
+    color: #000000;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 49px;
+  }
+}
+.responsibilities-title {
+}
+
+.responsibilities-img {
+  width: 536px;
+  height: 540px;
+}
+
+.responsibilities-about {
+  display: flex;
+}
