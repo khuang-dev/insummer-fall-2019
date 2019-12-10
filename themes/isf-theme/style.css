@@ -1942,18 +1942,24 @@ iframe {
   background: none; }
 
 .page-membership .entry-content h2 {
-  color: #ed1651; }
+  color: #ed1651;
+  text-align: center; }
 
 p.member-text {
   padding-left: 10%;
   padding-right: 10%; }
+
+.curator {
+  background-color: #ed1651;
+  text-align: right; }
 
 @media (min-width: 480px) {
   .page-membership .entry-content {
     margin: 0 12rem; }
     .page-membership .entry-content h2 {
       border-left: 8px solid #ed1651;
-      padding-left: 1.5rem; }
+      padding-left: 1.5rem;
+      text-align: left; }
   p.member-text {
     margin-bottom: 50px; }
   .curator {
@@ -1964,7 +1970,9 @@ p.member-text {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 auto 50px auto; }
+    margin: 0 auto 50px auto;
+    background-color: transparent;
+    text-align: left; }
   .member-title {
     padding-left: 20px;
     padding-top: 50px; }

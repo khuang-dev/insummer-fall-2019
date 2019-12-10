@@ -1,21 +1,28 @@
 .page-membership .entry-content {
   h2 {
     color: $color__pink;
+    text-align: center;
   }
 }
 p.member-text {
   padding-left: 10%;
   padding-right: 10%;
 }
+
+// Memebership Pakages
+
+.curator {
+  background-color: $color__pink;
+  text-align: right;
+}
+
 @include desktop {
-  // p.member-text {
-  //   margin-bottom: 50px;
-  // }
   .page-membership .entry-content {
     margin: 0 12rem;
     h2 {
       border-left: 8px solid $color__pink;
       padding-left: 1.5rem;
+      text-align: left;
     }
   }
 
@@ -30,6 +37,8 @@ p.member-text {
     box-shadow: 0 2px 2px 0px $color__grey, -12px 12px 0 0 $color__pink;
     display: flex;
     margin: 0 auto 50px auto;
+    background-color: transparent;
+    text-align: left;
   }
 
   .member-title {
