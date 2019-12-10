@@ -1999,7 +1999,8 @@ p.member-text {
 
 .curator {
   background-color: #ed1651;
-  text-align: right; }
+  text-align: right;
+  color: white; }
 
 .member-title {
   padding-right: 3rem;
