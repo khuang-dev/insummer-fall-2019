@@ -2015,30 +2015,36 @@ iframe {
     height: 55px;
     border-left: 8px solid #ed1651;
     border-right: unset;
-    width: 41%; } }
+    width: 41%; }
+    .responsibilities-title h3,
+    .qualificatons-title h3,
+    .benefits-title h3 {
+      margin-left: 1rem; } }
 
-.responsibilities-img {
-  width: 536px;
-  height: 540px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 339px;
-  width: 464px;
-  -webkit-box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
-          box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  margin: 0 auto 50px;
-  background-color: transparent;
-  text-align: left; }
+@media (min-width: 480px) {
+  .responsibilities-img {
+    width: 536px;
+    height: 540px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 339px;
+    width: 464px;
+    -webkit-box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
+            box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    margin: 0 auto 50px;
+    background-color: transparent;
+    text-align: left; } }
 
-.responsibilities-about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #fff2f2;
-  padding: 3rem; }
+@media (min-width: 480px) {
+  .responsibilities-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #fff2f2;
+    padding: 3rem; } }
 
 @media (min-width: 480px) {
   .volunteer-info h5,
@@ -2052,15 +2058,24 @@ iframe {
     font-size: 18px;
     line-height: 21px; } }
 
-.responsibilities-title-vs-info {
-  padding: 4rem; }
+.responsibilities-info h5,
+.benefits-info h5,
+.qualificatons-info,
+.qualificatons-list {
+  width: 470px; }
 
-.combine-qualifications-benefits {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+@media (min-width: 480px) {
+  .responsibilities-title-vs-info {
+    padding: 4rem; } }
+
+@media (min-width: 480px) {
+  .combine-qualifications-benefits {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 3rem; } }
 
 .btn__round-orange, .btn__round-pink {
   border: #f58220 3px solid;
