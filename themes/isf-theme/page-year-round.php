@@ -8,7 +8,7 @@
 get_header(); ?>
 		<?php if ( have_rows('banner_content') ) : ?>
 			<?php /* Start the Loop */ ?>
-			<div class="main-carousel">    
+			<div class="main-carousel hide-mobile">    
 
 				<?php while ( have_rows('banner_content') ) : the_row(); ?>
 				<section class="banner carousel-cell">
@@ -27,7 +27,7 @@ get_header(); ?>
 							<?php endif; ?>
 				</div>
 
-		<div class="banner__image-wrapper">
+		<div class="banner__image-wrapper hide-mobile">
 			<img class="banner__image" src="<?php the_sub_field('banner_image'); ?>"/>
 		</div>
 	</section>
