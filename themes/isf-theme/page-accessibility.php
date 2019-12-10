@@ -202,17 +202,25 @@ if( have_rows('about_accessibility_2', ) ):   ?>
 	$title=get_sub_field('information_title' );
 	$details=get_sub_field('information_details');
 ?>
-							<button class="accordion">
+					<button class="accordion">
 
-							<span>
-							<img src="<?=$img?>" width="20px">
-											<?=$title?>
+									<span>
+							<!-- <div class ="acces-img-title"> -->
 
-							</span>
-							<i class="fas fa-angle-down"></i>
-								
-								
-							</button>
+											<!-- <div class ="access-img-accordion"> -->
+												<img src="<?=$img?>" width="20px">
+										<!-- </div> -->
+										
+												<?=$title?>
+
+												
+									</span>
+
+									<i class="fas fa-angle-down"></i>
+							<!-- </div> -->
+							
+							
+					</button>
 
 
 						<div class="panel">

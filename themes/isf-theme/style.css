@@ -2406,6 +2406,12 @@ p.member-text {
 .fa-angle-down {
   font-size: 24px; }
 
+.accordion img {
+  border-radius: 50px;
+  background-color: #fff2f2;
+  width: 35px;
+  height: 35px; }
+
 .page-year-round h1 {
   text-align: center;
   color: #ed1651;
