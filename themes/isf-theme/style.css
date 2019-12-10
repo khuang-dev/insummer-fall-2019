@@ -2173,12 +2173,34 @@ iframe {
     max-width: 1100px;
     margin: auto;
     -ms-flex-pack: distribute;
-        justify-content: space-around; } }
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2; } }
+
+.accessibility-video-loop {
+  max-width: 1100px;
+  margin: auto; }
+
+.accessibility-about-title {
+  width: 100%; }
 
 .accessibility-about-title h3 {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: solid 4px #ed1651; }
   @media (min-width: 480px) {
     .accessibility-about-title h3 {
+      border-bottom: unset;
       border-right: solid 8px #ed1651;
       height: 49px;
       width: 256px;
@@ -2197,6 +2219,13 @@ iframe {
       display: block;
       width: 50%; } }
 
+.accessibility-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1100px;
+  margin: auto; }
+
 @media (min-width: 480px) {
   .icon-vs-title {
     display: -webkit-box;
@@ -2210,18 +2239,23 @@ iframe {
 @media (min-width: 480px) {
   .accessibility-about-img {
     height: 507px;
-    width: 830px; } }
-
-@media (min-width: 480px) {
-  .accessibility-about-info h5 {
-    height: 192px;
     width: 830px;
-    color: #000000;
-    font-family: '.SF NS Display';
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    margin: auto; } }
+    max-width: 100%; } }
+
+.accessibility-about-info h5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center; }
+  @media (min-width: 480px) {
+    .accessibility-about-info h5 {
+      height: 192px;
+      width: 830px;
+      color: #000000;
+      font-family: 'Montserrat';
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center; } }
 
 @media (min-width: 480px) {
   .accessibility-icon-svg {
@@ -2279,9 +2313,14 @@ iframe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background-color: white; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  cursor: pointer; }
   @media (min-width: 480px) {
     .accordion {
       display: none; } }
+
+.fa-angle-down {
+  font-size: 24px; }

@@ -77,20 +77,20 @@ get_header(); ?>
 										// display a sub field value
 										?>
 
-							<div class="accessibility-about">
+					<div class="accessibility-about">
 
-							<div class ="title-vs-img">
-							<div class="accessibility-about-title"> <h3><?php  the_sub_field('title_accessibility', );?> </h3></div>
-								<img class="accessibility-about-img" src="<?php the_sub_field('image_accessibility'); ?>"/>
-						</div>
-
-								<div class="accessibility-about-info"> <h5><?php  the_sub_field('contact_information');?> </h5></div>
+						<div class="accessibility-about-title"> <h3><?php  the_sub_field('title_accessibility', );?> </h3></div>
+							<div class="title-vs-img">
+						<img class="accessibility-about-img" src="<?php the_sub_field('image_accessibility'); ?>"/>
+						
+						<div class="accessibility-about-info"> <h5><?php  the_sub_field('contact_information');?> </h5></div>
+					</div>
 							</div>
 
 											<?php endwhile;
 											?>
 
-										</div>
+					</div>
 
 											<?php
 									else :
@@ -107,7 +107,7 @@ get_header(); ?>
 					// check if the repeater field has rows of data
 					if( have_rows('about_accessibility', ) ):   ?>
 
-						<divc class="accessibility-info-loop">						
+						<div class="accessibility-info-loop">						
 
 						<?php
 									// loop through the rows of data
@@ -138,13 +138,19 @@ get_header(); ?>
 					$details=get_sub_field('information_details');
 						?>
 								
-										<button class="accordion" style="background-image:url('<?=$img?>')"><?=$title?></button>
+									<button class="accordion" >
+										<span>
+											<img src="<?=$img?>" width="20px">
+											<?=$title?>
+										</span>
+										<i class="fas fa-angle-down"></i>
+									
+									</button>
 
 											<div class="panel">
 											<p><?=$details?></p>
 											</div>
-								
-
+							
 										<?php endwhile;
 										?>
 
@@ -196,7 +202,17 @@ if( have_rows('about_accessibility_2', ) ):   ?>
 	$title=get_sub_field('information_title' );
 	$details=get_sub_field('information_details');
 ?>
-					<button class="accordion" style="background-image:url('<?=$img?>')"><?=$title?></button>
+							<button class="accordion">
+
+							<span>
+							<img src="<?=$img?>" width="20px">
+											<?=$title?>
+
+							</span>
+							<i class="fas fa-angle-down"></i>
+								
+								
+							</button>
 
 
 						<div class="panel">

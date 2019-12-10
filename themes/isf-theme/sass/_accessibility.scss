@@ -16,12 +16,27 @@
     max-width: 1100px;
     margin: auto;
     justify-content: space-around;
+    flex-direction: column;
+    flex-grow: 2;
   }
+}
+
+.accessibility-video-loop {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.accessibility-about-title {
+  width: 100%;
 }
 
 .accessibility-about-title h3 {
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 4px $btn__pink;
   @include desktop {
+    border-bottom: unset;
     border-right: solid 8px $btn__pink;
     height: 49px;
     width: 256px;
@@ -42,9 +57,17 @@
   }
 }
 
+.accessibility-about {
+  display: flex;
+  max-width: 1100px;
+  margin: auto;
+}
+
 .icon-vs-title {
   @include desktop {
     display: flex;
+    // flex-direction: column;
+    // flex-grow: 2;
     align-items: center;
     margin-left: -5rem;
   }
@@ -53,18 +76,20 @@
   @include desktop {
     height: 507px;
     width: 830px;
+    max-width: 100%;
   }
 }
 .accessibility-about-info h5 {
+  display: flex;
+  text-align: center;
   @include desktop {
     height: 192px;
     width: 830px;
     color: #000000;
-    font-family: '.SF NS Display';
+    font-family: 'Montserrat';
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-    margin: auto;
   }
 }
 .accessibility-icon-svg {
@@ -128,9 +153,14 @@
   background-repeat: no-repeat;
   max-width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: white;
+  cursor: pointer;
   @include desktop {
     display: none;
   }
+}
+
+.fa-angle-down {
+  font-size: 24px;
 }
