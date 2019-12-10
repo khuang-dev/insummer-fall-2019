@@ -62,7 +62,7 @@ get_header(); ?>
 							<div class="curator">
 										<?php while(has_sub_field('membership_package')): ?> 
 										<div class="member-title">		
-										<h3><?php the_sub_field('membership_title'); ?></h3>
+										<h3 class="package-title" ><?php the_sub_field('membership_title'); ?></h3>
 										<p><?php the_sub_field('membership_price'); ?></p>
 										</div>
 										<div class="package-text">

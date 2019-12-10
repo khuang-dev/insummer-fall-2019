@@ -2007,7 +2007,9 @@ p.member-text {
   padding-top: 4rem;
   padding-bottom: 22px; }
   .member-title h3 {
-    border-top: solid 4px; }
+    border-top: solid 4px;
+    border-top: 4px solid;
+    color: white; }
 
 .package-text {
   padding-right: 3rem;
