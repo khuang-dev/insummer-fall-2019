@@ -82,6 +82,7 @@
 .accessibility-about-info h5 {
   display: flex;
   text-align: center;
+  font-weight: normal;
   @include desktop {
     height: 192px;
     width: 830px;
