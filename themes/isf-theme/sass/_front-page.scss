@@ -1,13 +1,20 @@
 .title__upcoming-event {
     width: 100%;
     color: $color__black;
+    margin: 0 6rem;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+}
+.title__event {
+    font-weight: 600;
 }
 .wrapper__upcoming-events {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     margin: 0 6rem;
+    margin-bottom: 3rem;
 }
 .wrapper__single-event {
     width: 370px;
@@ -49,7 +56,7 @@
 }
 .wrapper__testimony {
     background-color: $bg__champagne;
-    padding: 0 6rem;
+    padding: 3rem 6rem;
 }
 .wrapper__testimony-text {
     display: flex;
@@ -63,8 +70,16 @@
     display: flex;
     height: 25rem;
     width: 100%;
-    // flex-direction: column;
-    // width: 100%;
+    // &:nth-child(odd) {
+    //     .wrapper__featured-text {
+    //         background-color: $color__pink;
+    //     }
+    // }
+    &:nth-child(even) {
+        .wrapper__featured-text {
+            background-color: $color__orange;
+        }
+    }
 }
 .wrapper__featured-content {
     display: flex;
@@ -72,27 +87,29 @@
     text-align: center;
     flex-direction: column;
     text-align: center;
-    position: relative;
+    position: relative; 
+
 }
 .wrapper__featured-text {
     width: 100%;
     position: absolute;
     bottom: 0;
-}
-.featured-left {
-    background-color: $bg__pink;
-}
-.featured-right {
-    background-color: $bg__orange;
+
 }
 .wrapper__fp-sponsor {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 6rem;
+    margin-bottom: 3rem;
 }
 .wrapper__single-sponsor-img {
     width: 300px;
     flex-basis: 30%;
     
+}
+.title__sponsor {
+    width: 100%;
+    margin: 0 6rem;
+    margin-top: 3rem;
 }

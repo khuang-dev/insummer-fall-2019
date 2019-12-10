@@ -46,10 +46,8 @@ get_header(); ?>
 </div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-        
+        <h3 class="h3__left-border-pink title__upcoming-event">Upcoming Events</h2>
         <section class="wrapper__upcoming-events">
-            <h2 class="title__upcoming-event">Upcoming Events</h2>
-
                 <?php 
 				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 3);
    				$event_posts = get_posts( $args ); // returns an array of posts
@@ -69,7 +67,7 @@ get_header(); ?>
                         </div>
                         
                         <div class="wrapper__info-event">
-                            <p><?php the_title(); ?></p>
+                            <p class="title__event"><?php the_title(); ?></p>
                             <p><?php the_field('event_date'); ?></p>
                             <?php if ( have_rows('event_time')):?>
                                 <?php while ( have_rows('event_time')) : the_row(); ?>
@@ -84,7 +82,7 @@ get_header(); ?>
             </section>
 
             <section class="wrapper__testimony">
-                <?php the_field('testimony_header'); ?>
+                <h3 class="h3__left-border-pink"><?php the_field('testimony_header'); ?></h3>
                 <article class="container__testimony">
                     <?php the_field('testimony_image'); ?>
                     <?php the_field('testimony_video'); ?>
@@ -101,19 +99,15 @@ get_header(); ?>
             </section>
 
             <section class="wrapper__featured">
-            <?php if ( have_rows('featured_page')):?>
-                            <?php while ( have_rows('featured_page')) : the_row(); ?>
+            <?php if ( have_rows('featured_content')):?>
+                            <?php while ( have_rows('featured_content')) : the_row(); ?>
                                 <div class="wrapper__featured-content" style="background-image: url(<?php the_sub_field('featured_page_image');?>); background-size: cover;">
-                                <div class="wrapper__featured-text featured-left featured-right">
-                                <?php $field = get_field_objects('featured_page'); 
-                                var_dump($field);?> 
-
-                                <h2><?php echo $field['label']; ?></h2>
-                                <?php the_field('fp_title'); ?>
-                                <?php if ( have_rows('featured_page_description')):?>
-                                    <?php while ( have_rows('featured_page_description')) : the_row(); ?>
-                                    <p class="p__white"><?php the_sub_field('line_one');?></p>
-                                    <p class="p__white"><?php the_sub_field('line_two');?></p>
+                                <div class="wrapper__featured-text">
+                                <h2 class="h2__featured"><?php the_sub_field('featured_title')?></h2>
+                                <?php if ( have_rows('featured_description')):?>
+                                    <?php while ( have_rows('featured_description')) : the_row(); ?>
+                                    <p class="p__featured p__white"><?php the_sub_field('line_one');?></p>
+                                    <p class="p__featured p__white"><?php the_sub_field('line_two');?></p>
                                 <?php endwhile; ?>
                                 <?php else : ?>
                                 <?php endif; ?> 
@@ -125,8 +119,8 @@ get_header(); ?>
             </section>
             
             <section>
+                <h3 class="h3__left-border-pink title__sponsor"><?php echo get_the_title(21); ?><h3>
                 <div class="wrapper__fp-sponsor">
-                <?php echo get_the_title(21); ?>
                 <?php if ( have_rows('sponsor_images', 21)):?>
                                     <?php while ( have_rows('sponsor_images', 21)) : the_row(); ?>
                                     <div class="wrapper__single-sponsor-img">
