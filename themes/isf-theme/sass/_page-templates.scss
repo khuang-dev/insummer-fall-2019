@@ -43,7 +43,15 @@
         }
     }
 .flickity-page-dots {
-    display: block;
+    margin-bottom: 2.5rem !important;
+    .dot {
+        background: rgb(255, 255, 255) !important;
+        opacity: 0.5 !important;
+    }
+    .is-selected {
+        background: $color__white !important;
+        opacity: 1 !important;
+    }
 }
 .flickity-prev-next-button {
     display: none;

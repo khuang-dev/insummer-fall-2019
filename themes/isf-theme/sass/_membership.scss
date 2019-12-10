@@ -1,11 +1,53 @@
 .page-membership .entry-content {
-  margin: 0 12rem;
   h2 {
-    color: $color__black;
-    border-left: 8px solid $color__pink;
-    padding-left: 1.5rem;
+    color: $color__pink;
+    text-align: center;
   }
 }
+p.member-text {
+  padding-left: 10%;
+  padding-right: 10%;
+}
 
-.member-text {
+// Memebership Pakages
+
+.curator {
+  background-color: $color__pink;
+  text-align: right;
+}
+
+@include desktop {
+  .page-membership .entry-content {
+    margin: 0 12rem;
+    h2 {
+      border-left: 8px solid $color__pink;
+      padding-left: 1.5rem;
+      text-align: left;
+    }
+  }
+
+  p.member-text {
+    margin-bottom: 50px;
+  }
+  // Memebership Pakages
+
+  .curator {
+    height: 339px;
+    width: 464px;
+    box-shadow: 0 2px 2px 0px $color__grey, -12px 12px 0 0 $color__pink;
+    display: flex;
+    margin: 0 auto 50px auto;
+    background-color: transparent;
+    text-align: left;
+  }
+
+  .member-title {
+    padding-left: 20px;
+    padding-top: 50px;
+  }
+
+  .package-text {
+    padding-left: 20px;
+    padding-top: 50px;
+  }
 }

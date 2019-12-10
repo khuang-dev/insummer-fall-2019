@@ -43,7 +43,54 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -259,9 +306,6 @@ h3, h5 {
   color: #191414; }
 
 /* Copy */
-p {
-  margin-bottom: 1.5rem; }
-
 .p__white {
   color: #ffffff; }
 
@@ -336,12 +380,10 @@ body {
   background: #ffffff;
   /* Fallback for when there is no custom background color defined. */ }
 
-blockquote,
-q {
+blockquote, q {
   quotes: '' ''; }
   blockquote:before, blockquote:after,
-  q:before,
-  q:after {
+  q:before, q:after {
     content: ''; }
 
 hr {
@@ -1230,7 +1272,13 @@ object {
     font-weight: 600; }
 
 .flickity-page-dots {
-  display: block; }
+  margin-bottom: 2.5rem !important; }
+  .flickity-page-dots .dot {
+    background: white !important;
+    opacity: 0.5 !important; }
+  .flickity-page-dots .is-selected {
+    background: #ffffff !important;
+    opacity: 1 !important; }
 
 .flickity-prev-next-button {
   display: none; }
@@ -1941,12 +1989,44 @@ iframe {
   border: #ed1651 3px solid;
   background: none; }
 
-.page-membership .entry-content {
-  margin: 0 12rem; }
-  .page-membership .entry-content h2 {
-    color: #191414;
-    border-left: 8px solid #ed1651;
-    padding-left: 1.5rem; }
+.page-membership .entry-content h2 {
+  color: #ed1651;
+  text-align: center; }
+
+p.member-text {
+  padding-left: 10%;
+  padding-right: 10%; }
+
+.curator {
+  background-color: #ed1651;
+  text-align: right; }
+
+@media (min-width: 480px) {
+  .page-membership .entry-content {
+    margin: 0 12rem; }
+    .page-membership .entry-content h2 {
+      border-left: 8px solid #ed1651;
+      padding-left: 1.5rem;
+      text-align: left; }
+  p.member-text {
+    margin-bottom: 50px; }
+  .curator {
+    height: 339px;
+    width: 464px;
+    -webkit-box-shadow: 0 2px 2px 0px #cecece, -12px 12px 0 0 #ed1651;
+            box-shadow: 0 2px 2px 0px #cecece, -12px 12px 0 0 #ed1651;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto 50px auto;
+    background-color: transparent;
+    text-align: left; }
+  .member-title {
+    padding-left: 20px;
+    padding-top: 50px; }
+  .package-text {
+    padding-left: 20px;
+    padding-top: 50px; } }
 
 @media (min-width: 480px) {
   .apply-here {
@@ -2280,6 +2360,7 @@ iframe {
   @media (min-width: 480px) {
     .accessibility-info-details {
       font-size: 24px;
+<<<<<<< HEAD
       width: 353px;
       margin-bottom: 2rem; } }
 
@@ -2325,3 +2406,105 @@ iframe {
 
 .fa-angle-down {
   font-size: 24px; }
+=======
+      width: 353px; } }
+
+.title__upcoming-event {
+  width: 100%;
+  color: #191414; }
+
+.wrapper__upcoming-events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.wrapper__single-event {
+  width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.wrapper__image-event {
+  width: 370px;
+  height: 265px;
+  position: relative; }
+  .wrapper__image-event img {
+    height: 265px;
+    width: auto;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.thumbnail__date {
+  background-color: #ffffff;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  border-radius: 25px;
+  text-align: center; }
+  .thumbnail__date p {
+    padding: 0;
+    margin: 0; }
+
+.wrapper__testimony {
+  background-color: #fff2f2; }
+
+.wrapper__testimony-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.container__testimony {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.wrapper__featured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 25rem;
+  width: 100%; }
+
+.wrapper__featured-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  position: relative; }
+
+.wrapper__featured-text {
+  width: 100%;
+  position: absolute;
+  bottom: 0; }
+
+.featured-left {
+  background-color: #ed1651; }
+
+.featured-right {
+  background-color: #f58220; }
+>>>>>>> 91ad894f64320fc874902b7c387a0295390afc68
