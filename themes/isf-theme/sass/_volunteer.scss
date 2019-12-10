@@ -3,16 +3,23 @@
     display: flex;
     max-width: 1100px;
     margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
   }
 }
 
-.volunteer-title {
+.volunteer-info h5 {
+  @include desktop {
+    margin-left: 5rem;
+  }
+}
+.volunteer-title,
+.responsibilities-title,
+.qualificatons-title,
+.benefits-title {
   @include desktop {
     border-bottom: unset;
     border-right: solid 8px $btn__pink;
-    //   height: 49px;
-    // width: 256px;
-    //   height: 49px;
     color: #000000;
     font-family: 'Montserrat';
     font-size: 40px;
@@ -20,14 +27,61 @@
     line-height: 49px;
   }
 }
-.responsibilities-title {
+.volunteer-title {
+  @include desktop {
+    height: 95px;
+  }
+}
+
+.responsibilities-title,
+.qualificatons-title,
+.benefits-title {
+  @include desktop {
+    height: 55px;
+    border-left: 8px solid #ed1651;
+    border-right: unset;
+    width: 41%;
+  }
 }
 
 .responsibilities-img {
   width: 536px;
   height: 540px;
+  object-fit: cover;
+  height: 339px;
+  width: 464px;
+  box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 50px;
+  background-color: transparent;
+  text-align: left;
 }
 
 .responsibilities-about {
   display: flex;
+  background-color: $bg__champagne;
+  padding: 3rem;
+}
+.volunteer-info h5,
+.responsibilities-info h5,
+.benefits-info h5,
+.qualificatons-info,
+.qualificatons-list {
+  @include desktop {
+    height: 192px;
+    // width: 830px;
+    color: #000000;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+.responsibilities-title-vs-info {
+  padding: 4rem;
+}
+
+.combine-qualifications-benefits {
+  display: flex;
+  justify-content: space-around;
 }

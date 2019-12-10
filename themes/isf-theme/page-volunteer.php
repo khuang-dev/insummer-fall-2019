@@ -84,13 +84,13 @@ get_header(); ?>
 
 				<img class="responsibilities-img" src="<?php the_sub_field('responsibilities_picture'); ?>"/>
 
-						<div class="responsibilities-title"> <h3><?php  the_sub_field('responsibilities_title');?> </h3></div>
-					
-					
 
-					
-					<div class="responsibilities-info"> <h5><?php  the_sub_field('responsibilities_content');?> </h5></div>
+				<div class ="responsibilities-title-vs-info">
+						<div class="responsibilities-title"> <h3><?php  the_sub_field('responsibilities_title');?> </h3></div>
+						<div class="responsibilities-info"> <h5><?php  the_sub_field('responsibilities_content');?> </h5></div>
 		
+				</div>
+
 			</div>	
 
 				<?php endwhile;?>
@@ -101,6 +101,8 @@ get_header(); ?>
 
 
 					<!-- END OF THE SECOND LOOP VOLUNTEER -->
+
+<div class ="combine-qualifications-benefits">
 
 
 							<!-- THIS IS THE THIRD LOOP -->
@@ -120,14 +122,8 @@ get_header(); ?>
 							
 							<div class="qualificatons-info"> <h5><?php  the_sub_field('qualifications_content');?> </h5></div>
 
-							<div class="qualificatons-list"> <h3><?php  the_sub_field('qualificatons_list');?> </h3></div>
+							<div class="qualificatons-list"> <h5><?php  the_sub_field('qualificatons_list');?> </h5></div>
 						
-
-
-
-
-
-
 
 
 							</div>	
@@ -160,6 +156,7 @@ get_header(); ?>
 			<div class="benefits-info"> <h5><?php  the_sub_field('benefits_content');?> </h5></div>
 
 		
+		
 			</div>	
 
 				<?php endwhile;?>
@@ -168,7 +165,7 @@ get_header(); ?>
 			<?php else : endif; ?>
 						
 
-
+	</div>
 						<!-- END OF FOURTH LOOP -->
 
 
