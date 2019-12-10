@@ -2360,7 +2360,6 @@ p.member-text {
   @media (min-width: 480px) {
     .accessibility-info-details {
       font-size: 24px;
-<<<<<<< HEAD
       width: 353px;
       margin-bottom: 2rem; } }
 
@@ -2406,8 +2405,6 @@ p.member-text {
 
 .fa-angle-down {
   font-size: 24px; }
-=======
-      width: 353px; } }
 
 .page-year-round h1 {
   text-align: center;
@@ -2555,4 +2552,3 @@ p.member-text {
 
 .featured-right {
   background-color: #f58220; }
->>>>>>> 91ad894f64320fc874902b7c387a0295390afc68
