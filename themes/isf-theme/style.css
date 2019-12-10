@@ -2415,6 +2415,9 @@ p.member-text {
   font-weight: 700;
   font-size: 30px; }
 
+.page-year-round h2 {
+  color: #191414; }
+
 .single-artist h1 {
   color: #191414;
   border-left: 8px solid #ed1651;
