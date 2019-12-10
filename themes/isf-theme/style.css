@@ -2420,8 +2420,6 @@ p.member-text {
   display: flex;
   height: 25rem;
   width: 100%; }
-  .wrapper__featured:nth-child(even) .wrapper__featured-text {
-    background-color: #f58220; }
 
 .wrapper__featured-content {
   display: -webkit-box;
@@ -2436,11 +2434,17 @@ p.member-text {
           flex-direction: column;
   text-align: center;
   position: relative; }
+  .wrapper__featured-content:nth-of-type(odd) .wrapper__featured-text {
+    background-color: #ed1651; }
+  .wrapper__featured-content:nth-of-type(even) .wrapper__featured-text {
+    background-color: #f58220; }
 
 .wrapper__featured-text {
   width: 100%;
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem; }
 
 .wrapper__fp-sponsor {
   display: -webkit-box;

@@ -86,11 +86,11 @@
     //         background-color: $color__pink;
     //     }
     // }
-    &:nth-child(even) {
-        .wrapper__featured-text {
-            background-color: $color__orange;
-        }
-    }
+    // &:nth-child(even) {
+    //     .wrapper__featured-text {
+    //         background-color: $color__orange;
+    //     }
+    // }
 }
 .wrapper__featured-content {
     display: flex;
@@ -99,13 +99,24 @@
     flex-direction: column;
     text-align: center;
     position: relative; 
+    &:nth-of-type(odd){
+        .wrapper__featured-text {
+            background-color: $color__pink;
+        }
+    }
+    &:nth-of-type(even){
+        .wrapper__featured-text {
+            background-color: $color__orange;
+        }
+    }
 
 }
 .wrapper__featured-text {
     width: 100%;
     position: absolute;
     bottom: 0;
-
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
 }
 .wrapper__fp-sponsor {
     display: flex;
