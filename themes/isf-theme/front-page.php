@@ -80,17 +80,19 @@ get_header(); ?>
                     <?php endforeach; wp_reset_postdata(); ?>
 
             </section>
-
+            
             <section class="wrapper__testimony">
-                <h3 class="h3__left-border-pink"><?php the_field('testimony_header'); ?></h3>
+            <h3 class="h3__left-border-pink"><?php the_field('testimony_header'); ?></h3>
                 <article class="container__testimony">
                     <?php the_field('testimony_image'); ?>
                     <?php the_field('testimony_video'); ?>
                     <div class="wrapper__testimony-text">
                     <?php if ( have_rows('testimony')):?>
                             <?php while ( have_rows('testimony')) : the_row(); ?>
+                            <div class="wrapper__testimony-single">
                                 <p><?php the_sub_field('testimony_text');?></p>
-                                <p><?php the_sub_field('testimony_author');?></p>
+                                <p class="author__testimony">- <?php the_sub_field('testimony_author');?></p>
+                    </div>
                             <?php endwhile; ?>
                             <?php else : ?>
                             <?php endif; ?>  

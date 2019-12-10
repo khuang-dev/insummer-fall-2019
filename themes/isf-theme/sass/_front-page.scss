@@ -61,9 +61,20 @@
 .wrapper__testimony-text {
     display: flex;
     flex-direction: column;
+    width: 40rem;
+}
+.wrapper__testimony-single {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
 }
 .container__testimony {
     display: flex;
+    justify-content: space-between;
+}
+.author__testimony {
+    font-weight: 600;
+    text-align: right;
 }
 
 .wrapper__featured {
