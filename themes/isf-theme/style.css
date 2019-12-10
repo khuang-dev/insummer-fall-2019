@@ -2001,15 +2001,30 @@ p.member-text {
   background-color: #ed1651;
   text-align: right;
   color: white; }
+  @media (min-width: 480px) {
+    .curator {
+      color: #191414; } }
 
 .member-title {
   padding-right: 3rem;
   padding-top: 4rem;
   padding-bottom: 22px; }
   .member-title h3 {
-    border-top: solid 4px;
-    border-top: 4px solid;
     color: white; }
+    @media (min-width: 480px) {
+      .member-title h3 {
+        color: #191414; } }
+
+.package-title {
+  position: relative; }
+  .package-title::before {
+    content: '';
+    width: 50%;
+    height: 4px;
+    background: #ffffff;
+    position: absolute;
+    top: -10px;
+    right: 0; }
 
 .package-text {
   padding-right: 3rem;

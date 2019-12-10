@@ -15,6 +15,9 @@ p.member-text {
   background-color: $color__pink;
   text-align: right;
   color: white;
+  @include desktop {
+    color: $color__black;
+  }
 }
 
 .member-title {
@@ -23,12 +26,24 @@ p.member-text {
   padding-bottom: 22px;
 
   h3 {
-    border-top: solid 4px;
-    border-top: 4px solid;
     color: white;
+    @include desktop {
+      color: $color__black;
+    }
   }
 }
-
+.package-title {
+  position: relative;
+  &::before {
+    content: '';
+    width: 50%;
+    height: 4px;
+    background: $color__white;
+    position: absolute;
+    top: -10px;
+    right: 0;
+  }
+}
 .package-text {
   padding-right: 3rem;
   padding-left: 1rem;
