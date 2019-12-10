@@ -16,9 +16,10 @@ get_header(); ?>
 			<header class="entry-header">
 				<div class="artist-container">
 					<div class="artist-img">
-						<?php if ( has_post_thumbnail() ) : ?>
-							<?php the_post_thumbnail( 'large' ); ?>
-						<?php endif; ?>
+						<img src="<?php echo get_field('artist_image');?>" />
+						<!-- <php if ( has_post_thumbnail() ) : ?>
+							<php the_post_thumbnail( 'large' ); ?>
+						<php endif; ?> -->
 						
 						<div class="artist-social hide-mobile">
 							<a href="<?php the_field ('facebook_url', 'options'); ?>">
