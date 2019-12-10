@@ -45,74 +45,7 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
-
-					<div class="accessibility">
-						<?php
-							if( have_rows('accessibility') ):
-
-								while ( have_rows('accessibility') ) : the_row();
-								?>
-
-								<h1><?php echo the_sub_field('title_accessibility');?></h1>
-								<img src="<?php the_sub_field('image_accessibility');?>" />
-								<p><?php the_sub_field('contact_information');?></p>
-
-								<?php
-								endwhile;
-
-							else :
-								// no rows found
-							endif;
-
-							?>
-					</div>
-
-					<div class="about-accessibility1">
-							<?php
-
-							if( have_rows('about_accessibility') ):
-
-								while ( have_rows('about_accessibility') ) : the_row();
-								?>
-								<img src="<?php the_sub_field('accessibility_image'); ?>" ?>
-								<h3><?php the_sub_field('information_title'); ?></h3>
-								<p><?php the_sub_field('information_details'); ?></p>
-
-
-								<?php
-
-								endwhile;
-							else :
-								// no rows found
-							endif;
-
-							?>
-					</div>
-
-						<img src="<?php echo get_field ('image_file')?> "/>
-
-					<div class="about-accessibility2">
-						<?php
-
-							if( have_rows('about_accessibility_2') ):
-
-								while ( have_rows('about_accessibility_2') ) : the_row();
-								?>
-								<img src="<?php the_sub_field('accessibility_image'); ?>" ?>
-								<h3><?php the_sub_field('information_title'); ?></h3>
-								<p><?php the_sub_field('information_details'); ?></p>
-
-
-								<?php
-
-								endwhile;
-							else :
-								// no rows found
-							endif;
-
-							?>
-					</div>
-
+					<?php //the_content(); ?>
 
 					<?php
 						wp_link_pages( array(
@@ -144,16 +77,20 @@ get_header(); ?>
 										// display a sub field value
 										?>
 
-							<div class="accessibility-about-info">
-							<div class="accessibility-about-title"> <?php  the_sub_field('title_accessibility', );?> </div>
-								<img class="accessibility-about-img" src="<?php the_sub_field('image_accessibility'); ?>"/>
-								<div class="accessibility-about-info"> <?php  the_sub_field('contact_information');?> </div>
+					<div class="accessibility-about">
+
+						<div class="accessibility-about-title"> <h3><?php  the_sub_field('title_accessibility', );?> </h3></div>
+							<div class="title-vs-img">
+						<img class="accessibility-about-img" src="<?php the_sub_field('image_accessibility'); ?>"/>
+						
+						<div class="accessibility-about-info"> <h5><?php  the_sub_field('contact_information');?> </h5></div>
+					</div>
 							</div>
 
 											<?php endwhile;
 											?>
 
-										</div>
+					</div>
 
 											<?php
 									else :
@@ -162,11 +99,7 @@ get_header(); ?>
 
 									?>
 
-									<!-- END OF THE LOOP VIDEO NR.1 -->
-
-
-
-
+						<!-- END OF THE LOOP VIDEO NR.1 -->
 
 			<!-- THIS IS THE LOOP FOR ICONS NR.1 -->
 			<?php
@@ -185,11 +118,39 @@ get_header(); ?>
 
 						<div class="accessibility-info-item">
 						
+						<div class ="icon-vs-title">
 							<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
-							<div class="accessibility-title"> <?php  the_sub_field('information_title', );?> </div>
-							<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
+								
+						
+							<div class="accessibility-title"><h3> <?php  the_sub_field('information_title', );?></h3> </div>
 						</div>
 
+							<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
+						
+
+						</div>
+
+						<?php
+					$img=get_sub_field('accessibility_image');
+					// var_dump($img);
+
+					$title=get_sub_field('information_title' );
+					$details=get_sub_field('information_details');
+						?>
+								
+									<button class="accordion" >
+										<span>
+											<img src="<?=$img?>" width="20px">
+											<?=$title?>
+										</span>
+										<i class="fas fa-angle-down"></i>
+									
+									</button>
+
+											<div class="panel">
+											<p><?=$details?></p>
+											</div>
+							
 										<?php endwhile;
 										?>
 
@@ -204,6 +165,7 @@ get_header(); ?>
 
 								<!-- END OF THE LOOP ICONS NR.1 -->
 
+								<img src="<?php echo get_field ('image_file')?> "/>
 
 									<!-- THIS IS THE LOOP FOR ICONS NR.2 -->
 
@@ -223,10 +185,41 @@ if( have_rows('about_accessibility_2', ) ):   ?>
 
 	<div class="accessibility-info-item">
 	
+	<div class ="icon-vs-title">
 		<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
-		<div class="accessibility-title"> <?php  the_sub_field('information_title', );?> </div>
+
+		<div class="accessibility-title"><h3> <?php  the_sub_field('information_title', );?></h3> </div>
+							</div>
+
 		<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
 	</div>
+
+
+	<?php
+	$img=get_sub_field('accessibility_image');
+	// var_dump($img);
+
+	$title=get_sub_field('information_title' );
+	$details=get_sub_field('information_details');
+?>
+							<button class="accordion">
+
+							<span>
+							<img src="<?=$img?>" width="20px">
+											<?=$title?>
+
+							</span>
+							<i class="fas fa-angle-down"></i>
+								
+								
+							</button>
+
+
+						<div class="panel">
+						<p><?=$details?></p>
+						</div>
+
+						
 
 					<?php endwhile;
 					?>
@@ -239,15 +232,12 @@ if( have_rows('about_accessibility_2', ) ):   ?>
 			endif;
 
 			?>
-
+									<!-- END OF THE LOOP ICONS NR.2 -->
 
 
 
 
 									
-
-									<!-- END OF THE LOOP ICONS NR.2 -->
-
 
 
 										</main><!-- #main -->

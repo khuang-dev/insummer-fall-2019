@@ -95,6 +95,8 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function red_starter_scripts() {
+
+
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'red-starter-flickity-css', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
 	wp_enqueue_style( 'red-starter-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
@@ -104,6 +106,9 @@ function red_starter_scripts() {
 	wp_enqueue_script( 'red-starter-mobile-nav', get_template_directory_uri() . '/build/js/mobile-nav.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'red-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'red-starter-accordion-mobile-js', get_template_directory_uri() . '/build/js/accordion-mobile.min.js', array(), '', true );
+
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
