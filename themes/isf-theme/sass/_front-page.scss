@@ -1,35 +1,46 @@
 .title__upcoming-event {
     width: 100%;
     color: $color__black;
-    margin: 0 6rem;
     margin-bottom: 1.5rem;
     margin-top: 3rem;
+    @include desktop {
+    margin: 0 6rem;
+    }
 }
 .title__event {
     font-weight: 600;
 }
 .wrapper__upcoming-events {
+    display: block;
+    @include desktop {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     margin: 0 6rem;
     margin-bottom: 3rem;
+    }
 }
 .wrapper__single-event {
-    width: 370px;
+    width: 100%;
+    @include desktop {
+    width: 30%;
     display: flex;
     flex-direction: column;
+    }
 }
 .wrapper__image-event {
-    width: 370px;
+    width: 100%;
+    @include desktop {
+    width: auto;
     height: 265px;
     position: relative;
     img {
-        height: 265px;
+        height: 100%;
         width: auto;
         object-fit: cover;
     }
+}
 }
 .thumbnail__date {
     background-color: $color__white;
@@ -62,6 +73,7 @@
     display: flex;
     flex-direction: column;
     width: 40rem;
+    margin-left: 6rem;
 }
 .wrapper__testimony-single {
     display: flex;
@@ -101,12 +113,12 @@
     position: relative; 
     &:nth-of-type(odd){
         .wrapper__featured-text {
-            background-color: $color__pink;
+            background-color: $color__pink-transparent;
         }
     }
     &:nth-of-type(even){
         .wrapper__featured-text {
-            background-color: $color__orange;
+            background-color: $color__orange-transparent;
         }
     }
 
