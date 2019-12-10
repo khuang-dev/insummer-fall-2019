@@ -2409,6 +2409,54 @@ p.member-text {
 =======
       width: 353px; } }
 
+.page-year-round h1 {
+  text-align: center;
+  color: #ed1651;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px; }
+
+.single-artist h1 {
+  color: #191414;
+  border-left: 8px solid #ed1651;
+  padding-left: 1.5rem;
+  text-transform: uppercase;
+  font-size: 40px; }
+
+.single-artist p {
+  font-size: 18px; }
+
+.artist-info {
+  padding-left: 1rem; }
+  @media (min-width: 480px) {
+    .artist-info {
+      padding-left: 8rem; } }
+
+.artist-container {
+  background-color: #fff2f2; }
+  @media (min-width: 480px) {
+    .artist-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; } }
+
+@media (min-width: 480px) {
+  .artist-img {
+    padding: 3rem; }
+    .artist-img img {
+      max-width: none; } }
+
+.artist-social {
+  padding-top: 1rem; }
+  .artist-social .artist-icon {
+    margin-right: 1rem; }
+
 .title__upcoming-event {
   width: 100%;
   color: #191414; }
