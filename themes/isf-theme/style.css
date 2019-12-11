@@ -2029,6 +2029,142 @@ iframe {
   .become-a-sponsor {
     max-width: 1110px; } }
 
+@media (min-width: 480px) {
+  .volunteer-about-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 3rem; } }
+
+@media (min-width: 480px) {
+  .volunteer-info h5 {
+    margin-left: 5rem; } }
+
+@media (min-width: 480px) {
+  .volunteer-title,
+  .responsibilities-title,
+  .qualificatons-title,
+  .benefits-title {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    border-bottom: unset;
+    border-right: solid 8px #ed1651;
+    color: #000000;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 49px; } }
+
+@media (min-width: 480px) {
+  .volunteer-title {
+    height: 95px; }
+    .volunteer-title a {
+      color: #ed1651; } }
+
+@media (min-width: 480px) {
+  .responsibilities-title,
+  .qualificatons-title,
+  .benefits-title {
+    height: 55px;
+    border-left: 8px solid #ed1651;
+    border-right: unset;
+    width: 41%; }
+    .responsibilities-title h3,
+    .qualificatons-title h3,
+    .benefits-title h3 {
+      margin-left: 1rem; } }
+
+@media (min-width: 480px) {
+  .responsibilities-img {
+    width: 536px;
+    height: 540px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
+            box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    margin: 0 auto 50px;
+    background-color: transparent;
+    text-align: left; } }
+
+@media (min-width: 480px) {
+  .responsibilities-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #fff2f2;
+    padding: 3rem; } }
+
+@media (min-width: 480px) {
+  .volunteer-info h5,
+  .responsibilities-info h5,
+  .benefits-info h5,
+  .qualificatons-info,
+  .qualificatons-list {
+    height: 192px;
+    color: #000000;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: 25px; } }
+
+@media (min-width: 480px) {
+  .qualificatons-info {
+    height: 100px; } }
+
+@media (min-width: 480px) {
+  .qualificatons-list {
+    line-height: 30px; } }
+
+@media (min-width: 480px) {
+  .responsibilities-info h5,
+  .benefits-info h5,
+  .qualificatons-info,
+  .qualificatons-list {
+    width: 470px; } }
+
+@media (min-width: 480px) {
+  .responsibilities-title-vs-info {
+    padding: 4rem; } }
+
+@media (min-width: 480px) {
+  .combine-qualifications-benefits {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 3rem; } }
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion-volunteer {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion-volunteer:hover {
+  background-color: #ccc; }
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden; }
+
 .btn__round-orange, .btn__round-pink {
   border: #f58220 3px solid;
   border-radius: 50px;
@@ -2051,7 +2187,37 @@ p.member-text {
 
 .curator {
   background-color: #ed1651;
-  text-align: right; }
+  text-align: right;
+  color: white; }
+  @media (min-width: 480px) {
+    .curator {
+      color: #191414; } }
+
+.member-title {
+  padding-right: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 22px; }
+  .member-title h3 {
+    color: white; }
+    @media (min-width: 480px) {
+      .member-title h3 {
+        color: #191414; } }
+
+.package-title {
+  position: relative; }
+  .package-title::before {
+    content: '';
+    width: 50%;
+    height: 4px;
+    background: #ffffff;
+    position: absolute;
+    top: -10px;
+    right: 0; }
+
+.package-text {
+  padding-right: 3rem;
+  padding-left: 1rem;
+  padding-bottom: 2rem; }
 
 @media (min-width: 480px) {
   .page-membership .entry-content {
@@ -2457,6 +2623,18 @@ p.member-text {
 
 .fa-angle-down {
   font-size: 24px; }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.accordion img {
+  border-radius: 50px;
+  background-color: #fff2f2;
+  width: 35px;
+  height: 35px; }
+=======
+>>>>>>> e05dd61aecf288445002825424335baee329e50a
+>>>>>>> 9cdce798cf481a46fc647b23084bd2ebb6a7b5fb
 
 .page-year-round h1 {
   text-align: center;
@@ -2466,6 +2644,53 @@ p.member-text {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 30px; }
+
+.page-year-round h2 {
+  color: #191414; }
+
+.page-become-a-patron .entry-content {
+  margin: 0 12rem; }
+
+.patron-title {
+  color: #191414; }
+  .patron-title h1 {
+    border-left: 8px solid #ed1651;
+    padding-left: 1.5rem;
+    text-align: left;
+    color: #191414; }
+
+.patron-packages {
+  -webkit-box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651;
+          box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651; }
+
+.page-festival .entry-content {
+  padding-left: 1rem; }
+
+.page-festival .events-title {
+  color: #191414;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-left: 3px solid #ed1651;
+  padding-left: 1rem; }
+
+.categories-info {
+  border: 1px solid red;
+  height: 20rem; }
+  .categories-info a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 1px solid;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+    width: 7rem; }
 
 .single-artist h1 {
   color: #191414;
@@ -2497,7 +2722,8 @@ p.member-text {
 
 @media (min-width: 480px) {
   .artist-img {
-    padding: 3rem; }
+    padding: 3rem;
+    height: 22rem; }
     .artist-img img {
       max-width: none; } }
 
@@ -2702,9 +2928,17 @@ p.member-text {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%; }
 
+<<<<<<< HEAD
+.featured-right {
+  background-color: #f58220; }
+=======
 .title__sponsor {
   width: 100%;
   margin-top: 3rem; }
+<<<<<<< HEAD
   @media (min-width: 480px) {
     .title__sponsor {
       padding-left: 6rem; } }
+=======
+>>>>>>> e05dd61aecf288445002825424335baee329e50a
+>>>>>>> 9cdce798cf481a46fc647b23084bd2ebb6a7b5fb

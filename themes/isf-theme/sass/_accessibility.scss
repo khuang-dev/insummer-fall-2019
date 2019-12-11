@@ -66,8 +66,6 @@
 .icon-vs-title {
   @include desktop {
     display: flex;
-    // flex-direction: column;
-    // flex-grow: 2;
     align-items: center;
     margin-left: -5rem;
   }
@@ -165,3 +163,12 @@
 .fa-angle-down {
   font-size: 24px;
 }
+
+.accordion img {
+  border-radius: 50px;
+  background-color: #fff2f2;
+  width: 35px;
+  height: 35px;
+}
+
+//END OF ACCORDION MENU

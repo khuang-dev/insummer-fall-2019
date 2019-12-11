@@ -59,6 +59,9 @@ get_header(); ?>
 					<section class="yearly-events">
 						<h2 class="events-title">Check out our Events</h2>
 
+						<!-- <php get_category('');?> -->
+						
+						<div class="event-container">
 						<?php
 							$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 5);
 							$event_posts = get_posts ($args);
@@ -82,8 +85,27 @@ get_header(); ?>
                                     <?php the_sub_field('start_time');?> - <?php the_sub_field('end_time');?>
                                 <?php endwhile; ?>
                                 <?php else : ?>
-                                <?php endif; ?>
-                        </div>
+								<?php endif; ?>
+						</div>
+
+						<div class="event-button">
+						<button class="event_button">
+							<a class="banner__btn-label" href="<?php the_sub_field('event__btn-url');?>"><?php the_sub_field('event__btn-label');?></a>
+							</button>
+
+							<!-- <php
+									if( have_rows('event_buttone') ):
+										while ( have_rows('event_button') ) : the_row();
+										?>
+											<php the_sub_field('event__btn-label'); ?>
+											<a href="<php the_sub_field('event__btn-url'); ?>"></a>
+									<php		
+										endwhile;
+									else :
+									endif;
+									?> -->
+						</div>
+						</div>
                         </article>
                     <?php endforeach; wp_reset_postdata(); ?>
 

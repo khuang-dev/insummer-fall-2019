@@ -116,19 +116,19 @@ get_header(); ?>
 									// display a sub field value
 									?>
 
-						<div class="accessibility-info-item">
-						
-						<div class ="icon-vs-title">
-							<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
-								
-						
-							<div class="accessibility-title"><h3> <?php  the_sub_field('information_title', );?></h3> </div>
-						</div>
+					<div class="accessibility-info-item">
+					
+					<div class ="icon-vs-title">
+						<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
+							
+					
+						<div class="accessibility-title"><h3> <?php  the_sub_field('information_title', );?></h3> </div>
+					</div>
 
-							<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
-						
+						<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
+					
 
-						</div>
+					</div>
 
 						<?php
 					$img=get_sub_field('accessibility_image');
@@ -202,17 +202,25 @@ if( have_rows('about_accessibility_2', ) ):   ?>
 	$title=get_sub_field('information_title' );
 	$details=get_sub_field('information_details');
 ?>
-							<button class="accordion">
+					<button class="accordion">
 
-							<span>
-							<img src="<?=$img?>" width="20px">
-											<?=$title?>
+									<span>
+							<!-- <div class ="acces-img-title"> -->
 
-							</span>
-							<i class="fas fa-angle-down"></i>
-								
-								
-							</button>
+											<!-- <div class ="access-img-accordion"> -->
+												<img src="<?=$img?>" width="20px">
+										<!-- </div> -->
+										
+												<?=$title?>
+
+												
+									</span>
+
+									<i class="fas fa-angle-down"></i>
+							<!-- </div> -->
+							
+							
+					</button>
 
 
 						<div class="panel">

@@ -38,12 +38,163 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-			<?php endwhile; // End of the loop. ?>
+		<!-- THIS IS THE LOOP FOR FIRST PART OF VOLUNTEER -->
 
+<?php
+			
+						if( have_rows('volunteer', ) ):   ?>
+
+							<div class="volunteer-first-loop">						
+
+							<?php	while ( have_rows('volunteer' ) ) : the_row();?>
+
+					<div class="volunteer-about-main">
+
+						<div class="volunteer-title"> <h3><?php  the_sub_field('isf_volunteer');?> </h3></div>
+						
+						
+						<div class="volunteer-about"> <h5><?php  the_sub_field('isf_about');?> </h5></div>
+
+						<div class="volunteer-info"> <h5><?php  the_sub_field('isf_more_information');?> </h5></div>
+					
+					</div>
+
+							<?php endwhile;?>
+
+							</div>
+						<?php else : endif; ?>
+
+							<!-- END OF VOLUNTEER FIRST LOOP -->
+
+
+							<!-- VOLUNTEER SECOND LOOP -->
+
+							<?php
+			
+			if( have_rows('responsibilities') ):   ?>
+
+				<div class="volunteer-second-loop">						
+
+				<?php	while ( have_rows('responsibilities' ) ) : the_row();?>
+
+				<div class="responsibilities-about">
+
+				<img class="responsibilities-img" src="<?php the_sub_field('responsibilities_picture'); ?>"/>
+
+
+				<div class ="responsibilities-title-vs-info">
+						<div class="responsibilities-title"> <h3><?php  the_sub_field('responsibilities_title');?> </h3></div>
+						<div class="responsibilities-info"> <h5><?php  the_sub_field('responsibilities_content');?> </h5></div>
+		
+				</div>
+
+			</div>	
+
+				<?php endwhile;?>
+
+				</div>
+			<?php else : endif; ?>
+
+
+
+					<!-- END OF THE SECOND LOOP VOLUNTEER -->
+
+<div class ="combine-qualifications-benefits">
+
+
+							<!-- THIS IS THE THIRD LOOP -->
+
+							<?php
+			
+							if( have_rows('qualificatons') ):   ?>
+
+								<div class="volunteer-third-loop">						
+
+								<?php	while ( have_rows('qualificatons' ) ) : the_row();?>
+
+								<div class="qualificatons-about">
+
+								<div class="qualificatons-title"> <h3><?php  the_sub_field('qualificatons_title');?> </h3></div>
+							
+							
+							<div class="qualificatons-info"> <h5><?php  the_sub_field('qualifications_content');?> </h5></div>
+
+							<div class="qualificatons-list"> <h5><?php  the_sub_field('qualificatons_list');?> </h5></div>
+						
+
+
+							</div>	
+
+								<?php endwhile;?>
+
+								</div>
+							<?php else : endif; ?>
+						
+
+							<!-- END OF THE THIRD LOOP -->
+
+
+
+
+				<!-- THIS IS THE FOURTH LOOP -->
+						<?php
+			
+			if( have_rows('benefits') ):   ?>
+
+				<div class="volunteer-four-loop">						
+
+				<?php	while ( have_rows('benefits' ) ) : the_row();?>
+
+				<div class="benefits-about">
+
+				<div class="benefits-title"> <h3><?php  the_sub_field('benefits_title');?> </h3></div>
+			
+			
+			<div class="benefits-info"> <h5><?php  the_sub_field('benefits_content');?> </h5></div>
+
+
+				<?php
+
+					$title_benefits=get_sub_field('benefits_title' );
+					$benefits_content=get_sub_field('benefits_content');
+			?>
+
+
+					<button class="accordion-volunteer">
+						<span>
+
+						<?=$title_benefits?>
+						</span>
+
+					</button>
+
+
+					<div class="panel">
+
+					<p></p><?=$benefits_content?></p>
+
+					</div>
+
+								
+
+
+		
+							</div>	
+
+								<?php endwhile;?>
+
+								</div>
+							<?php else : endif; ?>
+										
+
+					</div>
+						<!-- END OF FOURTH LOOP -->
+
+
+			
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
