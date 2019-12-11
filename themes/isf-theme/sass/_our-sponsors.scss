@@ -1,87 +1,105 @@
-
-.page-our-sponsors {
+.our-sponsors {
+    margin-left: 1rem;
+    @include desktop {
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
     h1 {
+        color: $color__pink;
+        text-align: center;
+        font-weight: 700;
+        @include desktop {
+            color: $color__black;
+            border-left: 8px solid $color__pink;
+            padding-left: 1.5rem;
+            text-transform: uppercase;
+            text-align: left;
+        }
+    }
+    h2 {
         color: $color__black;
-        border-left: 8px solid $color__pink;
-        padding-left: 1.5rem;
-        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    img {
+        @include desktop {
+            max-width: none;
+        }
+    }
+    a{
+        color: $color__pink;
+        @include desktop {
+            color: $color__white;
+        }
     }
 }
 
+.sponsors {        
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    padding: 50px;
+    img {
+        width: 226px;
+        height: auto;
+        margin: 40px;
+    }
+}
+
+
+
+
+.sponsors_box {
+    margin-right: none;
+    width: 10rem;
+    padding-bottom: 1rem;
+    padding-right: 0.5rem;
+    @include desktop {
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+}
+.sponsor-img {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .become-sponsor {
+    text-decoration: none;
+  
     border: 3px solid $color__pink;
-    margin: 85px;
+    margin: 135px;
     text-align: center;
     border-radius: 12px;
     padding: 0.5rem;
     color: $color__pink;
+    @include desktop {
+        color: $color__white;
+        border: 3px solid $btn__pink;
+        background-color: $bg__pink;
+        max-width: 17%;
+        text-align: center;
+        margin-left: 42%;
+        height: 58px;
+        width: 263px;
+        line-height: 38px;
+        font-size: 18px;    
+    }
 
     &:hover {
         border: 3px solid $color__orange;
         color: $color__orange;
-    }
-}
 
-// .sponsor-img {
-//     display: flex;
-//     flex-flow: row wrap;
-// }
-
-
-
-    .page-our-sponsors {
         @include desktop {
-        h2 {
-            color: $color__black;
-            font-size: 13px;
-            text-align: center;
-        } 
-        
-        .our-sponsors {
-            max-width: 1110px;
-        }
-        .sponsors {        
-            display: flex;
-            justify-content: space-around;
-            flex-flow: row wrap;
-            padding: 50px;
-            img {
-                width: 226px;
-                height: auto;
-                margin: 40px;
-            }
-            .sponsor-img {
-                min-height: 300px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                // img {
-                //     width: 50px;
-                // }
-            }
-            
-        }
-       
-        .become-sponsor {
+            background-color: $color__orange;
+            border: 3px solid $color__orange;
             color: $color__white;
-            border: 3px solid $btn__pink;
-            background-color: $bg__pink;
-            max-width: 17%;
-            text-align: center;
-            margin-left: 42%;
-            height: 58px;
-            width: 263px;
-            border-radius: 12px;
-            line-height: 38px;
-            font-size: 18px;
-
-            &:hover {
-                background-color: $color__orange;
-                border: 3px solid $color__orange;
-
-
-            }
         }
     }
+
 }
 

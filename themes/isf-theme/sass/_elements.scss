@@ -16,6 +16,9 @@ html {
 
 body {
   background: $color__white; /* Fallback for when there is no custom background color defined. */
+  @include desktop {
+    min-width: 830px;
+  }
 }
 
 blockquote,

@@ -16,3 +16,13 @@
     @content;
   }
 }
+@mixin primary-menu-margin {
+  @media (min-width: $breakpoint__primary-menu-margin) {
+    @content;
+  }
+}
+@mixin header-btn {
+  @media (min-width: $breakpoint__header-btn) {
+    @content;
+  }
+}

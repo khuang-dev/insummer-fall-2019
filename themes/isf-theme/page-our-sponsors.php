@@ -29,7 +29,7 @@ get_header(); ?>
 
 							?>
 							<div class="sponsors_box">
-								<h2 class="sponsor_level hide-mobile"><?php the_sub_field('sponsor_level')?></h2>
+								<h2 class="sponsor_level"><?php the_sub_field('sponsor_level')?></h2>
 								
 								<div class="sponsor-img">
 									<img src="<?php the_sub_field('sponsor_image'); ?>" />
@@ -45,7 +45,7 @@ get_header(); ?>
 						?>
 					</div>
 					
-					<p class="become-sponsor">Become a Sponsor</p>
+					<a class="become-sponsor" href ="">Become a Sponsor</a>
 					
 					<?php
 						wp_link_pages( array(
