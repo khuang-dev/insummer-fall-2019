@@ -1,11 +1,34 @@
 .page-become-a-sponsor {
     h1 {
+        color: $color__pink;
+        text-align: center;
+        font-weight: 700;
+        @include desktop {
         color: $color__black;
         border-left: 8px solid $color__pink;
         padding-left: 1.5rem;
         text-transform: uppercase;
+        text-align: left;
+        }
+    }
+    a {
+        color: $color__white;
+        text-decoration: none;
     }
 }
+
+// .btn-sponsor-package {
+//     @include desktop {
+//         border: 2px solid $color__pink;
+//         color: $color__white;
+//         background-color: $color__pink;
+//         &:hover {
+//             border-color: $color__orange;
+//             background-color: $color__orange;
+//         }
+    
+//     }
+// }
 
 .testimony {
     list-style: none;
@@ -31,11 +54,16 @@
 }
 .sponsor-info {
     border: 2px solid $color__pink;
-    color: $color__pink;
-    &:hover {
-        border-color: $color__orange; 
-        color: $color__orange;
-        ;  
+    color: $color__white;
+    background: $color__pink;
+    @include desktop {
+        border: 2px solid $color__pink;
+        color: $color__pink;
+        &:hover {
+            border-color: $color__orange; 
+            color: $color__orange;
+            ;  
+        } 
     }
 }
 

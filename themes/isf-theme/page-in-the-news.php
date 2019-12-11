@@ -14,7 +14,8 @@ get_header(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
-				<h1 class="news-headline"><?php echo get_field ('page_headline');?></h1>
+				<?php the_title( '<h1 class="entry-title hide-desktop">', '</h1>' ); ?>
+				<h1 class="news-headline hide-mobile"><?php echo get_field ('page_headline');?></h1>
 
 				</header><!-- .entry-header -->
 
@@ -26,9 +27,27 @@ get_header(); ?>
 						<?php while(has_sub_field('news_festivals')): ?>
 
 							<div class="source-box">
-								<img class="news-img" src="<?php the_sub_field('img_news'); ?>"/>
-								<h3><?php the_sub_field('season_news'); ?></h3>
-								<p><?php the_sub_field('news_source'); ?></p>
+								<div class="news-img-box">
+									<img class="news-img" src="<?php the_sub_field('img_news'); ?>"/>
+								</div>
+								<h4><?php the_sub_field('news_event'); ?></h4>
+
+								<div class="link-box">
+								<?php if( have_rows('news_source') ): ?>
+									
+									<?php while ( have_rows('news_source') ) : the_row(); ?>
+											<a class="new-source" href="<?php the_sub_field('article_link');?>">
+											<?php the_sub_field('article_source');?></a>
+									</div>
+
+										<?php endwhile; ?>
+
+									<?php
+									else :
+										// no rows found
+									endif;
+									?>
+								<p><?php //the_sub_field('news_source'); ?></p>
 							</div>
 
 						<?php endwhile; ?>

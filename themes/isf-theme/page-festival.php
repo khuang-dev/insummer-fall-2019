@@ -61,57 +61,37 @@ get_header(); ?>
 						<h2 class="events-title">Know the Artists</h2>
 
 						<div class="categories-info">
+
 						<?php
-
-
-
 							$terms = get_terms( array(
-								'taxonomy' => 'event-taxonomy',
-								'hide_empty' => 0,
-							) );
+                                'taxonomy' => 'event-taxonomy',
+                                'hide_empty' => 0,
+                            ) ); ?>
 
+                            
+                            <?php foreach ( $terms as $term ) :
+
+                                // echo '<pre>';
+                                // var_dump($term);
+                                // echo '</pre>';
+                                echo '<a href="' . get_term_link( $term )  .  '">' . $term->name.  '</a>'; 
+    
+							endforeach;?>
 							
-							foreach ( $terms as $term ) :
-
-								// echo '<pre>';
-								// var_dump($term);
-								// echo '</pre>';
-								echo '<a href="' . get_term_link( $term )  .  '">' . $term->name.  '</a>';
-	
-							endforeach;
-
-
-
-
-							$args = array(
-								'orderby' => 'name',
-								'order'   => 'ASC',
-								'post_type' => 'isf_events', 'artist');
-								$event_categories = get_categories ($args);
-								// echo '<pre>';
-								//  print_r(get_categories ());
-								//  echo '</pre>';
-							?>
-
-							<?php foreach ($event_categories as $categories){ ?>
-								
-								<?php  // var_dump(get_term_link($categories)); ?>
-								<a href="<?php echo get_term_link($categories);?>"><?php echo $categories->name;?></a> 
-							<?php }?> 
 
 							</div>
 						<!-- <php get_category('');?> -->
 						
 						<div class="event-container">
 						<?php
-							// //$args = array( 
-							// 	'post_type' => 'isf_event', 
-							// 	'order' => 'RAND',
-							// 	'posts_per_page' => get_option('posts_per_page'));
-							// $event_posts = get_posts ($args);
+							$args = array( 
+								'post_type' => 'isf_event', 
+								'order' => 'RAND',
+								'posts_per_page' => get_option('posts_per_page'));
+							$event_posts = get_posts ($args);
 						?>
 
-						<!-- <php foreach ( $event_posts as $post) : setup_postdata($post); ?>
+						<?php foreach ( $event_posts as $post) : setup_postdata($post); ?>
 						<div class="wrapper__image-event">
                             <img src="<?php the_field('event_image'); ?>">
                             <div class="thumbnail__date">
@@ -119,7 +99,7 @@ get_header(); ?>
                                 <p class="thumbnail__date-day"><?php echo $date->format('d'); ?></p>
                                 <p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
                             </div>
-                        </div> -->
+                        </div>
                         
                         <div class="wrapper__info-event">
                             <p><?php the_title(); ?></p>
