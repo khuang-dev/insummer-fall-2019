@@ -4,11 +4,9 @@
  *
  * @link  http://codex.wordpress.org/Function_Reference/register_taxonomy
  */
-
 // Add your custom taxonomies here...
 // Register Custom Taxonomy
 // function custom_event() {
-
 // 	$labels = array(
 // 		'name'                       => _x( 'Events', 'Taxonomy General Name', 'text_domain' ),
 // 		'singular_name'              => _x( 'Event', 'Taxonomy Singular Name', 'text_domain' ),
@@ -42,16 +40,10 @@
 // 		'show_in_rest'               => true,
 // 	);
 // 	register_taxonomy( 'event', array( 'post' ), $args );
-
 // }
 // add_action( 'init', 'custom_event', 0 );
-
-
-
-
 // Register Custom Taxonomy
 function event_taxonomy() {
-
 	$labels = array(
 		'name'                       => 'Taxonomies',
 		'singular_name'              => 'Taxonomy',
@@ -85,6 +77,5 @@ function event_taxonomy() {
 		'show_in_rest'               => true,
 	);
 	register_taxonomy( 'event-taxonomy', array( 'isf_event', 'artist' ), $args );
-
 }
 add_action( 'init', 'event_taxonomy', 0 );

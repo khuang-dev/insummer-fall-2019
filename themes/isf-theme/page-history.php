@@ -47,10 +47,14 @@ get_header(); ?>
 
 			<div class="entry-content">
 				<!-- <php the_content(); ?> -->
-
-				<h1><?php  echo get_field ('page_title'); ?></h1>
-				<?php  echo get_field ('page_content'); ?>
-
+				<section class="history-description">
+				<h3 class="h3__right-border-pink"><?php  echo get_field ('history_title'); ?></h3>
+				<span><?php  echo get_field ('history_description'); ?><span>
+				</section>
+				<section class="history-media">
+					<?php the_field('history_image');?>
+					<?php the_field('history_video');?>
+				</section>
 				<?php
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html( 'Pages:' ),

@@ -16,6 +16,9 @@ $color__grey: #cecece;
 $color__black: #191414;
 $color__grey: #cecece;
 $color__pink: #ed1651;
+$color__pink-transparent: #ed164fd2;
+$color__orange-transparent: #f58320d0;
+
 
 //Button
 $btn__pink: #ed1651;
@@ -44,3 +47,5 @@ $p__black: #191414;
 // Screen Breakpoint
 
 $breakpoint__desktop: 480px;
+$breakpoint__header-btn: 1150px;
+$breakpoint__primary-menu-margin: 1305px;

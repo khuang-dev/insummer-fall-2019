@@ -126,8 +126,8 @@ get_header(); ?>
                 <?php if ( have_rows('sponsor_images', 21)):?>
                                     <?php while ( have_rows('sponsor_images', 21)) : the_row(); ?>
                                     <div class="wrapper__single-sponsor-img">
-                                    <img src="<?php the_sub_field('sponsor_image', 21);?>">
-                </div>
+                                        <img src="<?php the_sub_field('sponsor_image', 21);?>">
+                                    </div>
                                 <?php endwhile; ?>
                                 <?php else : ?>
                                 <?php endif; ?> 

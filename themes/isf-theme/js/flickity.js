@@ -21,7 +21,8 @@
             wrapAround: true,
             freeScroll: false,
             autoPlay: true,
-            pageDots: true
+            pageDots: true,
+            adaptiveHeight: true
         });
     })// end of doc ready
 

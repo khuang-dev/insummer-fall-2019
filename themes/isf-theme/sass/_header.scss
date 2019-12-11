@@ -1,11 +1,12 @@
 .main-navigation {
-    margin-top: 2rem;
+  margin-top: 2rem;
   @include desktop {
     margin-top: 1rem;
     height: 140px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    min-width: 830px;
     ul ul {
       display: flex;
       text-transform: none;
@@ -19,27 +20,27 @@
   }
 }
 .wrapper__desktop-header {
-    @include desktop {
+  @include desktop {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 3.5rem;
     margin-left: 2.75rem;
     width: 100%;
-    }
+  }
 }
 .wrapper__primary-menu {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    @include desktop {
-        flex-wrap: nowrap;
-    }
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include desktop {
+    flex-wrap: nowrap;
+  }
 }
 .site-header {
-    position: relative;
-    z-index: 30;
+  position: relative;
+  z-index: 30;
 }
 
 .menu__primary {
@@ -50,7 +51,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    margin: 0 80px;
+    margin: 0 auto;
     a {
       margin: 0 1rem;
       white-space: nowrap;
@@ -64,6 +65,9 @@
       }
     }
   }
+  @include primary-menu-margin {
+    margin: 0 80px;
+  }
 }
 .menu__mobile {
   display: flex;
@@ -73,20 +77,16 @@
   text-align: center;
   width: 50%;
   position: relative;
-  h3 {
-    margin: 0;
-  }
-
   text-align: center;
   h3 {
     margin: 0;
     border-top: 2px solid $color__grey;
     margin-top: 0.5rem;
     margin-bottom: 0;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.2rem;
     &:hover {
       cursor: pointer;
     }
@@ -109,7 +109,7 @@
     text-align: center;
     z-index: 30;
     @include desktop {
-        display: none;
+      display: none;
     }
     a {
       padding: 0.5rem 0;
@@ -134,11 +134,11 @@
   h3 {
     margin-top: 0.5rem;
     margin-bottom: 0;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     text-transform: uppercase;
     font-weight: 400;
     border-top: 2px solid $color__grey;
-    font-size: 1rem;
+    font-size: 1.2rem;
     &:hover {
       cursor: pointer;
     }
@@ -160,7 +160,7 @@
     text-align: center;
     z-index: 30;
     @include desktop {
-        display: none;
+      display: none;
     }
     a {
       padding: 0.5rem 0;
@@ -186,141 +186,142 @@
   display: none;
   width: 8rem;
   height: 20rem;
-position: fixed;
-top: 2.5rem;
-right: 0px;
-z-index: 999;
+  position: fixed;
+  top: 2.5rem;
+  right: 0px;
+  z-index: 999;
   .icon-cancel {
-      font-size: 2rem;
-      color: $bg__pink;
-      position: absolute;
-      right: 1rem;
-      top: 1.3rem;
-      z-index: 10;
+    font-size: 2rem;
+    color: $bg__pink;
+    position: absolute;
+    right: 1rem;
+    top: 1.3rem;
+    z-index: 10;
   }
   ul {
-      display: flex;
-      flex-direction: column;
-      font-size: 1rem;
-      background: $bg__champagne;
-      width: 50vw;
-      height: 100vh;
-      position: absolute;
-      right: 0;
-      top: 0;
-      padding-top: 3rem;
-      li {
-          margin: 1rem auto 1rem auto;
-          a {
-            &:hover {
-                font-weight: 600;
-            }
-          }
-
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    background: $bg__champagne;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 3rem;
+    li {
+      margin: 1rem auto 1rem auto;
+      a {
+        &:hover {
+          font-weight: 600;
+        }
       }
     }
   }
+}
 
 .wrapper__social-media {
   display: flex;
   width: 200px;
   @include desktop {
-      display: flex !important;
+    display: flex !important;
   }
   img {
     margin: 0 0.75rem;
   }
-
 }
 .externallink__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+  width: 100%;
+  @include desktop {
+    display: none;
+  }
+  @include header-btn {
     display: flex;
-    justify-content: space-between;
-    margin: 0 1rem;
-    width: 100%;
-    @include desktop {
-        margin: 0;
-        width: auto;
-    }
+    margin: 0;
+    width: auto;
+  }
 }
 .container__isflogo {
-    margin: 0 auto;
-    @include desktop {
-        display: none;
-    }
+  margin: 0 auto;
+  @include desktop {
+    display: none !important;
+  }
+  @include header-btn {
+    display: none !important;
+  }
 }
 .isf-logo {
-    display: block;
-    margin: 1.25rem auto;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-bottom: 0.75rem;
-    @include desktop {
-        display: none;
-    }
+  display: block;
+  margin: 1.25rem auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.75rem;
+  @include desktop {
+    display: none;
+  }
 }
 .menu-overlay-event {
-    position: fixed;
-    z-index: 20;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
 }
 .menu-overlay-getinvolved {
-    @extend .menu-overlay-event;
+  @extend .menu-overlay-event;
 }
 .menu-overlay-hamburger {
-    @extend .menu-overlay-event;
-    background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4));
+  @extend .menu-overlay-event;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4));
 }
 .menu__primary-home {
-    a {
-        font-size: 0;
-        background-image: url('../../assets/05_Logos/ISF_Orange_Spiral.png');
-        width: 2.5rem;
-        height: 2.5rem;
-        background-size: contain;
-        display: block;
-        transform: translateY(-1rem);
-        &:hover {
-            font-weight: normal;
-            border: none;
-        }
+  a {
+    font-size: 0;
+    background-image: url('../../assets/05_Logos/ISF_Orange_Spiral.png');
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: contain;
+    display: block;
+    transform: translateY(-1rem);
+    &:hover {
+      font-weight: normal;
+      border: none;
     }
+  }
 }
 .externalform__header {
-    display: none;
-    @include desktop {
+  display: none;
+  @include desktop {
+    height: 1.5rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 1rem;
-    }
+  }
 }
 .desktop__search-login-wrapper {
-    display: flex;
+  display: flex;
 }
 .btn__donate {
+  display: none !important;
+
+  @include desktop {
     display: none !important;
-    @include desktop {
+  }
+  @include header-btn {
     display: block !important;
     transform: translateY(-0.5rem);
     text-align: center;
     height: 2.5rem;
-    }
+  }
 }
 .link__header-signup {
-    margin-left: 0.8rem;
+  margin-left: 0.8rem;
 }
 
-
-.search__desktop{
-        &.active {
-            // width: 300px;
-            // opacity: 1;
-            display: block;
-            // background: red;
-        }
-} 
