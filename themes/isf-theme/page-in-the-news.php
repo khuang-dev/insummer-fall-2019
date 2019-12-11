@@ -27,8 +27,24 @@ get_header(); ?>
 
 							<div class="source-box">
 								<img class="news-img" src="<?php the_sub_field('img_news'); ?>"/>
-								<h3><?php the_sub_field('season_news'); ?></h3>
-								<p><?php the_sub_field('news_source'); ?></p>
+								<h4><?php the_sub_field('news_event'); ?></h4>
+
+								<div class="link-box">
+								<?php if( have_rows('news_source') ): ?>
+									
+									<?php while ( have_rows('news_source') ) : the_row(); ?>
+											<a class="new-source" href="<?php the_sub_field('article_link');?>">
+											<?php the_sub_field('article_source');?></a>
+									</div>
+
+										<?php endwhile; ?>
+
+									<?php
+									else :
+										// no rows found
+									endif;
+									?>
+								<p><?php //the_sub_field('news_source'); ?></p>
 							</div>
 
 						<?php endwhile; ?>
