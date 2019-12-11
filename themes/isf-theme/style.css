@@ -2482,6 +2482,14 @@ p.member-text {
   font-weight: 700;
   font-size: 30px; }
 
+.page-become-a-patron .entry-content {
+  margin: 0 12rem; }
+
+.patron-title {
+  color: #191414; }
+  .patron-title h1 {
+    color: #191414; }
+
 .single-artist h1 {
   color: #191414;
   border-left: 8px solid #ed1651;

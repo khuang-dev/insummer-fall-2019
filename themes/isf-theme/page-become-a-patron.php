@@ -46,8 +46,7 @@ get_header(); ?>
 		</div>
 	</section>
 <?php endwhile; ?>
-<?// else : ?>
-<?php //endif; ?>
+
 </div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
