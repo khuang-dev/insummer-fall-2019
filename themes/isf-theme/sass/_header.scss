@@ -244,6 +244,9 @@ z-index: 999;
 }
 .container__isflogo {
     margin: 0 auto;
+    @include desktop {
+        display: none;
+    }
 }
 .isf-logo {
     display: block;
@@ -311,3 +314,13 @@ z-index: 999;
 .link__header-signup {
     margin-left: 0.8rem;
 }
+
+
+.search__desktop{
+        &.active {
+            // width: 300px;
+            // opacity: 1;
+            display: block;
+            // background: red;
+        }
+} 

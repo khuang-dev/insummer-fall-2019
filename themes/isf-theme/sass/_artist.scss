@@ -30,6 +30,7 @@
 .artist-img {
     @include desktop {
         padding: 3rem;
+        height: 22rem;
         img {
             max-width: none;
         }
