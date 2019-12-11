@@ -45,3 +45,10 @@
     display: none;
   }
 }
+
+/* Hover State */
+
+.active,
+.accordion-patron:hover {
+  background-color: $btnbg__orange;
+}
