@@ -116,19 +116,19 @@ get_header(); ?>
 									// display a sub field value
 									?>
 
-						<div class="accessibility-info-item">
-						
-						<div class ="icon-vs-title">
-							<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
-								
-						
-							<div class="accessibility-title"><h3> <?php  the_sub_field('information_title', );?></h3> </div>
-						</div>
+					<div class="accessibility-info-item">
+					
+					<div class ="icon-vs-title">
+						<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
+							
+					
+						<div class="accessibility-title"><h3> <?php  the_sub_field('information_title', );?></h3> </div>
+					</div>
 
-							<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
-						
+						<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
+					
 
-						</div>
+					</div>
 
 						<?php
 					$img=get_sub_field('accessibility_image');

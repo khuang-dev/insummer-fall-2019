@@ -155,17 +155,42 @@ get_header(); ?>
 			
 			<div class="benefits-info"> <h5><?php  the_sub_field('benefits_content');?> </h5></div>
 
+
+				<?php
+
+					$title_benefits=get_sub_field('benefits_title' );
+					$benefits_content=get_sub_field('benefits_content');
+			?>
+
+
+					<button class="accordion-volunteer">
+						<span>
+
+						<?=$title_benefits?>
+						</span>
+
+					</button>
+
+
+					<div class="panel">
+
+					<p></p><?=$benefits_content?></p>
+
+					</div>
+
+								
+
+
 		
-		
-			</div>	
+							</div>	
 
-				<?php endwhile;?>
+								<?php endwhile;?>
 
-				</div>
-			<?php else : endif; ?>
-						
+								</div>
+							<?php else : endif; ?>
+										
 
-	</div>
+					</div>
 						<!-- END OF FOURTH LOOP -->
 
 
