@@ -109,6 +109,7 @@ function red_starter_scripts() {
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'red-starter-accordion-mobile-js', get_template_directory_uri() . '/build/js/accordion-mobile.min.js', array(), '', true );
 	wp_enqueue_script( 'red-starter-accordion-volunteer-mobile-js', get_template_directory_uri() . '/build/js/accordion-volunteer-mobile.min.js', array(), '', true );
+	
 
 
 

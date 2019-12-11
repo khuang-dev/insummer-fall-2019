@@ -40,10 +40,6 @@ get_header(); ?>
         <?php the_field( 'banner_title' ); ?>
         <?php the_field( 'banner_date' ); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
-		<div class="banner__image-wrapper">
-			<img class="banner__image" src="<?php the_sub_field('banner_image'); ?>"/>
-		</div>
 	</section>
 <?php endwhile; ?>
 
@@ -69,31 +65,15 @@ get_header(); ?>
 						?>
 						</div>
 
-						<div class="hide-desktop">
-						<button class="accordion">Section 1</button>
-							<div class="panel">
-							<p>Lorem ipsum...</p>
-							</div>
-
-							<button class="accordion">Section 2</button>
-							<div class="panel">
-							<p>Lorem ipsum...</p>
-							</div>
-
-							<button class="accordion">Section 3</button>
-							<div class="panel">
-							<p>Lorem ipsum...</p>
-							</div>
-						</div>						
+										
 
 
-						<div class="hide-mobile">
-						<div class="patron-packages">
+						<div class="patron-packages hide-mobile">
 							<?php
 							if( have_rows('patron_packages') ):
 								while ( have_rows('patron_packages') ) : the_row();
 								?>
-								<div class="patron-package">
+								<div class="patron-package hide-mobile">
 									<div class="patron-title-price">
 								<h3><?php the_sub_field('package_name'); ?></h3>
 								<p><?php the_sub_field('package_price'); ?></p>
@@ -101,13 +81,29 @@ get_header(); ?>
 								<p><?php the_sub_field('package_options'); ?></p>
 							</div>
 
+							<?php
+							$package_name=get_sub_field('package_name');
+							$package_options=get_sub_field('package_options');
+							?>
+
+							<button class='accordion-patron hide-desktop'>
+							<span>
+							<?=$package_name?>
+							<p><?php the_sub_field('package_price'); ?></p>
+							</span>
+							</button>
+
+						<div class="panel-patron hide-desktop">
+						<p><?=$package_options?></p>
+						</div>
+
+		
 								<?php
 								endwhile;
 							else :
 								// no rows found
 							endif;
 							?>
-						</div>
 						</div>
 
 					<?php

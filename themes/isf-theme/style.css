@@ -2776,16 +2776,11 @@ p.member-text {
 .page-year-round h2 {
   color: #191414; }
 
-.page-become-a-patron .entry-content {
-  margin: 0 12rem; }
-
 .patron-title {
   color: #191414; }
   .patron-title h1 {
-    border-left: 8px solid #ed1651;
-    padding-left: 1.5rem;
-    text-align: left;
-    color: #191414; }
+    text-align: center;
+    color: #ed1651; }
 
 .patron-packages {
   display: -webkit-box;
@@ -2795,21 +2790,75 @@ p.member-text {
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
-
-.patron-package {
-  -webkit-box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651;
-          box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: calc(50% - 2rem);
-  margin: 1rem;
-  padding: 1rem;
-  height: 275px; }
+          justify-content: center;
+  padding-bottom: 4rem; }
 
 .patron-title-price {
   padding-right: 20px; }
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion-patron {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  height: 8rem;
+  font-size: 24px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  background-color: #ed1651;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
+  .accordion-patron span {
+    border-top: solid 2px white; }
+  @media (min-width: 480px) {
+    .accordion-patron {
+      display: none; } }
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion-patron:hover {
+  background-color: #f58220; }
+
+/* Style the accordion panel. Note: hidden by default */
+.panel-patron {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden; }
+
+@media (min-width: 480px) {
+  .page-become-a-patron .entry-content {
+    margin: 0 12rem; }
+  .patron-title {
+    color: #191414; }
+    .patron-title h1 {
+      border-left: 8px solid #ed1651;
+      padding-left: 1.5rem;
+      text-align: left;
+      color: #191414; }
+  .patron-package {
+    -webkit-box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651;
+            box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(50% - 2rem);
+    margin: 1rem;
+    padding: 1rem;
+    height: 275px; } }
 
 .page-festival .entry-content {
   padding-left: 1rem; }
