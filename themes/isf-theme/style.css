@@ -2788,8 +2788,22 @@ p.member-text {
     color: #191414; }
 
 .patron-packages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.patron-package {
   -webkit-box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651;
-          box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651; }
+          box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 50%; }
 
 .page-festival .entry-content {
   padding-left: 1rem; }
@@ -3116,10 +3130,5 @@ p.member-text {
 
 .history-media {
   width: 100%;
-<<<<<<< HEAD
-  margin: 0 6rem;
-  margin-top: 3rem; }
-=======
   background-color: #fff2f2;
   text-align: center; }
->>>>>>> f4449cfb30c62305526e67d77a74a57670fe809c

@@ -74,9 +74,11 @@ get_header(); ?>
 							if( have_rows('patron_packages') ):
 								while ( have_rows('patron_packages') ) : the_row();
 								?>
-								<div class="patron-packages">
+								<div class="patron-package">
+									<div class="patron-title-price">
 								<h3><?php the_sub_field('package_name'); ?></h3>
 								<p><?php the_sub_field('package_price'); ?></p>
+									</div>
 								<p><?php the_sub_field('package_options'); ?></p>
 							</div>
 
