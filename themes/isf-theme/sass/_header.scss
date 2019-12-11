@@ -297,6 +297,7 @@
 .externalform__header {
   display: none;
   @include desktop {
+    height: 1.5rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -324,11 +325,3 @@
   margin-left: 0.8rem;
 }
 
-.search__desktop {
-  &.active {
-    // width: 300px;
-    // opacity: 1;
-    display: block;
-    // background: red;
-  }
-}

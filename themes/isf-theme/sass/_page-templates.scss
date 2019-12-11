@@ -10,7 +10,7 @@
 .banner__image-wrapper {
     position: relative;
     z-index: -10;
-    height: 250px;
+    height: 200px;
     overflow: hidden;
     @include desktop {
         height: 520px;
@@ -67,7 +67,7 @@
     display: none;
 }
 .carousel-cell {
-    height: 250px;
+    height: 200px;
     @include desktop {
         height: 520px;
     }

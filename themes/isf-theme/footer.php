@@ -15,7 +15,7 @@
 				
 				<section class="wrapper__footer-signup">
 				<?php dynamic_sidebar( 'footer-1' ); ?>
-				<div class="wrapper__social-media">
+				<div class="wrapper__social-media footer__social-media">
 							<a href="<?php the_field( 'facebook_url', 'options' ); ?>">
 								<img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/white-icon/Facebook.png" alt="icon-facebook">
 							</a>
