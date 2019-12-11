@@ -64,11 +64,10 @@ get_header(); ?>
 
 						<?php
 							$terms = get_terms( array(
-                                'taxonomy' => 'event-taxonomy',
+                                'taxonomy' => 'event-taxonomy', 'create_isf_categories',
                                 'hide_empty' => 0,
-                            ) ); ?>
-
-                            
+							) ); ?>
+								
                             <?php foreach ( $terms as $term ) :
 
                                 // echo '<pre>';
@@ -76,8 +75,7 @@ get_header(); ?>
                                 // echo '</pre>';
                                 echo '<a href="' . get_term_link( $term )  .  '">' . $term->name.  '</a>'; 
     
-							endforeach;?>
-							
+							endforeach;?>							
 
 							</div>
 						<!-- <php get_category('');?> -->
