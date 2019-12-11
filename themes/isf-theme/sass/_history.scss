@@ -1,0 +1,14 @@
+.history-description {
+    display: flex;
+    margin: 5rem 10rem;
+    h3 {
+        white-space: nowrap;
+        height: 2rem;
+        margin-right: 1rem;
+    }
+}
+.history-media {
+    width: 100%;
+    background-color: $bg__champagne;
+    text-align: center;
+}

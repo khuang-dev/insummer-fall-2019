@@ -68,7 +68,7 @@ get_header(); ?>
 							if( have_rows('awards') ):
 								while ( have_rows('awards') ) : the_row();
 						?>
-									<h1><?php the_sub_field('awards_type');?></h1>
+									<h3><?php the_sub_field('awards_type');?></h3>
 									<p><?php the_sub_field('about_award');?></p>
 
 						<?php

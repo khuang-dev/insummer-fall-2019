@@ -3032,3 +3032,18 @@ p.member-text {
     .title__sponsor {
       margin-left: 6rem;
       font-size: 2rem; } }
+
+.history-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5rem 10rem; }
+  .history-description h3 {
+    white-space: nowrap;
+    height: 2rem;
+    margin-right: 1rem; }
+
+.history-media {
+  width: 100%;
+  background-color: #fff2f2;
+  text-align: center; }
