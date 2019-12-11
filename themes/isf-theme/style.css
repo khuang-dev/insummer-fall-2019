@@ -2493,6 +2493,10 @@ p.member-text {
     text-align: left;
     color: #191414; }
 
+.patron-packages {
+  -webkit-box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651;
+          box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651; }
+
 .single-artist h1 {
   color: #191414;
   border-left: 8px solid #ed1651;

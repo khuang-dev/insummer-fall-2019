@@ -5,9 +5,13 @@
 .patron-title {
   color: $color__black;
   h1 {
-    border-left: 8px solid #ed1651;
+    border-left: 8px solid $color__pink;
     padding-left: 1.5rem;
     text-align: left;
     color: $color__black;
   }
+}
+
+.patron-packages {
+  box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 $color__pink;
 }
