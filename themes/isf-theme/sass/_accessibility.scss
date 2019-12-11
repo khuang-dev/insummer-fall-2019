@@ -5,7 +5,8 @@
   border: solid 2px black;
   @include desktop {
     max-width: 1100px;
-    margin: auto;
+    // margin: auto;
+    margin: auto 4rem auto auto;
     border: none;
   }
 }
@@ -54,6 +55,7 @@
   @include desktop {
     display: block;
     width: 50%;
+    margin-right: -6rem;
   }
 }
 
@@ -98,13 +100,14 @@
   }
 }
 
-.accessibility-title {
+.accessibility-title h3 {
   font-weight: bold;
   line-height: 37px;
   font-family: 'Montserrat';
   @include desktop {
-    font-size: 30px;
-    width: 67%;
+    text-transform: capitalize;
+    font-size: 1.875rem;
+    width: 94%;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
     margin-left: 1rem;
@@ -114,8 +117,8 @@
 .accessibility-info-details {
   font-family: 'Montserrat';
   @include desktop {
-    font-size: 24px;
-    width: 353px;
+    font-size: 22px;
+    width: 374px;
     margin-bottom: 2rem;
   }
 }
