@@ -2961,7 +2961,10 @@ p.member-text {
 .title__sponsor {
   width: 100%;
   margin-top: 3rem; }
+<<<<<<< HEAD
   @media (min-width: 480px) {
     .title__sponsor {
       width: auto;
       margin-left: 6rem; } }
+=======
+>>>>>>> 38429617720226a2d84b6ee0ae338992b8ad99ef
