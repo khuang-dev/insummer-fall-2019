@@ -463,7 +463,7 @@ input[type='submit'] {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: 0.6rem 1rem 0.4rem; }
+  padding: 0.4rem 1rem 0.4rem; }
   button:hover,
   input[type='button']:hover,
   input[type='reset']:hover,
@@ -1321,32 +1321,46 @@ object {
 
 .banner__content {
   position: absolute;
-  text-align: right; }
+  text-align: right;
+  right: 1.5rem;
+  top: 0.5rem; }
   @media (min-width: 480px) {
     .banner__content {
       right: 8rem;
       top: 6rem; } }
   .banner__content .banner__title {
-    text-transform: uppercase;
-    font-size: 3rem;
-    max-width: 35rem;
+    font-size: 2rem;
     font-weight: 600;
+    max-width: 20rem;
+    text-transform: uppercase;
     line-height: 1;
-    margin: 0; }
+    margin-top: 1rem;
+    margin-bottom: 0.5rem; }
+    @media (min-width: 480px) {
+      .banner__content .banner__title {
+        font-size: 3rem;
+        max-width: 35rem;
+        margin: 0; } }
+  .banner__content .banner__description {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem; }
 
 .banner__btn {
   border: #ed1651 3px solid;
-  border-radius: 50px;
-  background-color: transparent; }
-  .banner__btn:hover {
-    background-color: #ed1651;
-    border: #ed1651 3px solid; }
+  border-radius: 10px;
+  background: #ed1651; }
   .banner__btn a {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 600; }
+  @media (min-width: 480px) {
+    .banner__btn {
+      background-color: transparent; }
+      .banner__btn:hover {
+        background-color: #ed1651;
+        border: #ed1651 3px solid; } }
 
 .flickity-page-dots {
   margin-bottom: 2.5rem !important; }
@@ -2786,7 +2800,8 @@ p.member-text {
     .title__upcoming-event {
       margin-left: 6rem;
       margin-bottom: 1.5rem;
-      margin-top: 3rem; } }
+      margin-top: 3rem;
+      font-size: 2rem; } }
 
 .title__event {
   font-weight: 600; }
@@ -2813,25 +2828,27 @@ p.member-text {
       margin: 0 6rem;
       margin-bottom: 3rem; } }
 
-.wrapper__single-event {
-  margin: 0 auto; }
-  .wrapper__single-event:nth-child(3) {
-    display: none; }
-    @media (min-width: 480px) {
-      .wrapper__single-event:nth-child(3) {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; } }
+.wrapper__single-event:nth-child(3) {
+  display: none; }
   @media (min-width: 480px) {
-    .wrapper__single-event {
-      width: 30%;
+    .wrapper__single-event:nth-child(3) {
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
+      display: flex; } }
+
+@media (min-width: 480px) {
+  .wrapper__single-event {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
 
 .wrapper__image-event {
   width: 11rem;
@@ -2846,7 +2863,9 @@ p.member-text {
       height: 265px; }
       .wrapper__image-event img {
         height: 100%;
-        width: auto; } }
+        width: auto;
+        -o-object-fit: cover;
+           object-fit: cover; } }
 
 .thumbnail__date {
   width: 3.5rem;
@@ -2900,7 +2919,9 @@ p.member-text {
   @media (min-width: 480px) {
     .wrapper__testimony {
       padding: 3rem 6rem;
-      display: block; } }
+      display: block; }
+      .wrapper__testimony h3 {
+        font-size: 2rem; } }
 
 .wrapper__testimony-text {
   display: -webkit-box;
@@ -2989,7 +3010,9 @@ p.member-text {
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin: 0 1.25rem;
+  margin-bottom: 3rem; }
   @media (min-width: 480px) {
     .wrapper__fp-sponsor {
       margin: 0 6rem;
@@ -3007,4 +3030,5 @@ p.member-text {
   margin-left: 1.25rem; }
   @media (min-width: 480px) {
     .title__sponsor {
-      margin-left: 6rem; } }
+      margin-left: 6rem;
+      font-size: 2rem; } }

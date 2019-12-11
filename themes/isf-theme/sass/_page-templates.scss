@@ -22,36 +22,51 @@
 .banner__content {
     position: absolute;
     text-align: right;
+    right: 1.5rem;
+    top: 0.5rem;
     @include desktop {
         right: 8rem;
         top: 6rem;
     }
     .banner__title {
+        font-size: 2rem;
+        font-weight: 600;
+        max-width: 20rem;
         text-transform: uppercase;
+        line-height: 1;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        @include desktop {
         font-size: 3rem;
         max-width: 35rem;
-        font-weight: 600;
-        line-height: 1;
         margin: 0;
+        }
+    }
+    .banner__description {
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
     }
 }
 
 .banner__btn {
     border: $btn__pink 3px solid;
-    border-radius: 50px;
+    border-radius: 10px;
+    background: $bg__pink;
+    a {
+        color: $color__white; 
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    @include desktop {
     background-color: transparent;
         &:hover {
         background-color: $btn__pink;
         border: $btn__pink 3px solid;
         }
-        a {
-            color: $color__white; 
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 1rem;
-            font-weight: 600;
-        }
     }
+}
 .flickity-page-dots {
     margin-bottom: 2.5rem !important;
     .dot {
