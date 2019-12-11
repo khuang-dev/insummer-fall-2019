@@ -41,7 +41,9 @@
 .responsibilities-title,
 .qualificatons-title,
 .benefits-title {
+  display: none;
   @include desktop {
+    display: block;
     height: 55px;
     border-left: 8px solid #ed1651;
     border-right: unset;
@@ -52,6 +54,7 @@
   }
 }
 .responsibilities-img {
+  display: none;
   @include desktop {
     width: 536px;
     height: 540px;
@@ -102,7 +105,9 @@
 .benefits-info h5,
 .qualificatons-info,
 .qualificatons-list {
+  display: none;
   @include desktop {
+    display: block;
     width: 470px;
   }
 }
@@ -124,8 +129,18 @@
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion-volunteer {
-  background-color: #eee;
-  color: #444;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  height: 8rem;
+  font-size: 24px;
+
+  font-family: 'Montserrat';
+  font-weight: bold;
+  background-color: $btn__pink;
+  color: white;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -133,12 +148,17 @@
   border: none;
   outline: none;
   transition: 0.4s;
+  span {
+    border-top: solid 2px white;
+  }
+  @include desktop {
+    display: none;
+  }
 }
-
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .accordion-volunteer:hover {
-  background-color: #ccc;
+  background-color: $btnbg__orange;
 }
 
 /* Style the accordion panel. Note: hidden by default */

@@ -2049,33 +2049,40 @@ iframe {
     .volunteer-title a {
       color: #ed1651; } }
 
-@media (min-width: 480px) {
-  .responsibilities-title,
-  .qualificatons-title,
-  .benefits-title {
-    height: 55px;
-    border-left: 8px solid #ed1651;
-    border-right: unset;
-    width: 41%; }
-    .responsibilities-title h3,
-    .qualificatons-title h3,
-    .benefits-title h3 {
-      margin-left: 1rem; } }
+.responsibilities-title,
+.qualificatons-title,
+.benefits-title {
+  display: none; }
+  @media (min-width: 480px) {
+    .responsibilities-title,
+    .qualificatons-title,
+    .benefits-title {
+      display: block;
+      height: 55px;
+      border-left: 8px solid #ed1651;
+      border-right: unset;
+      width: 41%; }
+      .responsibilities-title h3,
+      .qualificatons-title h3,
+      .benefits-title h3 {
+        margin-left: 1rem; } }
 
-@media (min-width: 480px) {
-  .responsibilities-img {
-    width: 536px;
-    height: 540px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -webkit-box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
-            box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    margin: 0 auto 50px;
-    background-color: transparent;
-    text-align: left; } }
+.responsibilities-img {
+  display: none; }
+  @media (min-width: 480px) {
+    .responsibilities-img {
+      width: 536px;
+      height: 540px;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -webkit-box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
+              box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      margin: 0 auto 50px;
+      background-color: transparent;
+      text-align: left; } }
 
 @media (min-width: 480px) {
   .responsibilities-about {
@@ -2105,12 +2112,18 @@ iframe {
   .qualificatons-list {
     line-height: 30px; } }
 
-@media (min-width: 480px) {
-  .responsibilities-info h5,
-  .benefits-info h5,
-  .qualificatons-info,
-  .qualificatons-list {
-    width: 470px; } }
+.responsibilities-info h5,
+.benefits-info h5,
+.qualificatons-info,
+.qualificatons-list {
+  display: none; }
+  @media (min-width: 480px) {
+    .responsibilities-info h5,
+    .benefits-info h5,
+    .qualificatons-info,
+    .qualificatons-list {
+      display: block;
+      width: 470px; } }
 
 @media (min-width: 480px) {
   .responsibilities-title-vs-info {
@@ -2127,8 +2140,21 @@ iframe {
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion-volunteer {
-  background-color: #eee;
-  color: #444;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  height: 8rem;
+  font-size: 24px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  background-color: #ed1651;
+  color: white;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -2137,11 +2163,16 @@ iframe {
   outline: none;
   -webkit-transition: 0.4s;
   transition: 0.4s; }
+  .accordion-volunteer span {
+    border-top: solid 2px white; }
+  @media (min-width: 480px) {
+    .accordion-volunteer {
+      display: none; } }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .accordion-volunteer:hover {
-  background-color: #ccc; }
+  background-color: #f58220; }
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
@@ -2608,15 +2639,12 @@ p.member-text {
 
 .fa-angle-down {
   font-size: 24px; }
-<<<<<<< HEAD
 
 .accordion img {
   border-radius: 50px;
   background-color: #fff2f2;
   width: 35px;
   height: 35px; }
-=======
->>>>>>> e05dd61aecf288445002825424335baee329e50a
 
 .page-year-round h1 {
   text-align: center;
@@ -2867,12 +2895,7 @@ p.member-text {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%; }
 
-<<<<<<< HEAD
-.featured-right {
-  background-color: #f58220; }
-=======
 .title__sponsor {
   width: 100%;
   margin: 0 6rem;
   margin-top: 3rem; }
->>>>>>> e05dd61aecf288445002825424335baee329e50a
