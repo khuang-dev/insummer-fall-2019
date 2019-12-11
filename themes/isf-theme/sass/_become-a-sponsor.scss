@@ -4,16 +4,29 @@
         text-align: center;
         font-weight: 700;
         @include desktop {
-        color: $color__black;
-        border-left: 8px solid $color__pink;
+        color: $color__black;  
         padding-left: 1.5rem;
         text-transform: uppercase;
         text-align: left;
+        margin-left: 8rem
         }
     }
-    a {
+    .sponsor-button,
+    .contact-button {
+        a {
+            color: $color__white;
+            text-decoration: none;
+        }
+    }
+
+    .banner__content {
+        text-align: right;
+        width: 42rem;
+    }
+    .banner__title {
         color: $color__white;
-        text-decoration: none;
+        border: none;
+        padding-bottom: 1rem;
     }
 }
 
@@ -31,7 +44,37 @@
         border-color: $color__orange;
         background-color: $color__orange;
    }
+   @include desktop {
+       border: 4px solid $color__pink;
+       background: $color__white;
+       a {
+        color: $color__pink;
+       }
+       &:hover {
+           border-color: 4px solid $color__orange;
+           background: $color__white;
+           a {color: $color__orange;}
+       }
+   }
 }
+.sponsor-button {
+    border: 2px solid $color__pink;
+    background: $color__pink;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 700;
+    margin: auto;
+    display: block;
+    width: fit-content;
+    padding: 1rem;
+    &:hover {
+        border-color: $color__orange;
+        background-color: $color__orange;
+   }
+}
+
+
+
 .become_sponsor {
     margin: 1rem;
 }
@@ -46,27 +89,32 @@
      padding-bottom: 2rem;
  }
 
+ .b-testimony {
+     padding-top: 2rem;
+ }
+
+ .testimony-quote {
+     font-weight: 700;
+ }
+ .testimony-author {
+     font-weight: 700;
+ }
+
 .testimony {
     list-style: none;
 }
 
-
-.testimony-author,
-.author-title {
+.sponsors-author {
     text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 17rem;
+    margin-left: 42rem;
 }
 
 
 @include desktop {
   
-    .sponsors-author {
-        display: flex;
-        justify-content: flex-end;
-        padding-right: -1rem;
-        margin-left: 50rem;
-        flex-flow: row wrap;
-    }
-
     .become-a-sponsor {
         max-width: 1110px;
     }

@@ -8,7 +8,7 @@
 get_header(); ?>
 
 <header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					<?php the_title( '<h1 class="entry-title h3__left-border-pink">', '</h1>' ); ?>
 				</header><!-- .entry-header -->
 
 		<?php if ( have_rows('banner_content') ) : ?>
@@ -71,7 +71,7 @@ get_header(); ?>
 							?>
 					</div>
 
-					<div class="become_sponsor">
+					<div class="become_sponsor hide-desktop">
 						<?php if( have_rows('content') ): ?>
 								<?php while ( have_rows('content') ) : the_row();?>
 									<h2 class="become_header"><?php the_sub_field('page_header'); ?></h2>
@@ -101,7 +101,7 @@ get_header(); ?>
 					</div>
 					
 					<div class= contact_button>
-						<a class="sponsor-info" href ="">Contact for more Information</a>
+						<a class="sponsor-info" href ="contact-us">Contact for more Information</a>
 					</div>
 
 					<?php

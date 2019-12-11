@@ -2077,14 +2077,24 @@ iframe {
   @media (min-width: 480px) {
     .page-become-a-sponsor h1 {
       color: #191414;
-      border-left: 8px solid #ed1651;
       padding-left: 1.5rem;
       text-transform: uppercase;
-      text-align: left; } }
+      text-align: left;
+      margin-left: 8rem; } }
 
-.page-become-a-sponsor a {
+.page-become-a-sponsor .sponsor-button a,
+.page-become-a-sponsor .contact-button a {
   color: #ffffff;
   text-decoration: none; }
+
+.page-become-a-sponsor .banner__content {
+  text-align: right;
+  width: 42rem; }
+
+.page-become-a-sponsor .banner__title {
+  color: #ffffff;
+  border: none;
+  padding-bottom: 1rem; }
 
 .contact_button {
   border: 2px solid #ed1651;
@@ -2101,6 +2111,33 @@ iframe {
   .contact_button:hover {
     border-color: #f58220;
     background-color: #f58220; }
+  @media (min-width: 480px) {
+    .contact_button {
+      border: 4px solid #ed1651;
+      background: #ffffff; }
+      .contact_button a {
+        color: #ed1651; }
+      .contact_button:hover {
+        border-color: 4px solid #f58220;
+        background: #ffffff; }
+        .contact_button:hover a {
+          color: #f58220; } }
+
+.sponsor-button {
+  border: 2px solid #ed1651;
+  background: #ed1651;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 700;
+  margin: auto;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem; }
+  .sponsor-button:hover {
+    border-color: #f58220;
+    background-color: #f58220; }
 
 .become_sponsor {
   margin: 1rem; }
@@ -2113,27 +2150,26 @@ iframe {
 .become_content {
   padding-bottom: 2rem; }
 
+.b-testimony {
+  padding-top: 2rem; }
+
+.testimony-quote {
+  font-weight: 700; }
+
+.testimony-author {
+  font-weight: 700; }
+
 .testimony {
   list-style: none; }
 
-.testimony-author,
-.author-title {
-  text-align: center; }
+.sponsors-author {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 17rem;
+  margin-left: 42rem; }
 
 @media (min-width: 480px) {
-  .sponsors-author {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    padding-right: -1rem;
-    margin-left: 50rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap; }
   .become-a-sponsor {
     max-width: 1110px; } }
 

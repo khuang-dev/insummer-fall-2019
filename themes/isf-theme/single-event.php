@@ -27,6 +27,35 @@ get_header(); ?>
 
 			<div class="entry-content">
 				<?php the_content(); ?>
+				<img src="<?php get_field ('event_image')?>" alt="Artist Image">
+				
+				<?php the_field ('event_date')?>
+
+				<?php
+					if( have_rows('event_time') ):
+						while ( have_rows('event_time') ) : the_row();
+						?>
+							<?php the_sub_field('start_time'); ?>
+							<?php the_sub_field('end_time'); ?>
+							<?php
+						endwhile;
+					else :
+						// no rows found
+					endif;
+					?>
+
+
+				<div class="single_e_details">
+				<?php
+					if( have_rows('repeater_field_name') ):
+						while ( have_rows('repeater_field_name') ) : the_row();
+							the_sub_field('sub_field_name');
+						endwhile;
+					else :
+						// no rows found
+					endif;
+					?>
+				</div>
 				<?php
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
@@ -57,5 +86,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
