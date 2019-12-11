@@ -18,7 +18,7 @@ get_header(); ?>
 				<?php while ( have_rows('banner_content') ) : the_row(); ?>
 				<section class="banner carousel-cell">
 
-				<div class="banner__content">
+				<div class="banner__content hide-mobile">
 					<h1 class="banner__title"><?php the_sub_field('banner_title');?></h1>
 					<p class="banner__description p__white"><?php the_sub_field('banner_description');?></p>
 				
@@ -59,8 +59,10 @@ get_header(); ?>
 					<div class="sponsor-button hide-mobile">
 					<?php if( have_rows('sponsors_button') ): ?>
 						<?php while ( have_rows('sponsors_button') ) : the_row(); ?>
+						<div class="sponsor-package">
 								<a href="<?php the_sub_field('link');?>">
 								<?php the_sub_field('button_label');?></a>
+						</div>
 							<?php 
 								endwhile;
 							else :
@@ -98,7 +100,7 @@ get_header(); ?>
 							<?php endif; ?>
 					</div>
 					
-					<div class= sponsor-button>
+					<div class= contact_button>
 						<a class="sponsor-info" href ="">Contact for more Information</a>
 					</div>
 
