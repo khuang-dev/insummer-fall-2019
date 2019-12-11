@@ -6,6 +6,7 @@
  */
 
 get_header(); ?>
+
 		<?php if ( have_rows('banner_content') ) : ?>
 			<?php /* Start the Loop */ ?>
 			<div class="main-carousel">    
@@ -34,6 +35,19 @@ get_header(); ?>
 <?php endwhile; ?>
 <?php else : ?>
 <?php endif; ?>
+</div>
+		<?php the_post_thumbnail(); ?>
+        <?php the_field( 'banner_title' ); ?>
+        <?php the_field( 'banner_date' ); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+
+		<div class="banner__image-wrapper">
+			<img class="banner__image" src="<?php the_sub_field('banner_image'); ?>"/>
+		</div>
+	</section>
+<?php endwhile; ?>
+<?// else : ?>
+<?php //endif; ?>
 </div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -85,7 +99,7 @@ get_header(); ?>
 
 				<!-- <php get_template_part( 'template-parts/content', 'page' ); ?> -->
 
-			<?php endwhile; // End of the loop. ?>
+			<?php //endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

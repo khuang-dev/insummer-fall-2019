@@ -22,9 +22,32 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h4 {
 	color: $color__white;
 }
+.h2__featured {
+	font-size: 3rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.25rem;
+}
 
 h3, h5 {
 	color: $color__black;
+}
+//h3
+h3 {
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1;
+}
+.h3__left-border-pink {
+	border-left: 5px $color__pink solid; 
+	padding-left: 0.75rem;
+	margin-bottom: 1.5rem;
+}
+.h3__right-border-pink {
+	border-right: 5px $color__pink solid;
+	padding-right: 0.75rem;
+	margin-bottom: 1.5rem;
 }
 
 .h3__white {
@@ -33,8 +56,8 @@ h3, h5 {
 .h3__black {
 	color: $color__black;
 }
-/* Copy */
 
+//p
 p {
 }
 .p__white {
@@ -42,6 +65,9 @@ p {
 }
 .p__black {
 	color: $color__black;
+}
+.p__featured {
+	font-weight: 600;
 }
 
 dfn, cite, em, i {
