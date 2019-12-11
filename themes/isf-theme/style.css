@@ -2798,36 +2798,40 @@ p.member-text {
   color: #191414;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  border-left: 3px solid #ed1651;
-  padding-left: 1rem; }
+  padding-left: 1rem;
+  margin-left: 6rem; }
 
 .categories-info {
-  border: 1px solid red;
-  height: 20rem; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 6rem;
+  text-align: center; }
   .categories-info a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
     text-decoration: none;
-    padding: 0.5rem;
-    border: 1px solid;
-    margin-left: 1rem;
-    margin-right: 1rem;
     text-align: center;
-    width: 7rem; }
+    text-transform: uppercase; }
+    .categories-info a:hover {
+      border-bottom: #191414 2px solid;
+      font-weight: 600; }
 
 .wrapper__isf {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 6rem; }
+  margin: 3rem 6rem; }
   .wrapper__isf h3 {
     white-space: nowrap;
-    height: 2rem; }
+    height: 2rem;
+    margin-right: 2rem;
+    padding-right: 2rem; }
 
 .single-artist h1 {
   color: #191414;
