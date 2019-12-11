@@ -18,6 +18,8 @@
 .qualificatons-title,
 .benefits-title {
   @include desktop {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
     border-bottom: unset;
     border-right: solid 8px $btn__pink;
     color: #000000;
@@ -30,6 +32,9 @@
 .volunteer-title {
   @include desktop {
     height: 95px;
+    a {
+      color: $btn__pink;
+    }
   }
 }
 
@@ -51,8 +56,8 @@
     width: 536px;
     height: 540px;
     object-fit: cover;
-    height: 339px;
-    width: 464px;
+    // height: 339px;
+    // width: 464px;
     box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
     display: -ms-flexbox;
     display: flex;
@@ -78,14 +83,28 @@
     color: #000000;
     font-family: 'Montserrat';
     font-size: 18px;
-    line-height: 21px;
+    line-height: 25px;
+  }
+}
+
+.qualificatons-info {
+  @include desktop {
+    height: 100px;
+  }
+}
+
+.qualificatons-list {
+  @include desktop {
+    line-height: 30px;
   }
 }
 .responsibilities-info h5,
 .benefits-info h5,
 .qualificatons-info,
 .qualificatons-list {
-  width: 470px;
+  @include desktop {
+    width: 470px;
+  }
 }
 
 .responsibilities-title-vs-info {
