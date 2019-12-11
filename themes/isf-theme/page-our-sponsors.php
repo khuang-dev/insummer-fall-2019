@@ -45,7 +45,7 @@ get_header(); ?>
 						?>
 					</div>
 					
-					<p class="become-sponsor">Become a Sponsor</p>
+					<a class="become-sponsor" href ="">Become a Sponsor</a>
 					
 					<?php
 						wp_link_pages( array(

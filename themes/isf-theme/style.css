@@ -1889,6 +1889,11 @@ iframe {
   @media (min-width: 480px) {
     .our-sponsors img {
       max-width: none; } }
+  .our-sponsors a {
+    color: #ed1651; }
+    @media (min-width: 480px) {
+      .our-sponsors a {
+        color: #ffffff; } }
 
 .sponsors {
   display: -webkit-box;
@@ -1929,8 +1934,9 @@ iframe {
           align-items: center; }
 
 .become-sponsor {
+  text-decoration: none;
   border: 3px solid #ed1651;
-  margin: 85px;
+  margin: 135px;
   text-align: center;
   border-radius: 12px;
   padding: 0.5rem;
@@ -1952,9 +1958,9 @@ iframe {
     color: #f58220; }
     @media (min-width: 480px) {
       .become-sponsor:hover {
-        color: #ffffff;
         background-color: #f58220;
-        border: 3px solid #f58220; } }
+        border: 3px solid #f58220;
+        color: #ffffff; } }
 
 .hide-mobile {
   display: none; }
@@ -1987,10 +1993,20 @@ iframe {
   display: none; }
 
 .page-become-a-sponsor h1 {
-  color: #191414;
-  border-left: 8px solid #ed1651;
-  padding-left: 1.5rem;
-  text-transform: uppercase; }
+  color: #ed1651;
+  text-align: center;
+  font-weight: 700; }
+  @media (min-width: 480px) {
+    .page-become-a-sponsor h1 {
+      color: #191414;
+      border-left: 8px solid #ed1651;
+      padding-left: 1.5rem;
+      text-transform: uppercase;
+      text-align: left; } }
+
+.page-become-a-sponsor a {
+  color: #ffffff;
+  text-decoration: none; }
 
 .testimony {
   list-style: none; }
@@ -2013,10 +2029,15 @@ iframe {
 
 .sponsor-info {
   border: 2px solid #ed1651;
-  color: #ed1651; }
-  .sponsor-info:hover {
-    border-color: #f58220;
-    color: #f58220; }
+  color: #ffffff;
+  background: #ed1651; }
+  @media (min-width: 480px) {
+    .sponsor-info {
+      border: 2px solid #ed1651;
+      color: #ed1651; }
+      .sponsor-info:hover {
+        border-color: #f58220;
+        color: #f58220; } }
 
 .testimony-author,
 .author-title {
