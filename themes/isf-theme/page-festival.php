@@ -104,14 +104,14 @@ get_header(); ?>
 						
 						<div class="event-container">
 						<?php
-							$args = array( 
-								'post_type' => 'isf_event', 
-								'order' => 'RAND',
-								'posts_per_page' => get_option('posts_per_page'));
-							$event_posts = get_posts ($args);
+							// //$args = array( 
+							// 	'post_type' => 'isf_event', 
+							// 	'order' => 'RAND',
+							// 	'posts_per_page' => get_option('posts_per_page'));
+							// $event_posts = get_posts ($args);
 						?>
 
-						<?php foreach ( $event_posts as $post) : setup_postdata($post); ?>
+						<!-- <php foreach ( $event_posts as $post) : setup_postdata($post); ?>
 						<div class="wrapper__image-event">
                             <img src="<?php the_field('event_image'); ?>">
                             <div class="thumbnail__date">
@@ -119,7 +119,7 @@ get_header(); ?>
                                 <p class="thumbnail__date-day"><?php echo $date->format('d'); ?></p>
                                 <p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
                             </div>
-                        </div>
+                        </div> -->
                         
                         <div class="wrapper__info-event">
                             <p><?php the_title(); ?></p>
