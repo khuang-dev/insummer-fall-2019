@@ -69,6 +69,12 @@ get_header(); ?>
 						?>
 						</div>
 
+						<div class="hide-desktop">
+							mobile accordion menu
+						</div>						
+
+
+						<div class="hide-mobile">
 						<div class="patron-packages">
 							<?php
 							if( have_rows('patron_packages') ):
@@ -88,6 +94,7 @@ get_header(); ?>
 								// no rows found
 							endif;
 							?>
+						</div>
 						</div>
 
 					<?php
