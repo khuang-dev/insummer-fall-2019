@@ -407,6 +407,9 @@ html {
 body {
   background: #ffffff;
   /* Fallback for when there is no custom background color defined. */ }
+  @media (min-width: 480px) {
+    body {
+      min-width: 830px; } }
 
 blockquote, q {
   quotes: '' ''; }
@@ -942,7 +945,8 @@ object {
           -ms-flex-pack: justify;
               justify-content: space-between;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+      min-width: 830px; }
       .main-navigation ul ul {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1001,7 +1005,7 @@ object {
           -ms-flex-pack: center;
               justify-content: center;
       position: relative;
-      margin: 0 80px; }
+      margin: 0 auto; }
       .menu__primary a {
         margin: 0 1rem;
         white-space: nowrap; }
@@ -1011,6 +1015,9 @@ object {
           font-weight: 600; }
         .menu__primary a:visited {
           color: #191414; } }
+  @media (min-width: 1305px) {
+    .menu__primary {
+      margin: 0 80px; } }
 
 .menu__mobile {
   display: -webkit-box;
@@ -1185,6 +1192,12 @@ object {
   width: 100%; }
   @media (min-width: 480px) {
     .externallink__header {
+      display: none; } }
+  @media (min-width: 1150px) {
+    .externallink__header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       margin: 0;
       width: auto; } }
 
@@ -1192,7 +1205,10 @@ object {
   margin: 0 auto; }
   @media (min-width: 480px) {
     .container__isflogo {
-      display: none; } }
+      display: none !important; } }
+  @media (min-width: 1150px) {
+    .container__isflogo {
+      display: none !important; } }
 
 .isf-logo {
   display: block;
@@ -1252,6 +1268,9 @@ object {
 .btn__donate {
   display: none !important; }
   @media (min-width: 480px) {
+    .btn__donate {
+      display: none !important; } }
+  @media (min-width: 1150px) {
     .btn__donate {
       display: block !important;
       -webkit-transform: translateY(-0.5rem);
@@ -1557,7 +1576,8 @@ iframe {
           -ms-flex-pack: justify;
               justify-content: space-between;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+      min-width: 830px; }
       .main-navigation ul ul {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1616,7 +1636,7 @@ iframe {
           -ms-flex-pack: center;
               justify-content: center;
       position: relative;
-      margin: 0 80px; }
+      margin: 0 auto; }
       .menu__primary a {
         margin: 0 1rem;
         white-space: nowrap; }
@@ -1626,6 +1646,9 @@ iframe {
           font-weight: 600; }
         .menu__primary a:visited {
           color: #191414; } }
+  @media (min-width: 1305px) {
+    .menu__primary {
+      margin: 0 80px; } }
 
 .menu__mobile {
   display: -webkit-box;
@@ -1800,6 +1823,12 @@ iframe {
   width: 100%; }
   @media (min-width: 480px) {
     .externallink__header {
+      display: none; } }
+  @media (min-width: 1150px) {
+    .externallink__header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       margin: 0;
       width: auto; } }
 
@@ -1807,7 +1836,10 @@ iframe {
   margin: 0 auto; }
   @media (min-width: 480px) {
     .container__isflogo {
-      display: none; } }
+      display: none !important; } }
+  @media (min-width: 1150px) {
+    .container__isflogo {
+      display: none !important; } }
 
 .isf-logo {
   display: block;
@@ -1867,6 +1899,9 @@ iframe {
 .btn__donate {
   display: none !important; }
   @media (min-width: 480px) {
+    .btn__donate {
+      display: none !important; } }
+  @media (min-width: 1150px) {
     .btn__donate {
       display: block !important;
       -webkit-transform: translateY(-0.5rem);
@@ -2623,18 +2658,12 @@ p.member-text {
 
 .fa-angle-down {
   font-size: 24px; }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 .accordion img {
   border-radius: 50px;
   background-color: #fff2f2;
   width: 35px;
   height: 35px; }
-=======
->>>>>>> e05dd61aecf288445002825424335baee329e50a
->>>>>>> 9cdce798cf481a46fc647b23084bd2ebb6a7b5fb
 
 .page-year-round h1 {
   text-align: center;
@@ -2739,7 +2768,8 @@ p.member-text {
   margin-top: 3rem; }
   @media (min-width: 480px) {
     .title__upcoming-event {
-      padding-left: 6rem;
+      width: auto;
+      margin-left: 6rem;
       margin-bottom: 1.5rem;
       margin-top: 3rem; } }
 
@@ -2928,17 +2958,10 @@ p.member-text {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%; }
 
-<<<<<<< HEAD
-.featured-right {
-  background-color: #f58220; }
-=======
 .title__sponsor {
   width: 100%;
   margin-top: 3rem; }
-<<<<<<< HEAD
   @media (min-width: 480px) {
     .title__sponsor {
-      padding-left: 6rem; } }
-=======
->>>>>>> e05dd61aecf288445002825424335baee329e50a
->>>>>>> 9cdce798cf481a46fc647b23084bd2ebb6a7b5fb
+      width: auto;
+      margin-left: 6rem; } }

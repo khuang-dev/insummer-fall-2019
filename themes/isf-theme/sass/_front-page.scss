@@ -4,7 +4,8 @@
     margin-bottom: 1.5rem;
     margin-top: 3rem;
     @include desktop {
-    padding-left: 6rem;
+        width: auto;
+    margin-left: 6rem;
     margin-bottom: 1.5rem;
     margin-top: 3rem;
     }
@@ -168,7 +169,7 @@
     width: 100%;
     margin-top: 3rem;
     @include desktop {
-        padding-left: 6rem;
-
+        width: auto;
+        margin-left: 6rem;
     }
 }
