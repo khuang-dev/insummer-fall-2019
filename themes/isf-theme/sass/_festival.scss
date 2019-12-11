@@ -1,0 +1,31 @@
+.page-festival {
+    .entry-content {
+        padding-left: 1rem;
+    }
+    .events-title {
+        color: $color__black;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-left: 3px solid $color__pink;
+        padding-left: 1rem;
+    }
+}
+
+.categories-info {
+    // display: flex;
+    // justify-content: space-between;
+    border: 1px solid red;
+    height: 20rem;
+    // padding: 1rem;
+    a {
+        display: flex;
+        flex-flow: column wrap;
+        text-decoration: none;
+        padding: 0.5rem;
+        border: 1px solid;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        text-align: center;
+        width: 7rem;
+    }
+}

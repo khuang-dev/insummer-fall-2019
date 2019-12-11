@@ -2418,6 +2418,35 @@ p.member-text {
 .page-year-round h2 {
   color: #191414; }
 
+.page-festival .entry-content {
+  padding-left: 1rem; }
+
+.page-festival .events-title {
+  color: #191414;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-left: 3px solid #ed1651;
+  padding-left: 1rem; }
+
+.categories-info {
+  border: 1px solid red;
+  height: 20rem; }
+  .categories-info a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 1px solid;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+    width: 7rem; }
+
 .single-artist h1 {
   color: #191414;
   border-left: 8px solid #ed1651;

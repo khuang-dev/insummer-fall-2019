@@ -60,11 +60,54 @@ get_header(); ?>
 				<section class="festival-events">
 						<h2 class="events-title">Know the Artists</h2>
 
+						<div class="categories-info">
+						<?php
+
+
+
+							$terms = get_terms( array(
+								'taxonomy' => 'event-taxonomy',
+								'hide_empty' => 0,
+							) );
+
+							
+							foreach ( $terms as $term ) :
+
+								// echo '<pre>';
+								// var_dump($term);
+								// echo '</pre>';
+								echo '<a href="' . get_term_link( $term )  .  '">' . $term->name.  '</a>';
+	
+							endforeach;
+
+
+
+
+							$args = array(
+								'orderby' => 'name',
+								'order'   => 'ASC',
+								'post_type' => 'isf_events', 'artist');
+								$event_categories = get_categories ($args);
+								// echo '<pre>';
+								//  print_r(get_categories ());
+								//  echo '</pre>';
+							?>
+
+							<?php foreach ($event_categories as $categories){ ?>
+								
+								<?php  // var_dump(get_term_link($categories)); ?>
+								<a href="<?php echo get_term_link($categories);?>"><?php echo $categories->name;?></a> 
+							<?php }?> 
+
+							</div>
 						<!-- <php get_category('');?> -->
 						
 						<div class="event-container">
 						<?php
-							$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 5);
+							$args = array( 
+								'post_type' => 'isf_event', 
+								'order' => 'RAND',
+								'posts_per_page' => get_option('posts_per_page'));
 							$event_posts = get_posts ($args);
 						?>
 
