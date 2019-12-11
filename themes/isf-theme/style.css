@@ -2182,7 +2182,7 @@ iframe {
     .qualificatons-title,
     .benefits-title {
       display: block;
-      height: 55px;
+      height: 33px;
       border-left: 8px solid #ed1651;
       border-right: unset;
       width: 41%; }
@@ -2304,6 +2304,38 @@ iframe {
   background-color: white;
   display: none;
   overflow: hidden; }
+
+@media (min-width: 480px) {
+  .volunteer-apply-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem; } }
+
+@media (min-width: 480px) {
+  .apply-btn {
+    height: 58px;
+    width: 263px;
+    border-radius: 12px;
+    background-color: #ed1651;
+    cursor: pointer; }
+    .apply-btn a {
+      text-transform: uppercase;
+      color: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-top: 0.4rem;
+      font-family: 'Montserrat';
+      font-size: 24px;
+      font-weight: 600; } }
 
 .btn__round-orange, .btn__round-pink {
   border: #f58220 3px solid;

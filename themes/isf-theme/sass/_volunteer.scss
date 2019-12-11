@@ -44,7 +44,7 @@
   display: none;
   @include desktop {
     display: block;
-    height: 55px;
+    height: 33px;
     border-left: 8px solid #ed1651;
     border-right: unset;
     width: 41%;
@@ -167,4 +167,33 @@
   background-color: white;
   display: none;
   overflow: hidden;
+}
+
+.volunteer-apply-btn {
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.apply-btn {
+  @include desktop {
+    height: 58px;
+    width: 263px;
+    border-radius: 12px;
+    background-color: #ed1651;
+    cursor: pointer;
+    a {
+      text-transform: uppercase;
+      color: white;
+      display: flex;
+      justify-content: center;
+      margin-top: 0.4rem;
+      font-family: 'Montserrat';
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
 }
