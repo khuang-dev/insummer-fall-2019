@@ -17,33 +17,36 @@
     }
 }
 
-// .btn-sponsor-package {
-//     @include desktop {
-//         border: 2px solid $color__pink;
-//         color: $color__white;
-//         background-color: $color__pink;
-//         &:hover {
-//             border-color: $color__orange;
-//             background-color: $color__orange;
-//         }
-    
-//     }
-// }
+.become_sponsor {
+    margin: 1rem;
+}
+
+ .become_header {
+    color: $color__black;
+    font-weight: 700;
+    padding-bottom: 2rem;
+ }
+
+ .become_content {
+     padding-bottom: 2rem;
+ }
 
 .testimony {
     list-style: none;
 }
 
-.sponsor-package,
+.sponsor-button,
 .sponsor-info {
+    @include desktop {
     text-align: center;
     margin-left: 7rem;
     padding: 0.5rem;
     border-radius: 16px;
     margin-right: 7rem;
+    }
 }
 
-.sponsor-package {
+.sponsor-button {
     border: 2px solid $color__pink;
     color: $color__white;
     background-color: $color__pink;
@@ -52,20 +55,20 @@
         background-color: $color__orange;
     }
 }
-.sponsor-info {
-    border: 2px solid $color__pink;
-    color: $color__white;
-    background: $color__pink;
-    @include desktop {
-        border: 2px solid $color__pink;
-        color: $color__pink;
-        &:hover {
-            border-color: $color__orange; 
-            color: $color__orange;
-            ;  
-        } 
-    }
-}
+// .sponsor-info {
+//     border: 2px solid $color__pink;
+//     color: $color__white;
+//     background: $color__pink;
+//     @include desktop {
+//         border: 2px solid $color__pink;
+//         color: $color__pink;
+//         &:hover {
+//             border-color: $color__orange; 
+//             color: $color__orange;
+//             ;  
+//         } 
+//     }
+// }
 
 .testimony-author,
 .author-title {
