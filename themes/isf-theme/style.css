@@ -2488,6 +2488,9 @@ p.member-text {
 .patron-title {
   color: #191414; }
   .patron-title h1 {
+    border-left: 8px solid #ed1651;
+    padding-left: 1.5rem;
+    text-align: left;
     color: #191414; }
 
 .single-artist h1 {
