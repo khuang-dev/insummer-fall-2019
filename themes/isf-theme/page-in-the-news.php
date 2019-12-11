@@ -14,7 +14,8 @@ get_header(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
-				<h1 class="news-headline"><?php echo get_field ('page_headline');?></h1>
+				<?php the_title( '<h1 class="entry-title hide-desktop">', '</h1>' ); ?>
+				<h1 class="news-headline hide-mobile"><?php echo get_field ('page_headline');?></h1>
 
 				</header><!-- .entry-header -->
 
@@ -26,7 +27,9 @@ get_header(); ?>
 						<?php while(has_sub_field('news_festivals')): ?>
 
 							<div class="source-box">
-								<img class="news-img" src="<?php the_sub_field('img_news'); ?>"/>
+								<div class="news-img-box">
+									<img class="news-img" src="<?php the_sub_field('img_news'); ?>"/>
+								</div>
 								<h4><?php the_sub_field('news_event'); ?></h4>
 
 								<div class="link-box">
