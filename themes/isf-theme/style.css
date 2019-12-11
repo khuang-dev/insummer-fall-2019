@@ -2138,15 +2138,18 @@ iframe {
   .become-a-sponsor {
     max-width: 1110px; } }
 
-@media (min-width: 480px) {
-  .volunteer-about-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 1100px;
-    margin: auto;
-    margin-top: 4rem;
-    margin-bottom: 3rem; } }
+.volunteer-about-main {
+  width: 90%;
+  margin: auto; }
+  @media (min-width: 480px) {
+    .volunteer-about-main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      max-width: 1100px;
+      margin: auto;
+      margin-top: 4rem;
+      margin-bottom: 3rem; } }
 
 @media (min-width: 480px) {
   .volunteer-info h5 {
@@ -2167,11 +2170,18 @@ iframe {
     font-weight: bold;
     line-height: 49px; } }
 
-@media (min-width: 480px) {
-  .volunteer-title {
-    height: 95px; }
-    .volunteer-title a {
-      color: #ed1651; } }
+.volunteer-title {
+  margin: 1rem; }
+  .volunteer-title a,
+  .volunteer-title h3 {
+    color: #ed1651; }
+  @media (min-width: 480px) {
+    .volunteer-title {
+      height: 95px; }
+      .volunteer-title h3 {
+        color: #191414; }
+      .volunteer-title a {
+        color: #ed1651; } }
 
 .responsibilities-title,
 .qualificatons-title,
@@ -2227,6 +2237,12 @@ iframe {
     font-family: 'Montserrat';
     font-size: 18px;
     line-height: 25px; } }
+
+.volunteer-info strong {
+  font-weight: unset; }
+  @media (min-width: 480px) {
+    .volunteer-info strong {
+      font-weight: bold; } }
 
 @media (min-width: 480px) {
   .qualificatons-info {
@@ -2316,26 +2332,29 @@ iframe {
     padding-top: 3rem;
     padding-bottom: 3rem; } }
 
-@media (min-width: 480px) {
-  .apply-btn {
-    height: 58px;
-    width: 263px;
-    border-radius: 12px;
-    background-color: #ed1651;
-    cursor: pointer; }
-    .apply-btn a {
-      text-transform: uppercase;
-      color: white;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      margin-top: 0.4rem;
-      font-family: 'Montserrat';
-      font-size: 24px;
-      font-weight: 600; } }
+.apply-btn {
+  display: none; }
+  @media (min-width: 480px) {
+    .apply-btn {
+      display: block;
+      height: 58px;
+      width: 263px;
+      border-radius: 12px;
+      background-color: #ed1651;
+      cursor: pointer; }
+      .apply-btn a {
+        text-transform: uppercase;
+        color: white;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-top: 0.4rem;
+        font-family: 'Montserrat';
+        font-size: 24px;
+        font-weight: 600; } }
 
 .btn__round-orange, .btn__round-pink {
   border: #f58220 3px solid;

@@ -1,4 +1,6 @@
 .volunteer-about-main {
+  width: 90%;
+  margin: auto;
   @include desktop {
     display: flex;
     max-width: 1100px;
@@ -30,8 +32,16 @@
   }
 }
 .volunteer-title {
+  margin: 1rem;
+  a,
+  h3 {
+    color: $btn__pink;
+  }
   @include desktop {
     height: 95px;
+    h3 {
+      color: $color__black;
+    }
     a {
       color: $btn__pink;
     }
@@ -87,6 +97,13 @@
     font-family: 'Montserrat';
     font-size: 18px;
     line-height: 25px;
+  }
+}
+
+.volunteer-info strong {
+  font-weight: unset;
+  @include desktop {
+    font-weight: bold;
   }
 }
 
@@ -179,7 +196,9 @@
 }
 
 .apply-btn {
+  display: none;
   @include desktop {
+    display: block;
     height: 58px;
     width: 263px;
     border-radius: 12px;
