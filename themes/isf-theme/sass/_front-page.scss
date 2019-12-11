@@ -4,7 +4,9 @@
     margin-bottom: 1.5rem;
     margin-top: 3rem;
     @include desktop {
-    margin: 0 6rem;
+    padding-left: 6rem;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
     }
 }
 .title__event {
@@ -31,10 +33,10 @@
 }
 .wrapper__image-event {
     width: 100%;
+    position: relative;
     @include desktop {
     width: auto;
     height: 265px;
-    position: relative;
     img {
         height: 100%;
         width: auto;
@@ -49,7 +51,7 @@
     position: absolute;
     top: 1.2rem;
     left: 1.2rem;
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: center;
     .thumbnail__date-day {
         font-weight: 700;
@@ -57,7 +59,12 @@
         transform: translateY(-0.5rem);
     }
     .thumbnail__date-month {
-        padding-top: 0.6rem;
+        font-size: 1.5rem;
+        padding-top: 0.2rem;
+        @include desktop {
+            font-size: 1rem;
+            padding-top: 0.6rem;
+        }
     }
     p {
         padding: 0;
@@ -67,13 +74,21 @@
 }
 .wrapper__testimony {
     background-color: $bg__champagne;
+    display: flex;
+    flex-direction: column;
+    @include desktop {
     padding: 3rem 6rem;
+    display: block;
+    }
 }
 .wrapper__testimony-text {
     display: flex;
     flex-direction: column;
-    width: 40rem;
+    @include desktop {
     margin-left: 6rem;
+    width: 40rem;
+
+    }
 }
 .wrapper__testimony-single {
     display: flex;
@@ -82,7 +97,12 @@
 }
 .container__testimony {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
 }
 .author__testimony {
     font-weight: 600;
@@ -134,8 +154,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    @include desktop {
     margin: 0 6rem;
     margin-bottom: 3rem;
+    }
 }
 .wrapper__single-sponsor-img {
     width: 300px;
@@ -144,6 +166,9 @@
 }
 .title__sponsor {
     width: 100%;
-    margin: 0 6rem;
     margin-top: 3rem;
+    @include desktop {
+        padding-left: 6rem;
+
+    }
 }
