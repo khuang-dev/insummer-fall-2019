@@ -2330,7 +2330,23 @@ iframe {
         -ms-flex-pack: center;
             justify-content: center;
     padding-top: 3rem;
-    padding-bottom: 3rem; } }
+    padding-bottom: 3rem; }
+    .volunteer-apply-btn p {
+      text-transform: uppercase;
+      color: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-top: 0.6rem;
+      font-family: 'Montserrat';
+      font-size: 24px;
+      font-weight: 600; } }
+
+a:link {
+  text-decoration: none; }
 
 .apply-btn {
   display: none; }
@@ -2341,20 +2357,7 @@ iframe {
       width: 263px;
       border-radius: 12px;
       background-color: #ed1651;
-      cursor: pointer; }
-      .apply-btn a {
-        text-transform: uppercase;
-        color: white;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        margin-top: 0.4rem;
-        font-family: 'Montserrat';
-        font-size: 24px;
-        font-weight: 600; } }
+      cursor: pointer; } }
 
 .btn__round-orange, .btn__round-pink {
   border: #f58220 3px solid;
@@ -2672,7 +2675,7 @@ p.member-text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: solid 2px black; }
+  border: solid 2px #191414; }
   @media (min-width: 480px) {
     .accessibility-info-loop {
       max-width: 1100px;
@@ -2720,7 +2723,7 @@ p.member-text {
       width: 256px;
       height: 49px;
       width: 236.4px;
-      color: #000000;
+      color: #191414;
       font-family: 'Montserrat';
       font-size: 40px;
       font-weight: bold;
@@ -2767,7 +2770,7 @@ p.member-text {
     .accessibility-about-info h5 {
       height: 192px;
       width: 830px;
-      color: #000000;
+      color: #191414;
       font-family: 'Montserrat';
       font-size: 18px;
       line-height: 21px;
@@ -2820,7 +2823,7 @@ p.member-text {
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: #ffffff;
   display: none;
   overflow: hidden; }
 
@@ -2833,7 +2836,7 @@ p.member-text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: white;
+  background-color: #ffffff;
   cursor: pointer; }
   @media (min-width: 480px) {
     .accordion {

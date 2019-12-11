@@ -55,7 +55,7 @@
   @include desktop {
     display: block;
     height: 33px;
-    border-left: 8px solid #ed1651;
+    border-left: 8px solid $color__pink;
     border-right: unset;
     width: 41%;
     h3 {
@@ -69,9 +69,7 @@
     width: 536px;
     height: 540px;
     object-fit: cover;
-    // height: 339px;
-    // width: 464px;
-    box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
+    box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 $color__pink;
     display: -ms-flexbox;
     display: flex;
     margin: 0 auto 50px;
@@ -192,7 +190,20 @@
     justify-content: center;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    p {
+      text-transform: uppercase;
+      color: white;
+      display: flex;
+      justify-content: center;
+      margin-top: 0.6rem;
+      font-family: 'Montserrat';
+      font-size: 24px;
+      font-weight: 600;
+    }
   }
+}
+a:link {
+  text-decoration: none;
 }
 
 .apply-btn {
@@ -202,17 +213,7 @@
     height: 58px;
     width: 263px;
     border-radius: 12px;
-    background-color: #ed1651;
+    background-color: $color__pink;
     cursor: pointer;
-    a {
-      text-transform: uppercase;
-      color: white;
-      display: flex;
-      justify-content: center;
-      margin-top: 0.4rem;
-      font-family: 'Montserrat';
-      font-size: 24px;
-      font-weight: 600;
-    }
   }
 }
