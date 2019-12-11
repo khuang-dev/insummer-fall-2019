@@ -52,3 +52,11 @@
 .accordion-patron:hover {
   background-color: $btnbg__orange;
 }
+
+/* Accordion Panel Style */
+.panel-patron {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
