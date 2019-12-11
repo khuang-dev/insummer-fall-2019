@@ -1865,11 +1865,68 @@ iframe {
 .search__desktop.active {
   display: block; }
 
-.page-our-sponsors h1 {
-  color: #191414;
-  border-left: 8px solid #ed1651;
-  padding-left: 1.5rem;
-  text-transform: uppercase; }
+.our-sponsors {
+  margin-left: 1rem; }
+  @media (min-width: 480px) {
+    .our-sponsors {
+      margin-left: 8rem;
+      margin-right: 8rem; } }
+  .our-sponsors h1 {
+    color: #ed1651;
+    text-align: center;
+    font-weight: 700; }
+    @media (min-width: 480px) {
+      .our-sponsors h1 {
+        color: #191414;
+        border-left: 8px solid #ed1651;
+        padding-left: 1.5rem;
+        text-transform: uppercase;
+        text-align: left; } }
+  .our-sponsors h2 {
+    color: #191414;
+    text-align: center;
+    font-weight: 700; }
+  @media (min-width: 480px) {
+    .our-sponsors img {
+      max-width: none; } }
+
+.sponsors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 50px; }
+  .sponsors img {
+    width: 226px;
+    height: auto;
+    margin: 40px; }
+
+.sponsors_box {
+  margin-right: none;
+  width: 10rem;
+  padding-bottom: 1rem;
+  padding-right: 0.5rem; }
+  @media (min-width: 480px) {
+    .sponsors_box {
+      margin-right: 5rem;
+      margin-left: 5rem; } }
+
+.sponsor-img {
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .become-sponsor {
   border: 3px solid #ed1651;
@@ -1878,58 +1935,26 @@ iframe {
   border-radius: 12px;
   padding: 0.5rem;
   color: #ed1651; }
+  @media (min-width: 480px) {
+    .become-sponsor {
+      color: #ffffff;
+      border: 3px solid #ed1651;
+      background-color: #ed1651;
+      max-width: 17%;
+      text-align: center;
+      margin-left: 42%;
+      height: 58px;
+      width: 263px;
+      line-height: 38px;
+      font-size: 18px; } }
   .become-sponsor:hover {
     border: 3px solid #f58220;
     color: #f58220; }
-
-@media (min-width: 480px) {
-  .page-our-sponsors h2 {
-    color: #191414;
-    font-size: 13px;
-    text-align: center; }
-  .page-our-sponsors .our-sponsors {
-    max-width: 1110px; }
-  .page-our-sponsors .sponsors {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    padding: 50px; }
-    .page-our-sponsors .sponsors img {
-      width: 226px;
-      height: auto;
-      margin: 40px; }
-    .page-our-sponsors .sponsors .sponsor-img {
-      min-height: 300px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-  .page-our-sponsors .become-sponsor {
-    color: #ffffff;
-    border: 3px solid #ed1651;
-    background-color: #ed1651;
-    max-width: 17%;
-    text-align: center;
-    margin-left: 42%;
-    height: 58px;
-    width: 263px;
-    border-radius: 12px;
-    line-height: 38px;
-    font-size: 18px; }
-    .page-our-sponsors .become-sponsor:hover {
-      background-color: #f58220;
-      border: 3px solid #f58220; } }
+    @media (min-width: 480px) {
+      .become-sponsor:hover {
+        color: #ffffff;
+        background-color: #f58220;
+        border: 3px solid #f58220; } }
 
 .hide-mobile {
   display: none; }
