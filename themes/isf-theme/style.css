@@ -2820,6 +2820,15 @@ p.member-text {
     text-align: center;
     width: 7rem; }
 
+.wrapper__isf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 6rem; }
+  .wrapper__isf h3 {
+    white-space: nowrap;
+    height: 2rem; }
+
 .single-artist h1 {
   color: #191414;
   border-left: 8px solid #ed1651;

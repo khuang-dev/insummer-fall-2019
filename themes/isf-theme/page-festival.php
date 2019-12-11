@@ -39,7 +39,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title hide-mobile">', '</h1>' ); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
@@ -48,9 +47,10 @@ get_header(); ?>
 					<?php if(get_field('isf_events')): ?>
 
 						<?php while(has_sub_field('isf_events')): ?>
-
-								<h1 class="hide-mobile"><?php the_sub_field('current_event'); ?></h1>
-								<?php the_sub_field('event_information'); ?>
+								<div class="wrapper__isf">
+								<h3 class="hide-mobile h3__right-border-pink"><?php the_sub_field('current_event'); ?></h3>
+								<span><?php the_sub_field('event_information'); ?></span>
+						</div>
 							
 						<?php endwhile; ?>
 
