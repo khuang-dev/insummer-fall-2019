@@ -3129,5 +3129,10 @@ p.member-text {
 
 .history-media {
   width: 100%;
+<<<<<<< HEAD
+  margin: 0 6rem;
+  margin-top: 3rem; }
+=======
   background-color: #fff2f2;
   text-align: center; }
+>>>>>>> f4449cfb30c62305526e67d77a74a57670fe809c
