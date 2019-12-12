@@ -1,4 +1,6 @@
 .volunteer-about-main {
+  width: 90%;
+  margin: auto;
   @include desktop {
     display: flex;
     max-width: 1100px;
@@ -30,8 +32,16 @@
   }
 }
 .volunteer-title {
+  margin: 1rem;
+  a,
+  h3 {
+    color: $btn__pink;
+  }
   @include desktop {
     height: 95px;
+    h3 {
+      color: $color__black;
+    }
     a {
       color: $btn__pink;
     }
@@ -41,9 +51,11 @@
 .responsibilities-title,
 .qualificatons-title,
 .benefits-title {
+  display: none;
   @include desktop {
-    height: 55px;
-    border-left: 8px solid #ed1651;
+    display: block;
+    height: 33px;
+    border-left: 8px solid $color__pink;
     border-right: unset;
     width: 41%;
     h3 {
@@ -52,13 +64,12 @@
   }
 }
 .responsibilities-img {
+  display: none;
   @include desktop {
     width: 536px;
     height: 540px;
     object-fit: cover;
-    // height: 339px;
-    // width: 464px;
-    box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
+    box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 $color__pink;
     display: -ms-flexbox;
     display: flex;
     margin: 0 auto 50px;
@@ -87,6 +98,13 @@
   }
 }
 
+.volunteer-info strong {
+  font-weight: unset;
+  @include desktop {
+    font-weight: bold;
+  }
+}
+
 .qualificatons-info {
   @include desktop {
     height: 100px;
@@ -102,7 +120,9 @@
 .benefits-info h5,
 .qualificatons-info,
 .qualificatons-list {
+  display: none;
   @include desktop {
+    display: block;
     width: 470px;
   }
 }
@@ -124,8 +144,18 @@
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion-volunteer {
-  background-color: #eee;
-  color: #444;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  height: 8rem;
+  font-size: 24px;
+
+  font-family: 'Montserrat';
+  font-weight: bold;
+  background-color: $btn__pink;
+  color: white;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -133,12 +163,17 @@
   border: none;
   outline: none;
   transition: 0.4s;
+  span {
+    border-top: solid 2px white;
+  }
+  @include desktop {
+    display: none;
+  }
 }
-
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .accordion-volunteer:hover {
-  background-color: #ccc;
+  background-color: $btnbg__orange;
 }
 
 /* Style the accordion panel. Note: hidden by default */
@@ -147,4 +182,38 @@
   background-color: white;
   display: none;
   overflow: hidden;
+}
+
+.volunteer-apply-btn {
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    p {
+      text-transform: uppercase;
+      color: white;
+      display: flex;
+      justify-content: center;
+      margin-top: 0.6rem;
+      font-family: 'Montserrat';
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+}
+a:link {
+  text-decoration: none;
+}
+
+.apply-btn {
+  display: none;
+  @include desktop {
+    display: block;
+    height: 58px;
+    width: 263px;
+    border-radius: 12px;
+    background-color: $color__pink;
+    cursor: pointer;
+  }
 }

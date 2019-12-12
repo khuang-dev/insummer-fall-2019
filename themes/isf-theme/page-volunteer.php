@@ -88,21 +88,37 @@ get_header(); ?>
 				<div class ="responsibilities-title-vs-info">
 						<div class="responsibilities-title"> <h3><?php  the_sub_field('responsibilities_title');?> </h3></div>
 						<div class="responsibilities-info"> <h5><?php  the_sub_field('responsibilities_content');?> </h5></div>
-		
-				</div>
+											
+					</div>
 
-			</div>	
+						<?php
 
-				<?php endwhile;?>
+							$responsibilities_title=get_sub_field('responsibilities_title');
+							$responsibilities_content=get_sub_field('responsibilities_content');
+						
+							?>
 
-				</div>
-			<?php else : endif; ?>
+								<button class="accordion-volunteer">
+									<span><?=$responsibilities_title?></span>
+								</button>
+							<div class="panel">
+
+								<p><?=$responsibilities_content?></p>
+									
+							</div>
+
+						</div>	
+
+							<?php endwhile;?>
+
+							</div>
+						<?php else : endif; ?>
 
 
 
 					<!-- END OF THE SECOND LOOP VOLUNTEER -->
 
-<div class ="combine-qualifications-benefits">
+						<div class ="combine-qualifications-benefits">
 
 
 							<!-- THIS IS THE THIRD LOOP -->
@@ -124,9 +140,31 @@ get_header(); ?>
 
 							<div class="qualificatons-list"> <h5><?php  the_sub_field('qualificatons_list');?> </h5></div>
 						
+							<?php
+
+										$title_qualificatons=get_sub_field('qualificatons_title' );
+										$qualifications_content=get_sub_field('qualifications_content');
+										$qualificatons_list=get_sub_field('qualificatons_list');
+
+										?>
 
 
-							</div>	
+										<button class="accordion-volunteer">
+											<span>
+
+											<?=$title_qualificatons?>
+											</span>
+
+										</button>
+
+
+										<div class="panel">
+
+										<p><?=$qualifications_content?></p>
+										<p><?=$qualificatons_list?></p>
+									</div>
+
+								</div>	
 
 								<?php endwhile;?>
 
@@ -152,50 +190,56 @@ get_header(); ?>
 
 				<div class="benefits-title"> <h3><?php  the_sub_field('benefits_title');?> </h3></div>
 			
-			
 			<div class="benefits-info"> <h5><?php  the_sub_field('benefits_content');?> </h5></div>
-
-
 				<?php
-
 					$title_benefits=get_sub_field('benefits_title' );
 					$benefits_content=get_sub_field('benefits_content');
 			?>
-
 
 					<button class="accordion-volunteer">
 						<span>
 
 						<?=$title_benefits?>
 						</span>
-
 					</button>
-
 
 					<div class="panel">
 
-					<p></p><?=$benefits_content?></p>
+					<p><?=$benefits_content?></p>
 
 					</div>
-
-								
-
-
-		
 							</div>	
-
 								<?php endwhile;?>
-
 								</div>
 							<?php else : endif; ?>
-										
-
 					</div>
 						<!-- END OF FOURTH LOOP -->
 
-
+						<!-- BUTTON LOOP -->
+						
+								<?php
 			
-		</main><!-- #main -->
-	</div><!-- #primary -->
+									if( have_rows('apply_here_button') ):   ?>
 
-<?php get_footer(); ?>
+						<div class="volunteer-fifth-loop">						
+
+								<?php	while ( have_rows('apply_here_button' ) ) : the_row();?>
+
+							<div class="volunteer-apply-btn">
+							    <?php
+									
+										$button = get_sub_field('apply_button'); 
+										//var_dump($button);
+									?>
+									<a href="<?php echo $button[ 'url' ]; ?>" target="<?php echo $button[ 'target' ]; ?>" class="apply-btn"><p><?php echo $button[ 'title' ]; ?></p></a>
+
+									<?php	endwhile;
+
+									else :endif;?>
+							</div>
+						</div>
+								
+							</main><!-- #main -->
+						</div><!-- #primary -->
+
+					<?php get_footer(); ?>
