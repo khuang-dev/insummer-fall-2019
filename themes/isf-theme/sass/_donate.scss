@@ -93,14 +93,14 @@
       padding: 4px;
       min-width: 106px;
 
-      &:hover {
-        border-color: $btnbg__orange;
-      }
+      // &:hover {
+      //   border-color: $btnbg__orange;
+      // }
     }
 
     &:checked ~ label {
       // checked styles
-      border-color: red;
+      border-color: $btnbg__orange;
     }
   }
 }
