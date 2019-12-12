@@ -8,15 +8,9 @@
 //   }
 // }
 
-// .gform_heading {
-//   height: 49px;
-//   width: 182px;
-//   color: #000000;
-//   font-family: Montserrat;
-//   font-size: 40px;
-//   font-weight: bold;
-//   line-height: 49px;
-// }
+.gform_heading {
+  display: none;
+}
 
 // .page-donate {
 //   // max-width: 1100px;
@@ -103,4 +97,8 @@
       border-color: $btnbg__orange;
     }
   }
+}
+
+.ginput_container_radio {
+  display: flex;
 }
