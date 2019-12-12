@@ -1,10 +1,12 @@
-.page-sign-up-newsletter-form .fa-times-circle {
-  display: flex;
-  justify-content: flex-end;
-  cursor: pointer;
-  font-size: 2rem;
+.page-sign-up-newsletter-form,
+.confirmation-newsletter {
+  .fa-times-circle {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    font-size: 2rem;
+  }
 }
-
 .sign-up-newsletter {
   h1 {
     color: $color__black;
@@ -26,6 +28,7 @@
       line-height: 1.5rem;
     }
   }
+
   .first-p,
   .second-p {
     margin-bottom: 2rem;
@@ -78,6 +81,30 @@ input {
     &:hover {
       border: solid 4px $btnbg__orange;
       background-color: $btnbg__orange;
+    }
+  }
+}
+
+//THIS IS THE CONFIRMATION NEWSLETTER PAGE
+
+.confirmation-newsletter {
+  max-width: 800px;
+}
+.confirmation-become-volunteer,
+.confirmation-newsletter {
+  h1 {
+    color: $color__black;
+    // height: 98px;
+    // width: 545px;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    .first-p,
+    .second-p {
+      font-size: 20px;
+      margin-bottom: 2rem;
     }
   }
 }

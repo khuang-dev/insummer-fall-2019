@@ -3355,7 +3355,8 @@ p.member-text {
   background-color: #fff2f2;
   text-align: center; }
 
-.page-sign-up-newsletter-form .fa-times-circle {
+.page-sign-up-newsletter-form .fa-times-circle,
+.confirmation-newsletter .fa-times-circle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3424,3 +3425,23 @@ input {
   .form_newsletter__signup .gform_button:hover {
     border: solid 4px #f58220;
     background-color: #f58220; }
+
+.confirmation-newsletter {
+  max-width: 800px; }
+
+.confirmation-become-volunteer h1,
+.confirmation-newsletter h1 {
+  color: #191414;
+  font-family: 'Montserrat';
+  font-size: 40px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center; }
+  .confirmation-become-volunteer h1 .first-p,
+  .confirmation-become-volunteer h1 .second-p,
+  .confirmation-newsletter h1 .first-p,
+  .confirmation-newsletter h1 .second-p {
+    font-size: 20px;
+    margin-bottom: 2rem; }
