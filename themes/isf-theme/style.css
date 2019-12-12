@@ -1592,6 +1592,10 @@ iframe {
   display: -ms-flexbox;
   display: flex; }
 
+.donation-amount {
+  padding-top: 2rem;
+  padding-left: 1rem; }
+
 .donation-first-last-name input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1626,6 +1630,10 @@ iframe {
 
 .gchoice_4_8_3 {
   margin-left: 1rem; }
+
+.page-donate .field_4_12 {
+  padding-top: 23px;
+  padding-left: 10px; }
 
 .donate-image {
   background-image: url(../../assets/01_Icons/SVG/Donate1.svg);
