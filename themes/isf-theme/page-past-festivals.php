@@ -52,10 +52,11 @@ get_header(); ?>
 						<?php if(get_field('past_festival_testimonials')): ?>
 
 						<?php while(has_sub_field('past_festival_testimonials')): ?>
-
-							<p><?php the_sub_field('past_testimonial'); ?></p>
-							<p><?php the_sub_field('author_of_testimony'); ?></p>
-							<p><?php the_sub_field('festival_testimony_source'); ?></p>
+							<div class="past-testimony-wrapper">
+							<p class="past-testimonial"><?php the_sub_field('past_testimonial'); ?></p>
+							</div>
+							<p class="p__black testimonial-author">- <?php the_sub_field('author_of_testimony'); ?></p>
+							<p class="p__black testimonial-source"><?php the_sub_field('festival_testimony_source'); ?></p>
 
 
 						<?php endwhile; ?>
@@ -63,13 +64,16 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 
+
+
+				<section class="award-wrapper">
 					<div class="award-title">
 						<?php
 							if( have_rows('awards') ):
 								while ( have_rows('awards') ) : the_row();
 						?>
-									<h3><?php the_sub_field('awards_type');?></h3>
-									<p><?php the_sub_field('about_award');?></p>
+									<h3 class="h3__left-border-pink"><?php the_sub_field('awards_type');?></h3>
+									<p class="award-description"><?php the_sub_field('about_award');?></p>
 
 						<?php
 								endwhile;
@@ -101,7 +105,42 @@ get_header(); ?>
 						endif;
 						?>
 					</div>
+					</div>
+					</section>
+					<section class="wrapper__featured">
+            <?php if ( have_rows('featured_content', 9)):?>
+                            <?php while ( have_rows('featured_content', 9)) : the_row(); ?>
+                                <div class="wrapper__featured-content" style="background-image: url(<?php the_sub_field('featured_page_image');?>); background-size: cover;">
+                                <div class="wrapper__featured-text">
+                                <h2 class="h2__featured"><?php the_sub_field('featured_title')?></h2>
+                                <?php if ( have_rows('featured_description')):?>
+                                    <?php while ( have_rows('featured_description')) : the_row(); ?>
+                                    <p class="p__featured p__white"><?php the_sub_field('line_one');?></p>
+                                    <p class="p__featured p__white"><?php the_sub_field('line_two');?></p>
+                                <?php endwhile; ?>
+                                <?php else : ?>
+                                <?php endif; ?> 
+                                </div>
+                                </div>
+                            <?php endwhile; ?>
+                            <?php else : ?>
+                            <?php endif; ?> 
+			</section>
 
+				<h3 class="h3__left-border-pink title__featured-artists">Featured Artists</h2>
+				<section class="featured-artist-wrapper">
+                <?php 
+				$args = array( 'post_type' => 'artist', 'order' => 'ASC', 'posts_per_page' => 6);
+   				$artist_posts = get_posts( $args ); // returns an array of posts
+			    ?>
+
+			<?php foreach ( $artist_posts as $post ) : setup_postdata( $post ); ?>
+                   <?php /* Content from your array of post results goes here */ ?>
+                   <article class="wrapper__single-artist" style="background-image: url(<?php the_field('artist_image');?>); background-size: cover; background-position: center;">
+						<div class="p__white artist-name"><p><?php the_title(); ?></p></div>
+                    </article>
+                    <?php endforeach; wp_reset_postdata(); ?>
+				</section>
 					<?php
 						wp_link_pages( array(
 							'before' => '<div class="page-links">' . esc_html( 'Pages:' ),

@@ -195,3 +195,6 @@
     font-size: 2rem;
   }
 }
+.title__featured-artists {
+    @extend .title__upcoming-event
+}
