@@ -16,6 +16,7 @@ html {
 
 body {
   background: $color__white; /* Fallback for when there is no custom background color defined. */
+  font-family: $monsterrat;
   @include desktop {
     min-width: 830px;
   }

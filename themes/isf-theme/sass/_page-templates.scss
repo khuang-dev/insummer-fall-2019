@@ -26,7 +26,7 @@
     top: 0.5rem;
     @include desktop {
         right: 8rem;
-        top: 6rem;
+        top: 8rem;
     }
     .banner__title {
         font-size: 2rem;
@@ -50,7 +50,7 @@
 
 .banner__btn {
     border: $btn__pink 3px solid;
-    border-radius: 10px;
+    border-radius: 12px;
     background: $bg__pink;
     a {
         color: $color__white; 
@@ -60,10 +60,10 @@
         font-weight: 600;
     }
     @include desktop {
-    background-color: transparent;
+    background-color: $btn__pink;
         &:hover {
-        background-color: $btn__pink;
-        border: $btn__pink 3px solid;
+        background-color: $btn__orange;
+        border: $btn__orange 3px solid;
         }
     }
 }
