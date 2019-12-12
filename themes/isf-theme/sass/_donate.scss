@@ -87,8 +87,11 @@
 
     & ~ label {
       // all radio labels
-      border: 1px solid black;
-      border-radius: 10px;
+      border: 6px solid #000;
+      border-radius: 8px;
+      display: inline-block;
+      padding: 4px;
+      min-width: 106px;
     }
 
     &:checked ~ label {

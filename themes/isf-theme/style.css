@@ -1603,8 +1603,11 @@ iframe {
 .donate_radio input[type='radio'] {
   display: none; }
   .donate_radio input[type='radio'] ~ label {
-    border: 1px solid black;
-    border-radius: 10px; }
+    border: 6px solid #000;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 4px;
+    min-width: 106px; }
   .donate_radio input[type='radio']:checked ~ label {
     border-color: red; }
 

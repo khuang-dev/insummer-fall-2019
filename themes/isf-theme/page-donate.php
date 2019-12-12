@@ -46,12 +46,12 @@ get_header(); ?>
 					<a class="donate-text"> We extend our heartfelt gratitude to our visionary circle of patrons for their commitment, support and generosity in making the festival what it is. </a>
 			</div>
 		</div>
-
+<!-- 
 		<div class="donation-box">
 			<img class="donate1-svg"src="<?php echo get_stylesheet_directory_uri();?>/assets/01_Icons/SVG/Donate1.svg">
 			<a class="donation-amount">Donation Amount </a>
 		</div>
-	
+	 -->
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php the_content(); ?>
 		<?php endwhile; ?>
