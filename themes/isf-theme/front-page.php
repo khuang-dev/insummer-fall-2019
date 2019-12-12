@@ -81,7 +81,7 @@ get_header(); ?>
                             <?php if ( have_rows ('event_button'));?>
                             <?php while (have_rows('event_button')) : the_row(); ?>
                                     <button class="events-btn">
-                                    <a href="<?php the_sub_field('event__btn-url');?>"><?php the_sub_field('event__btn-label');?></a>
+                                    <a href="<?php the_sub_field('event_btnurl');?>"><?php the_sub_field('event_btnlabel');?></a>
                                     </button>
                                     <?php endwhile; ?>
                         </div>

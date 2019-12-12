@@ -44,6 +44,11 @@
                         <p><?php the_field('event_date'); ?>${value.acf.event_date}</p>
                         <p>${value.acf.event_time[0].start_time} - ${value.acf.event_time[0].end_time}</p>
                     </div>
+                    <div class="wrapper__btn-info">
+                            <button class="events-btn">
+                            <a href="${value.acf.event_button[0].event_btnurl}">${value.acf.event_button[0].event_btnlabel}</a>
+                            </button>
+                        </div>
                     </article>
                  `
         })
