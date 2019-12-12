@@ -1,37 +1,10 @@
 .page-year-round {
-    .year_round-head {
-        text-align: center;
-        color: $color__pink;
-        margin-left: 7rem;
-        margin-right: 7rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 30px;
-        @include desktop {
-            color: $color__black;
-            margin-right: 0;
-            font-size: 40px;
-            width: 16rem;
-
-        }
-    }
     h2 {
         color: $color__black;  
     }
     p {
         font-size: 18px;
     }
-}
-
-.year-content {
-    margin: 0 1.25rem;
-    @include desktop {
-       border-left: 8px $color__pink solid; 
-       padding-left: 3rem;
-       display: flex;
-       align-items: center;
-       font-size: 18px;
-   }
 }
 
 .events-title {
@@ -49,6 +22,35 @@
 }
 
 .year-events {
+    @include desktop {
     display: flex;
     margin-top: 3rem;
+    }
+}
+.year_round-head {
+    text-align: center;
+    color: $color__pink;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    @include desktop {
+        color: $color__black;
+        margin-right: 0;
+        font-size: 40px;
+        width: 16rem;
+
+    }
+}
+
+.year-content {
+    margin: 0 1.25rem;
+    @include desktop {
+       border-left: 8px $color__pink solid; 
+       padding-left: 3rem;
+       display: flex;
+       align-items: center;
+       font-size: 18px;
+   }
 }
