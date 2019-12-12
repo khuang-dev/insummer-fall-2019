@@ -1,0 +1,104 @@
+.past-testimony {
+    margin: 2rem 6rem;
+}
+.past-testimonial {
+    color: $color__pink;
+    font-weight: 600;
+    font-size: 1.2rem;
+    &::after {
+        content: '"';
+        color: $color__black;
+    }
+    &::before {
+        content: '"';
+        color: $color__black;
+    }
+}
+.past-testimony-wrapper {
+    display: flex;
+}
+.testimonial-author {
+    font-style: italic;
+    text-align: right;
+}
+.testimonial-source {
+    font-style: italic;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.award-wrapper {
+    background-color: $bg__champagne;
+    padding: 3rem 6rem;
+}
+.award-description {
+    margin-top: 2rem;
+}
+.award-list {
+    display: flex;
+    justify-content: space-between;
+}
+.featured-artist-wrapper {
+    margin: 0 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: 22rem 22rem;
+    grid-gap: 2rem;
+}
+.wrapper__single-artist {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &::before {
+        content: "";
+        display: block;
+        padding-bottom: 63%;
+    }
+    &:nth-child(1) {
+        .artist-name {
+        background-color: $color__pink-transparent;
+        }
+    }
+    &:nth-child(2) {
+        .artist-name {
+            background-color: $color__orange-transparent;
+            }    }
+    &:nth-child(3) {
+        .artist-name {
+            background-color: $color__lightblue-transparent;
+            }    }
+    &:nth-child(4) {
+        .artist-name {
+            background-color: $color__lightblue-transparent;
+            }    }
+    &:nth-child(5) {
+        .artist-name {
+            background-color: $color__pink-transparent;
+            }    }
+    &:nth-child(6) {
+        .artist-name {
+            background-color: $color__orange-transparent;
+            }    }
+}
+.artist-name {
+    text-transform: uppercase;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 9rem;
+    min-width: 15rem;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.5rem 0rem 0.5rem 0rem;
+    p {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+}

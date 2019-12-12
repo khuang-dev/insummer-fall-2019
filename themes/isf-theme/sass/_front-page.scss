@@ -199,3 +199,6 @@
 .wrapper_btn_sponsor {
   margin-bottom: 2rem;
 }
+.title__featured-artists {
+    @extend .title__upcoming-event
+}

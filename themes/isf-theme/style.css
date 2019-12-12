@@ -406,7 +406,8 @@ html {
 
 body {
   background: #ffffff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  font-family: "Monsterrat", sans-serif; }
   @media (min-width: 480px) {
     body {
       min-width: 830px; } }
@@ -469,16 +470,6 @@ input[type='submit'] {
   input[type='reset']:hover,
   input[type='submit']:hover {
     border-color: #ccc #bbb #aaa; }
-  button:active, button:focus,
-  input[type='button']:active,
-  input[type='button']:focus,
-  input[type='reset']:active,
-  input[type='reset']:focus,
-  input[type='submit']:active,
-  input[type='submit']:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
 /* Fields */
 input[type='text'],
@@ -1546,6 +1537,12 @@ iframe {
     width: 100%;
     max-width: 500px; } }
 
+.gform_heading {
+  display: none; }
+
+.gform_heading {
+  display: none; }
+
 .page-donate .content-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1580,7 +1577,8 @@ iframe {
       -ms-flex-pack: center;
           justify-content: center;
   height: 106px;
-  border: 1px solid #000;
+  border: 4px solid #000;
+  border-radius: 21px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -1603,10 +1601,28 @@ iframe {
 .donate_radio input[type='radio'] {
   display: none; }
   .donate_radio input[type='radio'] ~ label {
-    border: 1px solid black;
-    border-radius: 10px; }
+    border: 6px solid #ed1651;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 4px;
+    min-width: 106px; }
   .donate_radio input[type='radio']:checked ~ label {
-    border-color: red; }
+    border-color: #f58220; }
+
+.gfield_radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem; }
+
+.gchoice_4_8_3 {
+  margin-left: 1rem; }
+
+.donate-image {
+  background-image: url(../../assets/01_Icons/SVG/Donate1.svg);
+  background-repeat: no-repeat;
+  height: 67px;
+  width: 60px; }
 
 .main-navigation {
   margin-top: 2rem; }
@@ -2185,6 +2201,9 @@ iframe {
   width: 50%;
   padding-left: 1.25rem;
   padding-right: 1.25rem; }
+
+.remove-margin-bottom {
+  margin-bottom: 0 !important; }
 
 .page-become-a-sponsor h1 {
   color: #ed1651;
@@ -3171,6 +3190,21 @@ p.member-text {
       border-bottom: #191414 2px solid;
       font-weight: 600; }
 
+.category-btn, .category-all-btn {
+  border: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 0; }
+  .category-btn:hover, .category-all-btn:hover {
+    border-bottom: 2px #191414 solid;
+    font-weight: 600; }
+  .category-btn:focus, .category-all-btn:focus {
+    outline: none; }
+
+.category-active {
+  border-bottom: 2px #191414 solid;
+  font-weight: 600; }
+
 .wrapper__isf {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3181,6 +3215,110 @@ p.member-text {
     height: 2rem;
     margin-right: 2rem;
     padding-right: 2rem; }
+
+.isf-plus-description {
+  margin-left: 6rem;
+  display: none; }
+
+.wrapper-isfplus-event {
+  background-color: #fff2f2; }
+
+.past-testimony {
+  margin: 2rem 6rem; }
+
+.past-testimonial {
+  color: #ed1651;
+  font-weight: 600;
+  font-size: 1.2rem; }
+  .past-testimonial::after {
+    content: '"';
+    color: #191414; }
+  .past-testimonial::before {
+    content: '"';
+    color: #191414; }
+
+.past-testimony-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.testimonial-author {
+  font-style: italic;
+  text-align: right; }
+
+.testimonial-source {
+  font-style: italic;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: right; }
+
+.award-wrapper {
+  background-color: #fff2f2;
+  padding: 3rem 6rem; }
+
+.award-description {
+  margin-top: 2rem; }
+
+.award-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.featured-artist-wrapper {
+  margin: 0 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem; }
+
+.wrapper__single-artist {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  .wrapper__single-artist::before {
+    content: "";
+    display: block;
+    padding-bottom: 63%; }
+  .wrapper__single-artist:nth-child(1) .artist-name {
+    background-color: #ed164fd2; }
+  .wrapper__single-artist:nth-child(2) .artist-name {
+    background-color: #f58320d0; }
+  .wrapper__single-artist:nth-child(3) .artist-name {
+    background-color: #69c8cbd2; }
+  .wrapper__single-artist:nth-child(4) .artist-name {
+    background-color: #69c8cbd2; }
+  .wrapper__single-artist:nth-child(5) .artist-name {
+    background-color: #ed164fd2; }
+  .wrapper__single-artist:nth-child(6) .artist-name {
+    background-color: #f58320d0; }
+
+.artist-name {
+  text-transform: uppercase;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 9rem;
+  min-width: 15rem;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.5rem 0rem 0.5rem 0rem; }
+  .artist-name p {
+    margin: 0 auto;
+    max-width: 80%; }
 
 .single-artist h1 {
   color: #191414;
@@ -3222,7 +3360,7 @@ p.member-text {
   .artist-social .artist-icon {
     margin-right: 1rem; }
 
-.title__upcoming-event {
+.title__upcoming-event, .title__featured-artists {
   width: auto;
   color: #191414;
   margin-bottom: 1.5rem;
@@ -3230,7 +3368,7 @@ p.member-text {
   margin-left: 1.25rem;
   font-size: 1.2rem; }
   @media (min-width: 480px) {
-    .title__upcoming-event {
+    .title__upcoming-event, .title__featured-artists {
       margin-left: 6rem;
       margin-bottom: 1.5rem;
       margin-top: 3rem;
