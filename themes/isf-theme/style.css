@@ -1620,7 +1620,11 @@ iframe {
 .gfield_radio {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding: 1rem; }
+
+.gchoice_4_8_3 {
+  margin-left: 1rem; }
 
 .main-navigation {
   margin-top: 2rem; }
