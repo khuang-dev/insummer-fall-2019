@@ -78,9 +78,8 @@ get_header(); ?>
 
 							</div>
 						<!-- <php get_category('');?> -->
-							<section class="wrapper__upcoming-events removeflex grid-column-3 flexwrap flexstart" id="content-output">
-
-							</section>
+							<section class="wrapper__upcoming-events grid-column-3 flexwrap flexstart" id="content-output-isf"></section>
+							<section class="wrapper__upcoming-events grid-column-3 flexwrap flexstart" id="content-output-isfplus"></section>
 
 
 

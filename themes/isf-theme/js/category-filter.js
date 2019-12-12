@@ -15,13 +15,10 @@
             'Nov',
             'Dec',
         ];
-
         return months[month];
-
     }
 
     function buildEventMarkup(data) {
-        console.log(data)
         $.each(data, function(key, value){
             const date = new Date(value.acf.event_date);
             const month = getMonthName( date.getMonth() );
@@ -44,46 +41,33 @@
                     </div>
                     </article>
                  `
-
             return htmlTemplate;
-
-        }
-
+        });
+    }
     //new quote
     $('.categories-info').on('click', function(e){
         $.ajax({
             method: 'GET',
-            url: window.isf_vars.rest_url + 'wp/v2/isf_event?event-taxonomy=' + e.target.value + '&event-type=summer'
+            url: window.isf_vars.rest_url + 'wp/v2/isf_event?event-taxonomy=' + e.target.value //+ '&ISF_plus=18'
         })
-        .done(function(data) {
-            $('#content-output').empty();
-            const htmlTemplate = buildEventMarkup(data);
-            $('#content-output').append(htmlTemplate);
+        .done(function(data){
+            $('#content-output-isf').empty();
+            const isfOutput = buildEventMarkup(data);
+            $('#content-output-isf').append(isfOutput);
         });
+        // $.ajax({
+        //     method: 'GET',
+        //     url: window.isf_vars.rest_url + 'wp/v2/isf_event?event-taxonomy=' + e.target.value + '&ISF_plus'
+        // })
+        // .done(buildEventMarkup) {
+        //     $('#content-output-isfplus').empty();
+        //     const htmlTemplate = buildEventMarkup(data);
+        //     $('#content-output-isfplus').append(htmlTemplate);
+        // }
 
-
-        $.ajax({
-            method: 'GET',
-            url: window.isf_vars.rest_url + 'wp/v2/isf_event?event-taxonomy=' + e.target.value + '&event-type=summer'
-        })
-        .done(buildEventMarkup);
-            
-           
-						
+				
             // $args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => get_option('posts_per_page'));
-            //    $event_posts = get_posts( $args ); 
-
-                    // <div class="event-button">
-                    // <button class="event_button">
-                    //     <a class="banner__btn-label" href="<?php the_sub_field('event__btn-url');?>"><?php the_sub_field('event__btn-label');?></a>
-                    //     </button>
-
-                    // </div>
-
         
     //     //.fail(function(error){
-    });
-});
-
-
+    })
 })(jQuery);
