@@ -3226,8 +3226,7 @@ p.member-text {
     font-family: 'Avenir Next'; }
     .sign-up-newsletter .entry-content p p {
       line-height: 1.5rem; }
-  .sign-up-newsletter .gform_footer,
-  .sign-up-newsletter .gform_body {
+  .sign-up-newsletter .form_newsletter__signup_wrapper .gform_footer {
     position: unset;
     margin-right: 0rem;
     display: block; }
