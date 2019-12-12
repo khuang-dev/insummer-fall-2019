@@ -1549,6 +1549,9 @@ iframe {
 .gform_heading {
   display: none; }
 
+.gform_heading {
+  display: none; }
+
 .page-donate .content-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1614,7 +1617,7 @@ iframe {
   .donate_radio input[type='radio']:checked ~ label {
     border-color: #f58220; }
 
-.ginput_container_radio {
+.gfield_radio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
