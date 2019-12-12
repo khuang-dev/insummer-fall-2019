@@ -1,0 +1,62 @@
+.sign-up-newsletter {
+  h1 {
+    color: $color__black;
+  }
+}
+
+.sign-up-newsletter {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 700px;
+  .entry-content p {
+    line-height: 2.5rem;
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Avenir Next';
+
+    p {
+      line-height: 1.5rem;
+    }
+  }
+
+  .form_newsletter__signup_wrapper .gform_footer {
+    position: unset;
+    margin-right: 0rem;
+    display: block;
+  }
+}
+
+.sign-up-newsletter {
+  .gform_title {
+    display: none;
+  }
+}
+
+.sign-up-newsletter {
+  .gform_wrapper {
+    max-width: 400px;
+    margin: auto;
+    line-height: 5rem;
+  }
+}
+
+.form_newsletter__signup ul {
+  list-style-type: none;
+}
+
+.form_newsletter__signup {
+  .gform_button {
+    height: 58px;
+    width: 263px;
+    border-radius: 12px;
+    border: solid 4px $bg__champagne;
+    background-color: #ffffff;
+    color: $bg__champagne;
+    font-size: 1.5rem;
+    font-size: 24px;
+    &:hover {
+      border: solid 4px $btn__pink;
+    }
+  }
+}

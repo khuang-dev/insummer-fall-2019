@@ -2,10 +2,11 @@
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
-  border: solid 2px black;
+  border: solid 2px $color__black;
   @include desktop {
     max-width: 1100px;
-    margin: auto;
+    // margin: auto;
+    margin: auto 4rem auto auto;
     border: none;
   }
 }
@@ -42,7 +43,7 @@
     width: 256px;
     height: 49px;
     width: 236.4px;
-    color: #000000;
+    color: $color__black;
     font-family: 'Montserrat';
     font-size: 40px;
     font-weight: bold;
@@ -54,6 +55,7 @@
   @include desktop {
     display: block;
     width: 50%;
+    margin-right: -6rem;
   }
 }
 
@@ -84,7 +86,7 @@
   @include desktop {
     height: 192px;
     width: 830px;
-    color: #000000;
+    color: $color__black;
     font-family: 'Montserrat';
     font-size: 18px;
     line-height: 21px;
@@ -98,13 +100,14 @@
   }
 }
 
-.accessibility-title {
+.accessibility-title h3 {
   font-weight: bold;
   line-height: 37px;
   font-family: 'Montserrat';
   @include desktop {
-    font-size: 30px;
-    width: 67%;
+    text-transform: capitalize;
+    font-size: 1.875rem;
+    width: 94%;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
     margin-left: 1rem;
@@ -114,8 +117,8 @@
 .accessibility-info-details {
   font-family: 'Montserrat';
   @include desktop {
-    font-size: 24px;
-    width: 353px;
+    font-size: 22px;
+    width: 374px;
     margin-bottom: 2rem;
   }
 }
@@ -144,7 +147,7 @@
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: $color__white;
   display: none;
   overflow: hidden;
 }
@@ -153,7 +156,7 @@
   max-width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: $color__white;
   cursor: pointer;
   @include desktop {
     display: none;
@@ -166,7 +169,7 @@
 
 .accordion img {
   border-radius: 50px;
-  background-color: #fff2f2;
+  background-color: $bg__champagne;
   width: 35px;
   height: 35px;
 }
