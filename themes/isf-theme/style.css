@@ -2076,6 +2076,12 @@ iframe {
 .widget-title {
   display: none; }
 
+.banner_imgfit {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%; }
+
 .page-become-a-sponsor h1 {
   color: #ed1651;
   text-align: center;
