@@ -3356,7 +3356,8 @@ p.member-text {
   text-align: center; }
 
 .page-sign-up-newsletter-form .fa-times-circle,
-.confirmation-newsletter .fa-times-circle {
+.confirmation-newsletter .fa-times-circle,
+.page-confirmation-become-volunteer .fa-times-circle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3428,8 +3429,10 @@ input {
 
 .confirmation-newsletter {
   max-width: 800px; }
+  .confirmation-newsletter .entry-title {
+    display: none; }
 
-.confirmation-become-volunteer h1,
+.sign-up-newsletter h1,
 .confirmation-newsletter h1 {
   color: #191414;
   font-family: 'Montserrat';
@@ -3438,10 +3441,38 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.sign-up-newsletter .first-p,
+.sign-up-newsletter .second-p,
+.confirmation-newsletter .first-p,
+.confirmation-newsletter .second-p {
+  font-size: 20px;
+  margin-bottom: 2rem; }
+
+.confirmation-become-volunteer {
+  max-width: 800px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center; }
-  .confirmation-become-volunteer h1 .first-p,
-  .confirmation-become-volunteer h1 .second-p,
-  .confirmation-newsletter h1 .first-p,
-  .confirmation-newsletter h1 .second-p {
+  .confirmation-become-volunteer h1 {
+    color: #191414;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold; }
+  .confirmation-become-volunteer .first-p,
+  .confirmation-become-volunteer .second-p {
     font-size: 20px;
     margin-bottom: 2rem; }
+
+.confirmation-become-volunteer .volunteer-apply-btn p {
+  text-transform: capitalize; }
