@@ -3683,3 +3683,14 @@ p.member-text {
   font-size: 24px; }
   .form_newsletter__signup .gform_button:hover {
     border: solid 4px #ed1651; }
+
+.page-header {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .page-header h1 {
+    color: black;
+    font-size: 3rem; }
