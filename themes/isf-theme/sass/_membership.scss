@@ -53,6 +53,7 @@ p.member-text {
 @include desktop {
   .page-membership .entry-content {
     margin: 0 12rem;
+    padding-top: 5%;
     h2 {
       border-left: 8px solid $color__pink;
       padding-left: 1.5rem;
