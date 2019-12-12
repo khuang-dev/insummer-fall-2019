@@ -3779,3 +3779,8 @@ input {
   .page-header h1 {
     color: black;
     font-size: 3rem; }
+
+.page-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
