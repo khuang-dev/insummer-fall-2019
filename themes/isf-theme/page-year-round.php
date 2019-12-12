@@ -27,8 +27,8 @@ get_header(); ?>
 							<?php endif; ?>
 				</div>
 
-				<div class="banner__image-wrapper hide-mobile">
-					<img class="banner__image" src="<?php the_sub_field('banner_image'); ?>"/>
+				<div class="banner__image-wrapper  hide-mobile">
+					<img class="banner__image banner_imgfit" src="<?php the_sub_field('banner_image'); ?>"/>
 				</div>
 				</section>
 					<?php endwhile; ?>

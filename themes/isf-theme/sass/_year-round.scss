@@ -8,15 +8,30 @@
         font-weight: 700;
         font-size: 30px;
         @include desktop {
-            color: ;
+            color: $color__black;
+            margin-right: 0;
+            font-size: 40px;
+            width: 16rem;
+
         }
     }
     h2 {
         color: $color__black;  
     }
-    .year-content {
-         margin: 0 1.25rem;
-     }
+    p {
+        font-size: 18px;
+    }
+}
+
+.year-content {
+    margin: 0 1.25rem;
+    @include desktop {
+       border-left: 8px $color__pink solid; 
+       padding-left: 3rem;
+       display: flex;
+       align-items: center;
+       font-size: 18px;
+   }
 }
 
 .events-title {
@@ -25,7 +40,15 @@
     margin-bottom: 1.5rem;
     margin-top: 3rem;
     margin-left: 1.25rem;
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    @include desktop {
+        font-size: 40px;
+        margin-left: 7rem;
+        border-left: 8px $color__pink solid; 
+    }
 }
 
-  
+.year-events {
+    display: flex;
+    margin-top: 3rem;
+}
