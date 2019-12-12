@@ -60,10 +60,10 @@
         font-weight: 600;
     }
     @include desktop {
-    background-color: transparent;
+    background-color: $btn__pink;
         &:hover {
-        background-color: $btn__pink;
-        border: $btn__pink 3px solid;
+        background-color: $btn__orange;
+        border: $btn__orange 3px solid;
         }
     }
 }

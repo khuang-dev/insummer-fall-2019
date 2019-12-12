@@ -1357,10 +1357,10 @@ object {
     font-weight: 600; }
   @media (min-width: 480px) {
     .banner__btn {
-      background-color: transparent; }
+      background-color: #ed1651; }
       .banner__btn:hover {
-        background-color: #ed1651;
-        border: #ed1651 3px solid; } }
+        background-color: #f58220;
+        border: #f58220 3px solid; } }
 
 .flickity-page-dots {
   margin-bottom: 2.5rem !important; }

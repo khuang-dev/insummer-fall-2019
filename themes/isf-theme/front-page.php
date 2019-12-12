@@ -76,6 +76,16 @@ get_header(); ?>
                                 <?php else : ?>
                                 <?php endif; ?>
                         </div>
+
+                        <div class="wrapper__btn-info">
+                            <?php if ( have_rows ('event_button'));?>
+                            <?php while (have_rows('event_button')) : the_row(); ?>
+                                    <button>
+                                    <a href="<?php the_sub_field('event__btn-url');?>"><?php the_sub_field('event__btn-label');?></a>
+                                    </button>
+                                    <?php endwhile; ?>
+                        </div>
+                        
                         </article>
                     <?php endforeach; wp_reset_postdata(); ?>
 
