@@ -1459,7 +1459,10 @@ iframe {
   font-size: 1.5rem; }
   @media (min-width: 480px) {
     .send-us-message-form_wrapper .gform_footer .gform_button {
-      font-size: 24px; } }
+      font-size: 24px; }
+      .send-us-message-form_wrapper .gform_footer .gform_button:hover {
+        border: solid 4px #f58220;
+        background-color: #f58220; } }
 
 .send-us-message-form {
   display: -webkit-box;
@@ -2482,7 +2485,15 @@ iframe {
   -webkit-transition: 0.4s;
   transition: 0.4s; }
   .accordion-volunteer span {
-    border-top: solid 2px white; }
+    position: relative; }
+    .accordion-volunteer span::before {
+      content: '';
+      width: 80%;
+      height: 2px;
+      background: white;
+      position: absolute;
+      top: -10px;
+      right: 0; }
   @media (min-width: 480px) {
     .accordion-volunteer {
       display: none; } }
@@ -3636,6 +3647,18 @@ p.member-text {
   background-color: #fff2f2;
   text-align: center; }
 
+.page-sign-up-newsletter-form .fa-times-circle,
+.confirmation-newsletter .fa-times-circle,
+.page-confirmation-become-volunteer .fa-times-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  cursor: pointer;
+  font-size: 2rem; }
+
 .sign-up-newsletter h1 {
   color: #191414; }
 
@@ -3648,7 +3671,7 @@ p.member-text {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  max-width: 700px; }
+  max-width: 800px; }
   .sign-up-newsletter .entry-content p {
     line-height: 2.5rem;
     font-size: 20px;
@@ -3656,10 +3679,18 @@ p.member-text {
     font-family: 'Avenir Next'; }
     .sign-up-newsletter .entry-content p p {
       line-height: 1.5rem; }
+  .sign-up-newsletter .first-p,
+  .sign-up-newsletter .second-p {
+    margin-bottom: 2rem; }
   .sign-up-newsletter .form_newsletter__signup_wrapper .gform_footer {
     position: unset;
     margin-right: 0rem;
     display: block; }
+
+.form_newsletter__signup_wrapper .gform_body {
+  position: unset;
+  margin-right: 0rem;
+  display: block; }
 
 .sign-up-newsletter .gform_title {
   display: none; }
@@ -3672,6 +3703,9 @@ p.member-text {
 .form_newsletter__signup ul {
   list-style-type: none; }
 
+input {
+  cursor: pointer; }
+
 .form_newsletter__signup .gform_button {
   height: 58px;
   width: 263px;
@@ -3682,7 +3716,58 @@ p.member-text {
   font-size: 1.5rem;
   font-size: 24px; }
   .form_newsletter__signup .gform_button:hover {
-    border: solid 4px #ed1651; }
+    border: solid 4px #f58220;
+    background-color: #f58220; }
+
+.confirmation-newsletter {
+  max-width: 800px; }
+  .confirmation-newsletter .entry-title {
+    display: none; }
+
+.sign-up-newsletter h1,
+.confirmation-newsletter h1 {
+  color: #191414;
+  font-family: 'Montserrat';
+  font-size: 40px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.sign-up-newsletter .first-p,
+.sign-up-newsletter .second-p,
+.confirmation-newsletter .first-p,
+.confirmation-newsletter .second-p {
+  font-size: 20px;
+  margin-bottom: 2rem; }
+
+.confirmation-become-volunteer {
+  max-width: 800px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center; }
+  .confirmation-become-volunteer h1 {
+    color: #191414;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold; }
+  .confirmation-become-volunteer .first-p,
+  .confirmation-become-volunteer .second-p {
+    font-size: 20px;
+    margin-bottom: 2rem; }
+
+.confirmation-become-volunteer .volunteer-apply-btn p {
+  text-transform: capitalize; }
 
 .page-header {
   -webkit-box-pack: center;
