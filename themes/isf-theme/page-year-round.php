@@ -57,7 +57,7 @@ get_header(); ?>
 					</section>	
 
 					
-						<h3 class="events-title h3__left-border-pink">Check out our Events</h3>
+					<h3 class="events-title h3__left-border-pink">Check Out Our Events</h3>
 
 						<!-- <php get_category('');?> -->
 						<section class="fest-events">
