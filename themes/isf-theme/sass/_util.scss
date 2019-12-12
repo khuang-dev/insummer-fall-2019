@@ -48,6 +48,7 @@
 //Buttons - Events
 .wrapper__btn-info {
   text-align: left;
+  padding-bottom: 1.25rem;
 }
 .events-btn {
   height: 2.5rem;
@@ -112,3 +113,28 @@
       }
     
 }
+
+.fest-events {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // margin: 0 1.25rem;
+  flex-wrap: wrap;
+  @include desktop {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0 6rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.fest__single-event {
+    height: fit-content;
+    margin-right: inherit;
+    width: 50%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+
+

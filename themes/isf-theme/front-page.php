@@ -46,7 +46,7 @@ get_header(); ?>
 </div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-        <h3 class="h3__left-border-pink title__upcoming-event">Upcoming Events</h2>
+        <h3 class="h3__left-border-pink title__upcoming-event">Upcoming Events</h3>
         <section class="wrapper__upcoming-events">
                 <?php 
 				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 3);

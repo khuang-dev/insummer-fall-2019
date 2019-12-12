@@ -1,5 +1,5 @@
 .page-year-round {
-    h1 {
+    .year_round-head {
         text-align: center;
         color: $color__pink;
         margin-left: 7rem;
@@ -7,10 +7,25 @@
         text-transform: uppercase;
         font-weight: 700;
         font-size: 30px;
+        @include desktop {
+            color: ;
+        }
     }
-
     h2 {
-        color: $color__black;
-        
+        color: $color__black;  
     }
+    .year-content {
+         margin: 0 1.25rem;
+     }
 }
+
+.events-title {
+    width: auto;
+    color: #191414;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    margin-left: 1.25rem;
+    font-size: 1.2rem
+}
+
+  

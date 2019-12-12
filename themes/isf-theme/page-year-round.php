@@ -50,70 +50,61 @@ get_header(); ?>
 					<section class="year-events">
 						<?php if(get_field('year_events')): ?>
 							<?php while(has_sub_field('year_events')): ?>
-								<h1 class="year-round-head"><?php the_sub_field('event_year'); ?></h1>
+								<h1 class="year_round-head"><?php the_sub_field('event_year'); ?></h1>
 								<p class="year-content"><?php the_sub_field('year_event_about'); ?></p>
 							<?php endwhile; ?>
 						<?php endif; ?>
 					</section>	
 
-					<section class="yearly-events">
-						<h2 class="events-title">Check out our Events</h2>
+					
+						<h3 class="events-title h3__left-border-pink">Check out our Events</h3>
 
 						<!-- <php get_category('');?> -->
-						
-						<div class="event-container">
-						<?php
+						<section class="fest-events">
+							<?php 
 							$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 5);
-							$event_posts = get_posts ($args);
-						?>
+							$event_posts = get_posts( $args ); // returns an array of posts
+							?>
 
-						<?php foreach ( $event_posts as $post) : setup_postdata($post); ?>
-						<div class="wrapper__image-event">
-                            <img src="<?php the_field('event_image'); ?>">
-                            <div class="thumbnail__date">
-                                <?php $date = new DateTime(get_field('event_date')); ?>
-                                <p class="thumbnail__date-day"><?php echo $date->format('d'); ?></p>
-                                <p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
-                            </div>
-                        </div>
+							<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>
+								<?php /* Content from your array of post results goes here */ ?>
+								<article class="fest__single-event">
+
+									<div class="wrapper__image-event">
+										<img src="<?php the_field('event_image'); ?>">
+										<div class="thumbnail__date">
+											<?php $date = new DateTime(get_field('event_date')); ?>
+											<p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
+											<p class="thumbnail__date-day"><?php echo $date->format('d'); ?></p>
+										</div>
+									</div>
                         
-                        <div class="wrapper__info-event">
-                            <p><?php the_title(); ?></p>
-                            <p><?php the_field('event_date'); ?></p>
-                            <?php if ( have_rows('event_time')):?>
-                                <?php while ( have_rows('event_time')) : the_row(); ?>
-                                    <?php the_sub_field('start_time');?> - <?php the_sub_field('end_time');?>
-                                <?php endwhile; ?>
-                                <?php else : ?>
-								<?php endif; ?>
-						</div>
+									<div class="wrapper__info-event">
+										<p class="title__event"><?php the_title(); ?></p>
+										<p><?php the_field('event_date'); ?></p>
+										<?php if ( have_rows('event_time')):?>
+											<?php while ( have_rows('event_time')) : the_row(); ?>
+												<?php the_sub_field('start_time');?> - <?php the_sub_field('end_time');?>
+											<?php endwhile; ?>
+											<?php else : ?>
+											<?php endif; ?>
+									</div>
 
-						<div class="event-button">
-						<button class="event_button">
-							<a class="banner__btn-label" href="<?php the_sub_field('event__btn-url');?>"><?php the_sub_field('event__btn-label');?></a>
-							</button>
+									<div class="wrapper__btn-info">
+										<?php if ( have_rows ('event_button'));?>
+										<?php while (have_rows('event_button')) : the_row(); ?>
+												<button class="events-btn">
+												<a href="<?php the_sub_field('event__btn-url');?>"><?php the_sub_field('event__btn-label');?></a>
+												</button>
+												<?php endwhile; ?>
+									</div>
 
-							<!-- <php
-									if( have_rows('event_buttone') ):
-										while ( have_rows('event_button') ) : the_row();
-										?>
-											<php the_sub_field('event__btn-label'); ?>
-											<a href="<php the_sub_field('event__btn-url'); ?>"></a>
-									<php		
-										endwhile;
-									else :
-									endif;
-									?> -->
-						</div>
-						</div>
-                        </article>
+								</article>
+
                     <?php endforeach; wp_reset_postdata(); ?>
-
-
-					</section>
-				</div><!-- .entry-content -->
-			</article><!-- #post-## -->
+			
 			<?php endwhile; // End of the loop. ?>
+			</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

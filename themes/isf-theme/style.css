@@ -2098,7 +2098,8 @@ iframe {
   height: 100%; }
 
 .wrapper__btn-info {
-  text-align: left; }
+  text-align: left;
+  padding-bottom: 1.25rem; }
 
 .events-btn {
   height: 2.5rem;
@@ -2152,6 +2153,38 @@ iframe {
       .link_btn-sponsors a {
         font-size: 24px;
         font-weight: 600; } }
+
+.fest-events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media (min-width: 480px) {
+    .fest-events {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      margin: 0 6rem;
+      margin-bottom: 3rem; } }
+
+.fest__single-event {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-right: inherit;
+  width: 50%;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem; }
 
 .page-become-a-sponsor h1 {
   color: #ed1651;
@@ -2969,7 +3002,7 @@ p.member-text {
   width: 35px;
   height: 35px; }
 
-.page-year-round h1 {
+.page-year-round .year_round-head {
   text-align: center;
   color: #ed1651;
   margin-left: 7rem;
@@ -2980,6 +3013,17 @@ p.member-text {
 
 .page-year-round h2 {
   color: #191414; }
+
+.page-year-round .year-content {
+  margin: 0 1.25rem; }
+
+.events-title {
+  width: auto;
+  color: #191414;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  margin-left: 1.25rem;
+  font-size: 1.2rem; }
 
 .patron-title {
   color: #191414; }
