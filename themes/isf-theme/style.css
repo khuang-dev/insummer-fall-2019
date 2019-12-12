@@ -1560,6 +1560,8 @@ iframe {
   width: 100%; }
   .page-donate .content-area main {
     width: 80%; }
+  .page-donate .content-area li {
+    list-style-type: none; }
 
 .donate-title {
   padding: 2rem; }
@@ -1567,6 +1569,11 @@ iframe {
     color: #191414;
     border-left: 8px solid #ed1651;
     padding-left: 5px; }
+
+.gform-donate-title {
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase; }
 
 .donation-box {
   -webkit-box-pack: center;
