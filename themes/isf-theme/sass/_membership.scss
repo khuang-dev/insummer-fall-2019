@@ -7,6 +7,7 @@
 p.member-text {
   padding-left: 10%;
   padding-right: 10%;
+  padding-bottom: 8%;
 }
 
 // Memebership Pakages
@@ -53,10 +54,14 @@ p.member-text {
 @include desktop {
   .page-membership .entry-content {
     margin: 0 12rem;
+    padding-top: 2%;
     h2 {
       border-left: 8px solid $color__pink;
       padding-left: 1.5rem;
       text-align: left;
+      font-size: 29px;
+      color: $color__black;
+      text-transform: uppercase;
     }
   }
 
