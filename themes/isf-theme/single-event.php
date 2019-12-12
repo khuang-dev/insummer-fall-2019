@@ -27,6 +27,54 @@ get_header(); ?>
 
 			<div class="entry-content">
 				<?php the_content(); ?>
+				<img src="<?php get_field ('event_image');?>" alt="Artist Image">
+				
+				<?php the_field ('event_date');?>
+
+				<?php
+					if( have_rows('event_time') ):
+						while ( have_rows('event_time') ) : the_row();
+						?>
+							<?php the_sub_field('start_time'); ?>
+							<?php the_sub_field('end_time'); ?>
+							<?php
+						endwhile;
+					else :
+						// no rows found
+					endif;
+					?>
+
+					<?php the_field ('ticket_price'); ?>
+					<?php the_field ('venue'); ?>
+
+
+				<div class="single_e_details">
+				<?php
+					if( have_rows('event_address') ):
+						while ( have_rows('event_address') ) : the_row();?>
+							<?php the_sub_field('address'); ?>
+							<?php the_sub_field('city'); ?>
+							<?php the_sub_field('postal_code'); ?>
+							<?php the_sub_field('country'); ?>
+							<?php
+						endwhile;
+					else :
+						// no rows found
+					endif;
+					?>
+				</div>
+
+				<?php
+					if( have_rows('event_button') ):
+						while ( have_rows('event_button') ) : the_row();
+						?>
+							<a href="<?php the_sub_field('event__btn-url'); ?>"><?php the_sub_field('event__btn-label'); ?></a>
+							<?php
+						endwhile;
+					else :
+						// no rows found
+					endif; ?>
+
 				<?php
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
@@ -57,5 +105,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
