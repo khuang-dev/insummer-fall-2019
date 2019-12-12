@@ -3206,11 +3206,51 @@ p.member-text {
   background-color: #fff2f2;
   text-align: center; }
 
-.age-sign-up-newsletter-form .entry-title {
+.sign-up-newsletter h1 {
   color: #191414; }
 
-body {
-  color: black; }
+.sign-up-newsletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  max-width: 700px; }
+  .sign-up-newsletter .entry-content p {
+    line-height: 2.5rem;
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Avenir Next'; }
+    .sign-up-newsletter .entry-content p p {
+      line-height: 1.5rem; }
+  .sign-up-newsletter .gform_footer,
+  .sign-up-newsletter .gform_body {
+    position: unset;
+    margin-right: 0rem;
+    display: block; }
 
-.entry-header {
-  color: pink; }
+.sign-up-newsletter .gform_title {
+  display: none; }
+
+.sign-up-newsletter .gform_wrapper {
+  max-width: 400px;
+  margin: auto;
+  line-height: 5rem; }
+
+.form_newsletter__signup ul {
+  list-style-type: none; }
+
+.form_newsletter__signup .gform_button {
+  height: 58px;
+  width: 263px;
+  border-radius: 12px;
+  border: solid 4px #fff2f2;
+  background-color: #ffffff;
+  color: #fff2f2;
+  font-size: 1.5rem;
+  font-size: 24px; }
+  .form_newsletter__signup .gform_button:hover {
+    border: solid 4px #ed1651; }
