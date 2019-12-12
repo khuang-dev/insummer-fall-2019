@@ -64,19 +64,17 @@ get_header(); ?>
 
 						<?php
 							$terms = get_terms( array(
-                                'taxonomy' => 'event-taxonomy',
+                                'taxonomy' => 'event-taxonomy', 'create_isf_categories',
                                 'hide_empty' => 0,
-                            ) ); ?>
-
-                            
+							) ); ?>
+								
                             <?php foreach ( $terms as $term ) :
                                 // echo '<pre>';
                                 // var_dump($term);
                                 // echo '</pre>';
                                 echo '<div class="wrapper__category"><button value='. $term->term_id .'>' . $term->name.  '</button></div>'; 
     
-							endforeach;?>
-							
+							endforeach;?>							
 
 							</div>
 						<!-- <php get_category('');?> -->

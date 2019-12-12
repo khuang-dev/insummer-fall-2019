@@ -69,14 +69,22 @@ get_header(); ?>
 						?>
 						</div>
 
+						<div class="hide-desktop">
+							mobile accordion menu
+						</div>						
+
+
+						<div class="hide-mobile">
 						<div class="patron-packages">
 							<?php
 							if( have_rows('patron_packages') ):
 								while ( have_rows('patron_packages') ) : the_row();
 								?>
-								<div class="patron-packages">
+								<div class="patron-package">
+									<div class="patron-title-price">
 								<h3><?php the_sub_field('package_name'); ?></h3>
 								<p><?php the_sub_field('package_price'); ?></p>
+									</div>
 								<p><?php the_sub_field('package_options'); ?></p>
 							</div>
 
@@ -86,6 +94,7 @@ get_header(); ?>
 								// no rows found
 							endif;
 							?>
+						</div>
 						</div>
 
 					<?php
