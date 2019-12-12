@@ -2599,7 +2599,8 @@ p.member-text {
       padding-left: 1.5rem;
       text-align: left;
       font-size: 29px;
-      color: #191414; }
+      color: #191414;
+      text-transform: uppercase; }
   p.member-text {
     margin-bottom: 50px; }
   .curator {
