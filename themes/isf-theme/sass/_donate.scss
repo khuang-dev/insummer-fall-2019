@@ -87,11 +87,15 @@
 
     & ~ label {
       // all radio labels
-      border: 6px solid #000;
+      border: 6px solid $color__pink;
       border-radius: 8px;
       display: inline-block;
       padding: 4px;
       min-width: 106px;
+
+      &:hover {
+        border-color: $btnbg__orange;
+      }
     }
 
     &:checked ~ label {
