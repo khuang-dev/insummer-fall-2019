@@ -470,16 +470,6 @@ input[type='submit'] {
   input[type='reset']:hover,
   input[type='submit']:hover {
     border-color: #ccc #bbb #aaa; }
-  button:active, button:focus,
-  input[type='button']:active,
-  input[type='button']:focus,
-  input[type='reset']:active,
-  input[type='reset']:focus,
-  input[type='submit']:active,
-  input[type='submit']:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
 /* Fields */
 input[type='text'],
@@ -2077,6 +2067,9 @@ iframe {
 .widget-title {
   display: none; }
 
+.remove-margin-bottom {
+  margin-bottom: 0 !important; }
+
 .page-become-a-sponsor h1 {
   color: #ed1651;
   text-align: center;
@@ -2884,6 +2877,21 @@ p.member-text {
       border-bottom: #191414 2px solid;
       font-weight: 600; }
 
+.category-btn, .category-all-btn {
+  border: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 0; }
+  .category-btn:hover, .category-all-btn:hover {
+    border-bottom: 2px #191414 solid;
+    font-weight: 600; }
+  .category-btn:focus, .category-all-btn:focus {
+    outline: none; }
+
+.category-active {
+  border-bottom: 2px #191414 solid;
+  font-weight: 600; }
+
 .wrapper__isf {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2894,6 +2902,13 @@ p.member-text {
     height: 2rem;
     margin-right: 2rem;
     padding-right: 2rem; }
+
+.isf-plus-description {
+  margin-left: 6rem;
+  display: none; }
+
+.wrapper-isfplus-event {
+  background-color: #fff2f2; }
 
 .past-testimony {
   margin: 2rem 6rem; }
@@ -2943,7 +2958,6 @@ p.member-text {
   margin: 0 6rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 22rem 22rem;
   grid-gap: 2rem; }
 
 .wrapper__single-artist {
@@ -2961,6 +2975,10 @@ p.member-text {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+  .wrapper__single-artist::before {
+    content: "";
+    display: block;
+    padding-bottom: 63%; }
   .wrapper__single-artist:nth-child(1) .artist-name {
     background-color: #ed164fd2; }
   .wrapper__single-artist:nth-child(2) .artist-name {
@@ -2984,7 +3002,10 @@ p.member-text {
   min-width: 15rem;
   font-size: 2rem;
   font-weight: 600;
-  padding: 1.5rem 5rem 0.5rem 5rem; }
+  padding: 1.5rem 0rem 0.5rem 0rem; }
+  .artist-name p {
+    margin: 0 auto;
+    max-width: 80%; }
 
 .single-artist h1 {
   color: #191414;

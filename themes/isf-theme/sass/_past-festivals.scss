@@ -43,7 +43,7 @@
     margin: 0 6rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 22rem 22rem;
+    // grid-template-rows: 22rem 22rem;
     grid-gap: 2rem;
 }
 .wrapper__single-artist {
@@ -54,6 +54,12 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    &::before {
+        content: "";
+        display: block;
+        padding-bottom: 63%;
+    }
     &:nth-child(1) {
         .artist-name {
         background-color: $color__pink-transparent;
@@ -90,5 +96,9 @@
     min-width: 15rem;
     font-size: 2rem;
     font-weight: 600;
-    padding: 1.5rem 5rem 0.5rem 5rem;
+    padding: 1.5rem 0rem 0.5rem 0rem;
+    p {
+        margin: 0 auto;
+        max-width: 80%;
+    }
 }

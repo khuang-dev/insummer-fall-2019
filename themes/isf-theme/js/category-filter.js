@@ -1,6 +1,7 @@
-(function($){
+(function ($) {
 
-    function getMonthName( month ) {
+    // Date filter
+    function getMonthName(month) {
         const months = [
             'Jan', // 0
             'Feb', // 1
@@ -18,13 +19,17 @@
         return months[month];
     }
 
+    //Template 
     function buildEventMarkup(data) {
-        $.each(data, function(key, value){
+        let htmlTemplate = '';
+        $.each(data, function (key, value) {
+            console.log('value:');
+            console.log(value);
             const date = new Date(value.acf.event_date);
-            const month = getMonthName( date.getMonth() );
+            const month = getMonthName(date.getMonth());
             const day = date.getDate();
-        
-            const htmlTemplate = `
+
+            htmlTemplate += `
                <article class="wrapper__single-event">
                    <div class="wrapper__image-event">
                         <img src="${value.acf.event_image}">
@@ -41,33 +46,66 @@
                     </div>
                     </article>
                  `
-            return htmlTemplate;
-        });
+        })
+        return htmlTemplate;
     }
-    //new quote
-    $('.categories-info').on('click', function(e){
+
+    //Category filter
+
+    $('.category-all-btn').on('click', function () {
+        $('.category-btn').removeClass('category-active');
+        $('.category-all-btn').addClass('category-active');
+
         $.ajax({
             method: 'GET',
-            url: window.isf_vars.rest_url + 'wp/v2/isf_event?event-taxonomy=' + e.target.value //+ '&ISF_plus=18'
+            url: window.isf_vars.rest_url + 'wp/v2/isf_event'
         })
-        .done(function(data){
-            $('#content-output-isf').empty();
-            const isfOutput = buildEventMarkup(data);
-            $('#content-output-isf').append(isfOutput);
-        });
-        // $.ajax({
-        //     method: 'GET',
-        //     url: window.isf_vars.rest_url + 'wp/v2/isf_event?event-taxonomy=' + e.target.value + '&ISF_plus'
-        // })
-        // .done(buildEventMarkup) {
-        //     $('#content-output-isfplus').empty();
-        //     const htmlTemplate = buildEventMarkup(data);
-        //     $('#content-output-isfplus').append(htmlTemplate);
-        // }
+            .done(function (data) {
+                console.log('data:');
+                console.log(data)
+                $('#content-output-isf').empty();
+                $('#content-output-isfplus').empty();
+                const isfOutput = buildEventMarkup(data);
+                console.log(buildEventMarkup(data));
+                $('#content-output-isf').append(isfOutput);
+            })
+    })
+    $('.category-btn').on('click', function (e) {
+        $('.category-btn').removeClass('category-active');
+        $('.category-all-btn').removeClass('category-active');
+        $(e.target).addClass('category-active');
 
-				
-            // $args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => get_option('posts_per_page'));
-        
-    //     //.fail(function(error){
+        $.ajax({
+            method: 'GET',
+            url: window.isf_vars.rest_url + 'wp/v2/isf_event?event-taxonomy=' + e.target.value + '&ISF_plus=18'
+        })
+            .done(function (data) {
+                console.log('data:');
+                console.log(data)
+                $('#content-output-isf').empty();
+                const isfOutput = buildEventMarkup(data);
+                console.log(buildEventMarkup(data));
+                $('#content-output-isf').append(isfOutput);
+            })
+        $.ajax({
+            method: 'GET',
+            url: window.isf_vars.rest_url + 'wp/v2/isf_event?event-taxonomy=' + e.target.value + '&ISF_plus=19'
+        })
+            .done(function (data) {
+                $('#content-output-isfplus').empty();
+                if (data.length > 0) {
+                    $('.isf-plus-description').show();
+                } else {
+                    console.log('data:');
+                    console.log(data)
+                    $('.isf-plus-description').hide();
+                }
+                const isfOutput = buildEventMarkup(data);
+                console.log(buildEventMarkup(data));
+                $('#content-output-isfplus').append(isfOutput);
+            })
+            .fail(function () {
+                alert('an error has occurred');
+            })
     })
 })(jQuery);
