@@ -73,58 +73,17 @@ get_header(); ?>
                                 // echo '<pre>';
                                 // var_dump($term);
                                 // echo '</pre>';
-                                echo '<div class="wrapper__category"><a href="' . get_term_link( $term )  .  '">' . $term->name.  '</a></div>'; 
+                                echo '<div class="wrapper__category"><button value='. $term->term_id .'>' . $term->name.  '</button></div>'; 
     
 							endforeach;?>
 							
 
 							</div>
 						<!-- <php get_category('');?> -->
-						
-						<section class="wrapper__upcoming-events">
-                <?php 
-				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => get_option('posts_per_page'));
-   				$event_posts = get_posts( $args ); // returns an array of posts
-			    ?>
+							<section class="wrapper__upcoming-events removeflex grid-column-3 flexwrap flexstart" id="content-output">
 
-			<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>
-                   <?php /* Content from your array of post results goes here */ ?>
-                   <article class="wrapper__single-event">
+							</section>
 
-                       <div class="wrapper__image-event">
-                            <img src="<?php the_field('event_image'); ?>">
-                            <div class="thumbnail__date">
-                                <?php $date = new DateTime(get_field('event_date')); ?>
-                                <p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
-                                <p class="thumbnail__date-day"><?php echo $date->format('d'); ?></p>
-                            </div>
-                        </div>
-                        
-                        <div class="wrapper__info-event">
-                            <p class="title__event"><?php the_title(); ?></p>
-                            <p><?php the_field('event_date'); ?></p>
-                            <?php if ( have_rows('event_time')):?>
-                                <?php while ( have_rows('event_time')) : the_row(); ?>
-                                    <?php the_sub_field('start_time');?> - <?php the_sub_field('end_time');?>
-                                <?php endwhile; ?>
-                                <?php else : ?>
-                                <?php endif; ?>
-                        </div>
-                        </article>
-
-            </section>
-
-						<div class="event-button">
-						<button class="event_button">
-							<a class="banner__btn-label" href="<?php the_sub_field('event__btn-url');?>"><?php the_sub_field('event__btn-label');?></a>
-							</button>
-
-						</div>
-						</article>
-                    <?php endforeach; wp_reset_postdata(); ?>
-
-
-					</section>
 
 
 					

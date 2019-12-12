@@ -74,7 +74,9 @@ function event_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-		'show_in_rest'               => true,
+        'show_in_rest'               => true,
+        'query_vars'               => true,
+
 	);
 	register_taxonomy( 'event-taxonomy', array( 'isf_event', 'artist' ), $args );
 }

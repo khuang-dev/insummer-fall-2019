@@ -11,6 +11,13 @@
     display: none;
   }
 }
+
+.grid-column-3 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 2rem;
+}
 // TODO: scope to footer
 .gfield_label {
   display: none;
