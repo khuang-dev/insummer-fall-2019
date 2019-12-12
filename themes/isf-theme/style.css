@@ -1583,6 +1583,10 @@ iframe {
   display: -ms-flexbox;
   display: flex; }
 
+.donation-amount {
+  padding-top: 2rem;
+  padding-left: 1rem; }
+
 .donation-first-last-name input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1617,6 +1621,10 @@ iframe {
 
 .gchoice_4_8_3 {
   margin-left: 1rem; }
+
+.page-donate .field_4_12 {
+  padding-top: 23px;
+  padding-left: 10px; }
 
 .donate-image {
   background-image: url(../../assets/01_Icons/SVG/Donate1.svg);
@@ -2589,7 +2597,10 @@ p.member-text {
     .page-membership .entry-content h2 {
       border-left: 8px solid #ed1651;
       padding-left: 1.5rem;
-      text-align: left; }
+      text-align: left;
+      font-size: 29px;
+      color: #191414;
+      text-transform: uppercase; }
   p.member-text {
     margin-bottom: 50px; }
   .curator {
