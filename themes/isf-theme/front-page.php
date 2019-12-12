@@ -80,12 +80,12 @@ get_header(); ?>
                         <div class="wrapper__btn-info">
                             <?php if ( have_rows ('event_button'));?>
                             <?php while (have_rows('event_button')) : the_row(); ?>
-                                    <button>
+                                    <button class="events-btn">
                                     <a href="<?php the_sub_field('event__btn-url');?>"><?php the_sub_field('event__btn-label');?></a>
                                     </button>
                                     <?php endwhile; ?>
                         </div>
-                        
+
                         </article>
                     <?php endforeach; wp_reset_postdata(); ?>
 
@@ -143,6 +143,12 @@ get_header(); ?>
                                 <?php endif; ?> 
                 </div>
             </section>
+
+            <div class="wrapper_btn_sponsor">
+                <button class="link_btn-sponsors">
+                    <a href="our-sponsors">SEE MORE</a>
+                </button>
+            </div>
 
 		</main><!-- #main -->
     </div><!-- #primary -->
