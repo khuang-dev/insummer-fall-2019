@@ -2555,7 +2555,8 @@ a:link {
 
 p.member-text {
   padding-left: 10%;
-  padding-right: 10%; }
+  padding-right: 10%;
+  padding-bottom: 8%; }
 
 .curator {
   background-color: #ed1651;
