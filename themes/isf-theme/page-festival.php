@@ -39,7 +39,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title hide-mobile">', '</h1>' ); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
@@ -48,9 +47,10 @@ get_header(); ?>
 					<?php if(get_field('isf_events')): ?>
 
 						<?php while(has_sub_field('isf_events')): ?>
-
-								<h1 class="hide-mobile"><?php the_sub_field('current_event'); ?></h1>
-								<?php the_sub_field('event_information'); ?>
+								<div class="wrapper__isf">
+								<h3 class="hide-mobile h3__right-border-pink"><?php the_sub_field('current_event'); ?></h3>
+								<span><?php the_sub_field('event_information'); ?></span>
+						</div>
 							
 						<?php endwhile; ?>
 
@@ -58,71 +58,30 @@ get_header(); ?>
 				</section>
 
 				<section class="festival-events">
-						<h2 class="events-title">Know the Artists</h2>
+						<h3 class="events-title h3__left-border-pink">Know the Artists</h3>
 
 						<div class="categories-info">
 
 						<?php
 							$terms = get_terms( array(
-                                'taxonomy' => 'event-taxonomy',
+                                'taxonomy' => 'event-taxonomy', 'create_isf_categories',
                                 'hide_empty' => 0,
-                            ) ); ?>
-
-                            
+							) ); ?>
+								
                             <?php foreach ( $terms as $term ) :
-
                                 // echo '<pre>';
                                 // var_dump($term);
                                 // echo '</pre>';
-                                echo '<a href="' . get_term_link( $term )  .  '">' . $term->name.  '</a>'; 
+                                echo '<div class="wrapper__category"><button value='. $term->term_id .'>' . $term->name.  '</button></div>'; 
     
-							endforeach;?>
-							
+							endforeach;?>							
 
 							</div>
 						<!-- <php get_category('');?> -->
-						
-						<div class="event-container">
-						<?php
-							$args = array( 
-								'post_type' => 'isf_event', 
-								'order' => 'RAND',
-								'posts_per_page' => get_option('posts_per_page'));
-							$event_posts = get_posts ($args);
-						?>
+							<section class="wrapper__upcoming-events removeflex grid-column-3 flexwrap flexstart" id="content-output">
 
-						<?php foreach ( $event_posts as $post) : setup_postdata($post); ?>
-						<div class="wrapper__image-event">
-                            <img src="<?php the_field('event_image'); ?>">
-                            <div class="thumbnail__date">
-                                <?php $date = new DateTime(get_field('event_date')); ?>
-                                <p class="thumbnail__date-day"><?php echo $date->format('d'); ?></p>
-                                <p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
-                            </div>
-                        </div>
-                        
-                        <div class="wrapper__info-event">
-                            <p><?php the_title(); ?></p>
-                            <p><?php the_field('event_date'); ?></p>
-                            <?php if ( have_rows('event_time')):?>
-                                <?php while ( have_rows('event_time')) : the_row(); ?>
-                                    <?php the_sub_field('start_time');?> - <?php the_sub_field('end_time');?>
-                                <?php endwhile; ?>
-                                <?php else : ?>
-								<?php endif; ?>
-						</div>
+							</section>
 
-						<div class="event-button">
-						<button class="event_button">
-							<a class="banner__btn-label" href="<?php the_sub_field('event__btn-url');?>"><?php the_sub_field('event__btn-label');?></a>
-							</button>
-
-						</div>
-						</article>
-                    <?php endforeach; wp_reset_postdata(); ?>
-
-
-					</section>
 
 
 					

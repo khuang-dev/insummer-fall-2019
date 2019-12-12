@@ -1,17 +1,85 @@
-.page-become-a-patron .entry-content {
-  margin: 0 12rem;
-}
-
 .patron-title {
   color: $color__black;
   h1 {
-    border-left: 8px solid $color__pink;
-    padding-left: 1.5rem;
-    text-align: left;
-    color: $color__black;
+    text-align: center;
+    color: $color__pink;
   }
 }
 
 .patron-packages {
-  box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 $color__pink;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+.patron-title-price {
+  padding-right: 20px;
+}
+
+//THIS IS THE ACCORDION MENU
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion-patron {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  height: 8rem;
+  font-size: 24px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  background-color: $btn__pink;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  span {
+    border-top: solid 2px white;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+/* Hover State */
+
+.active,
+.accordion-patron:hover {
+  background-color: $btnbg__orange;
+}
+
+/* Accordion Panel Style */
+.panel-patron {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+@include desktop {
+  .page-become-a-patron .entry-content {
+    margin: 0 12rem;
+  }
+  .patron-title {
+    color: $color__black;
+    h1 {
+      border-left: 8px solid $color__pink;
+      padding-left: 1.5rem;
+      text-align: left;
+      color: $color__black;
+    }
+  }
+  .patron-package {
+    box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 $color__pink;
+    display: flex;
+    width: calc(50% - 2rem);
+    margin: 1rem;
+    padding: 1rem;
+    height: 275px;
+  }
 }

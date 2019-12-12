@@ -40,10 +40,6 @@ get_header(); ?>
         <?php the_field( 'banner_title' ); ?>
         <?php the_field( 'banner_date' ); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
-		<div class="banner__image-wrapper">
-			<img class="banner__image" src="<?php the_sub_field('banner_image'); ?>"/>
-		</div>
 	</section>
 <?php endwhile; ?>
 
@@ -69,17 +65,39 @@ get_header(); ?>
 						?>
 						</div>
 
-						<div class="patron-packages">
+										
+
+
+						<div class="patron-packages hide-mobile">
 							<?php
 							if( have_rows('patron_packages') ):
 								while ( have_rows('patron_packages') ) : the_row();
 								?>
-								<div class="patron-packages">
+								<div class="patron-package hide-mobile">
+									<div class="patron-title-price">
 								<h3><?php the_sub_field('package_name'); ?></h3>
 								<p><?php the_sub_field('package_price'); ?></p>
+									</div>
 								<p><?php the_sub_field('package_options'); ?></p>
 							</div>
 
+							<?php
+							$package_name=get_sub_field('package_name');
+							$package_options=get_sub_field('package_options');
+							?>
+
+							<button class='accordion-patron hide-desktop'>
+							<span>
+							<?=$package_name?>
+							<p><?php the_sub_field('package_price'); ?></p>
+							</span>
+							</button>
+
+						<div class="panel-patron hide-desktop">
+						<p><?=$package_options?></p>
+						</div>
+
+		
 								<?php
 								endwhile;
 							else :

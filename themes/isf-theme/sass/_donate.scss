@@ -32,6 +32,10 @@
   main {
     width: 80%;
   }
+
+  li {
+    list-style-type: none;
+  }
 }
 
 .donate-title {
@@ -43,6 +47,13 @@
     padding-left: 5px;
   }
 }
+
+.gform-donate-title {
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
 .donation-box {
   justify-content: center;
   height: 106px;
@@ -67,5 +78,22 @@
 
   span {
     width: 100%;
+  }
+}
+
+.donate_radio {
+  input[type='radio'] {
+    display: none;
+
+    & ~ label {
+      // all radio labels
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+
+    &:checked ~ label {
+      // checked styles
+      border-color: red;
+    }
   }
 }

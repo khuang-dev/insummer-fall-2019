@@ -6,26 +6,35 @@
         color: $color__black;
         margin-top: 2rem;
         margin-bottom: 2rem;
-        border-left: 3px solid $color__pink;
         padding-left: 1rem;
+        margin-left: 6rem;
     }
 }
-
+.wrapper__category {
+}
 .categories-info {
-    // display: flex;
-    // justify-content: space-between;
-    border: 1px solid red;
-    height: 20rem;
-    // padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 6rem;
+    text-align: center;
     a {
-        display: flex;
-        flex-flow: column wrap;
         text-decoration: none;
-        padding: 0.5rem;
-        border: 1px solid;
-        margin-left: 1rem;
-        margin-right: 1rem;
         text-align: center;
-        width: 7rem;
+        text-transform: uppercase;
+        &:hover {
+            border-bottom: $color__black 2px solid;
+            font-weight: 600;
+        }
+    }
+}
+.wrapper__isf {
+    display: flex;
+    margin: 3rem 6rem;
+    h3 {
+        white-space: nowrap;
+        height: 2rem;
+        margin-right: 2rem;
+        padding-right: 2rem;
     }
 }
