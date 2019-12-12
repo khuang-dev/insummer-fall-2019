@@ -1,3 +1,10 @@
+.page-sign-up-newsletter-form .fa-times-circle {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
 .sign-up-newsletter {
   h1 {
     color: $color__black;
@@ -8,7 +15,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 700px;
+  max-width: 800px;
   .entry-content p {
     line-height: 2.5rem;
     font-size: 20px;
@@ -19,12 +26,21 @@
       line-height: 1.5rem;
     }
   }
+  .first-p,
+  .second-p {
+    margin-bottom: 2rem;
+  }
 
   .form_newsletter__signup_wrapper .gform_footer {
     position: unset;
     margin-right: 0rem;
     display: block;
   }
+}
+.form_newsletter__signup_wrapper .gform_body {
+  position: unset;
+  margin-right: 0rem;
+  display: block;
 }
 
 .sign-up-newsletter {
@@ -45,6 +61,10 @@
   list-style-type: none;
 }
 
+input {
+  cursor: pointer;
+}
+
 .form_newsletter__signup {
   .gform_button {
     height: 58px;
@@ -56,7 +76,8 @@
     font-size: 1.5rem;
     font-size: 24px;
     &:hover {
-      border: solid 4px $btn__pink;
+      border: solid 4px $btnbg__orange;
+      background-color: $btnbg__orange;
     }
   }
 }
