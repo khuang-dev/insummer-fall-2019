@@ -1327,7 +1327,7 @@ object {
   @media (min-width: 480px) {
     .banner__content {
       right: 8rem;
-      top: 6rem; } }
+      top: 8rem; } }
   .banner__content .banner__title {
     font-size: 2rem;
     font-weight: 600;
