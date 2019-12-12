@@ -32,14 +32,13 @@ get_header(); ?>
 				<img src="<?php the_field ('event_image');?>" alt="Artist Image">
 				
 				<div class="single_event-info">
-					<p><?php the_field ('event_date');?>DATE</p>
+					<p>DATE<?php the_field ('event_date');?></p>
 
 					<?php
 						if( have_rows('event_time') ):
 							while ( have_rows('event_time') ) : the_row();
 							?>
-								<?php the_sub_field('start_time'); ?>
-								<?php the_sub_field('end_time'); ?>
+								<p>TIME<?php the_sub_field('start_time'); ?> - <?php the_sub_field('end_time'); ?></p>
 								<?php
 							endwhile;
 						else :
@@ -47,8 +46,8 @@ get_header(); ?>
 						endif;
 						?>
 
-						<?php the_field ('ticket_price'); ?>
-						<?php the_field ('venue'); ?>
+						<p>TICKET PRICE<?php the_field ('ticket_price'); ?></p>
+						<p>VENUE<?php the_field ('venue'); ?></p>
 
 
 					<div class="single_e_details">
@@ -57,6 +56,7 @@ get_header(); ?>
 								while ( have_rows('event_address') ) : the_row();?>
 									<?php the_sub_field('address'); ?>
 									<?php the_sub_field('city'); ?>
+									<?php the_sub_filed('province');?>
 									<?php the_sub_field('postal_code'); ?>
 									<?php the_sub_field('country'); ?>
 									<?php
