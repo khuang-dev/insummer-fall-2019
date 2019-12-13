@@ -663,6 +663,7 @@ textarea {
     text-align: center; }
 
 #gform-notification {
+  max-width: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2825,13 +2826,18 @@ p.member-text {
   margin-right: 0; }
 
 .volunteer-form .gform_button {
+  font-family: 'Montserrat';
   height: 58px;
   width: 263px;
   border-radius: 12px;
   background-color: #ed1651;
   color: white;
   font-size: 24px;
-  border: #ed1651; }
+  border: #ed1651;
+  font-weight: 600; }
+
+.checkbox-volunteer-form {
+  max-width: 577px; }
 
 .news-page .news-headline {
   color: #191414;
