@@ -3804,4 +3804,10 @@ input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2rem; }
+  padding: 2rem;
+  padding-bottom: 8rem; }
+  .page-content p {
+    color: #000;
+    font-size: 19px;
+    color: #000;
+    font-size: 30px; }
