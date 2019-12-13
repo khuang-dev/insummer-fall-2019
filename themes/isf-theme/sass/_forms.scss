@@ -19,6 +19,7 @@ input[type='submit'] {
   @include font-size(0.75);
   line-height: 1;
   padding: 0.4rem 1rem 0.4rem;
+
   // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 
   &:hover {
@@ -27,7 +28,6 @@ input[type='submit'] {
 
   &:active,
   &:focus {
-
   }
 }
 
@@ -93,39 +93,39 @@ textarea {
   display: none;
 }
 .search__mobile {
-	display: none;
-	.search-field {
-		border: none;
-		border-bottom: 1px solid $color__grey;
-		display: block;
-		outline: none;
-		width: 75vw;
-		transform: translateY(-0.4rem);
-		@include desktop {
-			display: none;
-		}
-	}
-	.icon-search {
-		display: none;
-	}
+  display: none;
+  .search-field {
+    border: none;
+    border-bottom: 1px solid $color__grey;
+    display: block;
+    outline: none;
+    width: 75vw;
+    transform: translateY(-0.4rem);
+    @include desktop {
+      display: none;
+    }
+  }
+  .icon-search {
+    display: none;
+  }
 }
 .search__desktop {
-	display: none;
-	.search-field {
-		display: block;
-		border: none;
-		border-bottom: 1px solid $color__grey;
-		transform: translateY(-0.3rem);
-		padding-bottom: 0;
-	}
-	.icon-search {
-		display: none;
-	}
+  display: none;
+  .search-field {
+    display: block;
+    border: none;
+    border-bottom: 1px solid $color__grey;
+    transform: translateY(-0.3rem);
+    padding-bottom: 0;
+  }
+  .icon-search {
+    display: none;
+  }
 }
 .btn__search-desktop {
-	width: 1.3rem !important;
-	height: 1.3rem !important;
-	margin-right: 1.5rem;
+  width: 1.3rem !important;
+  height: 1.3rem !important;
+  margin-right: 1.5rem;
 }
 .searchbar {
   @include desktop {
@@ -134,55 +134,55 @@ textarea {
 }
 
 .form__signup {
-	width: 100%;
-	max-width: 480px;
-	position: relative;
-	@include desktop {
-		width: 300px;
-	}
-	input[type=email] {
-		border: none;
-	}
-	input[type=text]{
-		border: none;
-		outline: none;
-		height: 50px;
-		&::placeholder {
-			padding-left: 1rem;
-		}
-	}
-	input[type=submit] {
-		box-shadow: none;
-		border: none;
-		height: 50px;
-	}
-   .gform_heading {
-	   h3 {
-	   color: $color__white;
-	   font-size: 1.5rem;
-	   text-transform: none;
-	   padding-top: 1.5rem;
-	   padding-bottom: 1rem;
-	   @include desktop {
-		   padding-top: 0;
-	   }
-   }
-   }
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  @include desktop {
+    width: 300px;
+  }
+  input[type='email'] {
+    border: none;
+  }
+  input[type='text'] {
+    border: none;
+    outline: none;
+    height: 50px;
+    &::placeholder {
+      padding-left: 1rem;
+    }
+  }
+  input[type='submit'] {
+    box-shadow: none;
+    border: none;
+    height: 50px;
+  }
+  .gform_heading {
+    h3 {
+      color: $color__white;
+      font-size: 1.5rem;
+      text-transform: none;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+      @include desktop {
+        padding-top: 0;
+      }
+    }
+  }
   .gform_body {
-	  width: 75%;
-	  height: 60px;
+    width: 75%;
+    height: 60px;
   }
   .gform_footer {
-	  width: 25%;
+    width: 25%;
   }
   .gform_button {
     background: $btn__pink;
-	height: 40px;
-	font-size: 0;
-	width: 100%;
-	background-image: url('../../assets/white-icon/Mail.png');
-	background-size: 55px;
-	background-repeat: no-repeat;
-	background-position: center;
+    height: 40px;
+    font-size: 0;
+    width: 100%;
+    background-image: url('../../assets/white-icon/Mail.png');
+    background-size: 55px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
