@@ -1,0 +1,32 @@
+.page-header {
+  justify-content: center;
+  display: flex;
+  padding: 4rem;
+
+  h1 {
+    color: black;
+    font-size: 33px;
+
+    @include desktop {
+      color: black;
+      font-size: 50px;
+    }
+  }
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  padding-bottom: 8rem;
+
+  p {
+    color: #000;
+    font-size: 22px;
+
+    @include desktop {
+      color: #000;
+      font-size: 37px;
+    }
+  }
+}

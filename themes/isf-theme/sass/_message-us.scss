@@ -79,9 +79,12 @@ iframe {
   font-size: 1.5rem;
   @include desktop {
     font-size: 24px;
+    &:hover {
+      border: solid 4px $btnbg__orange;
+      background-color: $btnbg__orange;
+    }
   }
 }
-
 .send-us-message-form {
   display: flex;
   flex-direction: column;

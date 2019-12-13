@@ -574,19 +574,19 @@ textarea {
   @media (min-width: 480px) {
     .form__signup {
       width: 300px; } }
-  .form__signup input[type=email] {
+  .form__signup input[type='email'] {
     border: none; }
-  .form__signup input[type=text] {
+  .form__signup input[type='text'] {
     border: none;
     outline: none;
     height: 50px; }
-    .form__signup input[type=text]::-webkit-input-placeholder {
+    .form__signup input[type='text']::-webkit-input-placeholder {
       padding-left: 1rem; }
-    .form__signup input[type=text]::-ms-input-placeholder {
+    .form__signup input[type='text']::-ms-input-placeholder {
       padding-left: 1rem; }
-    .form__signup input[type=text]::placeholder {
+    .form__signup input[type='text']::placeholder {
       padding-left: 1rem; }
-  .form__signup input[type=submit] {
+  .form__signup input[type='submit'] {
     -webkit-box-shadow: none;
             box-shadow: none;
     border: none;
@@ -1459,7 +1459,10 @@ iframe {
   font-size: 1.5rem; }
   @media (min-width: 480px) {
     .send-us-message-form_wrapper .gform_footer .gform_button {
-      font-size: 24px; } }
+      font-size: 24px; }
+      .send-us-message-form_wrapper .gform_footer .gform_button:hover {
+        border: solid 4px #f58220;
+        background-color: #f58220; } }
 
 .send-us-message-form {
   display: -webkit-box;
@@ -1537,12 +1540,6 @@ iframe {
     width: 100%;
     max-width: 500px; } }
 
-.gform_heading {
-  display: none; }
-
-.gform_heading {
-  display: none; }
-
 .page-donate .content-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1567,70 +1564,111 @@ iframe {
     border-left: 8px solid #ed1651;
     padding-left: 5px; }
 
-.gform-donate-title {
+.page-donate .gform-donate-title {
   font-weight: 600;
   font-size: 2rem;
   text-transform: uppercase; }
 
-.donation-box {
+.page-donate .donation-box {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 106px;
+  height: 12rem;
   border: 4px solid #000;
   border-radius: 21px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  width: 50rem;
+  margin: 3rem 0rem 1rem 7rem; }
 
-.donation-amount {
+.page-donate .donation-amount {
   padding-top: 2rem;
   padding-left: 1rem; }
 
-.donation-first-last-name input {
+.page-donate .donation-first-last-name input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 40px; }
 
-.donation-phone input {
+.page-donate .donation-phone input {
   height: 40px; }
 
-.donation-first-last-name .ginput_container {
+.page-donate .donation-first-last-name .ginput_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .donation-first-last-name .ginput_container span {
+  .page-donate .donation-first-last-name .ginput_container span {
     width: 100%; }
 
-.donate_radio input[type='radio'] {
+.page-donate .donate_radio input[type='radio'] {
   display: none; }
-  .donate_radio input[type='radio'] ~ label {
+  .page-donate .donate_radio input[type='radio'] ~ label {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border: 6px solid #ed1651;
     border-radius: 8px;
-    display: inline-block;
     padding: 4px;
-    min-width: 106px; }
-  .donate_radio input[type='radio']:checked ~ label {
+    min-width: 113px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .page-donate .donate_radio input[type='radio']:checked ~ label {
     border-color: #f58220; }
 
-.gfield_radio {
+.page-donate .gfield_radio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem; }
+  padding: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
-.gchoice_4_8_3 {
+.page-donate .gchoice_4_8_3 {
   margin-left: 1rem; }
 
 .page-donate .field_4_12 {
   padding-top: 23px;
   padding-left: 10px; }
 
-.donate-image {
+.page-donate .donate-image {
   background-image: url(../../assets/01_Icons/SVG/Donate1.svg);
   background-repeat: no-repeat;
   height: 67px;
   width: 60px; }
+
+.donate-form_wrapper .gform_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: unset;
+  margin-right: unset;
+  margin: 4rem; }
+
+.donate-form_wrapper .gform_footer .gform_button {
+  height: 58px;
+  width: 263px;
+  border-radius: 12px;
+  background-color: #ed1651;
+  color: white;
+  font-size: 1.5rem; }
+  @media (min-width: 480px) {
+    .donate-form_wrapper .gform_footer .gform_button {
+      font-size: 24px; }
+      .donate-form_wrapper .gform_footer .gform_button:hover {
+        border: solid 4px #f58220;
+        background-color: #f58220; } }
+
+.donation-tax-form-1 .gfield_label {
+  display: unset; }
+
+.submit-btn {
+  display: none; }
 
 .main-navigation {
   margin-top: 2rem; }
@@ -2482,7 +2520,15 @@ iframe {
   -webkit-transition: 0.4s;
   transition: 0.4s; }
   .accordion-volunteer span {
-    border-top: solid 2px white; }
+    position: relative; }
+    .accordion-volunteer span::before {
+      content: '';
+      width: 80%;
+      height: 2px;
+      background: white;
+      position: absolute;
+      top: -10px;
+      right: 0; }
   @media (min-width: 480px) {
     .accordion-volunteer {
       display: none; } }
@@ -2555,7 +2601,8 @@ a:link {
 
 p.member-text {
   padding-left: 10%;
-  padding-right: 10%; }
+  padding-right: 10%;
+  padding-bottom: 8%; }
 
 .curator {
   background-color: #ed1651;
@@ -2593,7 +2640,8 @@ p.member-text {
 
 @media (min-width: 480px) {
   .page-membership .entry-content {
-    margin: 0 12rem; }
+    margin: 0 12rem;
+    padding-top: 2%; }
     .page-membership .entry-content h2 {
       border-left: 8px solid #ed1651;
       padding-left: 1.5rem;
@@ -3640,6 +3688,18 @@ p.member-text {
   background-color: #fff2f2;
   text-align: center; }
 
+.page-sign-up-newsletter-form .fa-times-circle,
+.confirmation-newsletter .fa-times-circle,
+.page-confirmation-become-volunteer .fa-times-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  cursor: pointer;
+  font-size: 2rem; }
+
 .sign-up-newsletter h1 {
   color: #191414; }
 
@@ -3652,7 +3712,7 @@ p.member-text {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  max-width: 700px; }
+  max-width: 800px; }
   .sign-up-newsletter .entry-content p {
     line-height: 2.5rem;
     font-size: 20px;
@@ -3660,10 +3720,18 @@ p.member-text {
     font-family: 'Avenir Next'; }
     .sign-up-newsletter .entry-content p p {
       line-height: 1.5rem; }
+  .sign-up-newsletter .first-p,
+  .sign-up-newsletter .second-p {
+    margin-bottom: 2rem; }
   .sign-up-newsletter .form_newsletter__signup_wrapper .gform_footer {
     position: unset;
     margin-right: 0rem;
     display: block; }
+
+.form_newsletter__signup_wrapper .gform_body {
+  position: unset;
+  margin-right: 0rem;
+  display: block; }
 
 .sign-up-newsletter .gform_title {
   display: none; }
@@ -3676,6 +3744,9 @@ p.member-text {
 .form_newsletter__signup ul {
   list-style-type: none; }
 
+input {
+  cursor: pointer; }
+
 .form_newsletter__signup .gform_button {
   height: 58px;
   width: 263px;
@@ -3686,6 +3757,7 @@ p.member-text {
   font-size: 1.5rem;
   font-size: 24px; }
   .form_newsletter__signup .gform_button:hover {
+<<<<<<< HEAD
     border: solid 4px #ed1651; }
 
 .festival-gallery .main-carousel {
@@ -3775,3 +3847,105 @@ p.member-text {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 1.2rem; }
+=======
+    border: solid 4px #f58220;
+    background-color: #f58220; }
+
+.confirmation-newsletter {
+  max-width: 800px; }
+  .confirmation-newsletter .entry-title {
+    display: none; }
+
+.sign-up-newsletter h1,
+.confirmation-newsletter h1 {
+  color: #191414;
+  font-family: 'Montserrat';
+  font-size: 40px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.sign-up-newsletter .first-p,
+.sign-up-newsletter .second-p,
+.confirmation-newsletter .first-p,
+.confirmation-newsletter .second-p {
+  font-size: 20px;
+  margin-bottom: 2rem; }
+
+.confirmation-become-volunteer {
+  max-width: 800px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center; }
+  .confirmation-become-volunteer h1 {
+    color: #191414;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold; }
+  .confirmation-become-volunteer .first-p,
+  .confirmation-become-volunteer .second-p {
+    font-size: 20px;
+    margin-bottom: 2rem; }
+
+.confirmation-become-volunteer .volunteer-apply-btn p {
+  text-transform: capitalize; }
+
+.single-isf_event .entry-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #ed1651;
+  font-size: 20px; }
+
+.single_event-tags {
+  text-align: center;
+  font-weight: 700; }
+
+.single_event-content {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.page-header {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4rem; }
+  .page-header h1 {
+    color: black;
+    font-size: 33px; }
+    @media (min-width: 480px) {
+      .page-header h1 {
+        color: black;
+        font-size: 50px; } }
+
+.page-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+  padding-bottom: 8rem; }
+  .page-content p {
+    color: #000;
+    font-size: 22px; }
+    @media (min-width: 480px) {
+      .page-content p {
+        color: #000;
+        font-size: 37px; } }
+>>>>>>> c0b19171484729e598b7438a8e5374f58927b0ed

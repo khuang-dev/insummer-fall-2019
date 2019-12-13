@@ -8,18 +8,18 @@
 //   }
 // }
 
-.gform_heading {
-  display: none;
-}
+// .gform_heading {
+//   display: none;
+// }
 
 // .page-donate {
 //   // max-width: 1100px;
 //   // margin: auto;
 // }
 
-.gform_heading {
-  display: none;
-}
+// .page-donate .gform_heading {
+//   display: none;
+// }
 
 .page-donate .content-area {
   display: flex;
@@ -46,36 +46,38 @@
   }
 }
 
-.gform-donate-title {
+.page-donate .gform-donate-title {
   font-weight: 600;
   font-size: 2rem;
   text-transform: uppercase;
 }
 
-.donation-box {
+.page-donate .donation-box {
   justify-content: center;
-  height: 106px;
+  height: 12rem;
   border: 4px solid #000;
   border-radius: 21px;
   display: flex;
+  width: 50rem;
+  margin: 3rem 0rem 1rem 7rem;
 }
 
-.donation-amount {
+.page-donate .donation-amount {
   padding-top: 2rem;
   padding-left: 1rem;
 }
-.donation-first-last-name input {
+.page-donate .donation-first-last-name input {
   box-sizing: border-box;
   height: 40px;
   // width: 400px;
 }
 
-.donation-phone input {
+.page-donate .donation-phone input {
   height: 40px;
   // width: 941px;
 }
 
-.donation-first-last-name .ginput_container {
+.page-donate .donation-first-last-name .ginput_container {
   display: flex;
 
   span {
@@ -83,17 +85,18 @@
   }
 }
 
-.donate_radio {
+.page-donate .donate_radio {
   input[type='radio'] {
     display: none;
 
     & ~ label {
       // all radio labels
-      border: 6px solid $color__pink;
+      justify-content: center;
+      border: 6px solid #ed1651;
       border-radius: 8px;
-      display: inline-block;
       padding: 4px;
-      min-width: 106px;
+      min-width: 113px;
+      display: flex;
 
       // &:hover {
       //   border-color: $btnbg__orange;
@@ -107,12 +110,13 @@
   }
 }
 
-.gfield_radio {
+.page-donate .gfield_radio {
   display: flex;
   padding: 1rem;
+  justify-content: center;
 }
 
-.gchoice_4_8_3 {
+.page-donate .gchoice_4_8_3 {
   margin-left: 1rem;
 }
 
@@ -120,9 +124,42 @@
   padding-top: 23px;
   padding-left: 10px;
 }
-.donate-image {
+.page-donate .donate-image {
   background-image: url(../../assets/01_Icons/SVG/Donate1.svg);
   background-repeat: no-repeat;
   height: 67px;
   width: 60px;
+}
+
+//THIS IS THE DONATE FORM
+.donate-form_wrapper .gform_footer {
+  display: flex;
+  justify-content: center;
+  position: unset;
+  margin-right: unset;
+  margin: 4rem;
+}
+
+.donate-form_wrapper .gform_footer .gform_button {
+  height: 58px;
+  width: 263px;
+  border-radius: 12px;
+  background-color: #ed1651;
+  color: white;
+  font-size: 1.5rem;
+  @include desktop {
+    font-size: 24px;
+    &:hover {
+      border: solid 4px $btnbg__orange;
+      background-color: $btnbg__orange;
+    }
+  }
+}
+
+.donation-tax-form-1 .gfield_label {
+  display: unset;
+}
+
+.submit-btn {
+  display: none;
 }

@@ -122,7 +122,6 @@ function red_starter_scripts() {
         'wpapi_nonce' => wp_create_nonce('wp_rest'),
         'post_id' => get_the_ID(),
         'user_id' => get_current_user_id(),
-		'comments_open' => comments_open(get_the_ID()),
 		'success' => 'thanks',
 		'fail' => 'fail',
     ));
