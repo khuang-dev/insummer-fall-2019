@@ -1582,6 +1582,9 @@ iframe {
   width: 50rem;
   margin: 3rem 0rem 1rem 7rem; }
 
+.donation-box .ginput_container {
+  width: 23rem; }
+
 .page-donate .donation-amount {
   padding-top: 2rem;
   padding-left: 1rem; }
