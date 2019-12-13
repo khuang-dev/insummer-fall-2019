@@ -1,3 +1,13 @@
+.page-sign-up-newsletter-form,
+.confirmation-newsletter,
+.page-confirmation-become-volunteer {
+  .fa-times-circle {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}
 .sign-up-newsletter {
   h1 {
     color: $color__black;
@@ -8,7 +18,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 700px;
+  max-width: 800px;
   .entry-content p {
     line-height: 2.5rem;
     font-size: 20px;
@@ -19,12 +29,21 @@
       line-height: 1.5rem;
     }
   }
+  .first-p,
+  .second-p {
+    margin-bottom: 2rem;
+  }
 
   .form_newsletter__signup_wrapper .gform_footer {
     position: unset;
     margin-right: 0rem;
     display: block;
   }
+}
+.form_newsletter__signup_wrapper .gform_body {
+  position: unset;
+  margin-right: 0rem;
+  display: block;
 }
 
 .sign-up-newsletter {
@@ -45,6 +64,10 @@
   list-style-type: none;
 }
 
+input {
+  cursor: pointer;
+}
+
 .form_newsletter__signup {
   .gform_button {
     height: 58px;
@@ -56,7 +79,64 @@
     font-size: 1.5rem;
     font-size: 24px;
     &:hover {
-      border: solid 4px $btn__pink;
+      border: solid 4px $btnbg__orange;
+      background-color: $btnbg__orange;
     }
+  }
+}
+
+//THIS IS THE CONFIRMATION NEWSLETTER PAGE
+
+.confirmation-newsletter {
+  max-width: 800px;
+
+  .entry-title {
+    display: none;
+  }
+}
+.sign-up-newsletter,
+.confirmation-newsletter {
+  h1 {
+    color: $color__black;
+
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .first-p,
+  .second-p {
+    font-size: 20px;
+    margin-bottom: 2rem;
+  }
+}
+
+//THIS IST THE COMFIRMATION BECOME A VOLUNTEER
+
+.confirmation-become-volunteer {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    color: $color__black;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .first-p,
+  .second-p {
+    font-size: 20px;
+    margin-bottom: 2rem;
+  }
+}
+
+.confirmation-become-volunteer {
+  .volunteer-apply-btn p {
+    text-transform: capitalize;
   }
 }

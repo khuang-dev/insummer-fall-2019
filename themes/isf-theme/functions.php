@@ -117,12 +117,11 @@ function red_starter_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	wp_localize_script('category-filter', 'isf_vars', array(
+	wp_localize_script('red-starter-category-filter', 'isf_vars', array(
         'rest_url' => esc_url_raw(rest_url()),
         'wpapi_nonce' => wp_create_nonce('wp_rest'),
         'post_id' => get_the_ID(),
         'user_id' => get_current_user_id(),
-		'comments_open' => comments_open(get_the_ID()),
 		'success' => 'thanks',
 		'fail' => 'fail',
     ));
