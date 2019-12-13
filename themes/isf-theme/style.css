@@ -574,19 +574,19 @@ textarea {
   @media (min-width: 480px) {
     .form__signup {
       width: 300px; } }
-  .form__signup input[type=email] {
+  .form__signup input[type='email'] {
     border: none; }
-  .form__signup input[type=text] {
+  .form__signup input[type='text'] {
     border: none;
     outline: none;
     height: 50px; }
-    .form__signup input[type=text]::-webkit-input-placeholder {
+    .form__signup input[type='text']::-webkit-input-placeholder {
       padding-left: 1rem; }
-    .form__signup input[type=text]::-ms-input-placeholder {
+    .form__signup input[type='text']::-ms-input-placeholder {
       padding-left: 1rem; }
-    .form__signup input[type=text]::placeholder {
+    .form__signup input[type='text']::placeholder {
       padding-left: 1rem; }
-  .form__signup input[type=submit] {
+  .form__signup input[type='submit'] {
     -webkit-box-shadow: none;
             box-shadow: none;
     border: none;
@@ -614,6 +614,47 @@ textarea {
     background-size: 55px;
     background-repeat: no-repeat;
     background-position: center; }
+
+.main-class-notifications {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  position: fixed; }
+  .main-class-notifications .button .fa-times-circle {
+    cursor: pointer;
+    font-size: 4rem;
+    max-width: 1100px; }
+
+.message-sent .form_newsletter__signup,
+.page-sign-up-newsletter-form .form_newsletter__signup {
+  max-width: 700px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center; }
+  .message-sent .form_newsletter__signup h1,
+  .page-sign-up-newsletter-form .form_newsletter__signup h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -1539,7 +1580,7 @@ iframe {
     width: 100%;
     max-width: 500px; } }
 
-.gform_heading {
+.page-donate .gform_heading {
   display: none; }
 
 .page-donate .gform_heading {
@@ -2357,7 +2398,7 @@ iframe {
     color: #ed1651; }
   @media (min-width: 480px) {
     .volunteer-title {
-      height: 95px; }
+      height: 65px; }
       .volunteer-title h3 {
         color: #191414; }
       .volunteer-title a {
@@ -2430,7 +2471,8 @@ iframe {
 
 @media (min-width: 480px) {
   .qualificatons-list {
-    line-height: 30px; } }
+    line-height: 30px;
+    margin-left: 1rem; } }
 
 .responsibilities-info h5,
 .benefits-info h5,
@@ -2934,11 +2976,14 @@ p.member-text {
       margin-right: -6rem; } }
 
 .accessibility-about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 1100px;
-  margin: auto; }
+  display: block; }
+  @media (min-width: 480px) {
+    .accessibility-about {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      max-width: 1100px;
+      margin: auto; } }
 
 @media (min-width: 480px) {
   .icon-vs-title {
@@ -3729,7 +3774,8 @@ input {
     display: none; }
 
 .sign-up-newsletter h1,
-.confirmation-newsletter h1 {
+.confirmation-newsletter h1,
+.main-class-notifications h1 {
   color: #191414;
   font-family: 'Montserrat';
   font-size: 40px;
@@ -3745,7 +3791,9 @@ input {
 .sign-up-newsletter .first-p,
 .sign-up-newsletter .second-p,
 .confirmation-newsletter .first-p,
-.confirmation-newsletter .second-p {
+.confirmation-newsletter .second-p,
+.main-class-notifications .first-p,
+.main-class-notifications .second-p {
   font-size: 20px;
   margin-bottom: 2rem; }
 
