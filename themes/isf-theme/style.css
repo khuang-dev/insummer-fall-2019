@@ -633,6 +633,12 @@ textarea {
   left: 0;
   position: fixed; }
   .main-class-notifications .button .fa-times-circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     cursor: pointer;
     font-size: 4rem;
     max-width: 1100px; }
@@ -655,6 +661,39 @@ textarea {
     display: -ms-flexbox;
     display: flex;
     text-align: center; }
+
+#gform-notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center; }
+  #gform-notification .apply-btn {
+    text-transform: capitalize;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 0.6rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 0.5rem; }
+
+.button-notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 /*--------------------------------------------------------------
 # Navigation
