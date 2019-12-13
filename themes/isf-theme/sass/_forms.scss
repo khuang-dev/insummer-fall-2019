@@ -19,6 +19,7 @@ input[type='submit'] {
   @include font-size(0.75);
   line-height: 1;
   padding: 0.4rem 1rem 0.4rem;
+
   // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 
   &:hover {
@@ -183,6 +184,7 @@ textarea {
     background-size: 55px;
     background-repeat: no-repeat;
     background-position: center;
+<<<<<<< HEAD
   }
 }
 
@@ -205,6 +207,8 @@ textarea {
     cursor: pointer;
     font-size: 4rem;
     max-width: 1100px;
+=======
+>>>>>>> 755e0df948268a889639609e5d27a814a809a28e
   }
 }
 .message-sent,

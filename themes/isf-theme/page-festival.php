@@ -102,12 +102,21 @@ get_header(); ?>
                                 <?php endwhile; ?>
                                 <?php else : ?>
                                 <?php endif; ?>
+						</div>
+						<div class="wrapper__btn-info">
+                            <?php if ( have_rows ('event_button'));?>
+                            <?php while (have_rows('event_button')) : the_row(); ?>
+                                    <button class="events-btn">
+                                    <a href="<?php the_sub_field('event_btnurl');?>"><?php the_sub_field('event_btnlabel');?></a>
+                                    </button>
+                                    <?php endwhile; ?>
                         </div>
                         </article>
                     <?php endforeach; wp_reset_postdata(); ?>
 							</section>
+
 							<p class="isf-plus-description"><?php the_field('isfplus_description');?></p>
-							<section class="wrapper__upcoming-events grid-column-3 wrapper-isfplus-event" id="content-output-isfplus">
+							<section class="wrapper__upcoming-events grid-column-3 wrapper-isf-plus-event" id="content-output-isfplus">
 							</section>
 
 
