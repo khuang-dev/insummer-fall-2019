@@ -1677,6 +1677,9 @@ iframe {
 .donation-tax-form-1 .gfield_label {
   display: unset; }
 
+.donation-phone .gfield_label {
+  display: unset; }
+
 .submit-btn {
   display: none; }
 
