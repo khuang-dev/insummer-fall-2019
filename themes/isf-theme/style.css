@@ -3436,7 +3436,11 @@ p.member-text {
             flex-direction: column; } }
 
 .wrapper__info-event {
-  height: 7rem; }
+  width: 12rem;
+  height: 8rem; }
+  @media (min-width: 480px) {
+    .wrapper__info-event {
+      height: 7rem; } }
 
 .wrapper__image-event {
   width: 11rem;
