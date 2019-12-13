@@ -3778,6 +3778,11 @@ input {
   display: -ms-flexbox;
   display: flex; }
 
+.single_event-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .single_event-header {
   width: auto;
   color: #191414;
@@ -3798,9 +3803,16 @@ input {
           align-items: center;
   font-weight: 700; }
 
+.single_event-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
 .single_event-tags {
   text-align: center;
   font-weight: 700; }
+  @media (min-width: 480px) {
+    .single_event-tags {
+      text-align: left; } }
 
 .single_event-content {
   text-align: center;
@@ -3811,6 +3823,12 @@ input {
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase; }
+
+.single_event-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 25rem;
+  width: 25%; }
 
 .page-header {
   -webkit-box-pack: center;

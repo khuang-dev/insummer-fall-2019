@@ -34,8 +34,8 @@ get_header(); ?>
 					<div>
 						<p class="single_event-tags">DATE & TIME</p>
 						<div class="single_event-content">
-							<p><?php the_field ('event_date');?></p>
-							<p>
+							<p class="event-details"><?php the_field ('event_date');?></p>
+							<p class="event-details">
 								<?php
 								if( have_rows('event_time') ):
 									while ( have_rows('event_time') ) : the_row();
@@ -53,11 +53,11 @@ get_header(); ?>
 					<div>
 						<p class="single_event-tags">LOCATION</p>
 						<div class="single_event-content">
-							<p><?php the_field ('venue'); ?></p>
-							<p><?php
+							<p class="event-details"><?php the_field ('venue'); ?></p>
+							<p class="event-details"><?php
 								if( have_rows('event_address') ):
 									while ( have_rows('event_address') ) : the_row();?>
-									<p>
+									<p class="event-details">
 										<?php the_sub_field('address'); ?>
 										<?php the_sub_field('city'); ?>
 										<?php the_sub_field('province');?>
@@ -77,13 +77,13 @@ get_header(); ?>
 					<div>
 						<p class="single_event-tags">TICKET PRICE</p>
 						<div class="single_event-content">
-							<p><?php the_field ('ticket_price'); ?></p>
+							<p class="event-details"><?php the_field ('ticket_price'); ?></p>
 						</div>
 					</div>
 					<div>
 						<p class="single_event-tags">EVENT TAGS</p>
 						<div class="single_event-content">
-							<p>
+							<p class="event-details">
 								<?php
 									$terms = get_the_terms( get_the_ID(), 
 										'event-taxonomy'
@@ -101,15 +101,15 @@ get_header(); ?>
 			<!-- Desktop version -->
 				<div class="single_event-info hide-mobile">
 				<img class="single_event-image"src="<?php the_field ('event_image');?>" alt="Artist Image">
-
-					<p class="single_event-tags">DATE</p>
-					<p><?php the_field ('event_date');?></p>
-					<?php
+					<div class="single_event-details">
+						<p class="single_event-tags">DATE</p>
+						<p class="event-details"><?php the_field ('event_date');?></p>
+						<?php
 						if( have_rows('event_time') ):
 							while ( have_rows('event_time') ) : the_row();
 							?>
 								<p class="single_event-tags">TIME</p>
-								<p><?php the_sub_field('start_time'); ?> - <?php the_sub_field('end_time'); ?></p>
+								<p class="event-details"><?php the_sub_field('start_time'); ?> - <?php the_sub_field('end_time'); ?></p>
 								<?php
 							endwhile;
 						else :
@@ -117,43 +117,43 @@ get_header(); ?>
 						endif;
 						?>
 						<p class="single_event-tags">TICKET PRICE</p>
-						<p><?php the_field ('ticket_price'); ?></p>
+						<p class="event-details"><?php the_field ('ticket_price'); ?></p>
 
-						<div class="single_event-category">
-						<p class="single_event-tags">EVENT TAGS</p>
-							<p><?php
-								$terms = get_the_terms( get_the_ID(), 
-									'event-taxonomy'
-								); ?>
-
-								<?php foreach ( $terms as $term ) :
-									echo  $term->name; 
-								endforeach;?>	
-							</p>						
-						</div>
-						<p class="single_event-tags">VENUE</p>
-						<p><?php the_field ('venue'); ?></p>
-
-					<div class="single_e_details">
-						<?php
-							if( have_rows('event_address') ):
-								while ( have_rows('event_address') ) : the_row();?>
-								<p class="single_event-tags">ADDRESS</p>
-								<p>
-									<?php the_sub_field('address'); ?>
-									<?php the_sub_field('city'); ?>
-									<?php the_sub_field('province');?>
-									<?php the_sub_field('postal_code'); ?>
-									<?php the_sub_field('country'); ?>
-								</p>
+							<p class="single_event-tags">EVENT TAGS</p>
+								
+								<p class="event-details">
 									<?php
-									
-								endwhile;
-							else :
-								// no rows found
-							endif;
-							?>
-						</div>
+									$terms = get_the_terms( get_the_ID(), 
+										'event-taxonomy'
+									); ?>
+
+									<?php foreach ( $terms as $term ) :
+										echo  $term->name; 
+									endforeach;?>	
+								</p>			
+
+							<p class="single_event-tags">VENUE</p>
+							<p class="event-details"><?php the_field ('venue'); ?></p>
+
+						<!-- <div class="single_e_details"> -->
+							<?php
+								if( have_rows('event_address') ):
+									while ( have_rows('event_address') ) : the_row();?>
+									<p class="single_event-tags">ADDRESS</p>
+									<div class="event-address">
+										<p class="event-details"><?php the_sub_field('address'); ?></p>
+										<p class="event-details"><?php the_sub_field('city'); ?>,<br><?php the_sub_field('province');?><br><?php the_sub_field('postal_code'); ?></p>
+										<p class="event-details"><?php the_sub_field('country'); ?></p>
+									</div>
+										<?php
+										
+									endwhile;
+								else :
+									// no rows found
+								endif;
+								?>
+						<!-- </div> -->
+					</div>
 				</div>
 
 							<!-- ARTIST -->

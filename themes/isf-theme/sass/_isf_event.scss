@@ -12,6 +12,9 @@
     }
 }
 
+.single_event-info {
+    display: flex;
+}
 .single_event-header {
     width: auto;
     color: $color__black;
@@ -31,9 +34,17 @@
     font-weight: 700;
 }
 
+.single_event-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .single_event-tags {
     text-align: center;
     font-weight: 700;
+    @include desktop {
+        text-align: left;
+    }
 }
 
 .single_event-content {
@@ -46,4 +57,10 @@
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.single_event-image {
+    object-fit: cover;
+    height: 25rem;
+    width: 25%;
 }
