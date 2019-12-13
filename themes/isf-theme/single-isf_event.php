@@ -155,22 +155,34 @@ get_header(); ?>
 											
 				<!-- Buttons -->
 				<div class="event_btn-single">
-					<?php
-						if( have_rows('event_button') ):
-							while ( have_rows('event_button') ) : the_row();
+					<div class="wrapper__btn-info">
+						<?php if( have_rows('ticket_button') ):?>
+						<?php while ( have_rows('ticket_button') ) : the_row(); ?>
+							<button class="events-btn">
+								<a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('label'); ?></a>
+							</button>
+							<?php
+								endwhile;
+								else :
+								endif;
 							?>
-							<div class="single_events-btn">
-							<button class="single_event-btn hide-mobile">
-								<a href="<?php the_sub_field('event_btnurl') ?>">
-								<?php the_sub_field('event_btnlabel')?></a>
-							</button> 
-							</div>
-								<?php
-							endwhile;
-						else :
-							// no rows found
-						endif; ?>
+					</div>
+
+					<div class="wrapper__btn-info">
+						<?php if( have_rows('share_button') ):?>
+						<?php while ( have_rows('share_button') ) : the_row(); ?>
+							<button class="events-btn">
+								<a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('label'); ?></a>
+							</button>
+							<?php
+								endwhile;
+								else :
+								endif;
+							?>
+					</div>
 				</div>
+
+					
 			</section>
 
 							<!-- ARTIST -->
@@ -224,12 +236,6 @@ get_header(); ?>
 				</section>
 
 				<!-- SPONSORS -->
-				<?php
-				//$field = get_field ('sponsor_images') ;
-				//echo '<pre>';
-				//	var_dump($field);
-				//echo '</pre>';
-				?>
 
 			<section>
                 <h3 class="h3__left-border-pink title__sponsor"><?php echo get_the_title(21); ?><h3>

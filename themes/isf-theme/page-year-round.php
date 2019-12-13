@@ -74,7 +74,7 @@ get_header(); ?>
 						<!-- <php get_category('');?> -->
 							<section class="wrapper__upcoming-events grid-column-3 remove-margin-bottom" id="content-output-isf">
 							<?php 
-				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 5);
+				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 6);
    				$event_posts = get_posts( $args ); // returns an array of posts
 			    ?>
 
@@ -103,21 +103,26 @@ get_header(); ?>
 						</div>
 						
 						<div class="wrapper__btn-info">
-                                        <?php if ( have_rows ('event_button'));?>
-                                        <?php while (have_rows('event_button')) : the_row(); ?>
-                                                <button class="events-btn">
-                                                <a href="<?php the_sub_field('event__btn-url');?>"><?php the_sub_field('event__btn-label');?></a>
-                                                </button>
-                                                <?php endwhile; ?>
-									</div>
-						<section>
-						<h3 class="events-title h3__left-border-pink">Past Events</h3>
-						</section>
+							<?php if( have_rows('ticket_button') ):?>
+								<?php while ( have_rows('ticket_button') ) : the_row(); ?>
+									<button class="events-btn">
+									<a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('label'); ?></a>
+									</button>
+									<?php
+										endwhile;
+										else :
+										endif;
+									?>
+						</div>
 
                         </article>
                     <?php endforeach; wp_reset_postdata(); ?>
 				</section>
 			<?php endwhile; // End of the loop. ?>
+			<section>
+						<h3 class="events-title h3__left-border-pink">Past Events</h3>
+						</section>
+
 			</section>
 
 		</main><!-- #main -->

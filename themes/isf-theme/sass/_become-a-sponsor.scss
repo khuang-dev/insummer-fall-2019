@@ -1,5 +1,5 @@
 .page-become-a-sponsor {
-    h1 {
+    .entry-title {
         color: $color__pink;
         text-align: center;
         font-weight: 700;
@@ -21,15 +21,8 @@
 
     .banner__content {
         text-align: right;
-        width: 42rem;
-    }
-    .banner__title {
-        color: $color__white;
-        border: none;
-        padding-bottom: 1rem;
     }
 }
-
 .contact_button {
     border: 2px solid $color__pink;
     background: $color__pink;

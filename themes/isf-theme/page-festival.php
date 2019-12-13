@@ -28,7 +28,7 @@ get_header(); ?>
 				</div>
 
 		<div class="banner__image-wrapper">
-			<img class="banner__image" src="<?php the_sub_field('banner_image'); ?>"/>
+			<img class="banner__image banner_imgfit" src="<?php the_sub_field('banner_image'); ?>"/>
 		</div>
 	</section>
 <?php endwhile; ?>
@@ -102,8 +102,24 @@ get_header(); ?>
                                 <?php endwhile; ?>
                                 <?php else : ?>
                                 <?php endif; ?>
-                        </div>
-                        </article>
+						</div>
+						
+						<div class="wrapper__btn-info">
+							<?php if( have_rows('ticket_button') ):?>
+								<?php while ( have_rows('ticket_button') ) : the_row(); ?>
+									<button class="events-btn">
+									<a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('label'); ?></a>
+									</button>
+									<?php
+										endwhile;
+										else :
+										endif;
+									?>
+						</div>
+
+						</article>
+						
+						
                     <?php endforeach; wp_reset_postdata(); ?>
 							</section>
 							<p class="isf-plus-description"><?php the_field('isfplus_description');?></p>

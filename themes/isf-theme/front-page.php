@@ -78,12 +78,17 @@ get_header(); ?>
                         </div>
 
                         <div class="wrapper__btn-info">
-                            <?php if ( have_rows ('event_button'));?>
-                            <?php while (have_rows('event_button')) : the_row(); ?>
-                                    <button class="events-btn">
-                                    <a href="<?php the_sub_field('event__btn-url');?>"><?php the_sub_field('event__btn-label');?></a>
-                                    </button>
-                                    <?php endwhile; ?>
+
+                        <?php if( have_rows('ticket_button') ):?>
+                            <?php while ( have_rows('ticket_button') ) : the_row(); ?>
+                                <button class="events-btn">
+                                <a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('label'); ?></a>
+                                </button>
+                                <?php
+                                    endwhile;
+                                    else :
+                                    endif;
+                                ?>
                         </div>
 
                         </article>
