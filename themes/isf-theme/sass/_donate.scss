@@ -14,11 +14,13 @@
 }
 
 .donate-title {
-  padding: 2rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
 
   h3 {
     color: $color__black;
-    border-left: 8px solid $color__pink;
+    border-right: 8px solid $color__pink;
     padding-left: 5px;
   }
 }

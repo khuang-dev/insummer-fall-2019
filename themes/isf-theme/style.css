@@ -1558,10 +1558,17 @@ iframe {
     list-style-type: none; }
 
 .donate-title {
-  padding: 2rem; }
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
   .donate-title h3 {
     color: #191414;
-    border-left: 8px solid #ed1651;
+    border-right: 8px solid #ed1651;
     padding-left: 5px; }
 
 .page-donate .gform-donate-title {
