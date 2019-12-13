@@ -17,8 +17,8 @@ get_header(); ?>
 				<?php //if ( has_post_thumbnail() ) : ?>
 					<?php// the_post_thumbnail( 'large' ); ?>
 				<?php //endif; ?>
-				
-				<?php the_title( '<h1 class="entry-header hide-mobile">', '</h1>' ); ?>
+				<h1 class="hide-mobile year_round-head">YEAR ROUND EVENTS</h1>
+				<?php the_title( '<h1 class="single_event-title h3__left-border-pink hide-mobile">', '</h1>' ); ?>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
@@ -26,7 +26,7 @@ get_header(); ?>
 			<!-- MOBILE -->
 			<section class="single_event-page">
 				<?php the_content(); ?>
-				<img class="single_event-img"src="<?php the_field ('event_image');?>" alt="Artist Image">
+				<img class="single_event-img hide-desktop"src="<?php the_field ('event_image');?>" alt="Artist Image">
 				<div>
 				<?php the_title( '<h1 class="entry-title hide-desktop">', '</h1>' ); ?>
 
@@ -100,6 +100,8 @@ get_header(); ?>
 
 			<!-- Desktop version -->
 				<div class="single_event-info hide-mobile">
+				<img class="single_event-image"src="<?php the_field ('event_image');?>" alt="Artist Image">
+
 					<p class="single_event-tags">DATE</p>
 					<p><?php the_field ('event_date');?></p>
 					<?php
@@ -174,6 +176,8 @@ get_header(); ?>
 							</a>
 						</div>
 					</div>
+					
+					<p class="h3__left-border-pink artist_event-name"><?php the_field('artist_name');?></p>
 
 					<div class="artist-info">
 						<div class="artist-testimonial hide-mobile">
@@ -194,7 +198,7 @@ get_header(); ?>
 							?>
 						</div>
 						<?php the_content(); ?>
-						<p><?php the_field('artist_name');?></p>
+						<p class="h3__left-border-pink artist_event-name"><?php the_field('artist_name');?></p>
 						<?php the_field('artist_description');?>
 					</div>
 				</div>
@@ -204,7 +208,7 @@ get_header(); ?>
 					if( have_rows('event_button') ):
 						while ( have_rows('event_button') ) : the_row();
 						?>
-						<butto class="single_event-btn hide-mobile">
+						<button class="single_event-btn hide-mobile">
 							<a href="<?php the_sub_field('event__btn-url'); ?>"><?php the_sub_field('event__btn-label'); ?></a>
 						</button>
 							<?php

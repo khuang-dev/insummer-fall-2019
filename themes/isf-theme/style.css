@@ -3773,6 +3773,31 @@ input {
   font-size: 20px;
   font-weight: 700; }
 
+.single-isf_event .entry-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.single_event-header {
+  width: auto;
+  color: #191414;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  font-size: 40px;
+  margin-left: 7rem;
+  border-left: 8px #ed1651 solid; }
+
+.single_event-title {
+  text-transform: uppercase;
+  color: #191414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700; }
+
 .single_event-tags {
   text-align: center;
   font-weight: 700; }
@@ -3781,6 +3806,11 @@ input {
   text-align: center;
   padding-top: 0.5rem;
   padding-bottom: 1rem; }
+
+.artist_event-name {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase; }
 
 .page-header {
   -webkit-box-pack: center;
