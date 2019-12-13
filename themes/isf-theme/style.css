@@ -574,19 +574,19 @@ textarea {
   @media (min-width: 480px) {
     .form__signup {
       width: 300px; } }
-  .form__signup input[type=email] {
+  .form__signup input[type='email'] {
     border: none; }
-  .form__signup input[type=text] {
+  .form__signup input[type='text'] {
     border: none;
     outline: none;
     height: 50px; }
-    .form__signup input[type=text]::-webkit-input-placeholder {
+    .form__signup input[type='text']::-webkit-input-placeholder {
       padding-left: 1rem; }
-    .form__signup input[type=text]::-ms-input-placeholder {
+    .form__signup input[type='text']::-ms-input-placeholder {
       padding-left: 1rem; }
-    .form__signup input[type=text]::placeholder {
+    .form__signup input[type='text']::placeholder {
       padding-left: 1rem; }
-  .form__signup input[type=submit] {
+  .form__signup input[type='submit'] {
     -webkit-box-shadow: none;
             box-shadow: none;
     border: none;
@@ -1540,9 +1540,6 @@ iframe {
     width: 100%;
     max-width: 500px; } }
 
-.gform_heading {
-  display: none; }
-
 .page-donate .content-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1576,12 +1573,14 @@ iframe {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 106px;
+  height: 12rem;
   border: 4px solid #000;
   border-radius: 21px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  width: 50rem;
+  margin: 3rem 0rem 1rem 7rem; }
 
 .page-donate .donation-amount {
   padding-top: 2rem;
@@ -1605,11 +1604,16 @@ iframe {
 .page-donate .donate_radio input[type='radio'] {
   display: none; }
   .page-donate .donate_radio input[type='radio'] ~ label {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border: 6px solid #ed1651;
     border-radius: 8px;
-    display: inline-block;
     padding: 4px;
-    min-width: 106px; }
+    min-width: 113px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .page-donate .donate_radio input[type='radio']:checked ~ label {
     border-color: #f58220; }
 
@@ -1617,7 +1621,10 @@ iframe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem; }
+  padding: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .page-donate .gchoice_4_8_3 {
   margin-left: 1rem; }
@@ -1631,6 +1638,37 @@ iframe {
   background-repeat: no-repeat;
   height: 67px;
   width: 60px; }
+
+.donate-form_wrapper .gform_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: unset;
+  margin-right: unset;
+  margin: 4rem; }
+
+.donate-form_wrapper .gform_footer .gform_button {
+  height: 58px;
+  width: 263px;
+  border-radius: 12px;
+  background-color: #ed1651;
+  color: white;
+  font-size: 1.5rem; }
+  @media (min-width: 480px) {
+    .donate-form_wrapper .gform_footer .gform_button {
+      font-size: 24px; }
+      .donate-form_wrapper .gform_footer .gform_button:hover {
+        border: solid 4px #f58220;
+        background-color: #f58220; } }
+
+.donation-tax-form-1 .gfield_label {
+  display: unset; }
+
+.submit-btn {
+  display: none; }
 
 .main-navigation {
   margin-top: 2rem; }
@@ -3175,9 +3213,6 @@ p.member-text {
     padding: 1rem;
     height: 275px; } }
 
-.page-festival .entry-content {
-  padding-left: 1rem; }
-
 .page-festival .events-title {
   color: #191414;
   margin-top: 2rem;
@@ -3197,7 +3232,8 @@ p.member-text {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 6rem;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 2rem; }
   .categories-info a {
     text-decoration: none;
     text-align: center;
@@ -3206,38 +3242,47 @@ p.member-text {
       border-bottom: #191414 2px solid;
       font-weight: 600; }
 
-.category-btn, .category-all-btn {
+.category-btn, .category-all-btn, .category-all-btn-yearround {
   border: none;
   text-transform: uppercase;
   font-size: 1rem;
-  padding: 0; }
-  .category-btn:hover, .category-all-btn:hover {
-    border-bottom: 2px #191414 solid;
+  padding: 0;
+  padding-bottom: 0.5rem; }
+  .category-btn:hover, .category-all-btn:hover, .category-all-btn-yearround:hover {
+    border-bottom: 2px #ed1651 solid;
     font-weight: 600; }
-  .category-btn:focus, .category-all-btn:focus {
+  .category-btn:focus, .category-all-btn:focus, .category-all-btn-yearround:focus {
     outline: none; }
 
 .category-active {
-  border-bottom: 2px #191414 solid;
+  border-bottom: 2px #ed1651 solid;
   font-weight: 600; }
 
-.wrapper__isf {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 3rem 6rem; }
-  .wrapper__isf h3 {
-    white-space: nowrap;
-    height: 2rem;
-    margin-right: 2rem;
-    padding-right: 2rem; }
+@media (min-width: 480px) {
+  .wrapper__isf {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 3rem 6rem; }
+    .wrapper__isf h3 {
+      white-space: nowrap;
+      height: 2rem;
+      margin-right: 2rem;
+      padding-right: 2rem; } }
 
 .isf-plus-description {
-  margin-left: 6rem;
-  display: none; }
-
-.wrapper-isfplus-event {
+  padding-left: 6rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: 3rem;
+  display: none;
   background-color: #fff2f2; }
+
+.wrapper-isf-plus-event {
+  background-color: #fff2f2;
+  margin: 0 !important;
+  padding: 0 6rem;
+  padding-bottom: 3rem; }
 
 .past-testimony {
   margin: 2rem 6rem; }
@@ -3309,17 +3354,17 @@ p.member-text {
     display: block;
     padding-bottom: 63%; }
   .wrapper__single-artist:nth-child(1) .artist-name {
-    background-color: #ed164fd2; }
+    background-color: rgba(237, 22, 81, 0.75); }
   .wrapper__single-artist:nth-child(2) .artist-name {
-    background-color: #f58320d0; }
+    background-color: rgba(245, 130, 32, 0.75); }
   .wrapper__single-artist:nth-child(3) .artist-name {
-    background-color: #69c8cbd2; }
+    background-color: rgba(105, 200, 203, 0.75); }
   .wrapper__single-artist:nth-child(4) .artist-name {
-    background-color: #69c8cbd2; }
+    background-color: rgba(105, 200, 203, 0.75); }
   .wrapper__single-artist:nth-child(5) .artist-name {
-    background-color: #ed164fd2; }
+    background-color: rgba(237, 22, 81, 0.75); }
   .wrapper__single-artist:nth-child(6) .artist-name {
-    background-color: #f58320d0; }
+    background-color: rgba(245, 130, 32, 0.75); }
 
 .artist-name {
   text-transform: uppercase;
@@ -3582,9 +3627,9 @@ p.member-text {
   text-align: center;
   position: relative; }
   .wrapper__featured-content:nth-of-type(odd) .wrapper__featured-text {
-    background-color: #ed164fd2; }
+    background-color: rgba(237, 22, 81, 0.75); }
   .wrapper__featured-content:nth-of-type(even) .wrapper__featured-text {
-    background-color: #f58320d0; }
+    background-color: rgba(245, 130, 32, 0.75); }
 
 .wrapper__featured-text {
   width: 100%;
@@ -3765,6 +3810,94 @@ input {
 .confirmation-become-volunteer .volunteer-apply-btn p {
   text-transform: capitalize; }
 
+.festival-gallery .main-carousel {
+  margin: 3rem 6rem; }
+  .festival-gallery .main-carousel .flickity-prev-next-button {
+    display: block; }
+  .festival-gallery .main-carousel .flickity-button {
+    background: none;
+    color: #ed1651; }
+  .festival-gallery .main-carousel .previous {
+    -webkit-transform: translateX(-4.5rem);
+            transform: translateX(-4.5rem); }
+  .festival-gallery .main-carousel .next {
+    -webkit-transform: translateX(4.5rem);
+            transform: translateX(4.5rem); }
+
+.after-festival-message {
+  text-transform: uppercase;
+  color: #191414;
+  font-size: 3vw;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 6rem;
+  white-space: nowrap;
+  word-spacing: 1.5rem; }
+
+.after-festival-media {
+  text-align: center; }
+
+.after-festival-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 3vw;
+  background-color: #fff2f2;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 600;
+  padding: 0 7.5rem; }
+  .after-festival-meta p {
+    color: #ed1651; }
+  .after-festival-meta h4 {
+    text-transform: uppercase;
+    color: #191414; }
+
+.after-festival-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 7.5rem;
+  margin-top: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .after-festival-info p {
+    width: 40vw; }
+  .after-festival-info img {
+    width: 40vw; }
+
+.gallery-image-size {
+  -ms-flex-preferred-size: 24.5%;
+      flex-basis: 24.5%;
+  height: 50%;
+  overflow: hidden; }
+  .gallery-image-size img {
+    margin: 1.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    width: 100%; }
+
+.gallery-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.flickity-prev-next-button {
+  display: block !important; }
+
+.after-festival-comment {
+  font-weight: 500;
+  color: gray;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.2rem; }
+
 .single-isf_event .entry-title {
   text-transform: uppercase;
   text-align: center;
@@ -3905,12 +4038,29 @@ input {
           justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding: 4rem; }
   .page-header h1 {
     color: black;
-    font-size: 3rem; }
+    font-size: 33px; }
+    @media (min-width: 480px) {
+      .page-header h1 {
+        color: black;
+        font-size: 50px; } }
 
 .page-content {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+  padding-bottom: 8rem; }
+  .page-content p {
+    color: #000;
+    font-size: 22px; }
+    @media (min-width: 480px) {
+      .page-content p {
+        color: #000;
+        font-size: 37px; } }

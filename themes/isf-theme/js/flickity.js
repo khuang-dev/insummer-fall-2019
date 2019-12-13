@@ -15,7 +15,7 @@
 
     $(function(){
 
-        $('.main-carousel').flickity({
+        $('.fp-main-carousel').flickity({
             // options
             cellAlign: 'left',
             wrapAround: true,
@@ -23,6 +23,17 @@
             autoPlay: true,
             pageDots: true,
             adaptiveHeight: true
+        });
+
+        $('.festival-gallery .main-carousel').flickity({
+            // options
+            cellAlign: 'left',
+            wrapAround: true,
+            freeScroll: false,
+            autoPlay: false,
+            pageDots: false,
+            adaptiveHeight: true,
+            prevNextButton: true
         });
     })// end of doc ready
 

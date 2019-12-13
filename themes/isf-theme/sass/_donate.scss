@@ -8,9 +8,9 @@
 //   }
 // }
 
-.gform_heading {
-  display: none;
-}
+// .gform_heading {
+//   display: none;
+// }
 
 // .page-donate {
 //   // max-width: 1100px;
@@ -54,10 +54,12 @@
 
 .page-donate .donation-box {
   justify-content: center;
-  height: 106px;
+  height: 12rem;
   border: 4px solid #000;
   border-radius: 21px;
   display: flex;
+  width: 50rem;
+  margin: 3rem 0rem 1rem 7rem;
 }
 
 .page-donate .donation-amount {
@@ -89,11 +91,12 @@
 
     & ~ label {
       // all radio labels
-      border: 6px solid $color__pink;
+      justify-content: center;
+      border: 6px solid #ed1651;
       border-radius: 8px;
-      display: inline-block;
       padding: 4px;
-      min-width: 106px;
+      min-width: 113px;
+      display: flex;
 
       // &:hover {
       //   border-color: $btnbg__orange;
@@ -110,6 +113,7 @@
 .page-donate .gfield_radio {
   display: flex;
   padding: 1rem;
+  justify-content: center;
 }
 
 .page-donate .gchoice_4_8_3 {
@@ -125,4 +129,37 @@
   background-repeat: no-repeat;
   height: 67px;
   width: 60px;
+}
+
+//THIS IS THE DONATE FORM
+.donate-form_wrapper .gform_footer {
+  display: flex;
+  justify-content: center;
+  position: unset;
+  margin-right: unset;
+  margin: 4rem;
+}
+
+.donate-form_wrapper .gform_footer .gform_button {
+  height: 58px;
+  width: 263px;
+  border-radius: 12px;
+  background-color: #ed1651;
+  color: white;
+  font-size: 1.5rem;
+  @include desktop {
+    font-size: 24px;
+    &:hover {
+      border: solid 4px $btnbg__orange;
+      background-color: $btnbg__orange;
+    }
+  }
+}
+
+.donation-tax-form-1 .gfield_label {
+  display: unset;
+}
+
+.submit-btn {
+  display: none;
 }

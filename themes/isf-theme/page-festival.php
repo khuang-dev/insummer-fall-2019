@@ -122,8 +122,9 @@ get_header(); ?>
 						
                     <?php endforeach; wp_reset_postdata(); ?>
 							</section>
+
 							<p class="isf-plus-description"><?php the_field('isfplus_description');?></p>
-							<section class="wrapper__upcoming-events grid-column-3 wrapper-isfplus-event" id="content-output-isfplus">
+							<section class="wrapper__upcoming-events grid-column-3 wrapper-isf-plus-event" id="content-output-isfplus">
 							</section>
 
 

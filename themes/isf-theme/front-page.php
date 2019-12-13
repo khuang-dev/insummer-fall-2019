@@ -15,7 +15,7 @@ get_header(); ?>
 <?php endif; ?>
 
 <?php /* Start the Loop */ ?>
-<div class="main-carousel">    
+<div class="fp-main-carousel">    
 
 <?php while ( have_rows('banner_content') ) : the_row(); ?>
 <section class="banner carousel-cell">

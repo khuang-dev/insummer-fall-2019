@@ -55,24 +55,27 @@ get_header(); ?>
 							<?php endwhile; ?>
 						<?php endif; ?>
 					</section>	
+
 					<section class="festival-events">
 						<h3 class="events-title h3__left-border-pink">Check Out Our Events</h3>
-
+						<!-- category links -->
 						<div class="categories-info">
-						<div class="wrapper__category"><button value="all" class="category-active category-all-btn">View All</button></div>
+						<div class="wrapper__category"><button value="all" class="category-active category-all-btn-yearround">View All</button></div>
 						<?php
 							$terms = get_terms( array(
                                 'taxonomy' => 'event-taxonomy', 'create_isf_categories',
                                 'hide_empty' => 0,
 							) ); ?>
-								
                             <?php foreach ( $terms as $term ) :
                                 echo '<div class="wrapper__category"><button class="category-btn" value='. $term->term_id .'>' . $term->name.  '</button></div>'; 
 							endforeach;?>							
 
 							</div>
-						<!-- <php get_category('');?> -->
-							<section class="wrapper__upcoming-events grid-column-3 remove-margin-bottom" id="content-output-isf">
+
+
+
+			</section>
+			<section class="wrapper__upcoming-events grid-column-3" id="content-output-isfplus">
 							<?php 
 				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 6);
    				$event_posts = get_posts( $args ); // returns an array of posts
@@ -117,7 +120,6 @@ get_header(); ?>
 
                         </article>
                     <?php endforeach; wp_reset_postdata(); ?>
-				</section>
 			<?php endwhile; // End of the loop. ?>
 			<section>
 						<h3 class="events-title h3__left-border-pink">Past Events</h3>
