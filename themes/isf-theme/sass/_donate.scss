@@ -59,6 +59,7 @@
   border-radius: 21px;
   display: flex;
   width: 50rem;
+  margin: 3rem 0rem 1rem 7rem;
 }
 
 .page-donate .donation-amount {
@@ -153,6 +154,10 @@
       background-color: $btnbg__orange;
     }
   }
+}
+
+.donation-tax-form-1 .gfield_label {
+  display: unset;
 }
 
 .submit-btn {
