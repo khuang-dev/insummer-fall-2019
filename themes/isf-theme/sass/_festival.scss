@@ -43,6 +43,9 @@
 .category-all-btn {
     @extend .category-btn;
 }
+.category-all-btn-yearround {
+    @extend .category-btn;
+}
 .category-active {
     border-bottom: 2px $color__pink solid;
     font-weight: 600;

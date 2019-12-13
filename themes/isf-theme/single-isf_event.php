@@ -26,54 +26,62 @@ get_header(); ?>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
+
+			<section class="single_event-page">
 				<?php the_content(); ?>
-				<img src="<?php get_field ('event_image');?>" alt="Artist Image">
+				<img src="<?php the_field ('event_image');?>" alt="Artist Image">
 				
-				<?php the_field ('event_date');?>
+				<div class="single_event-info">
+					<p><?php the_field ('event_date');?>DATE</p>
 
-				<?php
-					if( have_rows('event_time') ):
-						while ( have_rows('event_time') ) : the_row();
+					<?php
+						if( have_rows('event_time') ):
+							while ( have_rows('event_time') ) : the_row();
+							?>
+								<?php the_sub_field('start_time'); ?>
+								<?php the_sub_field('end_time'); ?>
+								<?php
+							endwhile;
+						else :
+							// no rows found
+						endif;
 						?>
-							<?php the_sub_field('start_time'); ?>
-							<?php the_sub_field('end_time'); ?>
-							<?php
-						endwhile;
-					else :
-						// no rows found
-					endif;
-					?>
 
-					<?php the_field ('ticket_price'); ?>
-					<?php the_field ('venue'); ?>
+						<?php the_field ('ticket_price'); ?>
+						<?php the_field ('venue'); ?>
 
 
-				<div class="single_e_details">
-				<?php
-					if( have_rows('event_address') ):
-						while ( have_rows('event_address') ) : the_row();?>
-							<?php the_sub_field('address'); ?>
-							<?php the_sub_field('city'); ?>
-							<?php the_sub_field('postal_code'); ?>
-							<?php the_sub_field('country'); ?>
-							<?php
-						endwhile;
-					else :
-						// no rows found
-					endif;
-					?>
+					<div class="single_e_details">
+						<?php
+							if( have_rows('event_address') ):
+								while ( have_rows('event_address') ) : the_row();?>
+									<?php the_sub_field('address'); ?>
+									<?php the_sub_field('city'); ?>
+									<?php the_sub_field('postal_code'); ?>
+									<?php the_sub_field('country'); ?>
+									<?php
+								endwhile;
+							else :
+								// no rows found
+							endif;
+							?>
+						</div>
 				</div>
+
 
 				<?php
 					if( have_rows('event_button') ):
 						while ( have_rows('event_button') ) : the_row();
 						?>
+						<button>
 							<a href="<?php the_sub_field('event__btn-url'); ?>"><?php the_sub_field('event__btn-label'); ?></a>
+						</button>
 							<?php
 						endwhile;
 					else :
 						// no rows found
 					endif; ?>
+			</section>
 
 				<?php
 					wp_link_pages( array(

@@ -1583,6 +1583,10 @@ iframe {
   display: -ms-flexbox;
   display: flex; }
 
+.donation-amount {
+  padding-top: 2rem;
+  padding-left: 1rem; }
+
 .donation-first-last-name input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1617,6 +1621,10 @@ iframe {
 
 .gchoice_4_8_3 {
   margin-left: 1rem; }
+
+.page-donate .field_4_12 {
+  padding-top: 23px;
+  padding-left: 10px; }
 
 .donate-image {
   background-image: url(../../assets/01_Icons/SVG/Donate1.svg);
@@ -2589,7 +2597,10 @@ p.member-text {
     .page-membership .entry-content h2 {
       border-left: 8px solid #ed1651;
       padding-left: 1.5rem;
-      text-align: left; }
+      text-align: left;
+      font-size: 29px;
+      color: #191414;
+      text-transform: uppercase; }
   p.member-text {
     margin-bottom: 50px; }
   .curator {
@@ -3021,40 +3032,11 @@ p.member-text {
   width: 35px;
   height: 35px; }
 
-.page-year-round .year_round-head {
-  text-align: center;
-  color: #ed1651;
-  margin-left: 7rem;
-  margin-right: 7rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 30px; }
-  @media (min-width: 480px) {
-    .page-year-round .year_round-head {
-      color: #191414;
-      margin-right: 0;
-      font-size: 40px;
-      width: 16rem; } }
-
 .page-year-round h2 {
   color: #191414; }
 
 .page-year-round p {
   font-size: 18px; }
-
-.year-content {
-  margin: 0 1.25rem; }
-  @media (min-width: 480px) {
-    .year-content {
-      border-left: 8px #ed1651 solid;
-      padding-left: 3rem;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      font-size: 18px; } }
 
 .events-title {
   width: auto;
@@ -3069,11 +3051,41 @@ p.member-text {
       margin-left: 7rem;
       border-left: 8px #ed1651 solid; } }
 
-.year-events {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 3rem; }
+@media (min-width: 480px) {
+  .year-events {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 3rem; } }
+
+.year_round-head {
+  text-align: center;
+  color: #ed1651;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px; }
+  @media (min-width: 480px) {
+    .year_round-head {
+      color: #191414;
+      margin-right: 0;
+      font-size: 40px;
+      width: 16rem; } }
+
+.year-content {
+  margin: 0 1.25rem; }
+  @media (min-width: 480px) {
+    .year-content {
+      border-left: 8px #ed1651 solid;
+      padding-left: 3rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 18px; } }
 
 .patron-title {
   color: #191414; }
@@ -3188,16 +3200,16 @@ p.member-text {
       border-bottom: #191414 2px solid;
       font-weight: 600; }
 
-.category-btn, .category-all-btn {
+.category-btn, .category-all-btn, .category-all-btn-yearround {
   border: none;
   text-transform: uppercase;
   font-size: 1rem;
   padding: 0;
   padding-bottom: 0.5rem; }
-  .category-btn:hover, .category-all-btn:hover {
+  .category-btn:hover, .category-all-btn:hover, .category-all-btn-yearround:hover {
     border-bottom: 2px #ed1651 solid;
     font-weight: 600; }
-  .category-btn:focus, .category-all-btn:focus {
+  .category-btn:focus, .category-all-btn:focus, .category-all-btn-yearround:focus {
     outline: none; }
 
 .category-active {
