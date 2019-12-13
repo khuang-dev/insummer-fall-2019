@@ -19,6 +19,7 @@
   flex-direction: column;
   text-align: center;
   max-width: 800px;
+  margin: auto;
   .entry-content p {
     line-height: 2.5rem;
     font-size: 20px;
@@ -88,14 +89,15 @@ input {
 //THIS IS THE CONFIRMATION NEWSLETTER PAGE
 
 .confirmation-newsletter {
-  max-width: 800px;
-
+  max-width: 600px;
+  margin: auto;
   .entry-title {
     display: none;
   }
 }
 .sign-up-newsletter,
-.confirmation-newsletter {
+.confirmation-newsletter,
+.main-class-notifications {
   h1 {
     color: $color__black;
 
