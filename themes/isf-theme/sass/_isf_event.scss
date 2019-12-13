@@ -27,11 +27,15 @@
 }
 
 .single_event-title {
-    text-transform: uppercase;
-    color: $color__black;
-    display: flex;
-    align-items: center;
-    font-weight: 700;
+    display: none;
+    @include desktop {
+        display: block;
+        text-transform: uppercase;
+        color: $color__black;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+    }
 }
 
 .single_event-details {
@@ -64,3 +68,4 @@
     height: 25rem;
     width: 25%;
 }
+

@@ -18,7 +18,7 @@ get_header(); ?>
 					<?php// the_post_thumbnail( 'large' ); ?>
 				<?php //endif; ?>
 				<h1 class="hide-mobile year_round-head">YEAR ROUND EVENTS</h1>
-				<?php the_title( '<h1 class="single_event-title h3__left-border-pink hide-mobile">', '</h1>' ); ?>
+				<?php the_title( '<h1 class="hide-mobile single_event-title h3__left-border-pink">', '</h1>' ); ?>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
@@ -99,6 +99,7 @@ get_header(); ?>
 			</div>
 
 			<!-- Desktop version -->
+			<section class="hide-mobile">
 				<div class="single_event-info hide-mobile">
 				<img class="single_event-image"src="<?php the_field ('event_image');?>" alt="Artist Image">
 					<div class="single_event-details">
@@ -155,11 +156,12 @@ get_header(); ?>
 						<!-- </div> -->
 					</div>
 				</div>
+			</section>
 
 							<!-- ARTIST -->
 				<div class="artist-container">
 					<div class="artist-img">
-						<img src="<?php the_field('artist_image');?>" />
+						<img class="artist-single_event"src="<?php the_field('artist_image');?>" />
 						
 						<div class="artist-social hide-mobile">
 							<a href="<?php the_field ('facebook_url', 'options'); ?>">
@@ -176,8 +178,8 @@ get_header(); ?>
 							</a>
 						</div>
 					</div>
-					
-					<p class="h3__left-border-pink artist_event-name"><?php the_field('artist_name');?></p>
+				<div>
+					<p class="h3__left-border-pink artist_event-name hide-mobile"><?php the_field('artist_name');?></p>
 
 					<div class="artist-info">
 						<div class="artist-testimonial hide-mobile">
@@ -198,10 +200,12 @@ get_header(); ?>
 							?>
 						</div>
 						<?php the_content(); ?>
-						<p class="h3__left-border-pink artist_event-name"><?php the_field('artist_name');?></p>
+						<p class="h3__left-border-pink artist_event-name hide-desktop"><?php the_field('artist_name');?></p>
 						<?php the_field('artist_description');?>
 					</div>
+					</div>
 				</div>
+
 
 							<!-- Buttons -->
 				<?php
