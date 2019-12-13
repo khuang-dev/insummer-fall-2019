@@ -614,87 +614,83 @@ textarea {
     background-size: 55px;
     background-repeat: no-repeat;
     background-position: center; }
-
-.main-class-notifications {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  background-color: white;
-  height: 100%;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  position: fixed; }
-  .main-class-notifications .button .fa-times-circle {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    cursor: pointer;
-    font-size: 4rem;
-    max-width: 1100px; }
-
-.message-sent .form_newsletter__signup,
-.page-sign-up-newsletter-form .form_newsletter__signup {
-  max-width: 700px;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center; }
-  .message-sent .form_newsletter__signup h1,
-  .page-sign-up-newsletter-form .form_newsletter__signup h1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-align: center; }
-
-#gform-notification {
-  max-width: 700px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center; }
-  #gform-notification .apply-btn {
-    text-transform: capitalize;
-    color: white;
+  .form__signup .main-class-notifications {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 0.6rem;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-size: 24px;
-    font-weight: 600;
-    padding-top: 0.5rem; }
-
-.button-notification {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    position: fixed; }
+    .form__signup .main-class-notifications .button .fa-times-circle {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      cursor: pointer;
+      font-size: 4rem;
+      max-width: 1100px; }
+  .form__signup .message-sent .form_newsletter__signup,
+  .form__signup .page-sign-up-newsletter-form .form_newsletter__signup {
+    max-width: 700px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center; }
+    .form__signup .message-sent .form_newsletter__signup h1,
+    .form__signup .page-sign-up-newsletter-form .form_newsletter__signup h1 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: center; }
+  .form__signup #gform-notification {
+    max-width: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center; }
+    .form__signup #gform-notification .apply-btn {
+      text-transform: capitalize;
+      color: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-top: 0.6rem;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-size: 24px;
+      font-weight: 600;
+      padding-top: 0.5rem; }
+  .form__signup .button-notification {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -1620,15 +1616,9 @@ iframe {
     width: 100%;
     max-width: 500px; } }
 
-<<<<<<< HEAD
 .page-donate .gform_heading {
   display: none; }
 
-.page-donate .gform_heading {
-  display: none; }
-
-=======
->>>>>>> 755e0df948268a889639609e5d27a814a809a28e
 .page-donate .content-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3859,8 +3849,62 @@ input {
   font-size: 1.5rem;
   font-size: 24px; }
   .form_newsletter__signup .gform_button:hover {
-<<<<<<< HEAD
-    border: solid 4px #ed1651; }
+    border: solid 4px #f58220;
+    background-color: #f58220; }
+
+.confirmation-newsletter {
+  max-width: 600px;
+  margin: auto; }
+  .confirmation-newsletter .entry-title {
+    display: none; }
+
+.sign-up-newsletter h1,
+.confirmation-newsletter h1,
+.main-class-notifications h1 {
+  color: #191414;
+  font-family: 'Montserrat';
+  font-size: 40px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.sign-up-newsletter .first-p,
+.sign-up-newsletter .second-p,
+.confirmation-newsletter .first-p,
+.confirmation-newsletter .second-p,
+.main-class-notifications .first-p,
+.main-class-notifications .second-p {
+  font-size: 20px;
+  margin-bottom: 2rem; }
+
+.confirmation-become-volunteer {
+  max-width: 800px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center; }
+  .confirmation-become-volunteer h1 {
+    color: #191414;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold; }
+  .confirmation-become-volunteer .first-p,
+  .confirmation-become-volunteer .second-p {
+    font-size: 20px;
+    margin-bottom: 2rem; }
+
+.confirmation-become-volunteer .volunteer-apply-btn p {
+  text-transform: capitalize; }
 
 .festival-gallery .main-carousel {
   margin: 3rem 6rem; }
@@ -3949,63 +3993,6 @@ input {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 1.2rem; }
-=======
-    border: solid 4px #f58220;
-    background-color: #f58220; }
-
-.confirmation-newsletter {
-  max-width: 600px;
-  margin: auto; }
-  .confirmation-newsletter .entry-title {
-    display: none; }
-
-.sign-up-newsletter h1,
-.confirmation-newsletter h1,
-.main-class-notifications h1 {
-  color: #191414;
-  font-family: 'Montserrat';
-  font-size: 40px;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-
-.sign-up-newsletter .first-p,
-.sign-up-newsletter .second-p,
-.confirmation-newsletter .first-p,
-.confirmation-newsletter .second-p,
-.main-class-notifications .first-p,
-.main-class-notifications .second-p {
-  font-size: 20px;
-  margin-bottom: 2rem; }
-
-.confirmation-become-volunteer {
-  max-width: 800px;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center; }
-  .confirmation-become-volunteer h1 {
-    color: #191414;
-    font-family: 'Montserrat';
-    font-size: 40px;
-    font-weight: bold; }
-  .confirmation-become-volunteer .first-p,
-  .confirmation-become-volunteer .second-p {
-    font-size: 20px;
-    margin-bottom: 2rem; }
-
-.confirmation-become-volunteer .volunteer-apply-btn p {
-  text-transform: capitalize; }
 
 .single-isf_event .entry-title {
   text-transform: uppercase;
@@ -4054,4 +4041,3 @@ input {
       .page-content p {
         color: #000;
         font-size: 37px; } }
->>>>>>> c0b19171484729e598b7438a8e5374f58927b0ed
