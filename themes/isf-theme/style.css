@@ -3681,3 +3681,18 @@ p.member-text {
   font-size: 24px; }
   .form_newsletter__signup .gform_button:hover {
     border: solid 4px #ed1651; }
+
+.single-isf_event .entry-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #ed1651;
+  font-size: 20px; }
+
+.single_event-tags {
+  text-align: center;
+  font-weight: 700; }
+
+.single_event-content {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }

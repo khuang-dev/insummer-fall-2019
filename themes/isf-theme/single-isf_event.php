@@ -17,49 +17,131 @@ get_header(); ?>
 				<?php //if ( has_post_thumbnail() ) : ?>
 					<?php// the_post_thumbnail( 'large' ); ?>
 				<?php //endif; ?>
-
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-				<div class="entry-meta">
-					<?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
-				</div><!-- .entry-meta -->
+				
+				<?php the_title( '<h1 class="entry-header hide-mobile">', '</h1>' ); ?>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
 
 			<section class="single_event-page">
 				<?php the_content(); ?>
-				<img src="<?php the_field ('event_image');?>" alt="Artist Image">
-				
-				<div class="single_event-info">
-					<p>DATE<?php the_field ('event_date');?></p>
+				<img class="single_event-img"src="<?php the_field ('event_image');?>" alt="Artist Image">
+				<?php the_title( '<h1 class="entry-title hide-desktop">', '</h1>' ); ?>
 
+				<div class="single_event-mobile hide-desktop">
+					<div>
+						<p class="single_event-tags">DATE & TIME</p>
+						<div class="single_event-content">
+							<p><?php the_field ('event_date');?></p>
+							<p>
+								<?php
+								if( have_rows('event_time') ):
+									while ( have_rows('event_time') ) : the_row();
+									?>
+										<p><?php the_sub_field('start_time'); ?> - <?php the_sub_field('end_time'); ?></p>
+										<?php
+									endwhile;
+								else :
+									// no rows found
+								endif;
+								?>
+							</p>
+						</div>
+					</div>
+					<div>
+						<p class="single_event-tags">LOCATION</p>
+						<div class="single_event-content">
+							<p><?php the_field ('venue'); ?></p>
+							<p><?php
+								if( have_rows('event_address') ):
+									while ( have_rows('event_address') ) : the_row();?>
+									<p>
+										<?php the_sub_field('address'); ?>
+										<?php the_sub_field('city'); ?>
+										<?php the_sub_field('province');?>
+										<?php the_sub_field('postal_code'); ?>
+										<?php the_sub_field('country'); ?>
+									</p>
+										<?php
+										
+									endwhile;
+								else :
+									// no rows found
+								endif;
+								?>
+							</p>
+						</div>
+					</div>
+					<div>
+						<p class="single_event-tags">TICKET PRICE</p>
+						<div class="single_event-content">
+							<p><?php the_field ('ticket_price'); ?></p>
+						</div>
+					</div>
+					<div>
+						<p class="single_event-tags">EVENT TAGS</p>
+						<div class="single_event-content">
+							<p>
+								<?php
+									$terms = get_the_terms( get_the_ID(), 
+										'event-taxonomy'
+									); ?>
+
+									<?php foreach ( $terms as $term ) :
+										echo  $term->name; 
+									endforeach;?>	
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="single_event-info hide-mobile">
+					<p class="single_event-tags">DATE</p>
+					<p><?php the_field ('event_date');?></p>
 					<?php
 						if( have_rows('event_time') ):
 							while ( have_rows('event_time') ) : the_row();
 							?>
-								<p>TIME<?php the_sub_field('start_time'); ?> - <?php the_sub_field('end_time'); ?></p>
+								<p class="single_event-tags">TIME</p>
+								<p><?php the_sub_field('start_time'); ?> - <?php the_sub_field('end_time'); ?></p>
 								<?php
 							endwhile;
 						else :
 							// no rows found
 						endif;
 						?>
+						<p class="single_event-tags">TICKET PRICE</p>
+						<p><?php the_field ('ticket_price'); ?></p>
 
-						<p>TICKET PRICE<?php the_field ('ticket_price'); ?></p>
-						<p>VENUE<?php the_field ('venue'); ?></p>
+						<div class="single_event-category">
+						<p class="single_event-tags">EVENT TAGS</p>
+							<p><?php
+								$terms = get_the_terms( get_the_ID(), 
+									'event-taxonomy'
+								); ?>
 
+								<?php foreach ( $terms as $term ) :
+									echo  $term->name; 
+								endforeach;?>	
+							</p>						
+						</div>
+						<p class="single_event-tags">VENUE</p>
+						<p><?php the_field ('venue'); ?></p>
 
 					<div class="single_e_details">
 						<?php
 							if( have_rows('event_address') ):
 								while ( have_rows('event_address') ) : the_row();?>
+								<p class="single_event-tags">ADDRESS</p>
+								<p>
 									<?php the_sub_field('address'); ?>
 									<?php the_sub_field('city'); ?>
-									<?php the_sub_filed('province');?>
+									<?php the_sub_field('province');?>
 									<?php the_sub_field('postal_code'); ?>
 									<?php the_sub_field('country'); ?>
+								</p>
 									<?php
+									
 								endwhile;
 							else :
 								// no rows found
@@ -73,7 +155,7 @@ get_header(); ?>
 					if( have_rows('event_button') ):
 						while ( have_rows('event_button') ) : the_row();
 						?>
-						<button>
+						<butto class="single_event-btn hide-mobile">
 							<a href="<?php the_sub_field('event__btn-url'); ?>"><?php the_sub_field('event__btn-label'); ?></a>
 						</button>
 							<?php
@@ -98,8 +180,6 @@ get_header(); ?>
 
 
 			<!-- <php get_template_part( 'template-parts/content', 'single' ); ?> -->
-
-			<?php the_post_navigation(); ?>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
