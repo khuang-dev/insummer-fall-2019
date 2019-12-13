@@ -70,6 +70,18 @@
     width: 28rem;
   }
 }
+.page-donate .donation-address .ginput_container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .address_city {
+    width: 28rem;
+  }
+  .address_zip {
+    width: 28rem;
+  }
+}
 
 .page-donate .donate_radio {
   input[type='radio'] {
