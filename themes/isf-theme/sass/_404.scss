@@ -4,7 +4,12 @@
 
   h1 {
     color: black;
-    font-size: 3rem;
+    font-size: 25px;
+
+    @include desktop {
+      color: black;
+      font-size: 50px;
+    }
   }
 }
 
