@@ -1602,11 +1602,16 @@ iframe {
 .page-donate .donate_radio input[type='radio'] {
   display: none; }
   .page-donate .donate_radio input[type='radio'] ~ label {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border: 6px solid #ed1651;
     border-radius: 8px;
-    display: inline-block;
     padding: 4px;
-    min-width: 106px; }
+    min-width: 113px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .page-donate .donate_radio input[type='radio']:checked ~ label {
     border-color: #f58220; }
 
@@ -1631,6 +1636,34 @@ iframe {
   background-repeat: no-repeat;
   height: 67px;
   width: 60px; }
+
+.donate-form_wrapper .gform_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: unset;
+  margin-right: unset;
+  margin: 4rem; }
+
+.donate-form_wrapper .gform_footer .gform_button {
+  height: 58px;
+  width: 263px;
+  border-radius: 12px;
+  background-color: #ed1651;
+  color: white;
+  font-size: 1.5rem; }
+  @media (min-width: 480px) {
+    .donate-form_wrapper .gform_footer .gform_button {
+      font-size: 24px; }
+      .donate-form_wrapper .gform_footer .gform_button:hover {
+        border: solid 4px #f58220;
+        background-color: #f58220; } }
+
+.submit-btn {
+  display: none; }
 
 .main-navigation {
   margin-top: 2rem; }

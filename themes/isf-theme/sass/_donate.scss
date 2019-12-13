@@ -89,11 +89,12 @@
 
     & ~ label {
       // all radio labels
-      border: 6px solid $color__pink;
+      justify-content: center;
+      border: 6px solid #ed1651;
       border-radius: 8px;
-      display: inline-block;
       padding: 4px;
-      min-width: 106px;
+      min-width: 113px;
+      display: flex;
 
       // &:hover {
       //   border-color: $btnbg__orange;
@@ -126,4 +127,33 @@
   background-repeat: no-repeat;
   height: 67px;
   width: 60px;
+}
+
+//THIS IS THE DONATE FORM
+.donate-form_wrapper .gform_footer {
+  display: flex;
+  justify-content: center;
+  position: unset;
+  margin-right: unset;
+  margin: 4rem;
+}
+
+.donate-form_wrapper .gform_footer .gform_button {
+  height: 58px;
+  width: 263px;
+  border-radius: 12px;
+  background-color: #ed1651;
+  color: white;
+  font-size: 1.5rem;
+  @include desktop {
+    font-size: 24px;
+    &:hover {
+      border: solid 4px $btnbg__orange;
+      background-color: $btnbg__orange;
+    }
+  }
+}
+
+.submit-btn {
+  display: none;
 }
