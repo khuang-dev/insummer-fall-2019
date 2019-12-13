@@ -105,6 +105,10 @@
   margin-left: 1rem;
 }
 
+.volunteer-form_wrapper .gfield_radio {
+  display: block;
+}
+
 .tell-us-form-volunteer {
   width: 100%;
   @include desktop {
@@ -123,6 +127,7 @@
 }
 
 .volunteer-form .gform_button {
+  font-family: 'Montserrat';
   height: 58px;
   width: 263px;
   border-radius: 12px;
@@ -130,4 +135,9 @@
   color: white;
   font-size: 24px;
   border: $btn__pink;
+  font-weight: 600;
+}
+
+.checkbox-volunteer-form {
+  max-width: 577px;
 }
