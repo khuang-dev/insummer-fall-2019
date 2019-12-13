@@ -1585,10 +1585,6 @@ iframe {
 .donation-box .ginput_container {
   width: 23rem; }
 
-.page-donate .donation-amount {
-  padding-top: 2rem;
-  padding-left: 1rem; }
-
 .page-donate .donation-first-last-name input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
