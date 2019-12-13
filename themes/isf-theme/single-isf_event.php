@@ -23,9 +23,11 @@ get_header(); ?>
 
 			<div class="entry-content">
 
+			<!-- MOBILE -->
 			<section class="single_event-page">
 				<?php the_content(); ?>
 				<img class="single_event-img"src="<?php the_field ('event_image');?>" alt="Artist Image">
+				<div>
 				<?php the_title( '<h1 class="entry-title hide-desktop">', '</h1>' ); ?>
 
 				<div class="single_event-mobile hide-desktop">
@@ -94,7 +96,9 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
+			</div>
 
+			<!-- Desktop version -->
 				<div class="single_event-info hide-mobile">
 					<p class="single_event-tags">DATE</p>
 					<p><?php the_field ('event_date');?></p>
@@ -150,7 +154,52 @@ get_header(); ?>
 						</div>
 				</div>
 
+							<!-- ARTIST -->
+				<div class="artist-container">
+					<div class="artist-img">
+						<img src="<?php the_field('artist_image');?>" />
+						
+						<div class="artist-social hide-mobile">
+							<a href="<?php the_field ('facebook_url', 'options'); ?>">
+								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebok">
+							</a>
+							<a href="<?php get_field ('instagram_url', 'options'); ?>">
+								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/IG.svg" alt="icon-instagram">
+							</a>
+							<a href="<?php get_field ('twitter_url', 'options'); ?>">
+								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Twitter.svg" alt="icon-twitter">
+							</a>
+							<a href="<?php get_field ('youtube_url', 'options'); ?>">
+								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Youtube.svg" alt="icon-youtube">
+							</a>
+						</div>
+					</div>
 
+					<div class="artist-info">
+						<div class="artist-testimonial hide-mobile">
+							<?php
+								if( have_rows('testimonials') ):
+									while ( have_rows('testimonials') ) : the_row();
+							?>
+										<div class="testimonail-container">
+										<p><?php the_sub_field('testimony'); ?></p>
+										<p><?php the_sub_field('authors_name'); ?></p>
+										</div>
+
+							<?php
+									endwhile;
+								else :
+									// no rows found
+								endif;
+							?>
+						</div>
+						<?php the_content(); ?>
+						<p><?php the_field('artist_name');?></p>
+						<?php the_field('artist_description');?>
+					</div>
+				</div>
+
+							<!-- Buttons -->
 				<?php
 					if( have_rows('event_button') ):
 						while ( have_rows('event_button') ) : the_row();
@@ -164,14 +213,6 @@ get_header(); ?>
 						// no rows found
 					endif; ?>
 			</section>
-
-				<?php
-					wp_link_pages( array(
-						'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-						'after'  => '</div>',
-					) );
-				?>
-			</div><!-- .entry-content -->
 
 			<footer class="entry-footer">
 				<?php red_starter_entry_footer(); ?>

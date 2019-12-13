@@ -1543,9 +1543,6 @@ iframe {
 .gform_heading {
   display: none; }
 
-.page-donate .gform_heading {
-  display: none; }
-
 .page-donate .content-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3716,24 +3713,6 @@ input {
   font-size: 1.5rem;
   font-size: 24px; }
   .form_newsletter__signup .gform_button:hover {
-<<<<<<< HEAD
-    border: solid 4px #ed1651; }
-
-.single-isf_event .entry-title {
-  text-transform: uppercase;
-  text-align: center;
-  color: #ed1651;
-  font-size: 20px; }
-
-.single_event-tags {
-  text-align: center;
-  font-weight: 700; }
-
-.single_event-content {
-  text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
-=======
     border: solid 4px #f58220;
     background-color: #f58220; }
 
@@ -3787,6 +3766,22 @@ input {
 .confirmation-become-volunteer .volunteer-apply-btn p {
   text-transform: capitalize; }
 
+.single-isf_event .entry-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #ed1651;
+  font-size: 20px;
+  font-weight: 700; }
+
+.single_event-tags {
+  text-align: center;
+  font-weight: 700; }
+
+.single_event-content {
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem; }
+
 .page-header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -3802,4 +3797,3 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
->>>>>>> 6d70d9977d6a6bb1a6420071b6501e668c4b82f4
