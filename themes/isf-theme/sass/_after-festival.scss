@@ -1,0 +1,84 @@
+.festival-gallery {
+    .main-carousel {
+        margin: 3rem 6rem;
+        .flickity-prev-next-button {
+            display: block;
+        }
+        .flickity-button {
+            background: none;
+            color: $color__pink;
+        }
+        .previous {
+            transform: translateX(-4.5rem);
+        }
+        .next {
+            transform: translateX(4.5rem);
+        }
+    }
+}
+.after-festival-message {
+    text-transform: uppercase;
+    color: $color__black;
+    font-size: 3vw;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 6rem;
+    white-space: nowrap;
+    word-spacing: 1.5rem;
+}
+.after-festival-media {
+    text-align: center;
+}
+.after-festival-meta {
+    display: flex;
+    font-size: 3vw;
+    background-color: $bg__champagne;
+    text-align: center;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 0 7.5rem;
+    p {
+        color: $color__pink;
+    }
+    h4 {
+        text-transform: uppercase;
+        color: $color__black;
+    }
+}
+.after-festival-info {
+    display: flex;
+    margin: 0 7.5rem;
+    margin-top: 3rem;
+    justify-content: space-between;
+    p {
+        width: 40vw;
+    }
+    img {
+        width: 40vw;
+    }
+}
+.gallery-image-size {
+    flex-basis: 24.5%;
+    height: 50%;
+    overflow: hidden;
+    img {
+        margin: 1.5rem;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flickity-prev-next-button {
+    display: block !important;
+}
+.after-festival-comment {
+    font-weight: 500;
+    color: gray;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}

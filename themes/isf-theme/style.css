@@ -3687,3 +3687,91 @@ p.member-text {
   font-size: 24px; }
   .form_newsletter__signup .gform_button:hover {
     border: solid 4px #ed1651; }
+
+.festival-gallery .main-carousel {
+  margin: 3rem 6rem; }
+  .festival-gallery .main-carousel .flickity-prev-next-button {
+    display: block; }
+  .festival-gallery .main-carousel .flickity-button {
+    background: none;
+    color: #ed1651; }
+  .festival-gallery .main-carousel .previous {
+    -webkit-transform: translateX(-4.5rem);
+            transform: translateX(-4.5rem); }
+  .festival-gallery .main-carousel .next {
+    -webkit-transform: translateX(4.5rem);
+            transform: translateX(4.5rem); }
+
+.after-festival-message {
+  text-transform: uppercase;
+  color: #191414;
+  font-size: 3vw;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 6rem;
+  white-space: nowrap;
+  word-spacing: 1.5rem; }
+
+.after-festival-media {
+  text-align: center; }
+
+.after-festival-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 3vw;
+  background-color: #fff2f2;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 600;
+  padding: 0 7.5rem; }
+  .after-festival-meta p {
+    color: #ed1651; }
+  .after-festival-meta h4 {
+    text-transform: uppercase;
+    color: #191414; }
+
+.after-festival-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 7.5rem;
+  margin-top: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .after-festival-info p {
+    width: 40vw; }
+  .after-festival-info img {
+    width: 40vw; }
+
+.gallery-image-size {
+  -ms-flex-preferred-size: 24.5%;
+      flex-basis: 24.5%;
+  height: 50%;
+  overflow: hidden; }
+  .gallery-image-size img {
+    margin: 1.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    width: 100%; }
+
+.gallery-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.flickity-prev-next-button {
+  display: block !important; }
+
+.after-festival-comment {
+  font-weight: 500;
+  color: gray;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.2rem; }
