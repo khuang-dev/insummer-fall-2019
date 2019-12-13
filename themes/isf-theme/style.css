@@ -1686,7 +1686,9 @@ iframe {
         background-color: #f58220; } }
 
 .donation-tax-form-1 .gfield_label {
-  display: unset; }
+  display: unset;
+  font-size: 21px;
+  font-weight: 400; }
   .donation-tax-form-1 .gfield_label span {
     display: none; }
 
@@ -1694,6 +1696,11 @@ iframe {
   display: unset; }
   .donation-phone .gfield_label span {
     display: none; }
+
+.donation-message .gfield_label {
+  display: unset;
+  font-size: 21px;
+  font-weight: 400; }
 
 .submit-btn {
   display: none; }

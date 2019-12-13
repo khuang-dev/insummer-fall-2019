@@ -156,6 +156,8 @@
 
 .donation-tax-form-1 .gfield_label {
   display: unset;
+  font-size: 21px;
+  font-weight: 400;
 
   span {
     display: none;
@@ -168,6 +170,12 @@
   span {
     display: none;
   }
+}
+
+.donation-message .gfield_label {
+  display: unset;
+  font-size: 21px;
+  font-weight: 400;
 }
 .submit-btn {
   display: none;
