@@ -17,7 +17,7 @@
 //   // margin: auto;
 // }
 
-.gform_heading {
+.page-donate .gform_heading {
   display: none;
 }
 
@@ -46,13 +46,13 @@
   }
 }
 
-.gform-donate-title {
+.page-donate .gform-donate-title {
   font-weight: 600;
   font-size: 2rem;
   text-transform: uppercase;
 }
 
-.donation-box {
+.page-donate .donation-box {
   justify-content: center;
   height: 106px;
   border: 4px solid #000;
@@ -60,22 +60,22 @@
   display: flex;
 }
 
-.donation-amount {
+.page-donate .donation-amount {
   padding-top: 2rem;
   padding-left: 1rem;
 }
-.donation-first-last-name input {
+.page-donate .donation-first-last-name input {
   box-sizing: border-box;
   height: 40px;
   // width: 400px;
 }
 
-.donation-phone input {
+.page-donate .donation-phone input {
   height: 40px;
   // width: 941px;
 }
 
-.donation-first-last-name .ginput_container {
+.page-donate .donation-first-last-name .ginput_container {
   display: flex;
 
   span {
@@ -83,7 +83,7 @@
   }
 }
 
-.donate_radio {
+.page-donate .donate_radio {
   input[type='radio'] {
     display: none;
 
@@ -107,12 +107,12 @@
   }
 }
 
-.gfield_radio {
+.page-donate .gfield_radio {
   display: flex;
   padding: 1rem;
 }
 
-.gchoice_4_8_3 {
+.page-donate .gchoice_4_8_3 {
   margin-left: 1rem;
 }
 
@@ -120,7 +120,7 @@
   padding-top: 23px;
   padding-left: 10px;
 }
-.donate-image {
+.page-donate .donate-image {
   background-image: url(../../assets/01_Icons/SVG/Donate1.svg);
   background-repeat: no-repeat;
   height: 67px;

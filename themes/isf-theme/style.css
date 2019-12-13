@@ -1542,7 +1542,7 @@ iframe {
 .gform_heading {
   display: none; }
 
-.gform_heading {
+.page-donate .gform_heading {
   display: none; }
 
 .page-donate .content-area {
@@ -1569,12 +1569,12 @@ iframe {
     border-left: 8px solid #ed1651;
     padding-left: 5px; }
 
-.gform-donate-title {
+.page-donate .gform-donate-title {
   font-weight: 600;
   font-size: 2rem;
   text-transform: uppercase; }
 
-.donation-box {
+.page-donate .donation-box {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1585,50 +1585,50 @@ iframe {
   display: -ms-flexbox;
   display: flex; }
 
-.donation-amount {
+.page-donate .donation-amount {
   padding-top: 2rem;
   padding-left: 1rem; }
 
-.donation-first-last-name input {
+.page-donate .donation-first-last-name input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 40px; }
 
-.donation-phone input {
+.page-donate .donation-phone input {
   height: 40px; }
 
-.donation-first-last-name .ginput_container {
+.page-donate .donation-first-last-name .ginput_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .donation-first-last-name .ginput_container span {
+  .page-donate .donation-first-last-name .ginput_container span {
     width: 100%; }
 
-.donate_radio input[type='radio'] {
+.page-donate .donate_radio input[type='radio'] {
   display: none; }
-  .donate_radio input[type='radio'] ~ label {
+  .page-donate .donate_radio input[type='radio'] ~ label {
     border: 6px solid #ed1651;
     border-radius: 8px;
     display: inline-block;
     padding: 4px;
     min-width: 106px; }
-  .donate_radio input[type='radio']:checked ~ label {
+  .page-donate .donate_radio input[type='radio']:checked ~ label {
     border-color: #f58220; }
 
-.gfield_radio {
+.page-donate .gfield_radio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 1rem; }
 
-.gchoice_4_8_3 {
+.page-donate .gchoice_4_8_3 {
   margin-left: 1rem; }
 
 .page-donate .field_4_12 {
   padding-top: 23px;
   padding-left: 10px; }
 
-.donate-image {
+.page-donate .donate-image {
   background-image: url(../../assets/01_Icons/SVG/Donate1.svg);
   background-repeat: no-repeat;
   height: 67px;
@@ -3772,3 +3772,19 @@ input {
 
 .confirmation-become-volunteer .volunteer-apply-btn p {
   text-transform: capitalize; }
+
+.page-header {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .page-header h1 {
+    color: black;
+    font-size: 3rem; }
+
+.page-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
