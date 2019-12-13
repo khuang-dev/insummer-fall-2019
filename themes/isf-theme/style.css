@@ -3779,7 +3779,10 @@ input {
 .single_event-info {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-left: 13rem;
+  margin-bottom: 3rem;
+  height: 27rem; }
 
 .single_event-header {
   width: auto;
@@ -3807,30 +3810,93 @@ input {
 
 .single_event-details {
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-columns: 1fr 1fr;
+  padding-left: 5rem;
+  width: 40rem; }
 
 .single_event-tags {
   text-align: center;
   font-weight: 700; }
   @media (min-width: 480px) {
     .single_event-tags {
-      text-align: left; } }
+      text-align: left;
+      font-size: 20px;
+      color: #ed1651; } }
+
+@media (min-width: 480px) {
+  .event-details {
+    font-size: 20px;
+    font-weight: 700; } }
 
 .single_event-content {
   text-align: center;
   padding-top: 0.5rem;
   padding-bottom: 1rem; }
 
-.artist_event-name {
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase; }
-
 .single_event-image {
   -o-object-fit: cover;
      object-fit: cover;
   height: 25rem;
-  width: 25%; }
+  width: 35%; }
+  @media (min-width: 480px) {
+    .single_event-image {
+      -webkit-box-shadow: 10px 10px #ed1651;
+              box-shadow: 10px 10px #ed1651; } }
+
+.event_btn-single {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem; }
+
+.single_event-btn {
+  width: 20rem;
+  margin-right: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 3.5rem;
+  border-radius: 12px;
+  border: 3px solid #ed1651;
+  background: #ed1651; }
+  .single_event-btn a {
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .single_event-btn:hover {
+    border: 3px solid #f58220;
+    background: #f58220; }
+
+.artist-container {
+  height: 40rem; }
+
+.artist_event-name {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase; }
+  @media (min-width: 480px) {
+    .artist_event-name {
+      font-size: 30px;
+      margin-left: 8rem;
+      margin-top: 2rem; } }
+
+.testimonial-container {
+  margin-bottom: 1rem; }
+  .testimonial-container p {
+    font-size: 18px; }
+
+.testimonial_author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 .page-header {
   -webkit-box-pack: center;

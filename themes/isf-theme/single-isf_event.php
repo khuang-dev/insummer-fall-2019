@@ -121,13 +121,11 @@ get_header(); ?>
 						<p class="event-details"><?php the_field ('ticket_price'); ?></p>
 
 							<p class="single_event-tags">EVENT TAGS</p>
-								
 								<p class="event-details">
 									<?php
 									$terms = get_the_terms( get_the_ID(), 
 										'event-taxonomy'
 									); ?>
-
 									<?php foreach ( $terms as $term ) :
 										echo  $term->name; 
 									endforeach;?>	
@@ -136,14 +134,13 @@ get_header(); ?>
 							<p class="single_event-tags">VENUE</p>
 							<p class="event-details"><?php the_field ('venue'); ?></p>
 
-						<!-- <div class="single_e_details"> -->
 							<?php
 								if( have_rows('event_address') ):
 									while ( have_rows('event_address') ) : the_row();?>
 									<p class="single_event-tags">ADDRESS</p>
 									<div class="event-address">
 										<p class="event-details"><?php the_sub_field('address'); ?></p>
-										<p class="event-details"><?php the_sub_field('city'); ?>,<br><?php the_sub_field('province');?><br><?php the_sub_field('postal_code'); ?></p>
+										<p class="event-details"><?php the_sub_field('city'); ?>, &nbsp<?php the_sub_field('province');?> &nbsp<?php the_sub_field('postal_code'); ?></p>
 										<p class="event-details"><?php the_sub_field('country'); ?></p>
 									</div>
 										<?php
@@ -153,12 +150,31 @@ get_header(); ?>
 									// no rows found
 								endif;
 								?>
-						<!-- </div> -->
 					</div>
+				</div>
+											
+				<!-- Buttons -->
+				<div class="event_btn-single">
+					<?php
+						if( have_rows('event_button') ):
+							while ( have_rows('event_button') ) : the_row();
+							?>
+							<div class="single_events-btn">
+							<button class="single_event-btn hide-mobile">
+								<a href="<?php the_sub_field('event_btnurl') ?>">
+								<?php the_sub_field('event_btnlabel')?></a>
+							</button> 
+							</div>
+								<?php
+							endwhile;
+						else :
+							// no rows found
+						endif; ?>
 				</div>
 			</section>
 
 							<!-- ARTIST -->
+			<section>
 				<div class="artist-container">
 					<div class="artist-img">
 						<img class="artist-single_event"src="<?php the_field('artist_image');?>" />
@@ -187,9 +203,9 @@ get_header(); ?>
 								if( have_rows('testimonials') ):
 									while ( have_rows('testimonials') ) : the_row();
 							?>
-										<div class="testimonail-container">
-										<p><?php the_sub_field('testimony'); ?></p>
-										<p><?php the_sub_field('authors_name'); ?></p>
+										<div class="testimonial-container">
+											<p>"<?php the_sub_field('testimony'); ?>"</p> &nbsp
+											<p class="testimonial_author"> -- <?php the_sub_field('authors_name'); ?></p>
 										</div>
 
 							<?php
@@ -205,21 +221,28 @@ get_header(); ?>
 					</div>
 					</div>
 				</div>
+				</section>
 
-
-							<!-- Buttons -->
+				<!-- SPONSORS -->
 				<?php
-					if( have_rows('event_button') ):
-						while ( have_rows('event_button') ) : the_row();
-						?>
-						<button class="single_event-btn hide-mobile">
-							<a href="<?php the_sub_field('event__btn-url'); ?>"><?php the_sub_field('event__btn-label'); ?></a>
-						</button>
-							<?php
-						endwhile;
-					else :
-						// no rows found
-					endif; ?>
+				//$field = get_field ('sponsor_images') ;
+				//echo '<pre>';
+				//	var_dump($field);
+				//echo '</pre>';
+				?>
+
+			<section>
+                <h3 class="h3__left-border-pink title__sponsor"><?php echo get_the_title(21); ?><h3>
+                <div class="wrapper__fp-sponsor">
+                <?php if ( have_rows('sponsor_images', 21)):?>
+                                    <?php while ( have_rows('sponsor_images', 21)) : the_row(); ?>
+                                    <div class="wrapper__single-sponsor-img">
+                                        <img src="<?php the_sub_field('sponsor_image', 21);?>">
+                                    </div>
+                                <?php endwhile; ?>
+                                <?php else : ?>
+                                <?php endif; ?> 
+						</div>
 			</section>
 
 			<footer class="entry-footer">
