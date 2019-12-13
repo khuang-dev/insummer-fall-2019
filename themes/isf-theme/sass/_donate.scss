@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // .ginput_container_email {
 //   display: flex;
 //   flex-direction: column;
@@ -20,6 +21,11 @@
 // .page-donate .gform_heading {
 //   display: none;
 // }
+=======
+.page-donate .gform_heading {
+  display: none;
+}
+>>>>>>> b1bdfa78d3e34ede247cab186591bb6f82e4b82b
 
 .page-donate .content-area {
   display: flex;
@@ -37,11 +43,13 @@
 }
 
 .donate-title {
-  padding: 2rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
 
   h3 {
     color: $color__black;
-    border-left: 8px solid $color__pink;
+    border-right: 8px solid $color__pink;
     padding-left: 5px;
   }
 }
@@ -62,26 +70,47 @@
   margin: 3rem 0rem 1rem 7rem;
 }
 
-.page-donate .donation-amount {
-  padding-top: 2rem;
-  padding-left: 1rem;
-}
-.page-donate .donation-first-last-name input {
-  box-sizing: border-box;
-  height: 40px;
-  // width: 400px;
+.donation-box .ginput_container {
+  width: 23rem;
 }
 
-.page-donate .donation-phone input {
-  height: 40px;
-  // width: 941px;
+.donation-box .donation-box-content {
+  display: flex;
+  flex-direction: column;
+  a {
+    font-size: 24px;
+  }
 }
+
+// .page-donate .donation-first-last-name input {
+//   box-sizing: border-box;
+//   height: 40px;
+//   // width: 400px;
+// }
+
+// .page-donate .donation-phone input {
+//   height: 40px;
+//   // width: 941px;
+// }
 
 .page-donate .donation-first-last-name .ginput_container {
   display: flex;
+  justify-content: space-between;
 
   span {
-    width: 100%;
+    width: 28rem;
+  }
+}
+.page-donate .donation-address .ginput_container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .address_city {
+    width: 28rem;
+  }
+  .address_zip {
+    width: 28rem;
   }
 }
 
@@ -127,8 +156,8 @@
 .page-donate .donate-image {
   background-image: url(../../assets/01_Icons/SVG/Donate1.svg);
   background-repeat: no-repeat;
-  height: 67px;
-  width: 60px;
+  height: 6rem;
+  width: 4rem;
 }
 
 //THIS IS THE DONATE FORM
@@ -158,8 +187,27 @@
 
 .donation-tax-form-1 .gfield_label {
   display: unset;
+  font-size: 21px;
+  font-weight: 400;
+
+  span {
+    display: none;
+  }
 }
 
+.donation-phone .gfield_label {
+  display: unset;
+
+  span {
+    display: none;
+  }
+}
+
+.donation-message .gfield_label {
+  display: unset;
+  font-size: 21px;
+  font-weight: 400;
+}
 .submit-btn {
   display: none;
 }

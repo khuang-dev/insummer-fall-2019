@@ -9,7 +9,7 @@
 
 .events-title {
     width: auto;
-    color: #191414;
+    color: $color__black;
     margin-bottom: 1.5rem;
     margin-top: 3rem;
     margin-left: 1.25rem;
@@ -55,31 +55,5 @@
    }
 }
 
-// .categories-info {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     text-align: center;
-//         @include desktop {
-//         margin: 0 6rem;
-//         a {
-//             text-decoration: none;
-//             text-align: center;
-//             text-transform: uppercase;
-//             &:hover {
-//                 border-bottom: $color__black 2px solid;
-//                 font-weight: 600;
-//             }
-//         }
-//     }
-// }
-
-// .wrapper__year-categories {
-//     border: 2px solid red;
-//     padding-left: 1rem;
-//     padding-right: 1rem;
-//     border-radius: 12px;
-//     width: 8rem;
-// }
 
     
