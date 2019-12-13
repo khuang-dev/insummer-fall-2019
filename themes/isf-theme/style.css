@@ -1585,6 +1585,17 @@ iframe {
 .donation-box .ginput_container {
   width: 23rem; }
 
+.donation-box .donation-box-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .donation-box .donation-box-content a {
+    font-size: 24px; }
+
 .page-donate .donation-first-last-name input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1635,8 +1646,8 @@ iframe {
 .page-donate .donate-image {
   background-image: url(../../assets/01_Icons/SVG/Donate1.svg);
   background-repeat: no-repeat;
-  height: 67px;
-  width: 60px; }
+  height: 6rem;
+  width: 4rem; }
 
 .donate-form_wrapper .gform_footer {
   display: -webkit-box;

@@ -66,6 +66,14 @@
   width: 23rem;
 }
 
+.donation-box .donation-box-content {
+  display: flex;
+  flex-direction: column;
+  a {
+    font-size: 24px;
+  }
+}
+
 // .page-donate .donation-amount {
 //   padding-top: 2rem;
 //   padding-left: 1rem;
@@ -131,8 +139,8 @@
 .page-donate .donate-image {
   background-image: url(../../assets/01_Icons/SVG/Donate1.svg);
   background-repeat: no-repeat;
-  height: 67px;
-  width: 60px;
+  height: 6rem;
+  width: 4rem;
 }
 
 //THIS IS THE DONATE FORM
