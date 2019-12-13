@@ -51,26 +51,23 @@
   }
 }
 
-// .page-donate .donation-amount {
-//   padding-top: 2rem;
-//   padding-left: 1rem;
+// .page-donate .donation-first-last-name input {
+//   box-sizing: border-box;
+//   height: 40px;
+//   // width: 400px;
 // }
-.page-donate .donation-first-last-name input {
-  box-sizing: border-box;
-  height: 40px;
-  // width: 400px;
-}
 
-.page-donate .donation-phone input {
-  height: 40px;
-  // width: 941px;
-}
+// .page-donate .donation-phone input {
+//   height: 40px;
+//   // width: 941px;
+// }
 
 .page-donate .donation-first-last-name .ginput_container {
   display: flex;
+  justify-content: space-between;
 
   span {
-    width: 100%;
+    width: 28rem;
   }
 }
 
@@ -147,10 +144,18 @@
 
 .donation-tax-form-1 .gfield_label {
   display: unset;
+
+  span {
+    display: none;
+  }
 }
 
 .donation-phone .gfield_label {
   display: unset;
+
+  span {
+    display: none;
+  }
 }
 .submit-btn {
   display: none;

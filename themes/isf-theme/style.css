@@ -1596,20 +1596,15 @@ iframe {
   .donation-box .donation-box-content a {
     font-size: 24px; }
 
-.page-donate .donation-first-last-name input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 40px; }
-
-.page-donate .donation-phone input {
-  height: 40px; }
-
 .page-donate .donation-first-last-name .ginput_container {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .page-donate .donation-first-last-name .ginput_container span {
-    width: 100%; }
+    width: 28rem; }
 
 .page-donate .donate_radio input[type='radio'] {
   display: none; }
@@ -1676,9 +1671,13 @@ iframe {
 
 .donation-tax-form-1 .gfield_label {
   display: unset; }
+  .donation-tax-form-1 .gfield_label span {
+    display: none; }
 
 .donation-phone .gfield_label {
   display: unset; }
+  .donation-phone .gfield_label span {
+    display: none; }
 
 .submit-btn {
   display: none; }
