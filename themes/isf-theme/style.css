@@ -3787,10 +3787,11 @@ input {
           justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding: 4rem; }
   .page-header h1 {
     color: black;
-    font-size: 25px; }
+    font-size: 33px; }
     @media (min-width: 480px) {
       .page-header h1 {
         color: black;
@@ -3799,4 +3800,8 @@ input {
 .page-content {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem; }
