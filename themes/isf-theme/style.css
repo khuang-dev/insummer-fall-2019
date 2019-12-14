@@ -614,89 +614,91 @@ textarea {
     background-size: 55px;
     background-repeat: no-repeat;
     background-position: center; }
-  .form__signup .main-class-notifications {
+
+.main-class-notifications {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  position: fixed; }
+  .main-class-notifications .button .fa-times-circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    cursor: pointer;
+    font-size: 4rem;
+    max-width: 1100px;
+    justify-content: flex-end;
+    cursor: pointer;
+    font-size: 4rem;
+    max-width: 1100px; }
+
+.message-sent .form_newsletter__signup,
+.page-sign-up-newsletter-form .form_newsletter__signup {
+  max-width: 700px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center; }
+  .message-sent .form_newsletter__signup h1,
+  .page-sign-up-newsletter-form .form_newsletter__signup h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center; }
+
+#gform-notification {
+  max-width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center; }
+  #gform-notification .apply-btn {
+    text-transform: capitalize;
+    color: white;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    background-color: white;
-    height: 100%;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    position: fixed;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    cursor: pointer;
-    font-size: 4rem;
-    max-width: 1100px; }
-    .form__signup .main-class-notifications .button .fa-times-circle {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end;
-      cursor: pointer;
-      font-size: 4rem;
-      max-width: 1100px; }
-  .form__signup .message-sent .form_newsletter__signup,
-  .form__signup .page-sign-up-newsletter-form .form_newsletter__signup {
-    max-width: 700px;
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center; }
-    .form__signup .message-sent .form_newsletter__signup h1,
-    .form__signup .page-sign-up-newsletter-form .form_newsletter__signup h1 {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      text-align: center; }
-  .form__signup #gform-notification {
-    max-width: 700px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center; }
-    .form__signup #gform-notification .apply-btn {
-      text-transform: capitalize;
-      color: white;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      margin-top: 0.6rem;
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-size: 24px;
-      font-weight: 600;
-      padding-top: 0.5rem; }
-  .form__signup .button-notification {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    margin-top: 0.6rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 0.5rem; }
+
+.button-notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 /*--------------------------------------------------------------
 # Navigation

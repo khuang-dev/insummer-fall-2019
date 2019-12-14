@@ -185,72 +185,71 @@ textarea {
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+//THIS IS THE POP UP NOTIFICATIONS
+.main-class-notifications {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  position: fixed;
 
-  //THIS IS THE POP UP NOTIFICATIONS
-  .main-class-notifications {
+  .button .fa-times-circle {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: white;
-    height: 100%;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    position: fixed;
-
-    .button .fa-times-circle {
-      display: flex;
-      justify-content: flex-end;
-      cursor: pointer;
-      font-size: 4rem;
-      max-width: 1100px;
-    }
+    justify-content: flex-end;
+    cursor: pointer;
+    font-size: 4rem;
+    max-width: 1100px;
     justify-content: flex-end;
     cursor: pointer;
     font-size: 4rem;
     max-width: 1100px;
   }
-  .message-sent,
-  .page-sign-up-newsletter-form {
-    .form_newsletter__signup {
-      max-width: 700px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-
-      h1 {
-        display: flex;
-        text-align: center;
-      }
-    }
-  }
-  //END OF POP UP NOTIFICATONS
-
-  //THIS IS THE POP UP VOLUNTEER BUTTON
-
-  #gform-notification {
+}
+.message-sent,
+.page-sign-up-newsletter-form {
+  .form_newsletter__signup {
     max-width: 700px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
-    .apply-btn {
-      text-transform: capitalize;
-      color: white;
+
+    h1 {
       display: flex;
-      justify-content: center;
-      margin-top: 0.6rem;
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-size: 24px;
-      font-weight: 600;
-      padding-top: 0.5rem;
+      text-align: center;
     }
   }
+}
+//END OF POP UP NOTIFICATONS
 
-  .button-notification {
+//THIS IS THE POP UP VOLUNTEER BUTTON
+
+#gform-notification {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  .apply-btn {
+    text-transform: capitalize;
+    color: white;
     display: flex;
     justify-content: center;
+    margin-top: 0.6rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 0.5rem;
   }
+}
+
+.button-notification {
+  display: flex;
+  justify-content: center;
 }
