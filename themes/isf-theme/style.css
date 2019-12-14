@@ -630,7 +630,13 @@ textarea {
     z-index: 999;
     top: 0;
     left: 0;
-    position: fixed; }
+    position: fixed;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    cursor: pointer;
+    font-size: 4rem;
+    max-width: 1100px; }
     .form__signup .main-class-notifications .button .fa-times-circle {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -4035,8 +4041,6 @@ input {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 1.2rem; }
-<<<<<<< HEAD
-=======
 
 .single-isf_event .entry-title {
   text-transform: uppercase;
@@ -4066,7 +4070,6 @@ input {
   font-size: 40px;
   margin-left: 7rem;
   border-left: 8px #ed1651 solid; }
->>>>>>> b1bdfa78d3e34ede247cab186591bb6f82e4b82b
 
 .single_event-title {
   display: none; }

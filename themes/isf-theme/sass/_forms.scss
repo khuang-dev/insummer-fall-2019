@@ -189,7 +189,6 @@ textarea {
   //THIS IS THE POP UP NOTIFICATIONS
   .main-class-notifications {
     display: flex;
-<<<<<<< HEAD
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -207,12 +206,10 @@ textarea {
       font-size: 4rem;
       max-width: 1100px;
     }
-=======
     justify-content: flex-end;
     cursor: pointer;
     font-size: 4rem;
     max-width: 1100px;
->>>>>>> b1bdfa78d3e34ede247cab186591bb6f82e4b82b
   }
   .message-sent,
   .page-sign-up-newsletter-form {
