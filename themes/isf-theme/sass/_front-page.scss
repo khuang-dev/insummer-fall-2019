@@ -41,6 +41,13 @@
     flex-direction: column;
   }
 }
+.wrapper__info-event {
+  width: 12rem;
+  height: 8rem;
+  @include desktop {
+  height: 7rem;
+  }
+}
 .wrapper__image-event {
   width: 11rem;
   position: relative;
