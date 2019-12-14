@@ -407,7 +407,7 @@ html {
 body {
   background: #ffffff;
   /* Fallback for when there is no custom background color defined. */
-  font-family: "Monsterrat", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
   @media (min-width: 480px) {
     body {
       min-width: 830px; } }
@@ -1362,8 +1362,8 @@ object {
     background: #ffffff !important;
     opacity: 1 !important; }
 
-.flickity-prev-next-button {
-  display: none; }
+.fp-main-carousel .flickity-prev-next-button {
+  display: none !important; }
 
 .carousel-cell {
   height: 200px; }
@@ -3379,12 +3379,12 @@ p.member-text {
   width: 100%;
   height: 9rem;
   min-width: 15rem;
-  font-size: 2rem;
+  font-size: 2.5vw;
   font-weight: 600;
   padding: 1.5rem 0rem 0.5rem 0rem; }
   .artist-name p {
     margin: 0 auto;
-    max-width: 80%; }
+    max-width: 71%; }
 
 .single-artist h1 {
   color: #191414;
@@ -3757,8 +3757,73 @@ input {
   font-size: 1.5rem;
   font-size: 24px; }
   .form_newsletter__signup .gform_button:hover {
-<<<<<<< HEAD
-    border: solid 4px #ed1651; }
+    border: solid 4px #f58220;
+    background-color: #f58220; }
+
+.confirmation-newsletter {
+  max-width: 800px; }
+  .confirmation-newsletter .entry-title {
+    display: none; }
+
+.sign-up-newsletter h1,
+.confirmation-newsletter h1 {
+  color: #191414;
+  font-family: 'Montserrat';
+  font-size: 40px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.sign-up-newsletter .first-p,
+.sign-up-newsletter .second-p,
+.confirmation-newsletter .first-p,
+.confirmation-newsletter .second-p {
+  font-size: 20px;
+  margin-bottom: 2rem; }
+
+.confirmation-become-volunteer {
+  max-width: 800px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center; }
+  .confirmation-become-volunteer h1 {
+    color: #191414;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold; }
+  .confirmation-become-volunteer .first-p,
+  .confirmation-become-volunteer .second-p {
+    font-size: 20px;
+    margin-bottom: 2rem; }
+
+.confirmation-become-volunteer .volunteer-apply-btn p {
+  text-transform: capitalize; }
+
+.single-isf_event .entry-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #ed1651;
+  font-size: 20px; }
+
+.single_event-tags {
+  text-align: center;
+  font-weight: 700; }
+
+.single_event-content {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
 
 .festival-gallery .main-carousel {
   margin: 3rem 6rem; }
@@ -3847,59 +3912,6 @@ input {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 1.2rem; }
-=======
-    border: solid 4px #f58220;
-    background-color: #f58220; }
-
-.confirmation-newsletter {
-  max-width: 800px; }
-  .confirmation-newsletter .entry-title {
-    display: none; }
-
-.sign-up-newsletter h1,
-.confirmation-newsletter h1 {
-  color: #191414;
-  font-family: 'Montserrat';
-  font-size: 40px;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-
-.sign-up-newsletter .first-p,
-.sign-up-newsletter .second-p,
-.confirmation-newsletter .first-p,
-.confirmation-newsletter .second-p {
-  font-size: 20px;
-  margin-bottom: 2rem; }
-
-.confirmation-become-volunteer {
-  max-width: 800px;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center; }
-  .confirmation-become-volunteer h1 {
-    color: #191414;
-    font-family: 'Montserrat';
-    font-size: 40px;
-    font-weight: bold; }
-  .confirmation-become-volunteer .first-p,
-  .confirmation-become-volunteer .second-p {
-    font-size: 20px;
-    margin-bottom: 2rem; }
-
-.confirmation-become-volunteer .volunteer-apply-btn p {
-  text-transform: capitalize; }
 
 .single-isf_event .entry-title {
   text-transform: uppercase;
@@ -3948,4 +3960,3 @@ input {
       .page-content p {
         color: #000;
         font-size: 37px; } }
->>>>>>> c0b19171484729e598b7438a8e5374f58927b0ed

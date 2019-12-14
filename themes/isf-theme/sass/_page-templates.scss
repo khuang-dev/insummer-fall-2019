@@ -78,8 +78,10 @@
         opacity: 1 !important;
     }
 }
+.fp-main-carousel {
 .flickity-prev-next-button {
-    display: none;
+    display: none !important;
+}
 }
 .carousel-cell {
     height: 200px;

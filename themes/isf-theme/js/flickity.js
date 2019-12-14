@@ -22,7 +22,9 @@
             freeScroll: false,
             autoPlay: true,
             pageDots: true,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            prevNextButton: false
+
         });
 
         $('.festival-gallery .main-carousel').flickity({
