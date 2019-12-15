@@ -2915,6 +2915,8 @@ p.member-text {
   font-size: 24px;
   border: #ed1651;
   font-weight: 600; }
+  .volunteer-form .gform_button:hover {
+    background-color: #f58220; }
 
 .checkbox-volunteer-form {
   max-width: 577px; }
