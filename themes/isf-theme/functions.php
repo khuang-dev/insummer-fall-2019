@@ -142,6 +142,55 @@ function setupOptions() {
 	}
 }
 
+
+//* Gravity Forms notification popup instead of the page redirect or AJAX notification
+//* @link https://anythinggraphic.net/gravity-forms-notification-popup
+/* Override the default Gravity Forms confirmation behavior, displaying it in a popup. Remember to style the divs.
+----------------------------------------------------------------------------------------*/
+add_filter( 'gform_confirmation', 'ag_custom_confirmation', 10, 4 );
+function ag_custom_confirmation( $confirmation, $form, $entry, $ajax ) {
+	add_filter( 'wp_footer', 'ag_overlay');
+	return   '<div class="main-class-notifications">'.'<div id="gform-notification">'.'<a class="button" href="#"><i class="far fa-times-circle"></i></a>' . $confirmation.'<a class="button-notification" href="' . get_permalink( get_page_by_path( 'festival' ) ) . '"><i class="apply-btn">Events</i></a> </div>
+	</div>';
+
+
+	
+	//* OPTIONAL STEP - Keep the form disappearing. 
+	//* Gravity Forms notification popup instead of the page redirect or AJAX notification. 
+	//* Props to @WilliamAlexander in the comments
+	//* @link https://anythinggraphic.net/gravity-forms-notification-popup
+	add_filter( 'gform_confirmation', 'ag_custom_confirmation', 10, 4 );
+	function ag_custom_confirmation( $confirmation, $form, $entry, $ajax ) {
+		add_filter( 'wp_footer', 'ag_overlay');
+		$thisform = $form['id'];
+		return '[gravityform id=' . $thisform . ' title=false description=false]' . $confirmation . '<a href="#" rel="nofollow"><i class="far fa-times-circle"></i></a>';
+
+
+	}
+
+
+
+	//  get_page_uri( );
+}
+/* Add script to remove the overlay and confirmation message once the button in the popup is clicked.
+----------------------------------------------------------------------------------------*/
+function ag_overlay() {
+	echo '<div id="overlay"></div>';
+	echo '
+		<script type="text/javascript">
+			jQuery("body").addClass("message-sent");
+			jQuery("#gform-notification a").click(function() {
+				jQuery(".main-class-notifications").fadeOut("normal", function() {
+					$(this).remove();
+				});
+			});
+		</script>
+	';
+}
+
+
+
+
 /**
  * Custom template tags for this theme.
  */

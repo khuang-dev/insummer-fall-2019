@@ -38,7 +38,7 @@
     color: $btn__pink;
   }
   @include desktop {
-    height: 95px;
+    height: 65px;
     h3 {
       color: $color__black;
     }
@@ -114,6 +114,7 @@
 .qualificatons-list {
   @include desktop {
     line-height: 30px;
+    margin-left: 1rem;
   }
 }
 .responsibilities-info h5,

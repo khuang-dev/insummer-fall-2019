@@ -58,6 +58,7 @@ get_header(); ?>
 							?>
 						</div>
 						<?php the_content(); ?>
+						<?php the_field ('artist_description')?>
 					</div>
 				</div>
 

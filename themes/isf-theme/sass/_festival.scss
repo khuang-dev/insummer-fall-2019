@@ -51,6 +51,7 @@
     font-weight: 600;
 }
 .wrapper__isf {
+    @include desktop {
     display: flex;
     margin: 3rem 6rem;
     h3 {
@@ -59,6 +60,7 @@
         margin-right: 2rem;
         padding-right: 2rem;
     }
+}
 }
 .isf-plus-description {
     padding-left: 6rem;

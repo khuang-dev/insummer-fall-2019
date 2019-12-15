@@ -28,7 +28,7 @@ get_header(); ?>
 				</div>
 
 		<div class="banner__image-wrapper">
-			<img class="banner__image" src="<?php the_sub_field('banner_image'); ?>"/>
+			<img class="banner__image banner_imgfit" src="<?php the_sub_field('banner_image'); ?>"/>
 		</div>
 	</section>
 <?php endwhile; ?>
