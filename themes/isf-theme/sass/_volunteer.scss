@@ -225,5 +225,8 @@ a:link {
     border-radius: 12px;
     background-color: $color__pink;
     cursor: pointer;
+    &:hover {
+      background-color: $color__orange;
+    }
   }
 }

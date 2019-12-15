@@ -2705,7 +2705,9 @@ a:link {
       width: 263px;
       border-radius: 12px;
       background-color: #ed1651;
-      cursor: pointer; } }
+      cursor: pointer; }
+      .apply-btn:hover {
+        background-color: #f58220; } }
 
 .btn__round-orange, .btn__round-pink {
   border: #f58220 3px solid;
