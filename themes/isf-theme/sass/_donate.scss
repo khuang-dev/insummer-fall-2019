@@ -18,21 +18,32 @@
 }
 
 .donate-title {
-  padding: 3rem;
-  display: flex;
-  flex-direction: row;
-
+  text-align: center;
+  padding-top: 2rem;
   h3 {
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    border-bottom: unset;
-    border-right: 8px solid $color__pink;
-    color: $color__black;
-    font-family: Montserrat;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 49px;
-    padding: 1rem;
+    color: $color__pink;
+    text-transform: none;
+  }
+}
+
+@include desktop {
+  .donate-title {
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      border-bottom: unset;
+      border-right: 8px solid $color__pink;
+      color: $color__black;
+      font-family: Montserrat;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 49px;
+      padding: 1rem;
+    }
   }
 
   .donate-text {

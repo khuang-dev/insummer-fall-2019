@@ -1651,27 +1651,35 @@ iframe {
     list-style-type: none; }
 
 .donate-title {
-  padding: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row; }
+  text-align: center;
+  padding-top: 2rem; }
   .donate-title h3 {
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    border-bottom: unset;
-    border-right: 8px solid #ed1651;
-    color: #191414;
-    font-family: Montserrat;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 49px;
-    padding: 1rem; }
-  .donate-title .donate-text {
-    padding-left: 3rem; }
+    color: #ed1651;
+    text-transform: none; }
+
+@media (min-width: 480px) {
+  .donate-title {
+    padding: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .donate-title h3 {
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      border-bottom: unset;
+      border-right: 8px solid #ed1651;
+      color: #191414;
+      font-family: Montserrat;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 49px;
+      padding: 1rem; }
+  .donate-text {
+    padding-left: 3rem; } }
 
 .page-donate .gform-donate-title {
   font-weight: 600;
