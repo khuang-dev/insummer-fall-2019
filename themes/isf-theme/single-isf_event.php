@@ -17,8 +17,18 @@ get_header(); ?>
 				<?php //if ( has_post_thumbnail() ) : ?>
 					<?php// the_post_thumbnail( 'large' ); ?>
 				<?php //endif; ?>
-				<h1 class="hide-mobile year_round-head">YEAR ROUND EVENTS</h1>
-				<?php the_title( '<h1 class="hide-mobile single_event-title h3__left-border-pink">', '</h1>' ); ?>
+				<!-- <h1 class="hide-mobile year_round-head">YEAR ROUND EVENTS</h1>
+				<?php //the_title( '<h1 class="hide-mobile single_event-title h3__left-border-pink">', '</h1>' ); ?> -->
+				<section class="hide-mobile year-events">
+						<div class="year_round-head">
+							<h2 class="year-events-h1">Year Round Events</h2>
+							<h2 class="year-events-h2">ISF+</h2>
+						</div>
+						<?php the_title( '<h1 class="hide-mobile single_event-title h3__left-border-pink">', '</h1>' ); ?> 
+
+						<!-- <p class="year-content"><?php //the_field('page_about');?></p> -->
+					</section>	
+
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
@@ -102,6 +112,7 @@ get_header(); ?>
 			<section class="hide-mobile">
 				<div class="single_event-info hide-mobile">
 				<img class="single_event-image"src="<?php the_field ('event_image');?>" alt="Artist Image">
+				<div class="event-content">
 					<div class="single_event-details">
 						<p class="single_event-tags">DATE</p>
 						<p class="event-details"><?php the_field ('event_date');?></p>
@@ -151,6 +162,19 @@ get_header(); ?>
 								endif;
 								?>
 					</div>
+
+						<div class="hide-mobile event_calendar-btn">
+							<?php if( have_rows('calendar_buttons') ): ?>
+								<?php while ( have_rows('calendar_buttons') ) : the_row(); ?>
+										<a  class="calendar-btn" href="<?php the_sub_field('url'); ?>"><?php the_sub_field('button_label'); ?></a>
+									<?php	
+										endwhile;
+										else :
+										// no rows found
+										endif;
+									?>
+						</div>
+					</div>
 				</div>
 											
 				<!-- Buttons -->
@@ -171,7 +195,7 @@ get_header(); ?>
 					<div class="wrapper__btn-info">
 						<?php if( have_rows('share_button') ):?>
 						<?php while ( have_rows('share_button') ) : the_row(); ?>
-							<button class="events-btn">
+							<button class="share-btn">
 								<a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('label'); ?></a>
 							</button>
 							<?php
@@ -188,24 +212,26 @@ get_header(); ?>
 							<!-- ARTIST -->
 			<section>
 				<div class="artist-container">
+				<section class="artist-container-info">
 					<div class="artist-img">
 						<img class="artist-single_event"src="<?php the_field('artist_image');?>" />
 						
 						<div class="artist-social hide-mobile">
-							<a href="<?php the_field ('facebook_url', 'options'); ?>">
-								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebok">
+							<a class="hide-mobile" href="<?php the_field ('facebook_url', 'options'); ?>">
+								<img class="hide-mobile artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebok">
 							</a>
-							<a href="<?php get_field ('instagram_url', 'options'); ?>">
-								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/IG.svg" alt="icon-instagram">
+							<a class="hide-mobile" href="<?php get_field ('instagram_url', 'options'); ?>">
+								<img class="hide-mobile artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/IG.svg" alt="icon-instagram">
 							</a>
-							<a href="<?php get_field ('twitter_url', 'options'); ?>">
-								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Twitter.svg" alt="icon-twitter">
+							<a class="hide-mobile" href="<?php get_field ('twitter_url', 'options'); ?>">
+								<img class="hdide-mobile artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Twitter.svg" alt="icon-twitter">
 							</a>
-							<a href="<?php get_field ('youtube_url', 'options'); ?>">
-								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Youtube.svg" alt="icon-youtube">
+							<a class="hide-mobile" href="<?php get_field ('youtube_url', 'options'); ?>">
+								<img class="hide-mobile artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Youtube.svg" alt="icon-youtube">
 							</a>
 						</div>
 					</div>
+					</section>
 				<div class="about_artist-event">
 					<p class="h3__left-border-pink artist_event-name hide-mobile"><?php the_field('artist_name');?></p>
 

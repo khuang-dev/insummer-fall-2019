@@ -3601,13 +3601,25 @@ p.member-text {
     .artist-info {
       padding-left: 8rem; } }
 
+.artist-img img {
+  height: auto;
+  max-width: 80%;
+  margin: 2rem auto 2rem;
+  display: block;
+  padding-top: 1rem; }
+
 @media (min-width: 480px) {
   .artist-img {
     padding: 3rem;
     height: 22rem; } }
 
 .artist-social {
-  padding-top: 1rem; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly; }
   .artist-social .artist-icon {
     margin-right: 1rem; }
 
@@ -4128,6 +4140,9 @@ input {
   display: -ms-flexbox;
   display: flex; }
 
+.single-isf_event .entry-content {
+  margin-top: 0; }
+
 .single_event-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4164,7 +4179,8 @@ input {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-left: 5rem;
-  width: 40rem; }
+  width: 40rem;
+  height: 100%; }
 
 .single_event-tags {
   text-align: center;
@@ -4195,6 +4211,21 @@ input {
       -webkit-box-shadow: 10px 10px #ed1651;
               box-shadow: 10px 10px #ed1651; } }
 
+.event_calendar-btn {
+  padding-left: 8rem; }
+
+.calendar-btn {
+  border: 2px solid #cecece;
+  border-radius: 14px;
+  padding: 0.5rem;
+  margin-right: 1rem; }
+  .calendar-btn a {
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    display: block;
+    color: #cecece; }
+
 .event_btn-single {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4204,6 +4235,32 @@ input {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin-bottom: 2rem; }
+
+.share-btn {
+  height: 2.5rem;
+  width: 9rem;
+  border-radius: 12px;
+  border: #ed1651 4px solid;
+  border-radius: 12px;
+  background: #ffffff; }
+  .share-btn a {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ed1651; }
+  .share-btn:hover {
+    border: #f58220 3px solid;
+    background: #ffffff; }
+    .share-btn:hover a {
+      color: #f58220; }
+  @media (min-width: 480px) {
+    .share-btn {
+      height: 58px;
+      width: 259.45px;
+      border-radius: 12px; }
+      .share-btn a {
+        font-size: 24px;
+        font-weight: 600; } }
 
 .single_event-btn {
   width: 20rem;

@@ -20,17 +20,22 @@
 }
 
 .artist-img {
+    img {
+        height: auto;
+        max-width: 80%;
+        margin: 2rem auto 2rem;
+        display: block;
+        padding-top: 1rem;
+    }
     @include desktop {
         padding: 3rem;
         height: 22rem;
-        img {
-            // max-width: none;
-        }
     }
 }
 
 .artist-social {
-    padding-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
     .artist-icon {
         margin-right: 1rem;
     }
