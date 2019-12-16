@@ -694,13 +694,28 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.pop-up-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  text-transform: capitalize; }
+  .pop-up-text h3 {
+    text-transform: capitalize;
+    line-height: 2; }
+
 input[type='text'],
 input[type='email'],
 input[type='url'],
 input[type='password'],
 input[type='textarea'] {
   outline: none;
-  background-color: unset !important; }
+  background-color: white !important; }
+
+input:-internal-autofill-selected {
+  background-color: white !important; }
+  input:-internal-autofill-selected:focus, input:-internal-autofill-selected:hover, input:-internal-autofill-selected:active {
+    background-color: white !important; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -2827,7 +2842,8 @@ p.member-text {
     max-width: 1100px;
     margin: auto; } }
 
-.apply-here .gform_title {
+.apply-here .entry-title {
+  color: black;
   border-bottom: solid 2px #ed1651;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2837,14 +2853,18 @@ p.member-text {
           justify-content: center;
   text-transform: uppercase;
   font-family: 'Montserrat';
-  font-size: 18px; }
+  font-size: 18px;
+  font-weight: 600; }
   @media (min-width: 480px) {
-    .apply-here .gform_title {
+    .apply-here .entry-title {
       border-bottom: unset;
       display: unset;
       border-left: solid 8px #ed1651;
       font-size: 2.5rem;
       padding-left: 1.5rem; } }
+
+.apply-here .gform_title {
+  display: none; }
 
 .volunteer-form .gform_body {
   display: unset; }
