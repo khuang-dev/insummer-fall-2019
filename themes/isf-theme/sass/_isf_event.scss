@@ -50,6 +50,7 @@
     padding-left: 5rem;
     width: 40rem;
     height: 100%;
+    margin-top: 1rem;
 }
 
 .single_event-tags {
@@ -57,7 +58,7 @@
     font-weight: 700;
     @include desktop {
         text-align: left;
-        font-size: 20px;
+        font-size: 24px;
         color: $color__pink;
 
     }
@@ -83,34 +84,67 @@
     height: 25rem;
     width: 35%;
     @include desktop {
-        box-shadow: 10px 10px $color__pink;
-    }
+        margin-top: 3rem;
+        box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 $color__pink;    }
 }
 
 
 // button
 .event_calendar-btn {
     padding-left: 8rem;
-}
+
 .calendar-btn {
-    border: 2px solid $color__grey;
-    border-radius: 14px;
-    padding: 0.5rem;
-    margin-right: 1rem;
-    a {
-        text-decoration: none;
-        text-align: center;
-        margin: auto;
-        display: block;
-        color: $color__grey;
+        @include desktop {
+        border: 2px solid $color__grey;
+        border-radius: 14px;
+        padding: 0.5rem;
+        margin-right: 1rem;
+        color: $btn__grey;
+            a {
+                text-decoration: none;
+                text-align: center;
+                margin: auto;
+                display: block;
+            }
+        }
     }
 }
 .event_btn-single {
     display: flex;
     text-align: center;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 2rem;
 }
+.single_events-btn {
+        height: 2.5rem;
+        width: 9rem;
+        border-radius: 12px;
+        border: $btn__pink 3px solid;
+        border-radius: 12px;
+        background: $bg__pink;
+         a {
+           font-size: 15px;
+           font-weight: 600;
+           text-transform: uppercase;
+           color: $color__white; 
+         }
+         &:hover {
+          border: $btnbg__orange 3px solid;
+          background: $btnbg__orange;
+          
+         }
+        @include desktop {
+        height: 58px;	
+        width: 259.45px;	
+        border-radius: 12px;
+        margin-right: 3rem;
+          a {
+            font-size: 24px;
+            font-weight: 600;
+          }
+        }
+      } 
+
 .share-btn {
         height: 2.5rem;
         width: 9rem;

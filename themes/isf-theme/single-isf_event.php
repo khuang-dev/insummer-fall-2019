@@ -182,7 +182,7 @@ get_header(); ?>
 					<div class="wrapper__btn-info">
 						<?php if( have_rows('ticket_button') ):?>
 						<?php while ( have_rows('ticket_button') ) : the_row(); ?>
-							<button class="events-btn">
+							<button class="single_events-btn">
 								<a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('label'); ?></a>
 							</button>
 							<?php
@@ -216,7 +216,7 @@ get_header(); ?>
 					<div class="artist-img">
 						<img class="artist-single_event"src="<?php the_field('artist_image');?>" />
 						
-						<div class="artist-social hide-mobile">
+						<div class="hide-mobile artist-social">
 							<a class="hide-mobile" href="<?php the_field ('facebook_url', 'options'); ?>">
 								<img class="hide-mobile artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebok">
 							</a>
@@ -277,13 +277,6 @@ get_header(); ?>
 						</div>
 			</section>
 
-			<footer class="entry-footer">
-				<?php red_starter_entry_footer(); ?>
-			</footer><!-- .entry-footer -->
-		</article><!-- #post-## -->
-
-
-			<!-- <php get_template_part( 'template-parts/content', 'single' ); ?> -->
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
@@ -292,7 +285,14 @@ get_header(); ?>
 				endif;
 			?>
 
-		<?php endwhile; // End of the loop. ?>
+		
+<?php endwhile ?>
+
+
+<p class="isf-plus-description"><?php the_field('isfplus_description');?></p>
+<section class="wrapper__upcoming-events grid-column-3 wrapper-isf-plus-event" id="content-output-isfplus">
+
+</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

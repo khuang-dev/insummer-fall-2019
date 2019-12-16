@@ -3611,17 +3611,25 @@ p.member-text {
 @media (min-width: 480px) {
   .artist-img {
     padding: 3rem;
-    height: 22rem; } }
+    height: 22rem;
+    margin: 0; } }
 
-.artist-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly; }
-  .artist-social .artist-icon {
-    margin-right: 1rem; }
+@media (min-width: 480px) {
+  .artist-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 4rem;
+    justify-items: center;
+    justify-items: baseline;
+    width: 100%;
+    margin-top: -3rem; }
+    .artist-social a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .artist-social .artist-icon {
+      margin-right: 1rem; } }
 
 .title__upcoming-event, .title__featured-artists {
   width: auto;
@@ -4180,7 +4188,8 @@ input {
   grid-template-columns: 1fr 1fr;
   padding-left: 5rem;
   width: 40rem;
-  height: 100%; }
+  height: 100%;
+  margin-top: 1rem; }
 
 .single_event-tags {
   text-align: center;
@@ -4188,7 +4197,7 @@ input {
   @media (min-width: 480px) {
     .single_event-tags {
       text-align: left;
-      font-size: 20px;
+      font-size: 24px;
       color: #ed1651; } }
 
 @media (min-width: 480px) {
@@ -4208,33 +4217,59 @@ input {
   width: 35%; }
   @media (min-width: 480px) {
     .single_event-image {
-      -webkit-box-shadow: 10px 10px #ed1651;
-              box-shadow: 10px 10px #ed1651; } }
+      margin-top: 3rem;
+      -webkit-box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651;
+              box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651; } }
 
 .event_calendar-btn {
   padding-left: 8rem; }
-
-.calendar-btn {
-  border: 2px solid #cecece;
-  border-radius: 14px;
-  padding: 0.5rem;
-  margin-right: 1rem; }
-  .calendar-btn a {
-    text-decoration: none;
-    text-align: center;
-    margin: auto;
-    display: block;
-    color: #cecece; }
+  @media (min-width: 480px) {
+    .event_calendar-btn .calendar-btn {
+      border: 2px solid #cecece;
+      border-radius: 14px;
+      padding: 0.5rem;
+      margin-right: 1rem;
+      color: #999999; }
+      .event_calendar-btn .calendar-btn a {
+        text-decoration: none;
+        text-align: center;
+        margin: auto;
+        display: block; } }
 
 .event_btn-single {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 2rem; }
+
+.single_events-btn {
+  height: 2.5rem;
+  width: 9rem;
+  border-radius: 12px;
+  border: #ed1651 3px solid;
+  border-radius: 12px;
+  background: #ed1651; }
+  .single_events-btn a {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff; }
+  .single_events-btn:hover {
+    border: #f58220 3px solid;
+    background: #f58220; }
+  @media (min-width: 480px) {
+    .single_events-btn {
+      height: 58px;
+      width: 259.45px;
+      border-radius: 12px;
+      margin-right: 3rem; }
+      .single_events-btn a {
+        font-size: 24px;
+        font-weight: 600; } }
 
 .share-btn {
   height: 2.5rem;

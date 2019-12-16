@@ -30,13 +30,24 @@
     @include desktop {
         padding: 3rem;
         height: 22rem;
+        margin: 0;
     }
 }
 
 .artist-social {
+    @include desktop {
     display: flex;
-    justify-content: space-evenly;
+    margin-left: 4rem;
+    justify-items: center;
+    justify-items: baseline;
+    width: 100%;
+    margin-top: -3rem;
+    a {
+        display: flex;
+
+    }
     .artist-icon {
         margin-right: 1rem;
     }
+}
 }
