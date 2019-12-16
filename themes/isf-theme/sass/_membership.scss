@@ -2,6 +2,7 @@
   h2 {
     color: $color__pink;
     text-align: center;
+    font-size: 2em;
   }
 }
 p.member-text {
@@ -46,7 +47,7 @@ p.member-text {
   }
 }
 .package-text {
-  padding-right: 3rem;
+  padding-right: 1rem;
   padding-left: 1rem;
   padding-bottom: 2rem;
 }
@@ -62,6 +63,7 @@ p.member-text {
       font-size: 29px;
       color: $color__black;
       text-transform: uppercase;
+      font-weight: 600;
     }
   }
 

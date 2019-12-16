@@ -4,6 +4,9 @@
     text-align: center;
     color: $color__pink;
   }
+  p {
+    margin: 2rem;
+  }
 }
 
 .patron-packages {
@@ -72,6 +75,8 @@
       padding-left: 1.5rem;
       text-align: left;
       color: $color__black;
+      text-transform: uppercase;
+      font-weight: 600;
     }
   }
   .patron-package {
