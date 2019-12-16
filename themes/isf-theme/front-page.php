@@ -68,6 +68,7 @@ get_header(); ?>
                         
                         <div class="wrapper__info-event">
                             <p class="title__event"><?php the_title(); ?></p>
+                            <div>
                             <p><?php the_field('event_date'); ?></p>
                             <?php if ( have_rows('event_time')):?>
                                 <?php while ( have_rows('event_time')) : the_row(); ?>
@@ -75,6 +76,7 @@ get_header(); ?>
                                 <?php endwhile; ?>
                                 <?php else : ?>
                                 <?php endif; ?>
+                            </div>
                         </div>
 
                         <div class="wrapper__btn-info">

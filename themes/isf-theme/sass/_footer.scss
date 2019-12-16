@@ -51,6 +51,16 @@
 }
 .wrapper__footer-signup {
   flex-basis: 30%;
+  .widget-title {
+    display: block;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    @include desktop {
+    margin-top: 0rem;
+    margin-bottom: 1.5rem;
+    }
+  }
 }
 .wrapper__get-in-touch {
   flex-basis: 30%;
