@@ -39,7 +39,6 @@
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
-    padding: 50px;
     img {
         width: 226px;
         height: auto;
@@ -58,6 +57,7 @@
     @include desktop {
         margin-right: 5rem;
         margin-left: 5rem;
+        padding-top: 2rem;
     }
 }
 .sponsor-img {
@@ -70,30 +70,27 @@
 
 .become-sponsor {
     text-decoration: none;
-  
     border: 3px solid $color__pink;
-    margin: 135px;
     text-align: center;
     border-radius: 12px;
     padding: 0.5rem;
     color: $color__pink;
+    margin: auto;
+    display: block;  
+    font-weight: 700;
     @include desktop {
         color: $color__white;
         border: 3px solid $btn__pink;
         background-color: $bg__pink;
-        max-width: 17%;
         text-align: center;
-        margin-left: 42%;
         height: 58px;
         width: 263px;
         line-height: 38px;
-        font-size: 18px;    
+        font-size: 20px;  
     }
-
     &:hover {
         border: 3px solid $color__orange;
         color: $color__orange;
-
         @include desktop {
             background-color: $color__orange;
             border: 3px solid $color__orange;
