@@ -92,9 +92,10 @@ get_header(); ?>
 							while ( have_rows('award_list') ) : the_row();
 							?>
 
-								<p><?php the_sub_field('column_one'); ?></p>
-								<p><?php the_sub_field('column_two'); ?></p>
-								<p><?php the_sub_field('column_three'); ?></p>
+								<p class="award-one"><?php the_sub_field('column_one'); ?></p>
+								<p class="award-two"><?php the_sub_field('column_two'); ?></p>
+								<p class="award-three"><?php the_sub_field('column_three'); ?></p>
+								<a class="toggle-award">view more</a>
 
 						<?php
 

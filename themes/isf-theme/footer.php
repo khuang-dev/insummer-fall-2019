@@ -11,7 +11,7 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info content__footer">
-				<div class="icon__scroll-up-bg"><button><i class="fas fa-chevron-up icon__scroll-up"></i></button></div>
+				<div class="icon__scroll-up-bg"><button id="scroll-to-top"><i class="fas fa-chevron-up icon__scroll-up"></i></button></div>
 				
 				<section class="wrapper__footer-signup">
 				<?php dynamic_sidebar( 'footer-1' ); ?>

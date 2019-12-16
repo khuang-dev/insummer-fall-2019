@@ -75,71 +75,93 @@
                 $('#content-output-isf').append(isfOutput);
             })
     })
-    $('.category-all-btn-yearround').on('click', function(){
+    $('.category-all-btn-yearround').on('click', function () {
         $('.category-btn').removeClass('category-archive');
-        $('category-all-btn-yearround').addClass('category-active'); 
+        $('category-all-btn-yearround').addClass('category-active');
         $.ajax({
             method: 'GET',
             url: window.isf_vars.rest_url + 'wp/v2/isf_event?ISF_plus=19'
         })
-        .done(function (data) {
-            console.log('data:');
-            console.log(data)
-            if ($('#content-output-isf').length > 0) {
-            $('#content-output-isf').empty();
-            }
-            $('#content-output-isfplus').empty();
-            const isfOutput = buildEventMarkup(data);
-            console.log(buildEventMarkup(data));
-            $('#content-output-isfplus').append(isfOutput);
-        })
+            .done(function (data) {
+                console.log('data:');
+                console.log(data)
+                if ($('#content-output-isf').length > 0) {
+                    $('#content-output-isf').empty();
+                }
+
+                $('#content-output-isfplus').empty();
+                const isfOutput = buildEventMarkup(data);
+                console.log(buildEventMarkup(data));
+                $('#content-output-isfplus').append(isfOutput);
+
+            })
     })
     $('.category-btn').on('click', function (e) {
         $('.category-btn').removeClass('category-active');
         $('.category-all-btn').removeClass('category-active');
         $(e.target).addClass('category-active');
 
-        if($('#content-output-isf').length > 0) {
-        $.ajax({
-            method: 'GET',
-            url: window.isf_vars.rest_url + 'wp/v2/isf_event?event-taxonomy=' + e.target.value + '&ISF_plus=18'
-        })
-            .done(function (data) {
-                console.log('data:');
-                console.log(data)
-                $('#content-output-isf').empty();
-                const isfOutput = buildEventMarkup(data);
-                console.log(buildEventMarkup(data));
-                $('#content-output-isf').append(isfOutput);
+        if ($('#content-output-isf').length > 0) {
+
+            $.ajax({
+                method: 'GET',
+                url: window.isf_vars.rest_url + 'wp/v2/isf_event?event-taxonomy=' + e.target.value + '&ISF_plus=18',
+
             })
-            .fail(function () {
-                alert('an error has occurred');
-            })
-        }
-        if ($('#content-output-isfplus').length > 0) {
-        $.ajax({
-            method: 'GET',
-            url: window.isf_vars.rest_url + 'wp/v2/isf_event?event-taxonomy=' + e.target.value + '&ISF_plus=19'
-        })
-            .done(function (data) {
-                $('#content-output-isfplus').empty();
-                if (data.length > 0) {
-                    $('.isf-plus-description').show();
-                } else {
+                .done(function (data) {
                     console.log('data:');
-                    console.log(data)
-                    $('.isf-plus-description').hide();
-                }
-                const isfOutput = buildEventMarkup(data);
-                console.log(buildEventMarkup(data));
-                $('#content-output-isfplus').append(isfOutput);
-            })
+                    console.log(data);
 
-            .fail(function () {
-                alert('an error has occurred');
-            })
+                    $('#content-output-isf').empty();
+
+                    if (data.length == 0) {
+                        console.log('no data')
+                        $('.no-post').show();
+                    }
+                    else {
+                        console.log('data found')
+                        $('.no-post').hide();
+                        const isfOutput = buildEventMarkup(data);
+                        console.log(buildEventMarkup(data));
+                        $('#content-output-isf').append(isfOutput);
+                    }
+
+
+                })
+                .fail(function () {
+                    alert('an error has occurred');
+                })
         }
 
 
+        if ($('#content-output-isfplus').length > 0) {
+            $.ajax({
+                method: 'GET',
+                url: window.isf_vars.rest_url + 'wp/v2/isf_event?event-taxonomy=' + e.target.value + '&ISF_plus=19'
+            })
+                .done(function (data) {
+                    $('#content-output-isfplus').empty();
+                    if (data.length > 0) {
+                        $('.isf-plus-description').show();
+                    } else {
+                        console.log('data:');
+                        console.log(data)
+                        $('.isf-plus-description').hide();
+                    }
+                    if (data.length == 0) {
+                        console.log('no data')
+                        $('.no-post').show();
+                    } else {
+                        $('.no-post').hide();
+                        const isfOutput = buildEventMarkup(data);
+                        console.log(buildEventMarkup(data));
+                        $('#content-output-isfplus').append(isfOutput);
+                    }
+                })
+
+                .fail(function () {
+                    alert('an error has occurred');
+                })
+        }
     })
 })(jQuery);
