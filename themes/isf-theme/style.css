@@ -3376,6 +3376,8 @@ p.member-text {
   .patron-title h1 {
     text-align: center;
     color: #ed1651; }
+  .patron-title p {
+    margin: 2rem; }
 
 .patron-packages {
   display: -webkit-box;
