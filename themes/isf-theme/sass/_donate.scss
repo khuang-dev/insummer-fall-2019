@@ -68,7 +68,7 @@
   .page-donate .donation-box {
     justify-content: center;
     height: 12rem;
-    border: 4px solid #000;
+    border: 4px solid $color__black;
     border-radius: 21px;
     display: flex;
     width: 50rem;
@@ -136,7 +136,7 @@
     & ~ label {
       // all radio labels
       justify-content: center;
-      border: 6px solid #ed1651;
+      border: 6px solid $color__pink;
       border-radius: 8px;
       padding: 4px;
       min-width: 113px;
@@ -222,7 +222,7 @@
   height: 58px;
   width: 263px;
   border-radius: 12px;
-  background-color: #ed1651;
+  background-color: $color__pink;
   color: white;
   font-size: 1.5rem;
   @include desktop {
