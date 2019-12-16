@@ -9,13 +9,15 @@
   }
 }
 
-.apply-here .gform_title {
+.apply-here .entry-title {
+  color: black;
   border-bottom: solid 2px $btn__pink;
   display: flex;
   justify-content: center;
   text-transform: uppercase;
   font-family: 'Montserrat';
   font-size: 18px;
+  font-weight: 600;
   @include desktop {
     border-bottom: unset;
     display: unset;
@@ -23,6 +25,10 @@
     font-size: 2.5rem;
     padding-left: 1.5rem;
   }
+}
+
+.apply-here .gform_title {
+  display: none;
 }
 
 .volunteer-form .gform_body {
@@ -72,6 +78,7 @@
   }
   textarea {
     height: 16.875rem;
+    outline: none;
   }
 }
 

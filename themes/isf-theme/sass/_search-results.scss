@@ -1,0 +1,38 @@
+.search-results {
+  .content-area {
+    font-family: 'Montserrat';
+  }
+
+  .entry-title a {
+    display: flex;
+    justify-content: center;
+    @include desktop {
+      font-size: 24px;
+    }
+  }
+}
+.search-results {
+  .entry-summary p {
+    text-align: center;
+    @include desktop {
+      font-size: 24px;
+    }
+  }
+}
+
+//THOSE ARE QUOTES FOR THE SEARCH RESULTS
+
+.search-results {
+  .entry-summary p,
+  .entry-title a {
+    quotes: '“' '”' '‘' '’';
+  }
+  .entry-summary p,
+  .entry-title a:before {
+    content: open-quote;
+  }
+  .entry-summary p,
+  .entry-title a:after {
+    content: close-quote;
+  }
+}
