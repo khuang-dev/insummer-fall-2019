@@ -66,20 +66,20 @@ get_header(); ?>
 									<?php
 
 						// check if the repeater field has rows of data
-						if( have_rows('accessibility', ) ):   ?>
+						if( have_rows('accessibility') ):   ?>
 
 							<div class="accessibility-video-loop">						
 
 							<?php
 										// loop through the rows of data
-										while ( have_rows('accessibility', ) ) : the_row();
+										while ( have_rows('accessibility' ) ) : the_row();
 
 										// display a sub field value
 										?>
 
 					<div class="accessibility-about">
 
-						<div class="accessibility-about-title"> <h3><?php  the_sub_field('title_accessibility', );?> </h3></div>
+						<div class="accessibility-about-title"> <h3><?php  the_sub_field('title_accessibility');?> </h3></div>
 							<div class="title-vs-img">
 						<img class="accessibility-about-img" src="<?php the_sub_field('image_accessibility'); ?>"/>
 						
@@ -105,13 +105,13 @@ get_header(); ?>
 			<?php
 
 					// check if the repeater field has rows of data
-					if( have_rows('about_accessibility', ) ):   ?>
+					if( have_rows('about_accessibility') ):   ?>
 
 						<div class="accessibility-info-loop">						
 
 						<?php
 									// loop through the rows of data
-									while ( have_rows('about_accessibility', ) ) : the_row();
+									while ( have_rows('about_accessibility' ) ) : the_row();
 
 									// display a sub field value
 									?>
@@ -122,7 +122,7 @@ get_header(); ?>
 						<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
 							
 					
-						<div class="accessibility-title"><h3> <?php  the_sub_field('information_title', );?></h3> </div>
+						<div class="accessibility-title"><h3> <?php  the_sub_field('information_title' );?></h3> </div>
 					</div>
 
 						<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
@@ -172,13 +172,13 @@ get_header(); ?>
 									<?php
 
 // check if the repeater field has rows of data
-if( have_rows('about_accessibility_2', ) ):   ?>
+if( have_rows('about_accessibility_2' ) ):   ?>
 
 	<div class="accessibility-info-loop">						
 
 	<?php
 				// loop through the rows of data
-				while ( have_rows('about_accessibility_2', ) ) : the_row();
+				while ( have_rows('about_accessibility_2' ) ) : the_row();
 
 				// display a sub field value
 				?>
@@ -188,7 +188,7 @@ if( have_rows('about_accessibility_2', ) ):   ?>
 	<div class ="icon-vs-title">
 		<img class="accessibility-icon-svg" src="<?php the_sub_field('accessibility_image'); ?>"/>
 
-		<div class="accessibility-title"><h3> <?php  the_sub_field('information_title', );?></h3> </div>
+		<div class="accessibility-title"><h3> <?php  the_sub_field('information_title' );?></h3> </div>
 							</div>
 
 		<div class="accessibility-info-details"> <?php  the_sub_field('information_details');?> </div>
