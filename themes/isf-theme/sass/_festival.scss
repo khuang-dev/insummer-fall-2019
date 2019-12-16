@@ -1,78 +1,113 @@
 .page-festival {
-    .events-title {
-        color: $color__black;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        padding-left: 1rem;
-        margin-left: 6rem;
+  .events-title {
+    color: $color__black;
+    @include desktop {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      padding-left: 1rem;
+      margin-left: 6rem;
     }
+  }
+}
+.festival-events {
+  .wrapper__upcoming-events .wrapper__single-event {
+    &:nth-child(3) {
+      display: block;
+    }
+  }
 }
 .wrapper__category {
+  &:nth-child(1) {
+    display: none;
+    @include desktop {
+      display: block;
+    }
+  }
 }
 .categories-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 1.25rem;
+  text-align: center;
+  grid-gap: 20px;
+  @include desktop {
+    margin: 0 6rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 6rem;
+    flex-wrap: wrap;
+  }
+  a {
+    text-decoration: none;
     text-align: center;
-    margin-bottom: 2rem;
-    a {
-        text-decoration: none;
-        text-align: center;
-        text-transform: uppercase;
-        &:hover {
-            border-bottom: $color__black 2px solid;
-            font-weight: 600;
-        }
+    text-transform: uppercase;
+    &:hover {
+      border-bottom: $color__black 2px solid;
+      font-weight: 600;
     }
+  }
 }
 .category-btn {
+  border: 1px solid rgb(230, 230, 230);
+  background-color: rgb(230, 230, 230);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  width: 6rem;
+  height: 2.5rem;
+  padding: 0;
+  @include desktop {
+    background-color: transparent;
+    border-radius: 0;
+    width: auto;
+    height: auto;
     border: none;
     text-transform: uppercase;
-    font-size: 1rem;
     padding: 0;
     padding-bottom: 0.5rem;
+    font-size: 1rem;
     &:hover {
-        border-bottom: 2px $color__pink solid;
-        font-weight: 600;
+      border-bottom: 2px $color__pink solid;
+      font-weight: 600;
     }
     &:focus {
-        outline: none;
+      outline: none;
     }
+  }
 }
 .category-all-btn {
-    @extend .category-btn;
+  @extend .category-btn;
 }
 .category-all-btn-yearround {
-    @extend .category-btn;
+  @extend .category-btn;
 }
 .category-active {
-    border-bottom: 2px $color__pink solid;
-    font-weight: 600;
+  border-bottom: 2px $color__pink solid;
+  font-weight: 600;
 }
 .wrapper__isf {
-    @include desktop {
+  @include desktop {
     display: flex;
     margin: 3rem 6rem;
     h3 {
-        white-space: nowrap;
-        height: 2rem;
-        margin-right: 2rem;
-        padding-right: 2rem;
+      white-space: nowrap;
+      height: 2rem;
+      margin-right: 2rem;
+      padding-right: 2rem;
     }
-}
+  }
 }
 .isf-plus-description {
-    padding-left: 6rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    margin-top: 3rem;
-    display: none;
-    background-color: $bg__champagne;
+  padding-left: 6rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: 3rem;
+  display: none;
+  background-color: $bg__champagne;
 }
 .wrapper-isf-plus-event {
-    background-color: $bg__champagne;
-    margin: 0 !important;
-    padding: 0 6rem;
-    padding-bottom: 3rem;
+  background-color: $bg__champagne;
+  margin: 0 !important;
+  padding: 0 6rem;
+  padding-bottom: 3rem;
 }

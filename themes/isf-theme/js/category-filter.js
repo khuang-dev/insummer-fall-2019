@@ -46,7 +46,7 @@
                     </div>
                     <div class="wrapper__btn-info">
                             <button class="events-btn">
-                            <a href="${value.acf.event_button[0].event_btnurl}">${value.acf.event_button[0].event_btnlabel}</a>
+                            <a href="${value.acf.ticket_button[0].url}">${value.acf.ticket_button[0].label}</a>
                             </button>
                         </div>
                     </article>
