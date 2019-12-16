@@ -694,6 +694,14 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center; }
 
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='textarea'] {
+  outline: none;
+  background-color: unset !important; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -2874,7 +2882,8 @@ p.member-text {
   font-weight: bold; }
 
 .volunteer-form textarea {
-  height: 16.875rem; }
+  height: 16.875rem;
+  outline: none; }
 
 .phone-volunteer input,
 .email-form-volunteer input {

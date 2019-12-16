@@ -161,7 +161,8 @@ function ag_custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	function ag_custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 		add_filter( 'wp_footer', 'ag_overlay');
 		$thisform = $form['id'];
-		return '[gravityform id=' . $thisform . ' title=false description=false]' . $confirmation . '<a class="button" href="#" rel="nofollow"><i class="far fa-times-circle"></i></a>';
+		return '[gravityform id=' . $thisform . ' title=false description=false]' . $confirmation . 
+		'<a class="button" href="#" rel="nofollow"><i class="far fa-times-circle"></i></a>';
 
 	}
 
@@ -181,6 +182,8 @@ function ag_overlay() {
 			});
 		</script>
 	';
+
+
 }
 
 

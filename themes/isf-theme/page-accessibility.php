@@ -57,10 +57,7 @@ get_header(); ?>
 			</article><!-- #post-## -->
 
 
-				<!-- <php get_template_part( 'template-parts/content', 'page' ); ?> -->
-
 			<?php endwhile; // End of the loop. ?>
-
 
 						<!-- THIS IS THE LOOP FOR VIDEO NR.1 -->
 									<?php
@@ -87,8 +84,7 @@ get_header(); ?>
 					</div>
 							</div>
 
-											<?php endwhile;
-											?>
+											<?php endwhile;?>
 
 					</div>
 
@@ -132,7 +128,6 @@ get_header(); ?>
 
 						<?php
 					$img=get_sub_field('accessibility_image');
-					// var_dump($img);
 
 					$title=get_sub_field('information_title' );
 					$details=get_sub_field('information_details');
@@ -153,14 +148,11 @@ get_header(); ?>
 							
 										<?php endwhile;
 										?>
-
 									</div>
-
 										<?php
 								else :
 									// no rows found
 								endif;
-
 								?>
 
 								<!-- END OF THE LOOP ICONS NR.1 -->
@@ -197,7 +189,7 @@ if( have_rows('about_accessibility_2') ):   ?>
 
 	<?php
 	$img=get_sub_field('accessibility_image');
-	// var_dump($img);
+
 
 	$title=get_sub_field('information_title' );
 	$details=get_sub_field('information_details');
@@ -205,48 +197,28 @@ if( have_rows('about_accessibility_2') ):   ?>
 					<button class="accordion">
 
 									<span>
-							<!-- <div class ="acces-img-title"> -->
-
-											<!-- <div class ="access-img-accordion"> -->
 												<img src="<?=$img?>" width="20px">
 										<!-- </div> -->
 										
 												<?=$title?>
-
-												
 									</span>
 
 									<i class="fas fa-angle-down"></i>
 							<!-- </div> -->
 							
 							
-					</button>
+									</button>
+							<div class="panel">
+								<p><?=$details?></p>
+								</div>
+							<?php endwhile;
+							?>
 
-
-						<div class="panel">
-						<p><?=$details?></p>
 						</div>
 
-						
-
-					<?php endwhile;
-					?>
-
-				</div>
-
-					<?php
-			else :
-				// no rows found
-			endif;
-
-			?>
+								<?php else :
+								endif;?>
 									<!-- END OF THE LOOP ICONS NR.2 -->
-
-
-
-
-									
-
 
 										</main><!-- #main -->
 									</div><!-- #primary -->

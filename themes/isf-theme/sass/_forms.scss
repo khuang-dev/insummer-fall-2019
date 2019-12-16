@@ -237,3 +237,12 @@ textarea {
   display: flex;
   justify-content: center;
 }
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='textarea'] {
+  outline: none;
+  background-color: unset !important;
+}
