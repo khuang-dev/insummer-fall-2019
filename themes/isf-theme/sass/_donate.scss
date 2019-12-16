@@ -56,17 +56,25 @@
   font-size: 2rem;
   text-transform: uppercase;
 }
-
 .page-donate .donation-box {
   justify-content: center;
   height: 12rem;
-  border: 4px solid #000;
-  border-radius: 21px;
+  border: 4px solid $color__black;
+  border-radius: 20px;
   display: flex;
-  width: 50rem;
-  margin: 3rem 0rem 1rem 7rem;
 }
 
+@include desktop {
+  .page-donate .donation-box {
+    justify-content: center;
+    height: 12rem;
+    border: 4px solid #000;
+    border-radius: 21px;
+    display: flex;
+    width: 50rem;
+    margin: 3rem 0rem 1rem 7rem;
+  }
+}
 .donation-box .ginput_container {
   width: 23rem;
 }
@@ -200,6 +208,9 @@
   }
 }
 
+.donate-form_wrapper .gform_body {
+  display: unset;
+}
 .donation-message .gfield_label {
   display: unset;
   font-size: 21px;
