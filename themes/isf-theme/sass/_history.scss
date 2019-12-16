@@ -1,11 +1,23 @@
 .history-description {
+    margin: 0 1.25rem;
+    margin-bottom: 2rem;
+    h3 {
+        border: none;
+        text-align: center;
+        color: $color__pink;
+    }
+    @include desktop {
     display: flex;
     margin: 5rem 10rem;
+    margin-bottom: 5rem;
     h3 {
         white-space: nowrap;
         height: 2rem;
         margin-right: 1rem;
+        color: $color__black;
+border-right: 5px solid #ed1651;
     }
+}
 }
 .history-media {
     width: 100%;

@@ -54,30 +54,68 @@ get_header(); ?>
                                 </div>
 				</section>
 
-				<section class="festival-gallery">
+				<section class="festival-gallery desktop-gallery">
                 <?php 
                     $images = get_field('after_festival_gallery');
-
-                    // var_dump($images );
-                    // die();
                     if( $images ): ?>
                             <?php 
                                 $num_slides = count($images) /8  ;
                             ?>
-
                     <div class="main-carousel">
                        
                         <?php 
                             $image_offset = 0;
-                               
-                            for($slide_index = 0; $slide_index < $num_slides; $slide_index++){
-                                  
+                            for($slide_index = 0; $slide_index < $num_slides; $slide_index++){       
                         ?>
 
                         <div class="carousel-cell gallery-grid" style="width: 100%;">
                         
                         <?php 
                             for($i = 0; $i <= 7; $i++){?>
+                                <?php 
+                                if(isset($images[$image_offset])){ 
+                                    ?>
+                                    <div class="gallery-image-size">
+                                    <img src="<?php echo esc_url($images[$image_offset]['url']); ?>" alt="<?php  echo esc_attr($images[$image_offset]['alt']); ?>" />
+                                    </div>
+                                <?php
+                                } else {
+                                    break;
+                                } 
+                                ?>
+                        <?php 
+                        $image_offset++;
+                            }?>
+                   
+                    </div><!-- carousel-cell -->
+                    
+                   <?php 
+                //    endforeach;
+                    }
+                   ?>
+                    </div>
+                    <?php endif; ?>
+                    <p class="after-festival-comment"><?php the_field('after_festival_comment');?></p>
+                </section>
+
+                <section class="festival-gallery mobile-gallery">
+                <?php 
+                    $images = get_field('after_festival_gallery');
+                    if( $images ): ?>
+                            <?php 
+                                $num_slides = count($images) /2  ;
+                            ?>
+                    <div class="main-carousel">
+                       
+                        <?php 
+                            $image_offset = 0;
+                            for($slide_index = 0; $slide_index < $num_slides; $slide_index++){       
+                        ?>
+
+                        <div class="carousel-cell gallery-grid" style="width: 100%;">
+                        
+                        <?php 
+                            for($i = 0; $i <= 1; $i++){?>
                                 <?php 
                                 if(isset($images[$image_offset])){ 
                                     ?>

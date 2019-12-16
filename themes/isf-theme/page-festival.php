@@ -75,6 +75,7 @@ get_header(); ?>
 							</div>
 						<!-- <php get_category('');?> -->
 							<section class="wrapper__upcoming-events grid-column-3 remove-margin-bottom" id="content-output-isf">
+
 							<?php 
 				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => '-1');
    				$event_posts = get_posts( $args ); // returns an array of posts
@@ -122,7 +123,11 @@ get_header(); ?>
 						
                     <?php endforeach; wp_reset_postdata(); ?>
 							</section>
-
+							<article class="no-post">
+							<div class="no-post-bg" style="background-image: url(<?php the_field('no_post_image');?>)">	
+							</div>
+							<p class="no-post-message"><?php the_field('no_post_message');?></p>
+							</article>
 							<p class="isf-plus-description"><?php the_field('isfplus_description');?></p>
 							<section class="wrapper__upcoming-events grid-column-3 wrapper-isf-plus-event" id="content-output-isfplus">
 							</section>

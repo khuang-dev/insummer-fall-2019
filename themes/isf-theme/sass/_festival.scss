@@ -29,14 +29,15 @@
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 1.25rem;
   text-align: center;
-  grid-gap: 20px;
+  grid-gap: 10px !important;
+  margin-bottom: 2rem;
   @include desktop {
     margin: 0 6rem;
-    margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
   }
   a {
     text-decoration: none;
@@ -56,6 +57,12 @@
   width: 6rem;
   height: 2.5rem;
   padding: 0;
+  outline: none;
+  &:hover {
+    border-color: $color__pink;
+    background-color: $color__pink;
+    color: $color__white;
+  }
   @include desktop {
     background-color: transparent;
     border-radius: 0;
@@ -69,6 +76,8 @@
     &:hover {
       border-bottom: 2px $color__pink solid;
       font-weight: 600;
+      background-color: transparent;
+      color: $color__black;
     }
     &:focus {
       outline: none;
@@ -86,6 +95,7 @@
   font-weight: 600;
 }
 .wrapper__isf {
+    margin: 3rem 1.25rem;
   @include desktop {
     display: flex;
     margin: 3rem 6rem;
@@ -98,16 +108,47 @@
   }
 }
 .isf-plus-description {
-  padding-left: 6rem;
+  padding-left: 1.25rem;
+  background-color: $bg__champagne;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   margin-top: 3rem;
   display: none;
-  background-color: $bg__champagne;
+  @include desktop {
+    padding-left: 6rem;
+  }
 }
 .wrapper-isf-plus-event {
   background-color: $bg__champagne;
+  padding: 0 1.25rem;
   margin: 0 !important;
-  padding: 0 6rem;
   padding-bottom: 3rem;
+  @include desktop {
+    padding: 0 6rem;
+  }
+}
+
+.no-post {
+  display: none;
+  position: relative;
+}
+.no-post-bg {
+  width: 100%;
+  height: 25rem;
+  background-size: 20rem;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  background-position: center;
+}
+.no-post-message {
+  font-size: 1.2rem;
+  color: $color__pink;
+  font-weight: 600;
+  opacity: 1;
+  z-index: 20;
+  position: absolute;
+  top: 47%;
+  word-spacing: 1.5rem;
+  text-align: center;
+  width: 100%;
 }
