@@ -42,17 +42,27 @@
   }
 }
 .wrapper__info-event {
-  width: 12rem;
-  height: 8rem;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @include desktop {
   height: 7rem;
+  width: auto;
   }
 }
+.wrapper__btn-info {
+    margin-top: 1rem;
+    @include desktop {
+    margin-top: 1.5rem;
+    }
+}
 .wrapper__image-event {
-  width: 11rem;
+  width: 10rem;
   position: relative;
   img {
-    height: 11rem;
+    height: 10rem;
     object-fit: cover;
   }
   @include desktop {
@@ -172,10 +182,14 @@
 }
 .wrapper__featured-text {
   width: 100%;
+  height: 13.5rem;
   position: absolute;
   bottom: 0;
   padding-top: 1.5rem;
   padding-bottom: 2rem;
+  @include desktop {
+      height: auto;
+  }
 }
 .wrapper__fp-sponsor {
   display: flex;
