@@ -1660,9 +1660,15 @@ iframe {
       -ms-flex-direction: row;
           flex-direction: row; }
   .donate-title h3 {
-    color: #191414;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    border-bottom: unset;
     border-right: 8px solid #ed1651;
-    padding-left: 5px; }
+    color: #191414;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px; }
 
 .page-donate .gform-donate-title {
   font-weight: 600;

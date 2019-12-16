@@ -23,9 +23,15 @@
   flex-direction: row;
 
   h3 {
-    color: $color__black;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    border-bottom: unset;
     border-right: 8px solid $color__pink;
-    padding-left: 5px;
+    color: $color__black;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
   }
 }
 
