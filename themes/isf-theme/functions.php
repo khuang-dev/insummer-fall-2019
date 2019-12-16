@@ -144,9 +144,8 @@ function setupOptions() {
 
 
 //* Gravity Forms notification popup instead of the page redirect or AJAX notification
-//* @link https://anythinggraphic.net/gravity-forms-notification-popup
-/* Override the default Gravity Forms confirmation behavior, displaying it in a popup. Remember to style the divs.
-----------------------------------------------------------------------------------------*/
+
+
 add_filter( 'gform_confirmation', 'ag_custom_confirmation', 10, 4 );
 function ag_custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	add_filter( 'wp_footer', 'ag_overlay');
@@ -157,18 +156,14 @@ function ag_custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	
 	//* OPTIONAL STEP - Keep the form disappearing. 
 	//* Gravity Forms notification popup instead of the page redirect or AJAX notification. 
-	//* Props to @WilliamAlexander in the comments
-	//* @link https://anythinggraphic.net/gravity-forms-notification-popup
+	
 	add_filter( 'gform_confirmation', 'ag_custom_confirmation', 10, 4 );
 	function ag_custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 		add_filter( 'wp_footer', 'ag_overlay');
 		$thisform = $form['id'];
-		return '[gravityform id=' . $thisform . ' title=false description=false]' . $confirmation . '<a href="#" rel="nofollow"><i class="far fa-times-circle"></i></a>';
-
+		return '[gravityform id=' . $thisform . ' title=false description=false]' . $confirmation . '<a class="button" href="#" rel="nofollow"><i class="far fa-times-circle"></i></a>';
 
 	}
-
-
 
 	//  get_page_uri( );
 }
@@ -187,8 +182,6 @@ function ag_overlay() {
 		</script>
 	';
 }
-
-
 
 
 /**

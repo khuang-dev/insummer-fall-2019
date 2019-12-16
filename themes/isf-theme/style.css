@@ -634,6 +634,10 @@ textarea {
             justify-content: flex-end;
     cursor: pointer;
     font-size: 4rem;
+    max-width: 1100px;
+    justify-content: flex-end;
+    cursor: pointer;
+    font-size: 4rem;
     max-width: 1100px; }
 
 .message-sent .form_newsletter__signup,
@@ -2719,7 +2723,9 @@ a:link {
       width: 263px;
       border-radius: 12px;
       background-color: #ed1651;
-      cursor: pointer; } }
+      cursor: pointer; }
+      .apply-btn:hover {
+        background-color: #f58220; } }
 
 .btn__round-orange, .btn__round-pink {
   border: #f58220 3px solid;
@@ -2927,6 +2933,8 @@ p.member-text {
   font-size: 24px;
   border: #ed1651;
   font-weight: 600; }
+  .volunteer-form .gform_button:hover {
+    background-color: #f58220; }
 
 .checkbox-volunteer-form {
   max-width: 577px; }

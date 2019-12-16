@@ -136,6 +136,9 @@
   font-size: 24px;
   border: $btn__pink;
   font-weight: 600;
+  &:hover {
+    background-color: $color__orange;
+  }
 }
 
 .checkbox-volunteer-form {
