@@ -86,7 +86,7 @@
 .event_btn-single {
     display: flex;
     text-align: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-bottom: 2rem;
 }
 .single_event-btn {
@@ -113,7 +113,12 @@
 
 //Artist
 .artist-container {
-    height: 40rem;
+    height: 100%;
+    background-color: $bg__champagne;
+    @include desktop {
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }
 .artist_event-name {
     font-size: 20px;

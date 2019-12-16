@@ -206,7 +206,7 @@ get_header(); ?>
 							</a>
 						</div>
 					</div>
-				<div>
+				<div class="about_artist-event">
 					<p class="h3__left-border-pink artist_event-name hide-mobile"><?php the_field('artist_name');?></p>
 
 					<div class="artist-info">

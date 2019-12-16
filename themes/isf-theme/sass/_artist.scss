@@ -19,14 +19,6 @@
     }
 }
 
-.artist-container {
-    background-color: $bg__champagne;
-    @include desktop {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-}
-
 .artist-img {
     @include desktop {
         padding: 3rem;

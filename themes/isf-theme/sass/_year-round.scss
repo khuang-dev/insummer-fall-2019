@@ -1,7 +1,4 @@
 .page-year-round {
-    h2 {
-        color: $color__black;  
-    }
     p {
         font-size: 18px;
     }
@@ -29,18 +26,30 @@
 }
 .year_round-head {
     text-align: center;
-    color: $color__pink;
-    margin-left: 7rem;
-    margin-right: 7rem;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 30px;
+    padding-bottom: 2rem;
+    @include desktop {
+        margin-left: 7rem;
+        margin-right: 0;
+        width: 16rem;
+        text-align: left;
+    }
+}
+
+.year-events-h1 {
+    color: $color__pink;
+    font-size: 25px;
     @include desktop {
         color: $color__black;
-        margin-right: 0;
         font-size: 40px;
-        width: 16rem;
-
+    }
+}
+.year-events-h2 {
+    color: $color__pink;
+    font-size: 25px;
+    @include desktop {
+        font-size: 40px;
     }
 }
 

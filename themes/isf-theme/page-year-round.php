@@ -48,12 +48,11 @@ get_header(); ?>
 				<div class="entry-content">
 
 					<section class="year-events">
-						<?php if(get_field('year_events')): ?>
-							<?php while(has_sub_field('year_events')): ?>
-								<h1 class="year_round-head"><?php the_sub_field('event_year'); ?></h1>
-								<p class="year-content"><?php the_sub_field('year_event_about'); ?></p>
-							<?php endwhile; ?>
-						<?php endif; ?>
+						<div class="year_round-head">
+							<h2 class="year-events-h1">Year Round Events</h2>
+							<h2 class="year-events-h2">ISF+</h2>
+						</div>
+						<p class="year-content"><?php the_field('page_about');?></p>
 					</section>	
 
 					<section class="festival-events">
