@@ -1655,11 +1655,11 @@ iframe {
   padding-top: 2rem; }
   .donate-title h3 {
     color: #ed1651;
-    text-transform: none; }
+    text-transform: none;
+    font-weight: unset; }
 
 @media (min-width: 480px) {
   .donate-title {
-    padding: 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1678,6 +1678,12 @@ iframe {
       font-weight: 700;
       line-height: 49px;
       padding: 1rem; }
+    .donate-title .donate-text {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: start;
+      margin-left: 2rem; }
   .donate-text {
     padding-left: 3rem; } }
 
@@ -2811,7 +2817,8 @@ a:link {
 
 .page-membership .entry-content h2 {
   color: #ed1651;
-  text-align: center; }
+  text-align: center;
+  font-size: 2em; }
 
 p.member-text {
   padding-left: 10%;
@@ -2862,7 +2869,8 @@ p.member-text {
       text-align: left;
       font-size: 29px;
       color: #191414;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-weight: 600; }
   p.member-text {
     margin-bottom: 50px; }
   .curator {
@@ -3445,7 +3453,9 @@ p.member-text {
       border-left: 8px solid #ed1651;
       padding-left: 1.5rem;
       text-align: left;
-      color: #191414; }
+      color: #191414;
+      text-transform: uppercase;
+      font-weight: 600; }
   .patron-package {
     -webkit-box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651;
             box-shadow: 0 2px 2px 0 #cecece, -12px 12px 0 0 #ed1651;

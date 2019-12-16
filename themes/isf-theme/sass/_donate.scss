@@ -23,12 +23,12 @@
   h3 {
     color: $color__pink;
     text-transform: none;
+    font-weight: unset;
   }
 }
 
 @include desktop {
   .donate-title {
-    padding: 3rem;
     display: flex;
     flex-direction: row;
 
@@ -43,6 +43,12 @@
       font-weight: 700;
       line-height: 49px;
       padding: 1rem;
+    }
+
+    .donate-text {
+      display: flex;
+      text-align: start;
+      margin-left: 2rem;
     }
   }
 
