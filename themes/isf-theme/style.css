@@ -1668,7 +1668,10 @@ iframe {
     font-family: Montserrat;
     font-size: 40px;
     font-weight: 700;
-    line-height: 49px; }
+    line-height: 49px;
+    padding: 1rem; }
+  .donate-title .donate-text {
+    padding-left: 3rem; }
 
 .page-donate .gform-donate-title {
   font-weight: 600;
