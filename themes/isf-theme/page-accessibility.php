@@ -63,7 +63,11 @@ get_header(); ?>
 									<?php
 
 						// check if the repeater field has rows of data
+<<<<<<< HEAD
 						if( have_rows('accessibility' ) ):   ?>
+=======
+						if( have_rows('accessibility') ):   ?>
+>>>>>>> 7a34ce9eeadf863c92b61fe954e80a4b63a96e95
 
 							<div class="accessibility-video-loop">						
 
@@ -76,7 +80,11 @@ get_header(); ?>
 
 					<div class="accessibility-about">
 
+<<<<<<< HEAD
 						<div class="accessibility-about-title"> <h3><?php  the_sub_field('title_accessibility' );?> </h3></div>
+=======
+						<div class="accessibility-about-title"> <h3><?php  the_sub_field('title_accessibility');?> </h3></div>
+>>>>>>> 7a34ce9eeadf863c92b61fe954e80a4b63a96e95
 							<div class="title-vs-img">
 						<img class="accessibility-about-img" src="<?php the_sub_field('image_accessibility'); ?>"/>
 						
@@ -101,7 +109,11 @@ get_header(); ?>
 			<?php
 
 					// check if the repeater field has rows of data
+<<<<<<< HEAD
 					if( have_rows('about_accessibility' ) ):   ?>
+=======
+					if( have_rows('about_accessibility') ):   ?>
+>>>>>>> 7a34ce9eeadf863c92b61fe954e80a4b63a96e95
 
 						<div class="accessibility-info-loop">						
 
@@ -164,7 +176,11 @@ get_header(); ?>
 									<?php
 
 // check if the repeater field has rows of data
+<<<<<<< HEAD
 if( have_rows('about_accessibility_2') ):   ?>
+=======
+if( have_rows('about_accessibility_2' ) ):   ?>
+>>>>>>> 7a34ce9eeadf863c92b61fe954e80a4b63a96e95
 
 	<div class="accessibility-info-loop">						
 

@@ -310,6 +310,7 @@
 }
 .btn__donate {
   display: none !important;
+  padding-top: 0.4rem !important;
 
   @include desktop {
     display: none !important;

@@ -6,6 +6,7 @@
  */
 
 get_header(); ?>
+
 		<?php if ( have_rows('banner_content') ) : ?>
 			<?php /* Start the Loop */ ?>
 			<div class="fp-main-carousel">    
@@ -45,7 +46,7 @@ get_header(); ?>
 
 <?php
 			
-						if( have_rows('volunteer', ) ):   ?>
+						if( have_rows('volunteer' ) ):   ?>
 
 							<div class="volunteer-first-loop">						
 
