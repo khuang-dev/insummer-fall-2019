@@ -34,7 +34,6 @@ input[type='search'],
 textarea {
   color: $color__black;
   border: 1px solid $color__black;
-  // border-radius: 3px;
 
   &:focus {
     color: #111;
@@ -110,6 +109,7 @@ textarea {
     border-bottom: 1px solid $color__grey;
     transform: translateY(-0.3rem);
     padding-bottom: 0;
+    outline: none;
   }
   .icon-search {
     display: none;
@@ -236,4 +236,33 @@ textarea {
 .button-notification {
   display: flex;
   justify-content: center;
+}
+
+.pop-up-text {
+  display: flex;
+  text-align: center;
+  text-transform: capitalize;
+
+  h3 {
+    text-transform: capitalize;
+    line-height: 2;
+  }
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='textarea'] {
+  outline: none;
+  background-color: white !important;
+}
+
+input:-internal-autofill-selected {
+  background-color: white !important;
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: white !important;
+  }
 }

@@ -57,16 +57,17 @@ get_header(); ?>
 			</article><!-- #post-## -->
 
 
-				<!-- <php get_template_part( 'template-parts/content', 'page' ); ?> -->
-
 			<?php endwhile; // End of the loop. ?>
-
 
 						<!-- THIS IS THE LOOP FOR VIDEO NR.1 -->
 									<?php
 
 						// check if the repeater field has rows of data
+<<<<<<< HEAD
+						if( have_rows('accessibility' ) ):   ?>
+=======
 						if( have_rows('accessibility') ):   ?>
+>>>>>>> 7a34ce9eeadf863c92b61fe954e80a4b63a96e95
 
 							<div class="accessibility-video-loop">						
 
@@ -79,7 +80,11 @@ get_header(); ?>
 
 					<div class="accessibility-about">
 
+<<<<<<< HEAD
+						<div class="accessibility-about-title"> <h3><?php  the_sub_field('title_accessibility' );?> </h3></div>
+=======
 						<div class="accessibility-about-title"> <h3><?php  the_sub_field('title_accessibility');?> </h3></div>
+>>>>>>> 7a34ce9eeadf863c92b61fe954e80a4b63a96e95
 							<div class="title-vs-img">
 						<img class="accessibility-about-img" src="<?php the_sub_field('image_accessibility'); ?>"/>
 						
@@ -87,8 +92,7 @@ get_header(); ?>
 					</div>
 							</div>
 
-											<?php endwhile;
-											?>
+											<?php endwhile;?>
 
 					</div>
 
@@ -105,7 +109,11 @@ get_header(); ?>
 			<?php
 
 					// check if the repeater field has rows of data
+<<<<<<< HEAD
+					if( have_rows('about_accessibility' ) ):   ?>
+=======
 					if( have_rows('about_accessibility') ):   ?>
+>>>>>>> 7a34ce9eeadf863c92b61fe954e80a4b63a96e95
 
 						<div class="accessibility-info-loop">						
 
@@ -132,7 +140,6 @@ get_header(); ?>
 
 						<?php
 					$img=get_sub_field('accessibility_image');
-					// var_dump($img);
 
 					$title=get_sub_field('information_title' );
 					$details=get_sub_field('information_details');
@@ -153,14 +160,11 @@ get_header(); ?>
 							
 										<?php endwhile;
 										?>
-
 									</div>
-
 										<?php
 								else :
 									// no rows found
 								endif;
-
 								?>
 
 								<!-- END OF THE LOOP ICONS NR.1 -->
@@ -172,7 +176,11 @@ get_header(); ?>
 									<?php
 
 // check if the repeater field has rows of data
+<<<<<<< HEAD
+if( have_rows('about_accessibility_2') ):   ?>
+=======
 if( have_rows('about_accessibility_2' ) ):   ?>
+>>>>>>> 7a34ce9eeadf863c92b61fe954e80a4b63a96e95
 
 	<div class="accessibility-info-loop">						
 
@@ -197,7 +205,7 @@ if( have_rows('about_accessibility_2' ) ):   ?>
 
 	<?php
 	$img=get_sub_field('accessibility_image');
-	// var_dump($img);
+
 
 	$title=get_sub_field('information_title' );
 	$details=get_sub_field('information_details');
@@ -205,48 +213,28 @@ if( have_rows('about_accessibility_2' ) ):   ?>
 					<button class="accordion">
 
 									<span>
-							<!-- <div class ="acces-img-title"> -->
-
-											<!-- <div class ="access-img-accordion"> -->
 												<img src="<?=$img?>" width="20px">
 										<!-- </div> -->
 										
 												<?=$title?>
-
-												
 									</span>
 
 									<i class="fas fa-angle-down"></i>
 							<!-- </div> -->
 							
 							
-					</button>
+									</button>
+							<div class="panel">
+								<p><?=$details?></p>
+								</div>
+							<?php endwhile;
+							?>
 
-
-						<div class="panel">
-						<p><?=$details?></p>
 						</div>
 
-						
-
-					<?php endwhile;
-					?>
-
-				</div>
-
-					<?php
-			else :
-				// no rows found
-			endif;
-
-			?>
+								<?php else :
+								endif;?>
 									<!-- END OF THE LOOP ICONS NR.2 -->
-
-
-
-
-									
-
 
 										</main><!-- #main -->
 									</div><!-- #primary -->

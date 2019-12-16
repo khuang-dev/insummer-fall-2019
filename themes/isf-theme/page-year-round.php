@@ -94,14 +94,16 @@ get_header(); ?>
                         </div>
                         
                         <div class="wrapper__info-event">
-                            <p class="title__event"><?php the_title(); ?></p>
+							<p class="title__event"><?php the_title(); ?></p>
+							<div>
                             <p><?php the_field('event_date'); ?></p>
                             <?php if ( have_rows('event_time')):?>
                                 <?php while ( have_rows('event_time')) : the_row(); ?>
                                     <?php the_sub_field('start_time');?> - <?php the_sub_field('end_time');?>
                                 <?php endwhile; ?>
                                 <?php else : ?>
-                                <?php endif; ?>
+								<?php endif; ?>
+								</div>
 						</div>
 						
 						<div class="wrapper__btn-info">
@@ -120,11 +122,18 @@ get_header(); ?>
                         </article>
                     <?php endforeach; wp_reset_postdata(); ?>
 			<?php endwhile; // End of the loop. ?>
-			<section>
-						<h3 class="events-title h3__left-border-pink">Past Events</h3>
-						</section>
+
 
 			</section>
+			<article class="no-post">
+				<div class="no-post-bg" style="background-image: url(<?php the_field('no_post_image', 15);?>)">	
+					</div>
+				<p class="no-post-message"><?php the_field('no_post_message', 15);?></p>
+			</article>
+							
+							<section>
+						<h3 class="events-title h3__left-border-pink">Past Events</h3>
+						</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

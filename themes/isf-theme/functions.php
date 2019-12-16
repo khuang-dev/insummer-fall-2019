@@ -101,6 +101,8 @@ function red_starter_scripts() {
 	wp_enqueue_style( 'red-starter-flickity-css', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
 	wp_enqueue_style( 'red-starter-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
 	wp_enqueue_script( 'red-starter-flickity-script', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'red-starter-read-more', get_template_directory_uri() . '/build/js/read-more.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'red-starter-scroll-to-top', get_template_directory_uri() . '/build/js/scroll-to-top.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'red-starter-flickity-js', get_template_directory_uri() . '/build/js/flickity.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'red-starter-category-filter', get_template_directory_uri() . '/build/js/category-filter.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'red-starter-searchbar', get_template_directory_uri() . '/build/js/searchbar.min.js', array('jquery'), '', true );
@@ -143,6 +145,7 @@ function setupOptions() {
 }
 
 
+
 //* Gravity Forms notification popup instead of the page redirect or AJAX notification
 
 
@@ -151,19 +154,6 @@ function ag_custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	add_filter( 'wp_footer', 'ag_overlay');
 	return   '<div class="main-class-notifications">'.'<div id="gform-notification">'.'<a class="button" href="#"><i class="far fa-times-circle"></i></a>' . $confirmation.'<a class="button-notification" href="' . get_permalink( get_page_by_path( 'festival' ) ) . '"><i class="apply-btn">Events</i></a> </div>
 	</div>';
-
-
-	
-	//* OPTIONAL STEP - Keep the form disappearing. 
-	//* Gravity Forms notification popup instead of the page redirect or AJAX notification. 
-	
-	add_filter( 'gform_confirmation', 'ag_custom_confirmation', 10, 4 );
-	function ag_custom_confirmation( $confirmation, $form, $entry, $ajax ) {
-		add_filter( 'wp_footer', 'ag_overlay');
-		$thisform = $form['id'];
-		return '[gravityform id=' . $thisform . ' title=false description=false]' . $confirmation . '<a class="button" href="#" rel="nofollow"><i class="far fa-times-circle"></i></a>';
-
-	}
 
 	//  get_page_uri( );
 }
@@ -179,8 +169,11 @@ function ag_overlay() {
 					$(this).remove();
 				});
 			});
+
+			jQuery(".entry-title").after("<div class=pop-up-text><h3>Thank you for contacting us! Please visit our Web-page Indian Summer Festival for more information about our Company and Upcoming Events.</h3></div>");
 		</script>
 	';
+
 }
 
 
