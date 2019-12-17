@@ -85,7 +85,7 @@ get_header(); ?>
                    <article class="wrapper__single-event">
 
                        <div class="wrapper__image-event">
-                            <img src="<?php the_field('event_image'); ?>">
+					   <a href="<?php echo get_the_permalink(); ?>"><img src="<?php the_field('event_image'); ?>"></a>
                             <div class="thumbnail__date">
                                 <?php $date = new DateTime(get_field('event_date')); ?>
                                 <p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
@@ -94,7 +94,7 @@ get_header(); ?>
                         </div>
                         
                         <div class="wrapper__info-event">
-							<p class="title__event"><?php the_title(); ?></p>
+						<a href="<?php echo get_the_permalink(); ?>"><p class="title__event"><?php the_title(); ?></a>
 							<div>
                             <p><?php the_field('event_date'); ?></p>
                             <?php if ( have_rows('event_time')):?>
@@ -118,17 +118,12 @@ get_header(); ?>
 										endif;
 									?>
 						</div>
-						<!-- <article class="no-post"> 
-				<div class="no-post-bg" style="background-image: url(<?php //the_field('no_post_image', 15);?>)">	
-					</div>
-				<p class="no-post-message"><?php //the_field('no_post_message', 15);?></p>
-			</article>  -->
-
 
                         </article>
                     <?php endforeach; wp_reset_postdata(); ?>
 			<?php endwhile; // End of the loop. ?>
-			
+		</section>
+
 			<article class="no-post"> 
 				<div class="no-post-bg" style="background-image: url(<?php the_field('no_post_image', 15);?>)">	
 					</div>
@@ -136,8 +131,9 @@ get_header(); ?>
 			</article> 
 
 		<section class="past-event-container">
-			<div class="events-title">
-				<h3 class= "h3__left-border-pink event-title">Past Events</h3>
+			<div class="past-event-box">
+			<div class="event-title">
+				<h3 class= "h3__left-border-pink past-event-title">Past Events</h3>
 			</div>
 
 				<div class="grid-column-3 wrapper__upcoming-events">
@@ -176,6 +172,7 @@ get_header(); ?>
 							</article>
                     <?php endforeach; wp_reset_postdata(); ?>
 				</div>
+			</div>
 		</section>
 
 

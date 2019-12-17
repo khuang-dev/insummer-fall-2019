@@ -4,6 +4,9 @@
     }
 }
 
+.past-event-box {
+    padding-top: 2rem;
+}
 .events-title {
     width: auto;
     color: $color__black;
@@ -16,6 +19,19 @@
         margin-left: 7rem;
     }
 }
+
+.event-title {
+    width: auto;
+    color: $color__black;
+    margin-bottom: 1.5rem;
+    margin-left: 1.25rem;
+    font-size: 1.2rem;
+    @include desktop {
+        font-size: 40px;
+        margin-left: 7rem;
+    }
+}
+
 
 .year-events {
     @include desktop {
@@ -64,5 +80,7 @@
    }
 }
 
-
+.past-event-container {
+    background: $bg__champagne;
+}
     

@@ -3355,6 +3355,9 @@ p.member-text {
 .page-year-round p {
   font-size: 18px; }
 
+.past-event-box {
+  padding-top: 2rem; }
+
 .events-title {
   width: auto;
   color: #191414;
@@ -3364,6 +3367,17 @@ p.member-text {
   font-size: 1.2rem; }
   @media (min-width: 480px) {
     .events-title {
+      font-size: 40px;
+      margin-left: 7rem; } }
+
+.event-title {
+  width: auto;
+  color: #191414;
+  margin-bottom: 1.5rem;
+  margin-left: 1.25rem;
+  font-size: 1.2rem; }
+  @media (min-width: 480px) {
+    .event-title {
       font-size: 40px;
       margin-left: 7rem; } }
 
@@ -3415,6 +3429,9 @@ p.member-text {
           -ms-flex-align: center;
               align-items: center;
       font-size: 18px; } }
+
+.past-event-container {
+  background: #fff2f2; }
 
 .patron-title {
   color: #191414; }
