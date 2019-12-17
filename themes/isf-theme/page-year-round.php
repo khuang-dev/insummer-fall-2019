@@ -123,6 +123,12 @@ get_header(); ?>
                     <?php endforeach; wp_reset_postdata(); ?>
 			<?php endwhile; // End of the loop. ?>
 			
+			<article class="no-post">
+				<div class="no-post-bg" style="background-image: url(<?php the_field('no_post_image', 15);?>)">	
+					</div>
+				<p class="no-post-message"><?php the_field('no_post_message', 15);?></p>
+			</article>
+							
 			<section>
 						<h3 class="events-title h3__left-border-pink">Past Events</h3>
 
@@ -174,17 +180,6 @@ get_header(); ?>
 
 
 
-						</section>
-
-			</section>
-			<article class="no-post">
-				<div class="no-post-bg" style="background-image: url(<?php the_field('no_post_image', 15);?>)">	
-					</div>
-				<p class="no-post-message"><?php the_field('no_post_message', 15);?></p>
-			</article>
-							
-							<section>
-						<h3 class="events-title h3__left-border-pink">Past Events</h3>
 						</section>
 
 		</main><!-- #main -->
