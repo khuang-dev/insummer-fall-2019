@@ -3365,8 +3365,7 @@ p.member-text {
   @media (min-width: 480px) {
     .events-title {
       font-size: 40px;
-      margin-left: 7rem;
-      border-left: 8px #ed1651 solid; } }
+      margin-left: 7rem; } }
 
 @media (min-width: 480px) {
   .year-events {

@@ -112,6 +112,8 @@ function red_starter_scripts() {
 	wp_enqueue_script( 'red-starter-accordion-mobile-js', get_template_directory_uri() . '/build/js/accordion-mobile.min.js', array(), '', true );
 	wp_enqueue_script( 'red-starter-accordion-volunteer-mobile-js', get_template_directory_uri() . '/build/js/accordion-volunteer-mobile.min.js', array(), '', true );
 	wp_enqueue_script( 'red-starter-accordion-patron-mobile-js', get_template_directory_uri() . '/build/js/accordion-patron-mobile.min.js', array(), '', true );
+	wp_enqueue_script( 'red-starter-event-filter-js', get_template_directory_uri() . '/build/js/event-filter.min.js', array('jquery'), '', true );
+
 
 
 

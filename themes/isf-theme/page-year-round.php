@@ -118,69 +118,66 @@ get_header(); ?>
 										endif;
 									?>
 						</div>
+						<!-- <article class="no-post"> 
+				<div class="no-post-bg" style="background-image: url(<?php //the_field('no_post_image', 15);?>)">	
+					</div>
+				<p class="no-post-message"><?php //the_field('no_post_message', 15);?></p>
+			</article>  -->
+
 
                         </article>
                     <?php endforeach; wp_reset_postdata(); ?>
 			<?php endwhile; // End of the loop. ?>
 			
-			<article class="no-post">
+			<article class="no-post"> 
 				<div class="no-post-bg" style="background-image: url(<?php the_field('no_post_image', 15);?>)">	
 					</div>
 				<p class="no-post-message"><?php the_field('no_post_message', 15);?></p>
-			</article>
-							
-			<section>
-						<h3 class="events-title h3__left-border-pink">Past Events</h3>
+			</article> 
 
+		<section class="past-event-container">
+			<div class="events-title">
+				<h3 class= "h3__left-border-pink event-title">Past Events</h3>
+			</div>
 
+				<div class="grid-column-3 wrapper__upcoming-events">
+					<?php 
 					
-						<?php 
-				
+					$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 3,
+							'meta_query' => array( array(
+									'key' => 'event_date',
+									'type' => 'DATE',
+									'value' =>  date('Ymd'),
+									'compare' => '<'
+								)
+							)
+						);
 
+						$event_posts = get_posts( $args ); // returns an array of posts
 
-				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 3,
-					'meta_query' => array(
-						'meta_key' => 'event_date',
-						'type' => 'DATETIME',
-						'meta_value' =>  date('Ymd'),
-						'meta_compare' => '<'
-					)
-				);
+						?>
 
-				   $event_posts = get_posts( $args ); // returns an array of posts
-				   
-
-			    ?>
-
-			<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>
-                   <?php /* Content from your array of post results goes here */ ?>
-                   <article class="wrapper__single-event">
-				   <?php // var_dump(get_field('event_date')); ?>
-				
-                       <div class="wrapper__image-event">
-                            <img src="<?php the_field('event_image'); ?>">
-                            <div class="thumbnail__date">
-                                <?php $date = new DateTime(get_field('event_date')); ?>
-                                <p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
-                                <p class="thumbnail__date-day"><?php echo $date->format('d'); ?></p>
-                            </div>
-                        </div>
-                        
-                        <div class="wrapper__info-event">
-                            <p class="title__event"><?php the_title(); ?></p>
-                            <div>
-        
-                            </div>
-                        </div>
-
-                       
-
-                        </article>
+					<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>
+						<?php /* Content from your array of post results goes here */ ?>
+							<article class="wrapper__single-event">
+							<!-- <div class="grid-column-3"> -->
+									<div class="wrapper__image-event ">
+										<img src="<?php the_field('event_image'); ?>">
+										<div class="thumbnail__date">
+											<?php $date = new DateTime(get_field('event_date')); ?>
+											<p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
+											<p class="thumbnail__date-day"><?php echo $date->format('d'); ?></p>
+										</div>
+									</div>
+									<div class="wrapper__info-event">
+										<p class="title__event"><?php the_title(); ?></p>
+									</div>
+								<!-- </div> -->
+							</article>
                     <?php endforeach; wp_reset_postdata(); ?>
+				</div>
+		</section>
 
-
-
-						</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
