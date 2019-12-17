@@ -53,10 +53,10 @@
     justify-content: center;
     line-height: 3.5rem;
     text-align: center;
-    color: #000;
+    color: $color__black;
     font-size: 22px;
     @include desktop {
-      color: #000;
+      color: $color__black;
       font-size: 37px;
     }
   }
