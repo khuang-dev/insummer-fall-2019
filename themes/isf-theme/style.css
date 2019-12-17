@@ -2278,9 +2278,9 @@ iframe {
         text-transform: uppercase;
         text-align: left; } }
   .our-sponsors h2 {
-    color: #191414;
+    color: #999999;
     text-align: center;
-    font-weight: 700; }
+    font-weight: 500; }
   @media (min-width: 480px) {
     .our-sponsors img {
       max-width: none; } }
@@ -2337,7 +2337,7 @@ iframe {
   color: #ed1651;
   margin: auto;
   display: block;
-  font-weight: 700; }
+  font-weight: 600; }
   @media (min-width: 480px) {
     .become-sponsor {
       color: #ffffff;
@@ -2499,7 +2499,7 @@ iframe {
 .page-become-a-sponsor .entry-title {
   color: #ed1651;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   border-left: none; }
   @media (min-width: 480px) {
     .page-become-a-sponsor .entry-title {
@@ -2518,7 +2518,7 @@ iframe {
   background: #ed1651;
   border-radius: 12px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   margin: auto;
   display: block;
   width: -webkit-fit-content;
@@ -2551,7 +2551,7 @@ iframe {
     background: #ed1651;
     border-radius: 12px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     margin: auto;
     display: block;
     width: -webkit-fit-content;

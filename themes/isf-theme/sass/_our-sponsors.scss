@@ -17,9 +17,9 @@
         }
     }
     h2 {
-        color: $color__black;
+        color: $btn__grey;
         text-align: center;
-        font-weight: 700;
+        font-weight: 500;
     }
 
     img {
@@ -77,7 +77,7 @@
     color: $color__pink;
     margin: auto;
     display: block;  
-    font-weight: 700;
+    font-weight: 600;
     @include desktop {
         color: $color__white;
         border: 3px solid $btn__pink;
