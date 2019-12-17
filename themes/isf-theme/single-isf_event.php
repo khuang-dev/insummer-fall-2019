@@ -276,6 +276,23 @@ get_header(); ?>
                                 <?php endif; ?> 
 						</div>
 			</section>
+			<!-- <div class="isf_plus">
+
+				<section class="wrapper__upcoming-events grid-column-3 wrapper-isf-plus-event">
+					<p class="isf-plus-events"><?php //the_field ('isfplus_description');?></p>
+
+				</section>
+				<?php //$terms = get_terms (array (
+					//'taxonomy' => 'create_isf_taxonomy',
+					//'field' => 'slug',
+				//));
+				//echo '<pre>';
+				//var_dump ($terms);
+				//echo '</pre>'
+					?>
+
+			</div> -->
+
 
 
 			<?php
@@ -288,11 +305,6 @@ get_header(); ?>
 		
 <?php endwhile ?>
 
-
-<p class="isf-plus-description"><?php the_field('isfplus_description');?></p>
-<section class="wrapper__upcoming-events grid-column-3 wrapper-isf-plus-event" id="content-output-isfplus">
-
-</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
