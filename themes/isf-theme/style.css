@@ -4637,7 +4637,7 @@ input {
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
-.page-header {
+.error404 .page-header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4645,15 +4645,15 @@ input {
   display: -ms-flexbox;
   display: flex;
   padding: 4rem; }
-  .page-header h1 {
+  .error404 .page-header h1 {
     color: black;
     font-size: 33px; }
     @media (min-width: 480px) {
-      .page-header h1 {
+      .error404 .page-header h1 {
         color: black;
         font-size: 50px; } }
 
-.page-content {
+.error404 .page-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4662,11 +4662,11 @@ input {
           justify-content: center;
   padding: 2rem;
   padding-bottom: 8rem; }
-  .page-content p {
+  .error404 .page-content p {
     color: #000;
     font-size: 22px; }
     @media (min-width: 480px) {
-      .page-content p {
+      .error404 .page-content p {
         color: #000;
         font-size: 37px; } }
 
@@ -4701,3 +4701,25 @@ input {
 .search-results .entry-summary p,
 .search-results .entry-title a:after {
   content: close-quote; }
+
+.search-no-results .page-title,
+.search-no-results .page-header {
+  display: none; }
+
+.search-no-results .page-content p {
+  max-width: 600px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 3.5rem;
+  text-align: center;
+  color: #000;
+  font-size: 22px; }
+  @media (min-width: 480px) {
+    .search-no-results .page-content p {
+      color: #000;
+      font-size: 37px; } }
