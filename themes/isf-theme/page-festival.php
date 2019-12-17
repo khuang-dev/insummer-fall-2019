@@ -77,8 +77,8 @@ get_header(); ?>
 							<section class="wrapper__upcoming-events grid-column-3 remove-margin-bottom" id="content-output-isf">
 
 							<?php 
-				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => '-1');
-   				$event_posts = get_posts( $args ); // returns an array of posts
+				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => '-1',);
+				   $event_posts = get_posts( $args ); // returns an array of posts
 			    ?>
 
 			<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>

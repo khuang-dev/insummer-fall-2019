@@ -3393,7 +3393,8 @@ p.member-text {
   @media (min-width: 480px) {
     .year-events-h1 {
       color: #191414;
-      font-size: 40px; } }
+      font-size: 40px;
+      font-weight: 600; } }
 
 .year-events-h2 {
   color: #ed1651;
@@ -4422,6 +4423,11 @@ input {
   margin-bottom: 3rem;
   font-size: 1.2rem; }
 
+.single-isf_event h1,
+.single-isf_event h2,
+.single-isf_event p {
+  font-family: 'Montserrat'; }
+
 .single-isf_event .entry-title {
   text-transform: uppercase;
   text-align: center;
@@ -4436,6 +4442,24 @@ input {
 
 .single-isf_event .entry-content {
   margin-top: 0; }
+
+@media (min-width: 480px) {
+  .single_year-events {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.year_round-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 2rem; }
+  @media (min-width: 480px) {
+    .year_round-header {
+      margin-left: 10rem;
+      margin-right: 0;
+      width: 16rem;
+      text-align: left; } }
 
 .single_event-info {
   display: -webkit-box;
@@ -4467,7 +4491,8 @@ input {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      font-weight: 700; } }
+      font-weight: 600;
+      margin-right: 8rem; } }
 
 .single_event-details {
   display: grid;
@@ -4479,7 +4504,7 @@ input {
 
 .single_event-tags {
   text-align: center;
-  font-weight: 700; }
+  font-weight: 600; }
   @media (min-width: 480px) {
     .single_event-tags {
       text-align: left;
@@ -4489,7 +4514,7 @@ input {
 @media (min-width: 480px) {
   .event-details {
     font-size: 20px;
-    font-weight: 700; } }
+    font-weight: 600; } }
 
 .single_event-content {
   text-align: center;
@@ -4508,7 +4533,7 @@ input {
               box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651; } }
 
 .event_calendar-btn {
-  padding-left: 8rem; }
+  padding-left: 4rem; }
   @media (min-width: 480px) {
     .event_calendar-btn .calendar-btn {
       border: 2px solid #cecece;

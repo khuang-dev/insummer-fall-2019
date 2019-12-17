@@ -19,8 +19,8 @@ get_header(); ?>
 				<?php //endif; ?>
 				<!-- <h1 class="hide-mobile year_round-head">YEAR ROUND EVENTS</h1>
 				<?php //the_title( '<h1 class="hide-mobile single_event-title h3__left-border-pink">', '</h1>' ); ?> -->
-				<section class="hide-mobile year-events">
-						<div class="year_round-head">
+				<section class="hide-mobile single_year-events">
+						<div class="year_round-header">
 							<h2 class="year-events-h1">Year Round Events</h2>
 							<h2 class="year-events-h2">ISF+</h2>
 						</div>
