@@ -61,7 +61,7 @@ get_header(); ?>
 				<span><?php  echo get_field ('history_description'); ?><span>
 				</section>
 				<section class="history-media">
-					<?php the_field('history_image');?>
+					<img src="<?php the_field('history_image');?>">
 					<?php the_field('history_video');?>
 				</section>
 				<?php
@@ -73,10 +73,123 @@ get_header(); ?>
 			</div><!-- .entry-content -->
 		</article><!-- #post-## -->
 
-
-				<!-- <php get_template_part( 'template-parts/content', 'page' ); ?> -->
-
 			<?php endwhile; // End of the loop. ?>
+
+			<section class="timeline-nav" id="">
+
+<?php if (have_posts()) : ?>
+    <?php
+    $today = date('Ymd');
+
+    $past_args = array(
+        'posts_per_page' => -1,
+        'post_type' => 'isf_event',
+        'meta_query' => array (
+            array (
+                'key' => 'event_date',
+                'compare' => '<',
+                'type' => 'DATE'
+            )
+        ),
+        'orderby' => 'meta_value_num',
+        'order' => 'DESC'                   
+    );
+	query_posts( $past_args );
+	
+	$current_header ='';?> 
+    <?php while (have_posts()) : the_post(); ?>
+
+    <?php   
+		$date = new DateTime(get_field('event_date'));
+		$temp_header = $date->format('Y'); 
+		?>
+		
+		<a class="year-btn"><?php if ($current_header != $temp_header) {
+			$current_header = $temp_header;
+			echo $date->format('Y'); 
+		} ?></a>
+
+
+    <?php endwhile; ?>
+    <?php endif; ?>
+
+</section>
+
+
+
+<!-- TIMELINE -->
+<header class="timeline-header">
+<h1>Indian Summer Festival</h1>
+<h2>Timeline</h2>
+</header>
+
+<section class="timeline-nav-mobile" id="">
+<h3 class="timeline-select-title-mobile">Select a year<img class="icon__dropdown-pink" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/down-pink.svg" alt="icon-dropdown"></h3>
+<?php if (have_posts()) : ?>
+    <?php
+    $today = date('Ymd');
+
+    $past_args = array(
+        'posts_per_page' => -1,
+        'post_type' => 'isf_event',
+        'meta_query' => array (
+            array (
+                'key' => 'event_date',
+                'compare' => '<',
+                'type' => 'DATE'
+            )
+        ),
+        'orderby' => 'meta_value_num',
+        'order' => 'DESC'                   
+    );
+	query_posts( $past_args );
+	
+	$current_header ='';?> 
+    <?php while (have_posts()) : the_post(); ?>
+
+    <?php   
+		$date = new DateTime(get_field('event_date'));
+		$temp_header = $date->format('Y'); 
+		?>
+		<ul class="year-btn-mobile"><?php if ($current_header != $temp_header) {
+			$current_header = $temp_header;
+			echo $date->format('Y'); 
+		} ?></ul>
+
+
+    <?php endwhile; ?>
+	<?php endif; ?>
+	<h3 class="timeline-mobile-year-label"><h3>
+	<section class="timeline-mobile"></section>
+
+</section>
+
+<!-- TIMELINE LEFT -->
+<section class="timeline">
+<aside class="timeline-left">
+<div class="timeline-block-left margin-top6"><div class="january"></div><h3 class="month-font jan-font">January</h3><div class="timeline-bullet-left jan-bullet"></div></div>
+<div class="timeline-block-left"><div class="march"></div><h3 class="month-font mar-font">March</h3><div class="timeline-bullet-left mar-bullet"></div></div>
+<div class="timeline-block-left"><div class="may"></div><h3 class="month-font may-font">May</h3><div class="timeline-bullet-left may-bullet"></div></div>
+<div class="timeline-block-left"><div class="july"></div><h3 class="month-font jul-font">July</h3><div class="timeline-bullet-left jul-bullet"></div></div>
+<div class="timeline-block-left"><div class="september"></div><h3 class="month-font sep-font">September</h3><div class="timeline-bullet-left sep-bullet"></div></div>
+<div class="timeline-block-left"><div class="november"></div><h3 class="month-font nov-font">November</h3><div class="timeline-bullet-left nov-bullet"></div></div>
+</aside>
+
+<!-- LINE  -->
+<svg height="1650" width="5">
+  <line x1="0" y1="1650" x2="0" y2="0" style="stroke:#ed1651;stroke-width:10; stroke-dasharray:30 10" />
+</svg>
+
+<!-- TIMELINE RIGHT -->
+<aside class="timeline-right">
+<div class="timeline-block-right margin-top12"><div class="timeline-bullet-right feb-bullet"></div><h3 class="month-font feb-font">February</h3><div class="february"></div></div>
+<div class="timeline-block-right"><div class="timeline-bullet-right apr-bullet"></div><h3 class="month-font apr-font">April</h3><div class="april"></div></div>
+<div class="timeline-block-right"><div class="timeline-bullet-right jun-bullet"></div><h3 class="month-font jun-font">June</h3><div class="june"></div></div>
+<div class="timeline-block-right"><div class="timeline-bullet-right aug-bullet"></div><h3 class="month-font aug-font">August</h3><div class="august"></div></div>
+<div class="timeline-block-right"><div class="timeline-bullet-right oct-bullet"></div><h3 class="month-font oct-font">October</h3><div class="october"></div></div>
+<div class="timeline-block-right"><div class="timeline-bullet-right dec-bullet"></div><h3 class="month-font dec-font">December</h3><div class="december"></div></div>
+</aside>
+</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

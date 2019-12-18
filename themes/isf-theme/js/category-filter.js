@@ -3,9 +3,9 @@
     // Date filter
     function getMonthName(month) {
         const months = [
-            'Jan', // 0
-            'Feb', // 1
-            'Mar', // 2
+            'Jan', 
+            'Feb', 
+            'Mar', 
             'Apr',
             'May',
             'Jun',
@@ -23,8 +23,6 @@
     function buildEventMarkup(data) {
         let htmlTemplate = '';
         $.each(data, function (key, value) {
-            console.log('value:');
-            console.log(value);
             const date = new Date(value.acf.event_date);
             const month = getMonthName(date.getMonth());
             const day = date.getDate();
@@ -66,12 +64,9 @@
             url: window.isf_vars.rest_url + 'wp/v2/isf_event'
         })
             .done(function (data) {
-                console.log('data:');
-                console.log(data)
                 $('#content-output-isf').empty();
                 $('#content-output-isfplus').empty();
                 const isfOutput = buildEventMarkup(data);
-                console.log(buildEventMarkup(data));
                 $('#content-output-isf').append(isfOutput);
             })
     })
@@ -83,15 +78,12 @@
             url: window.isf_vars.rest_url + 'wp/v2/isf_event?ISF_plus=19'
         })
             .done(function (data) {
-                console.log('data:');
-                console.log(data)
                 if ($('#content-output-isf').length > 0) {
                     $('#content-output-isf').empty();
                 }
 
                 $('#content-output-isfplus').empty();
                 const isfOutput = buildEventMarkup(data);
-                console.log(buildEventMarkup(data));
                 $('#content-output-isfplus').append(isfOutput);
 
             })
@@ -109,20 +101,14 @@
 
             })
                 .done(function (data) {
-                    console.log('data:');
-                    console.log(data);
-
                     $('#content-output-isf').empty();
 
-                    if (data.length == 0) {
-                        console.log('no data')
+                    if (data.length === 0) {
                         $('.no-post').show();
                     }
                     else {
-                        console.log('data found')
                         $('.no-post').hide();
                         const isfOutput = buildEventMarkup(data);
-                        console.log(buildEventMarkup(data));
                         $('#content-output-isf').append(isfOutput);
                     }
 
@@ -144,17 +130,13 @@
                     if (data.length > 0) {
                         $('.isf-plus-description').show();
                     } else {
-                        console.log('data:');
-                        console.log(data)
                         $('.isf-plus-description').hide();
                     }
-                    if (data.length == 0) {
-                        console.log('no data')
+                    if (data.length === 0) {
                         $('.no-post').show();
                     } else {
                         $('.no-post').hide();
                         const isfOutput = buildEventMarkup(data);
-                        console.log(buildEventMarkup(data));
                         $('#content-output-isfplus').append(isfOutput);
                     }
                 })
