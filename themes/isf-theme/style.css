@@ -4679,6 +4679,10 @@ input {
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
+@media (min-width: 480px) {
+  .isf-plus-container1 {
+    color: #ffffff; } }
+
 .page-header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;

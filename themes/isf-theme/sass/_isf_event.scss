@@ -254,6 +254,8 @@
 }
 
 // //ISF+
-// .isf-plus-container1 {
-//     display: flex;
-// }
+.isf-plus-container1 {
+    @include desktop {
+        color: $color__white;
+    }
+}
