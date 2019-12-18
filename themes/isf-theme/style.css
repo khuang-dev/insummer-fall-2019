@@ -4141,6 +4141,9 @@ p.member-text {
 .wrapper_btn_sponsor {
   margin-bottom: 2rem; }
 
+.h2_title {
+  color: #ffffff; }
+
 .history-description {
   margin: 0 1.25rem;
   margin-bottom: 2rem; }
@@ -4673,10 +4676,10 @@ input {
   border-radius: 12px;
   background: #ffffff;
   font-weight: 600;
-  color: #ed1651; }
+  color: #ed1651 !important; }
   .access-report-btn:hover {
     border: 3px solid #f58220;
-    color: #f58220; }
+    color: #f58220 !important; }
 
 @media (min-width: 480px) {
   .mobile-gallery {
@@ -5058,3 +5061,6 @@ input {
 .search-results .entry-summary p,
 .search-results .entry-title a:after {
   content: close-quote; }
+
+.page-get-involved .site-main {
+  height: 5rem; }

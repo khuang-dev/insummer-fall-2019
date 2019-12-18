@@ -125,10 +125,10 @@
   border-radius: 12px;
   background: $color__white;
   font-weight: 600;
-  color: $color__pink;
+    color: $color__pink !important;
   &:hover {
     border: 3px solid $color__orange;
-    color: $color__orange;
+    color: $color__orange !important;
   }
 }
 
