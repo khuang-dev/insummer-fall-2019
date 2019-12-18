@@ -3742,7 +3742,17 @@ p.member-text {
   text-transform: uppercase;
   height: 4rem;
   font-size: 1.3rem;
-  font-weight: 600; }
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff; }
   @media (min-width: 480px) {
     .event__date {
       bottom: 0;
