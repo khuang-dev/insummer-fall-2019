@@ -31,6 +31,10 @@
   text-align: right;
 }
 
+.memory-ln {
+  display: flex;
+  flex-direction: column;
+}
 .title__down-memory-lane {
   width: auto;
   color: $color__black;
@@ -44,6 +48,14 @@
     margin-top: 3rem;
     font-size: 2rem;
   }
+}
+
+.see-all {
+  text-align: right;
+  margin: 0 7rem;
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .memory-lane-wrapper {
@@ -60,7 +72,7 @@
   }
 }
 
-.wrapper__single-event {
+.past-festivals .wrapper__single-event {
   width: 100%;
   height: 100%;
   text-align: center;

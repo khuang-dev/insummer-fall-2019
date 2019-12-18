@@ -93,6 +93,15 @@
         height: 520px;
     }
 }
-
+.archive-title {
+    text-transform: uppercase;
+    border-bottom: 4px solid $color__pink;
+}
+.artist-archive-bg {
+    background-color: $color__lightblue-transparent !important;
+}
+.archive-event-margin {
+    height: 3rem !important;
+}
 
 /* Front page */
