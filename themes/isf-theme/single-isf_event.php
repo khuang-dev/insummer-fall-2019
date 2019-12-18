@@ -207,10 +207,22 @@ get_header(); ?>
 					<?php// echo 'hello';
 					//echo get_field('artist_name');?>
                     <?php //endif; ?>  -->
-				
+				<?php //$artist = get_field_group('About Artists');
+				//echo '<pre>';
+				//var_dump ($artist);
+				//echo '</pre>';
+				?>
 
 			<section>
 
+
+
+			<?php
+			
+			$artist_name = get_field('artist_name');
+			$artist_description = get_field('artist_description');
+			if( $artist_name && $artist_description): ?>
+				
 				<div class="artist-container">
 				<section class="artist-container-info">
 				
@@ -234,7 +246,7 @@ get_header(); ?>
 					</div>
 					</section>
 				<div class="about_artist-event">
-					<p class="h3__left-border-pink artist_event-name hide-mobile"><?php the_field('artist_name');?></p>
+					<p class="h3__left-border-pink artist_event-name hide-mobile"><?php echo $artist_name;?></p>
 
 					<div class="artist-info">
 						<div class="artist-testimonial hide-mobile">
@@ -255,12 +267,14 @@ get_header(); ?>
 							?>
 						</div>
 						<?php the_content(); ?>
-						<p class="h3__left-border-pink artist_event-name hide-desktop"><?php the_field('artist_name');?></p>
-						<?php the_field('artist_description');?>
+						<p class="h3__left-border-pink artist_event-name hide-desktop"><?php echo $artist_name;?></p>
+						<?php echo $artist_description;?>
 					</div>
 					</div>
 				</div>
 				</section>
+			
+			<?php endif; ?>
 
 				<!-- SPONSORS -->
 

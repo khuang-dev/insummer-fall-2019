@@ -49,8 +49,11 @@ get_header(); ?>
                                 <?php else : ?>
                                 <?php endif; ?>
                                 <div class="after-festival-info">
-                                    <p class="p__black"><?php the_field('after_festival_info');?><p>
-                                    <img src="<?php the_field('after_festival_logo');?>">
+                                    <p class="p__black"><?php the_field('after_festival_info');?></p>
+                                    <div class="after-festival-report">
+                                        <img src="<?php echo get_field('after_festival_logo');?>">
+                                        <a class="access-report-btn" href="<?php the_field('after_festival_document');?>">Access Report</a>
+                                    </div>
                                 </div>
 				</section>
 

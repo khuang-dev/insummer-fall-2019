@@ -35,7 +35,7 @@
   text-transform: uppercase;
   color: $color__pink;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.75rem;
   margin: 0 1.25rem;
   @include desktop {
@@ -74,11 +74,13 @@
     flex-direction: row;
     font-size: 3vw;
     justify-content: space-between;
-    padding: 0 7.5rem;
+    padding: 4rem 7.5rem;
     p {
+      font-size: 50px;
       width: auto;
     }
     h4 {
+      font-size: 50px;
       margin: 0;
     }
     span {
@@ -97,13 +99,39 @@
     margin-top: 3rem;
     justify-content: space-between;
     p {
+      line-height: 2;
       width: 40vw;
     }
     img {
       width: 40vw;
+      display: block;
+      height: auto;
+      margin-bottom: 4rem;
     }
   }
 }
+.after-festival-report {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;  
+}
+.access-report-btn {
+  text-transform: uppercase;
+  border: 3px solid $color__pink;
+  text-align: center;
+  margin: auto;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 12px;
+  background: $color__white;
+  font-weight: 600;
+  color: $color__pink;
+  &:hover {
+    border: 3px solid $color__orange;
+    color: $color__orange;
+  }
+}
+
 
 .mobile-gallery {
     @include desktop {
@@ -147,9 +175,9 @@ display: none;
   display: block !important;
 }
 .after-festival-comment {
-  font-weight: 500;
-  color: gray;
+  font-weight: 600;
+  color: $color__charcoal;
   text-align: center;
   margin-bottom: 3rem;
-  font-size: 1.2rem;
+  font-size: 25px;
 }
