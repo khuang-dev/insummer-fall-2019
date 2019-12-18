@@ -1804,7 +1804,10 @@ iframe {
     min-width: 113px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    font-weight: 600;
+    color: #ed1651;
+    font-size: 20px; }
   .page-donate .donate_radio input[type='radio']:checked ~ label {
     border-color: #f58220; }
 
