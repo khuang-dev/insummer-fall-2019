@@ -149,19 +149,21 @@ get_header(); ?>
 
 
     <?php endwhile; ?>
-    <?php endif; ?>
+	<?php endif; ?>
+	<h3 class="timeline-mobile-year-label"><h3>
+	<section class="timeline-mobile"></section>
 
 </section>
 
 <!-- TIMELINE LEFT -->
 <section class="timeline">
 <aside class="timeline-left">
-<div class="timeline-block-left margin-top6"><div class="january"></div><h3 class="month-font jan-font">January</h3><div class="timeline-bullet-left"></div></div>
-<div class="timeline-block-left"><div class="march"></div><h3 class="month-font mar-font">March</h3><div class="timeline-bullet-left"></div></div>
-<div class="timeline-block-left"><div class="may"></div><h3 class="month-font may-font">May</h3><div class="timeline-bullet-left"></div></div>
-<div class="timeline-block-left"><div class="july"></div><h3 class="month-font jul-font">July</h3><div class="timeline-bullet-left"></div></div>
-<div class="timeline-block-left"><div class="september"></div><h3 class="month-font sep-font">September</h3><div class="timeline-bullet-left"></div></div>
-<div class="timeline-block-left"><div class="november"></div><h3 class="month-font nov-font">November</h3><div class="timeline-bullet-left"></div></div>
+<div class="timeline-block-left margin-top6"><div class="january"></div><h3 class="month-font jan-font">January</h3><div class="timeline-bullet-left jan-bullet"></div></div>
+<div class="timeline-block-left"><div class="march"></div><h3 class="month-font mar-font">March</h3><div class="timeline-bullet-left mar-bullet"></div></div>
+<div class="timeline-block-left"><div class="may"></div><h3 class="month-font may-font">May</h3><div class="timeline-bullet-left may-bullet"></div></div>
+<div class="timeline-block-left"><div class="july"></div><h3 class="month-font jul-font">July</h3><div class="timeline-bullet-left jul-bullet"></div></div>
+<div class="timeline-block-left"><div class="september"></div><h3 class="month-font sep-font">September</h3><div class="timeline-bullet-left sep-bullet"></div></div>
+<div class="timeline-block-left"><div class="november"></div><h3 class="month-font nov-font">November</h3><div class="timeline-bullet-left nov-bullet"></div></div>
 </aside>
 
 <!-- LINE  -->
@@ -171,12 +173,12 @@ get_header(); ?>
 
 <!-- TIMELINE RIGHT -->
 <aside class="timeline-right">
-<div class="timeline-block-right margin-top12"><div class="timeline-bullet-right"></div><h3 class="month-font feb-font">February</h3><div class="february"></div></div>
-<div class="timeline-block-right"><div class="timeline-bullet-right"></div><h3 class="month-font apr-font">April</h3><div class="april"></div></div>
-<div class="timeline-block-right"><div class="timeline-bullet-right"></div><h3 class="month-font jun-font">June</h3><div class="june"></div></div>
-<div class="timeline-block-right"><div class="timeline-bullet-right"></div><h3 class="month-font aug-font">August</h3><div class="august"></div></div>
-<div class="timeline-block-right"><div class="timeline-bullet-right"></div><h3 class="month-font oct-font">October</h3><div class="october"></div></div>
-<div class="timeline-block-right"><div class="timeline-bullet-right"></div><h3 class="month-font dec-font">December</h3><div class="december"></div></div>
+<div class="timeline-block-right margin-top12"><div class="timeline-bullet-right feb-bullet"></div><h3 class="month-font feb-font">February</h3><div class="february"></div></div>
+<div class="timeline-block-right"><div class="timeline-bullet-right apr-bullet"></div><h3 class="month-font apr-font">April</h3><div class="april"></div></div>
+<div class="timeline-block-right"><div class="timeline-bullet-right jun-bullet"></div><h3 class="month-font jun-font">June</h3><div class="june"></div></div>
+<div class="timeline-block-right"><div class="timeline-bullet-right aug-bullet"></div><h3 class="month-font aug-font">August</h3><div class="august"></div></div>
+<div class="timeline-block-right"><div class="timeline-bullet-right oct-bullet"></div><h3 class="month-font oct-font">October</h3><div class="october"></div></div>
+<div class="timeline-block-right"><div class="timeline-bullet-right dec-bullet"></div><h3 class="month-font dec-font">December</h3><div class="december"></div></div>
 </aside>
 </section>
 

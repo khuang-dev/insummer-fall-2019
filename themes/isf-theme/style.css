@@ -4221,10 +4221,14 @@ p.member-text {
           cursor: pointer; } }
 
 .timeline-nav-mobile {
-  margin: 3rem 1.25rem; }
+  margin: 3rem 1.25rem;
+  margin-top: 1.5rem; }
   @media (min-width: 480px) {
     .timeline-nav-mobile {
       display: none; } }
+
+.timeline-mobile {
+  padding: 1.5rem 0; }
 
 .timeline-select-title-mobile {
   display: -webkit-box;
@@ -4237,16 +4241,26 @@ p.member-text {
           justify-content: space-between;
   color: #ffffff;
   background-color: #ed1651;
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding: 0.5rem 0.75rem;
   font-weight: 400; }
 
 .year-btn-mobile {
+  display: none;
   padding: 0 0.75rem;
-  line-height: 2.5rem; }
-
-.year-btn-mobile-border-class {
+  line-height: 2.5rem;
   border: 1px solid #bebebe; }
+  .year-btn-mobile:hover {
+    background-color: #fff2f2; }
+
+.timeline-post-mobile {
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  position: relative !important;
+  -webkit-transform: translateY(0) !important;
+          transform: translateY(0) !important;
+  -webkit-box-shadow: 10px 5px #ed1651;
+          box-shadow: 10px 5px #ed1651; }
 
 .timeline-left {
   text-align: left;
@@ -4289,10 +4303,15 @@ p.member-text {
 .month-font {
   font-size: 1rem; }
 
+.month-font-mobile {
+  text-transform: none;
+  font-size: 1.5rem; }
+
 .font-change {
   font-size: 1.4rem; }
 
 .timeline-bullet-left {
+  display: none;
   width: 1.5rem;
   height: 1.5rem;
   background-color: #042f42;
@@ -4304,6 +4323,7 @@ p.member-text {
           transform: translateY(-0.25rem); }
 
 .timeline-bullet-right {
+  display: none;
   width: 1.5rem;
   height: 1.5rem;
   background-color: #042f42;
@@ -4313,6 +4333,22 @@ p.member-text {
   border: 1.5px #ffffff solid;
   -webkit-transform: translateY(-0.25rem);
           transform: translateY(-0.25rem); }
+
+.timeline-bullet-mobile {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #042f42;
+  border-radius: 50px;
+  border: 1.5px #ffffff solid;
+  -webkit-transform: translateX(-0.5rem);
+          transform: translateX(-0.5rem); }
+
+.timeline-post-title-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 1.5rem;
+  margin-bottom: 0.5rem; }
 
 .timeline-header {
   width: 100%;
@@ -4325,6 +4361,13 @@ p.member-text {
     font-weight: 600;
     font-size: 1.5rem;
     margin-bottom: 1.5rem; }
+
+.timeline-mobile-year-label {
+  padding-top: 1.5rem;
+  width: 6rem;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 3px #f58220 solid; }
 
 .page-sign-up-newsletter-form .fa-times-circle,
 .confirmation-newsletter .fa-times-circle,

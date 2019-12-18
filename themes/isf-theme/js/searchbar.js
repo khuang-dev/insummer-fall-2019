@@ -25,7 +25,6 @@
         //Desktop Search
         btnSearchDesktop.on('click', function (event) {
             event.preventDefault();
-            console.log('open search');
             if (!btnSearchDesktop.hasClass('search-active')) {
                 searchbarDesktop.animate({
                     width: 'toggle'
@@ -38,7 +37,6 @@
 
         //Search Blur
         searchField.on('blur', function () {
-            console.log('blur');
 
             if (btnSearchMobile.hasClass('search-active')) {
                 searchToggle.toggle();

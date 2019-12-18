@@ -3,9 +3,9 @@
     // Date filter
     function getMonthName(month) {
         const months = [
-            'Jan', // 0
-            'Feb', // 1
-            'Mar', // 2
+            'Jan', 
+            'Feb', 
+            'Mar', 
             'Apr',
             'May',
             'Jun',
@@ -23,7 +23,6 @@
     function buildEventMarkup(data) {
         let htmlTemplate = '';
         $.each(data, function (key, value) {
-            console.log(value);
             const date = new Date(value.acf.event_date);
             const month = getMonthName(date.getMonth());
             const day = date.getDate();
@@ -65,7 +64,6 @@
             url: window.isf_vars.rest_url + 'wp/v2/isf_event'
         })
             .done(function (data) {
-                console.log(data)
                 $('#content-output-isf').empty();
                 $('#content-output-isfplus').empty();
                 const isfOutput = buildEventMarkup(data);
@@ -80,7 +78,6 @@
             url: window.isf_vars.rest_url + 'wp/v2/isf_event?ISF_plus=19'
         })
             .done(function (data) {
-                console.log(data)
                 if ($('#content-output-isf').length > 0) {
                     $('#content-output-isf').empty();
                 }
@@ -104,11 +101,9 @@
 
             })
                 .done(function (data) {
-                    console.log(data);
-
                     $('#content-output-isf').empty();
 
-                    if (data.length == 0) {
+                    if (data.length === 0) {
                         $('.no-post').show();
                     }
                     else {
@@ -135,10 +130,9 @@
                     if (data.length > 0) {
                         $('.isf-plus-description').show();
                     } else {
-                        console.log(data)
                         $('.isf-plus-description').hide();
                     }
-                    if (data.length == 0) {
+                    if (data.length === 0) {
                         $('.no-post').show();
                     } else {
                         $('.no-post').hide();
