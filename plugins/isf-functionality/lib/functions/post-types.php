@@ -119,3 +119,4 @@ function artist() {
 
 }
 add_action( 'init', 'artist', 0 );
+
