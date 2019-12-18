@@ -59,6 +59,13 @@
 }
 
 .wrapper__single-event {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .award-wrapper {
