@@ -103,6 +103,28 @@
   }
 }
 
+.event__date {
+  text-transform: uppercase;
+  height: 4rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  @include desktop {
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 9rem;
+    min-width: 15rem;
+    font-size: 2.5vw;
+    font-weight: 600;
+    padding: 1.5rem 0rem 0.5rem 0rem;
+    p {
+      margin: 0 auto;
+      max-width: 71%;
+    }
+  }
+}
+
 .award-wrapper {
   background-color: $bg__champagne;
   padding: 3rem 1.25rem;
