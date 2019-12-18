@@ -120,7 +120,6 @@ get_header(); ?>
 
 						</article>
 						
-						
                     <?php endforeach; wp_reset_postdata(); ?>
 							</section>
 							<article class="no-post">
