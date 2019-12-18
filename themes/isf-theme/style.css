@@ -3721,6 +3721,22 @@ p.member-text {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+  .wrapper__single-event::before {
+    content: '';
+    display: block;
+    padding-bottom: 63%; }
+  .wrapper__single-event:nth-child(1) .event__date {
+    background-color: rgba(237, 22, 81, 0.75); }
+  .wrapper__single-event:nth-child(2) .event__date {
+    background-color: rgba(245, 130, 32, 0.75); }
+  .wrapper__single-event:nth-child(3) .event__date {
+    background-color: rgba(105, 200, 203, 0.75); }
+  .wrapper__single-event:nth-child(4) .event__date {
+    background-color: rgba(105, 200, 203, 0.75); }
+  .wrapper__single-event:nth-child(5) .event__date {
+    background-color: rgba(237, 22, 81, 0.75); }
+  .wrapper__single-event:nth-child(6) .event__date {
+    background-color: rgba(245, 130, 32, 0.75); }
 
 .award-wrapper {
   background-color: #fff2f2;
