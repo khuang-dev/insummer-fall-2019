@@ -51,10 +51,12 @@
   grid-template-columns: 1fr 1fr;
   margin: 0 1.25rem;
   grid-gap: 1rem;
+  margin-bottom: 2rem;
   @include desktop {
     margin: 0 6rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -182,10 +184,12 @@
   grid-template-columns: 1fr 1fr;
   margin: 0 1.25rem;
   grid-gap: 1rem;
+  margin-bottom: 2rem;
   @include desktop {
     margin: 0 6rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;
+    margin-bottom: 2rem;
   }
 }
 .wrapper__single-artist {

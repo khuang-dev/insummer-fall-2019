@@ -3699,12 +3699,14 @@ p.member-text {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 1.25rem;
-  grid-gap: 1rem; }
+  grid-gap: 1rem;
+  margin-bottom: 2rem; }
   @media (min-width: 480px) {
     .memory-lane-wrapper {
       margin: 0 6rem;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 2rem; } }
+      grid-gap: 2rem;
+      margin-bottom: 2rem; } }
 
 .wrapper__single-event {
   width: 100%;
@@ -3820,12 +3822,14 @@ p.member-text {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 1.25rem;
-  grid-gap: 1rem; }
+  grid-gap: 1rem;
+  margin-bottom: 2rem; }
   @media (min-width: 480px) {
     .featured-artist-wrapper {
       margin: 0 6rem;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 2rem; } }
+      grid-gap: 2rem;
+      margin-bottom: 2rem; } }
 
 .wrapper__single-artist {
   width: 100%;
