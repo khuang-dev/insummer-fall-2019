@@ -72,7 +72,7 @@ a {
     }
   }
   li {
-	position: static;
+    position: static;
 
     &:hover > a,
     &.focus > a {
@@ -108,13 +108,31 @@ button.menu-toggle {
   }
 
   .nav-previous {
-    // float: left;
     width: 50%;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-left: 6rem;
+    a {
+      color: $color__black;
+      border-bottom: 3px solid $color__pink;
+      &:hover {
+        color: $color__pink;
+      }
+    }
   }
 
   .nav-next {
-    // float: right;
     text-align: right;
-    width: 50%;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-right: 6rem;
+    a {
+      color: $color__black;
+      border-bottom: 3px solid $color__pink;
+      &:hover {
+        color: $color__pink;
+      }
+    }
   }
 }
