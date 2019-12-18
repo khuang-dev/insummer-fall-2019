@@ -52,7 +52,7 @@ get_header(); ?>
 				<span><?php  echo get_field ('history_description'); ?><span>
 				</section>
 				<section class="history-media">
-					<?php the_field('history_image');?>
+					<img src="<?php the_field('history_image');?>">
 					<?php the_field('history_video');?>
 				</section>
 				<?php

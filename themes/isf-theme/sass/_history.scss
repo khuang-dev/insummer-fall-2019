@@ -20,10 +20,21 @@
   }
 }
 .history-media {
+  height: 175px;
   width: 100%;
   background-color: $bg__champagne;
   text-align: center;
+  overflow: hidden;
+  img {
+      transform: translateY(-30%);
+      height: auto;
+      object-fit: cover;
+  }
+  @include desktop {
+      height: 450px;
+  }
 }
+
 .timeline {
   display: none;
   @include desktop {

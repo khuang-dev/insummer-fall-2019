@@ -4134,9 +4134,20 @@ p.member-text {
         border-right: 5px solid #ed1651; } }
 
 .history-media {
+  height: 175px;
   width: 100%;
   background-color: #fff2f2;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
+  .history-media img {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  @media (min-width: 480px) {
+    .history-media {
+      height: 450px; } }
 
 .timeline {
   display: none; }
@@ -4516,12 +4527,12 @@ input {
   background: #69c8cb; }
 
 .mobile-gallery .main-carousel .previous {
-  -webkit-transform: translateX(-2rem) translateY(-2rem);
-          transform: translateX(-2rem) translateY(-2rem); }
+  -webkit-transform: translateX(-1.75rem) translateY(-2rem);
+          transform: translateX(-1.75rem) translateY(-2rem); }
 
 .mobile-gallery .main-carousel .next {
-  -webkit-transform: translateX(2rem) translateY(-2rem);
-          transform: translateX(2rem) translateY(-2rem); }
+  -webkit-transform: translateX(1.75rem) translateY(-2rem);
+          transform: translateX(1.75rem) translateY(-2rem); }
 
 .after-festival-message {
   text-transform: uppercase;

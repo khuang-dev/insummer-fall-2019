@@ -170,6 +170,7 @@
 
             })
                 .done(function (data) {
+                    $('.timeline-mobile-year-label').empty();
                     $('.timeline-mobile-year-label').append(year);
                     $.each(data, function (key, value) {
                         const date = new Date(value.acf.event_date);
