@@ -17,8 +17,8 @@ get_header(); ?>
 
 				<section class="festival-overview">
                     <h2 class="after-festival-message"><?php the_field('after_festival_message');?><h2>
-                    <div class="after-festival-media">
-                        <?php the_field('after_festival_image');?>
+                    <div class="history-media">
+                        <img src="<?php the_field('after_festival_image');?>">
                         <?php the_field('after_festival_video');?>
                     </div>
                     <?php if ( have_rows('after_festival_meta')):?>

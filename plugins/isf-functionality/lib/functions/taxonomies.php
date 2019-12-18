@@ -83,3 +83,4 @@ function create_isf_category() {
 }
 add_action( 'init', 'event_taxonomy', 0 );
 add_action( 'init', 'create_isf_category', 1 );
+
