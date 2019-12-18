@@ -5154,8 +5154,6 @@ input {
 .search-results .entry-title a:after {
   content: close-quote; }
 
-.page-get-involved .site-main {
-  height: 5rem; }
 .search-no-results .page-title,
 .search-no-results .page-header {
   display: none; }
@@ -5177,3 +5175,6 @@ input {
     .search-no-results .page-content p {
       color: #191414;
       font-size: 37px; } }
+
+.page-get-involved .site-main {
+  height: 5rem; }
