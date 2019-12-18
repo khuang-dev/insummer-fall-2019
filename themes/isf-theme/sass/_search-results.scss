@@ -36,3 +36,28 @@
     content: close-quote;
   }
 }
+
+//THIS IS THE NO RESULTS PARTH
+
+.search-no-results {
+  .page-title,
+  .page-header {
+    display: none;
+  }
+}
+.search-no-results {
+  .page-content p {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    line-height: 3.5rem;
+    text-align: center;
+    color: $color__black;
+    font-size: 22px;
+    @include desktop {
+      color: $color__black;
+      font-size: 37px;
+    }
+  }
+}

@@ -100,17 +100,6 @@
   }
 }
 
-// .page-donate .donation-first-last-name input {
-//   box-sizing: border-box;
-//   height: 40px;
-//   // width: 400px;
-// }
-
-// .page-donate .donation-phone input {
-//   height: 40px;
-//   // width: 941px;
-// }
-
 @include desktop {
   .page-donate .donation-first-last-name .ginput_container {
     display: flex;
@@ -148,6 +137,9 @@
       padding: 4px;
       min-width: 113px;
       display: flex;
+      font-weight: 600;
+      color: $color__pink;
+      font-size: 20px;
 
       // &:hover {
       //   border-color: $btnbg__orange;
@@ -192,14 +184,6 @@
     }
   }
 }
-
-// @include desktop {
-//   .page-donate .gfield_radio {
-//     display: flex;
-//     padding: 1rem;
-//     justify-content: center;
-//   }
-// }
 
 .page-donate .gchoice_4_8_3 {
   margin-left: 1rem;
