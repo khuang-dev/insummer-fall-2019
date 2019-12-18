@@ -210,9 +210,17 @@ get_header(); ?>
 			</section>
 
 							<!-- ARTIST -->
+				<!-- <?php //if ( the_field('artist_name')!=null):?>
+					<?php// echo 'hello';
+					//echo get_field('artist_name');?>
+                    <?php //endif; ?>  -->
+				
+
 			<section>
+
 				<div class="artist-container">
 				<section class="artist-container-info">
+				
 					<div class="artist-img">
 						<img class="artist-single_event"src="<?php the_field('artist_image');?>" />
 						
@@ -276,23 +284,15 @@ get_header(); ?>
                                 <?php endif; ?> 
 						</div>
 			</section>
-			<!-- <div class="isf_plus">
 
-				<section class="wrapper__upcoming-events grid-column-3 wrapper-isf-plus-event">
-					<p class="isf-plus-events"><?php //the_field ('isfplus_description');?></p>
+
+			<div>
+				<p class="isf-plus-description"><?php the_field('isfplus_description');?></p>
+				<section class="isf-plus-container1 wrapper__upcoming-events grid-column-3 wrapper-isf-plus-event">
+				<p class="isf-plus-description"><?php the_field('isfplus_description');?></p>
 
 				</section>
-				<?php //$terms = get_terms (array (
-					//'taxonomy' => 'create_isf_taxonomy',
-					//'field' => 'slug',
-				//));
-				//echo '<pre>';
-				//var_dump ($terms);
-				//echo '</pre>'
-					?>
-
-			</div> -->
-
+			</div>
 
 
 			<?php

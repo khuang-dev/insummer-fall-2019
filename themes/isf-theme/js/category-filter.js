@@ -156,6 +156,7 @@
                         const isfOutput = buildEventMarkup(data);
                         console.log(buildEventMarkup(data));
                         $('#content-output-isfplus').append(isfOutput);
+                        $(isfOutput).appendTo('.isf-plus-container1');
                     }
                 })
 
