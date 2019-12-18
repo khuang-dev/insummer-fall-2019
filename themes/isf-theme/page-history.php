@@ -87,8 +87,7 @@ get_header(); ?>
     );
 	query_posts( $past_args );
 	
-	$current_header ='';
-    ?> 
+	$current_header ='';?> 
     <?php while (have_posts()) : the_post(); ?>
 
     <?php   
@@ -108,11 +107,51 @@ get_header(); ?>
 </section>
 
 
+
 <!-- TIMELINE -->
 <header class="timeline-header">
 <h1>Indian Summer Festival</h1>
 <h2>Timeline</h2>
 </header>
+
+<section class="timeline-nav-mobile" id="">
+<h3 class="timeline-select-title-mobile">Select a year<img class="icon__dropdown-pink" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/down-pink.svg" alt="icon-dropdown"></h3>
+<?php if (have_posts()) : ?>
+    <?php
+    $today = date('Ymd');
+
+    $past_args = array(
+        'posts_per_page' => -1,
+        'post_type' => 'isf_event',
+        'meta_query' => array (
+            array (
+                'key' => 'event_date',
+                'compare' => '<',
+                'type' => 'DATE'
+            )
+        ),
+        'orderby' => 'meta_value_num',
+        'order' => 'DESC'                   
+    );
+	query_posts( $past_args );
+	
+	$current_header ='';?> 
+    <?php while (have_posts()) : the_post(); ?>
+
+    <?php   
+		$date = new DateTime(get_field('event_date'));
+		$temp_header = $date->format('Y'); 
+		?>
+		<ul class="year-btn-mobile"><?php if ($current_header != $temp_header) {
+			$current_header = $temp_header;
+			echo $date->format('Y'); 
+		} ?></ul>
+
+
+    <?php endwhile; ?>
+    <?php endif; ?>
+
+</section>
 
 <!-- TIMELINE LEFT -->
 <section class="timeline">

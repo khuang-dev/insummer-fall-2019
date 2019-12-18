@@ -25,10 +25,13 @@ border-right: 5px solid #ed1651;
     text-align: center;
 }
 .timeline {
+    display: none; 
+    @include desktop {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    }
 }
 .timeline-block-left {
     padding-top: 8rem;
@@ -67,6 +70,8 @@ border-right: 5px solid #ed1651;
 }
 
 .timeline-nav {
+    display: none; 
+    @include desktop {
     display: none;
     z-index: 99;
     flex-direction: column;
@@ -92,6 +97,31 @@ border-right: 5px solid #ed1651;
             cursor: pointer;
         }
     }
+}
+}
+.timeline-nav-mobile {
+    margin: 3rem 1.25rem;
+    @include desktop {
+        display: none;
+    }
+}
+.timeline-select-title-mobile {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    color: $color__white;
+    background-color: $color__pink;
+    font-size: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    font-weight: 400;
+}
+.year-btn-mobile {
+    padding:0 0.75rem;
+    line-height: 2.5rem;
+}
+.year-btn-mobile-border-class {
+    border: 1px solid rgb(190, 190, 190);
+
 }
 .timeline-left {
     text-align: left;

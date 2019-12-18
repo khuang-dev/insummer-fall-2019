@@ -1,5 +1,8 @@
 (function ($) {
+    $(function(){
 
+    
+    
 const timeline = $('.timeline');
 const january = $('.january');
 const february = $('.february');
@@ -14,6 +17,7 @@ const october = $('.october');
 const november = $('.november');
 const december = $('.december');
 const yearBtn = $('.year-btn');
+const yearBtnMobile = $('.year-btn-mobile');
 
 function clearTimeline(){
     january.empty();
@@ -116,11 +120,27 @@ $(window).on('scroll', function(){
     const timelineOuterHeight = $('.history-media').outerHeight();
 
     if (window.scrollY > (timelineOffset + timelineOuterHeight)) {
-        console.log('test')
+        // console.log('test')
         $('.timeline-nav').css('display', 'flex');
     } else {
         $('.timeline-nav').css('display', 'none');
     }
 })
+
+    $.each(yearBtnMobile, function(index, value){
+        if ($(value).text() == '') {
+            console.log('noborder')
+            yearBtnMobile.css('border', 'none');
+            return false;
+        } else {
+            console.log('border')
+            yearBtnMobile.css('border', '1px solid rgb(190, 190, 190)');
+            return true;
+        }
+    })
+
+
+
+})// end of doc ready
 
 })(jQuery);
