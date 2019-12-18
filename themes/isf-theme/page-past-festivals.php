@@ -74,7 +74,7 @@ get_header(); ?>
 		  
 			<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>
                    <?php /* Content from your array of post results goes here */ ?>
-                   <article class="wrapper__single-artist" style="background-image: url(<?php the_field('event_image');?>); background-size: cover; background-position: center;">
+                   <article class="wrapper__single-event" style="background-image: url(<?php the_field('event_image');?>); background-size: cover; background-position: center;">
 						<div class="p__white event-name"></div>
 						<div class="event__date">
                                             <?php $date = new DateTime(get_field('event_date')); ?>

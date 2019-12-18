@@ -3681,6 +3681,31 @@ p.member-text {
   text-transform: uppercase;
   text-align: right; }
 
+.title__down-memory-lane {
+  width: auto;
+  color: #191414;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  margin-left: 1.25rem;
+  font-size: 1.2rem; }
+  @media (min-width: 480px) {
+    .title__down-memory-lane {
+      margin-left: 6rem;
+      margin-bottom: 1.5rem;
+      margin-top: 3rem;
+      font-size: 2rem; } }
+
+.memory-lane-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 1.25rem;
+  grid-gap: 1rem; }
+  @media (min-width: 480px) {
+    .memory-lane-wrapper {
+      margin: 0 6rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem; } }
+
 .award-wrapper {
   background-color: #fff2f2;
   padding: 3rem 1.25rem; }
@@ -3756,7 +3781,7 @@ p.member-text {
       -ms-flex-pack: end;
           justify-content: flex-end; }
   .wrapper__single-artist::before {
-    content: "";
+    content: '';
     display: block;
     padding-bottom: 63%; }
   .wrapper__single-artist:nth-child(1) .artist-name {
