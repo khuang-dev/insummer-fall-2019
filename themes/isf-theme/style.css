@@ -3431,7 +3431,9 @@ p.member-text {
       font-size: 18px; } }
 
 .past-event-container {
-  background: #fff2f2; }
+  background: #fff2f2;
+  -webkit-transform: translateY(46px);
+          transform: translateY(46px); }
 
 .patron-title {
   color: #191414; }
@@ -3986,6 +3988,16 @@ p.member-text {
       .thumbnail__date .thumbnail__date-month {
         font-size: 1rem;
         padding-top: 0.6rem; } }
+  .thumbnail__date .thumbnail__date-year {
+    font-weight: 700;
+    font-size: 1.2rem;
+    -webkit-transform: translateY(0.8rem);
+            transform: translateY(0.8rem); }
+    @media (min-width: 480px) {
+      .thumbnail__date .thumbnail__date-year {
+        font-size: 2rem;
+        -webkit-transform: translateY(0.9rem);
+                transform: translateY(0.9rem); } }
   .thumbnail__date p {
     padding: 0;
     margin: 0;
@@ -4459,6 +4471,22 @@ input {
 .single-isf_event .entry-content {
   margin-top: 0; }
 
+.single-isf_event .isf-plus-description {
+  background-color: #ffffff;
+  margin-top: 0;
+  color: #999999;
+  font-weight: 600;
+  font-size: 18px; }
+  @media (min-width: 480px) {
+    .single-isf_event .isf-plus-description {
+      background-color: #fff2f2;
+      color: #191414;
+      font-weight: 400; } }
+
+@media (min-width: 480px) {
+  .single-isf_event .wrapper__single-event {
+    padding-bottom: 1rem; } }
+
 @media (min-width: 480px) {
   .single_year-events {
     display: -webkit-box;
@@ -4679,9 +4707,16 @@ input {
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
+.isf-plus-container1 {
+  background: #ffffff; }
+  @media (min-width: 480px) {
+    .isf-plus-container1 {
+      background: #fff2f2; } }
+
 @media (min-width: 480px) {
-  .isf-plus-container1 {
-    color: #ffffff; } }
+  .isf_plus-event {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); } }
 
 .page-header {
   -webkit-box-pack: center;

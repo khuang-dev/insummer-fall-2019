@@ -18,6 +18,23 @@
     .entry-content {
         margin-top: 0;
     }
+    .isf-plus-description {
+        background-color: $color__white;
+        margin-top: 0;
+        color: $color__charcoal;
+        font-weight: 600;
+        font-size: 18px;
+        @include desktop {
+            background-color: $bg__champagne;
+            color: $color__black;
+            font-weight: 400;
+        }
+    }
+    .wrapper__single-event {
+        @include desktop {
+            padding-bottom: 1rem;
+        }
+    }
 }
 .single_year-events {
     @include desktop {
@@ -255,7 +272,13 @@
 
 // //ISF+
 .isf-plus-container1 {
+        background: $color__white;
+        @include desktop {
+            background: $bg__champagne;
+        }
+}
+.isf_plus-event {
     @include desktop {
-        color: $color__white;
+        transform: translateY(20px);
     }
 }

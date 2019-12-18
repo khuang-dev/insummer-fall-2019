@@ -39,8 +39,6 @@ function buildEventMarkup(data) {
         const day = date.getDate();
 
         htmlTemplate += `
-        <p class="isf-plus-description"><?php echo get_field('isfplus_description');?></p>
-
            <article class="wrapper__single-event">
                <div class="wrapper__image-event">
                     <img src="${value.acf.event_image}">

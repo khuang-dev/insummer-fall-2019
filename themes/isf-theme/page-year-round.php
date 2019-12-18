@@ -173,8 +173,7 @@ get_header(); ?>
 										<img src="<?php the_field('event_image'); ?>">
 										<div class="thumbnail__date">
 											<?php $date = new DateTime(get_field('event_date')); ?>
-											<p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
-											<p class="thumbnail__date-day"><?php echo $date->format('d'); ?></p>
+											<p class="thumbnail__date-day thumbnail__date-year"><?php echo $date->format('Y'); ?></p>
 										</div>
 									</div>
 									<div class="wrapper__info-event">

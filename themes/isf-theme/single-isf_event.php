@@ -228,7 +228,7 @@ get_header(); ?>
 								<img class="hdide-mobile artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Twitter.svg" alt="icon-twitter">
 							</a>
 							<a class="hide-mobile" href="<?php get_field ('youtube_url', 'options'); ?>">
-								<img class="hide-mobile artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Youtube.svg" alt="icon-youtube">
+								<img class="hide-mobile artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/3x/Youtube3x.png" alt="icon-youtube">
 							</a>
 						</div>
 					</div>
@@ -280,7 +280,7 @@ get_header(); ?>
 
 
 			<div class="isf_plus-event">
-			<p class="isf-plus-description"><?php echo get_field('isfplus_description');?></p>
+			<p class="isf-plus-description" style="display:block"><?php echo get_field('isfplus_description');?></p>
 				<section class="isf-plus-container1 wrapper__upcoming-events grid-column-3 wrapper-isf-plus-event" id="content-output-isfplus">
 				</section>
 			</div>
