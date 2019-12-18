@@ -1494,6 +1494,14 @@ object {
       height: 520px; } }
 
 /* Front page */
+.page-contact-us {
+  margin-left: 1rem;
+  margin-right: 1rem; }
+  @media (min-width: 480px) {
+    .page-contact-us {
+      margin-left: 0;
+      margin-right: 0; } }
+
 .message-us-page .entry-title {
   display: none; }
 
@@ -1507,13 +1515,15 @@ object {
             justify-content: space-between; } }
 
 .contact-us-title h3 {
-  border-bottom: solid 2px #ed1651;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  position: relative; }
   @media (min-width: 480px) {
     .contact-us-title h3 {
       border-left: solid 8px #ed1651;
@@ -1545,6 +1555,8 @@ object {
   line-height: 2.3125rem;
   text-align: center;
   margin-bottom: 1rem; }
+  .contact-info-details p {
+    color: black !important; }
 
 .mobile-svg {
   max-width: 100px;
@@ -1597,6 +1609,10 @@ iframe {
   text-align: center;
   line-height: 2.5rem;
   margin-bottom: 1rem; }
+  @media (min-width: 480px) {
+    .send-us-message-form {
+      margin-left: 0;
+      margin-right: 0; } }
   .send-us-message-form .gform_title {
     font-family: 'Montserrat';
     font-weight: bold; }
@@ -1606,9 +1622,6 @@ iframe {
   .send-us-message-form_wrapper li ul {
     margin: 0;
     padding: 0px; }
-
-.contact-info-loop .contact-info-details a {
-  color: red; }
 
 @media (min-width: 480px) {
   .message-us-page {
@@ -3174,8 +3187,7 @@ p.member-text {
       flex-flow: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
-  border: solid 2px #191414; }
+          justify-content: space-between; }
   @media (min-width: 480px) {
     .accessibility-info-loop {
       max-width: 1100px;
@@ -3214,10 +3226,13 @@ p.member-text {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: solid 4px #ed1651; }
+  position: relative;
+  margin-bottom: 2rem; }
   @media (min-width: 480px) {
     .accessibility-about-title h3 {
+      position: unset;
       border-bottom: unset;
+      background: unset;
       border-right: solid 8px #ed1651;
       height: 49px;
       width: 256px;
@@ -3263,21 +3278,31 @@ p.member-text {
     width: 830px;
     max-width: 100%; } }
 
-.accessibility-about-info h5 {
+.accessibility-about-info p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  font-weight: normal; }
+  font-weight: normal;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  line-height: 2rem; }
   @media (min-width: 480px) {
-    .accessibility-about-info h5 {
-      height: 192px;
+    .accessibility-about-info p {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       width: 830px;
       color: #191414;
       font-family: 'Montserrat';
       font-size: 18px;
       line-height: 21px;
-      text-align: center; } }
+      text-align: center;
+      line-height: 2rem; } }
+
+a[href^='tel'] {
+  display: block;
+  margin: 0 auto; }
 
 @media (min-width: 480px) {
   .accessibility-icon-svg {
@@ -3318,6 +3343,14 @@ p.member-text {
   -webkit-transition: 0.4s;
   transition: 0.4s; }
 
+.accordion span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .accordion:hover {
@@ -3352,7 +3385,8 @@ p.member-text {
   border-radius: 50px;
   background-color: #fff2f2;
   width: 35px;
-  height: 35px; }
+  height: 35px;
+  margin-right: 1rem; }
 
 .page-year-round p {
   font-size: 18px; }
@@ -5175,6 +5209,3 @@ input {
     .search-no-results .page-content p {
       color: #191414;
       font-size: 37px; } }
-
-.page-get-involved .site-main {
-  height: 5rem; }

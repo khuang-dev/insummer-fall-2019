@@ -2,10 +2,8 @@
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
-  border: solid 2px $color__black;
   @include desktop {
     max-width: 1100px;
-    // margin: auto;
     margin: auto 4rem auto auto;
     border: none;
   }
@@ -35,9 +33,13 @@
   text-transform: uppercase;
   display: flex;
   justify-content: center;
-  border-bottom: solid 4px $btn__pink;
+  position: relative;
+  margin-bottom: 2rem;
+
   @include desktop {
+    position: unset;
     border-bottom: unset;
+    background: unset;
     border-right: solid 8px $btn__pink;
     height: 49px;
     width: 256px;
@@ -50,6 +52,7 @@
     line-height: 49px;
   }
 }
+
 .accessibility-info-item {
   display: none;
   @include desktop {
@@ -81,19 +84,28 @@
     max-width: 100%;
   }
 }
-.accessibility-about-info h5 {
+.accessibility-about-info p {
   display: flex;
   text-align: center;
   font-weight: normal;
+  flex-wrap: wrap;
+  line-height: 2rem;
   @include desktop {
-    height: 192px;
+    // height: 192px;
+    justify-content: center;
     width: 830px;
     color: $color__black;
     font-family: 'Montserrat';
     font-size: 18px;
     line-height: 21px;
     text-align: center;
+    line-height: 2rem;
   }
+}
+
+a[href^='tel'] {
+  display: block;
+  margin: 0 auto;
 }
 .accessibility-icon-svg {
   @include desktop {
@@ -139,6 +151,10 @@
   outline: none;
   transition: 0.4s;
 }
+.accordion span {
+  display: flex;
+  align-items: center;
+}
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
@@ -174,6 +190,7 @@
   background-color: $bg__champagne;
   width: 35px;
   height: 35px;
+  margin-right: 1rem;
 }
 
 //END OF ACCORDION MENU

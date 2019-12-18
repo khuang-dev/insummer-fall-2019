@@ -1,3 +1,11 @@
+.page-contact-us {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .message-us-page {
   .entry-title {
     display: none;
@@ -10,9 +18,11 @@
 
 .contact-us-title {
   h3 {
-    border-bottom: solid 2px #ed1651;
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    position: relative;
 
     @include desktop {
       border-left: solid 8px $btn__pink;
@@ -24,6 +34,7 @@
     }
   }
 }
+
 .icon-message-us-wrapper {
   width: 100%;
   line-height: 4rem;
@@ -39,6 +50,9 @@
   line-height: 2.3125rem;
   text-align: center;
   margin-bottom: 1rem;
+  p {
+    color: black !important;
+  }
 }
 
 .mobile-svg {
@@ -74,7 +88,7 @@ iframe {
   height: 58px;
   width: 263px;
   border-radius: 12px;
-  background-color: #ed1651;
+  background-color: $bg__pink;
   color: white;
   font-size: 1.5rem;
   @include desktop {
@@ -91,6 +105,12 @@ iframe {
   text-align: center;
   line-height: 2.5rem;
   margin-bottom: 1rem;
+  // margin-left: 1rem;
+  // margin-right: 1rem;
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .gform_title {
     font-family: 'Montserrat';
     font-weight: bold;
@@ -112,7 +132,7 @@ iframe {
 .contact-info-loop {
   .contact-info-details {
     a {
-      color: red;
+      // color: red;
     }
   }
 }
@@ -124,10 +144,6 @@ iframe {
     justify-content: space-between;
     margin: auto;
   }
-
-  // .site-main {
-  //   margin: auto;
-  // }
 
   .post-19 h3 {
     padding-top: 3rem;
