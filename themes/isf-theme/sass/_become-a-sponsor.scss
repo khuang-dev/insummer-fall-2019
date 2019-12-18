@@ -2,7 +2,7 @@
     .entry-title {
         color: $color__pink;
         text-align: center;
-        font-weight: 700;
+        font-weight: 600;
         border-left: none;
         @include desktop {
         color: $color__black;  
@@ -23,7 +23,7 @@
     background: $color__pink;
     border-radius: 12px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     margin: auto;
     display: block;
     width: fit-content;
@@ -57,7 +57,7 @@
         background: $color__pink;
         border-radius: 12px;
         text-align: center;
-        font-weight: 700;
+        font-weight: 600;
         margin: auto;
         display: block;
         width: fit-content;

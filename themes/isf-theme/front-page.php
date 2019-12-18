@@ -23,6 +23,16 @@ get_header(); ?>
         <div class="banner__content">
         <h1 class="banner__title"><?php the_sub_field('banner_title');?></h1>
         <p class="banner__description p__white"><?php the_sub_field('banner_description');?></p>
+
+            <?php if ( have_rows('learn_more_button')):?>
+			<?php while ( have_rows('learn_more_button')) : the_row(); ?>
+				<button class="banner__btn">
+				    <a class="banner__btn-label" href="<?php the_sub_field('page_link');?>"><?php the_sub_field('banner_button_label');?></a>
+				</button>
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
+
         <?php if ( have_rows('banner_button')):?>
             <?php while ( have_rows('banner_button')) : the_row(); ?>
                 <button class="banner__btn">

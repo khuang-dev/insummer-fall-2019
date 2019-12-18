@@ -2285,9 +2285,9 @@ iframe {
         text-transform: uppercase;
         text-align: left; } }
   .our-sponsors h2 {
-    color: #191414;
+    color: #999999;
     text-align: center;
-    font-weight: 700; }
+    font-weight: 500; }
   @media (min-width: 480px) {
     .our-sponsors img {
       max-width: none; } }
@@ -2344,7 +2344,7 @@ iframe {
   color: #ed1651;
   margin: auto;
   display: block;
-  font-weight: 700; }
+  font-weight: 600; }
   @media (min-width: 480px) {
     .become-sponsor {
       color: #ffffff;
@@ -2506,7 +2506,7 @@ iframe {
 .page-become-a-sponsor .entry-title {
   color: #ed1651;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   border-left: none; }
   @media (min-width: 480px) {
     .page-become-a-sponsor .entry-title {
@@ -2525,7 +2525,7 @@ iframe {
   background: #ed1651;
   border-radius: 12px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   margin: auto;
   display: block;
   width: -webkit-fit-content;
@@ -2558,7 +2558,7 @@ iframe {
     background: #ed1651;
     border-radius: 12px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     margin: auto;
     display: block;
     width: -webkit-fit-content;
@@ -3357,6 +3357,9 @@ p.member-text {
 .page-year-round p {
   font-size: 18px; }
 
+.past-event-box {
+  padding-top: 2rem; }
+
 .events-title {
   width: auto;
   color: #191414;
@@ -3367,8 +3370,18 @@ p.member-text {
   @media (min-width: 480px) {
     .events-title {
       font-size: 40px;
-      margin-left: 7rem;
-      border-left: 8px #ed1651 solid; } }
+      margin-left: 7rem; } }
+
+.event-title {
+  width: auto;
+  color: #191414;
+  margin-bottom: 1.5rem;
+  margin-left: 1.25rem;
+  font-size: 1.2rem; }
+  @media (min-width: 480px) {
+    .event-title {
+      font-size: 40px;
+      margin-left: 7rem; } }
 
 @media (min-width: 480px) {
   .year-events {
@@ -3395,7 +3408,8 @@ p.member-text {
   @media (min-width: 480px) {
     .year-events-h1 {
       color: #191414;
-      font-size: 40px; } }
+      font-size: 40px;
+      font-weight: 600; } }
 
 .year-events-h2 {
   color: #ed1651;
@@ -3417,6 +3431,11 @@ p.member-text {
           -ms-flex-align: center;
               align-items: center;
       font-size: 18px; } }
+
+.past-event-container {
+  background: #fff2f2;
+  -webkit-transform: translateY(46px);
+          transform: translateY(46px); }
 
 .patron-title {
   color: #191414; }
@@ -4062,6 +4081,16 @@ p.member-text {
       .thumbnail__date .thumbnail__date-month {
         font-size: 1rem;
         padding-top: 0.6rem; } }
+  .thumbnail__date .thumbnail__date-year {
+    font-weight: 700;
+    font-size: 1.2rem;
+    -webkit-transform: translateY(0.8rem);
+            transform: translateY(0.8rem); }
+    @media (min-width: 480px) {
+      .thumbnail__date .thumbnail__date-year {
+        font-size: 2rem;
+        -webkit-transform: translateY(0.9rem);
+                transform: translateY(0.9rem); } }
   .thumbnail__date p {
     padding: 0;
     margin: 0;
@@ -4630,7 +4659,7 @@ input {
   text-transform: uppercase;
   color: #ed1651;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.75rem;
   margin: 0 1.25rem; }
   @media (min-width: 480px) {
@@ -4681,10 +4710,12 @@ input {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      padding: 0 7.5rem; }
+      padding: 4rem 7.5rem; }
       .after-festival-meta p {
+        font-size: 50px;
         width: auto; }
       .after-festival-meta h4 {
+        font-size: 50px;
         margin: 0; }
       .after-festival-meta span {
         display: block; } }
@@ -4704,9 +4735,40 @@ input {
           -ms-flex-pack: justify;
               justify-content: space-between; }
       .after-festival-info p {
+        line-height: 2;
         width: 40vw; }
       .after-festival-info img {
-        width: 40vw; } }
+        width: 40vw;
+        display: block;
+        height: auto;
+        margin-bottom: 4rem; } }
+
+.after-festival-report {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.access-report-btn {
+  text-transform: uppercase;
+  border: 3px solid #ed1651;
+  text-align: center;
+  margin: auto;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 12px;
+  background: #ffffff;
+  font-weight: 600;
+  color: #ed1651; }
+  .access-report-btn:hover {
+    border: 3px solid #f58220;
+    color: #f58220; }
 
 @media (min-width: 480px) {
   .mobile-gallery {
@@ -4751,11 +4813,16 @@ input {
   display: block !important; }
 
 .after-festival-comment {
-  font-weight: 500;
-  color: gray;
+  font-weight: 600;
+  color: #999999;
   text-align: center;
   margin-bottom: 3rem;
-  font-size: 1.2rem; }
+  font-size: 25px; }
+
+.single-isf_event h1,
+.single-isf_event h2,
+.single-isf_event p {
+  font-family: 'Montserrat'; }
 
 .single-isf_event .entry-title {
   text-transform: uppercase;
@@ -4771,6 +4838,40 @@ input {
 
 .single-isf_event .entry-content {
   margin-top: 0; }
+
+.single-isf_event .isf-plus-description {
+  background-color: #ffffff;
+  margin-top: 0;
+  color: #999999;
+  font-weight: 600;
+  font-size: 18px; }
+  @media (min-width: 480px) {
+    .single-isf_event .isf-plus-description {
+      background-color: #fff2f2;
+      color: #191414;
+      font-weight: 400; } }
+
+@media (min-width: 480px) {
+  .single-isf_event .wrapper__single-event {
+    padding-bottom: 1rem; } }
+
+@media (min-width: 480px) {
+  .single_year-events {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.year_round-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 2rem; }
+  @media (min-width: 480px) {
+    .year_round-header {
+      margin-left: 10rem;
+      margin-right: 0;
+      width: 16rem;
+      text-align: left; } }
 
 .single_event-info {
   display: -webkit-box;
@@ -4802,7 +4903,8 @@ input {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      font-weight: 700; } }
+      font-weight: 600;
+      margin-right: 8rem; } }
 
 .single_event-details {
   display: grid;
@@ -4814,7 +4916,7 @@ input {
 
 .single_event-tags {
   text-align: center;
-  font-weight: 700; }
+  font-weight: 600; }
   @media (min-width: 480px) {
     .single_event-tags {
       text-align: left;
@@ -4824,7 +4926,7 @@ input {
 @media (min-width: 480px) {
   .event-details {
     font-size: 20px;
-    font-weight: 700; } }
+    font-weight: 600; } }
 
 .single_event-content {
   text-align: center;
@@ -4843,7 +4945,7 @@ input {
               box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651; } }
 
 .event_calendar-btn {
-  padding-left: 8rem; }
+  padding-left: 4rem; }
   @media (min-width: 480px) {
     .event_calendar-btn .calendar-btn {
       border: 2px solid #cecece;
@@ -4972,6 +5074,17 @@ input {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+
+.isf-plus-container1 {
+  background: #ffffff; }
+  @media (min-width: 480px) {
+    .isf-plus-container1 {
+      background: #fff2f2; } }
+
+@media (min-width: 480px) {
+  .isf_plus-event {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); } }
 
 .error404 .page-header {
   -webkit-box-pack: center;

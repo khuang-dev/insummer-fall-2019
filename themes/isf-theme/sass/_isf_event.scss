@@ -1,4 +1,9 @@
 .single-isf_event {
+    h1,
+    h2, 
+    p {
+        font-family: 'Montserrat';
+    }
     .entry-title {
         text-transform: uppercase;
         text-align: center;
@@ -12,6 +17,40 @@
     }
     .entry-content {
         margin-top: 0;
+    }
+    .isf-plus-description {
+        background-color: $color__white;
+        margin-top: 0;
+        color: $color__charcoal;
+        font-weight: 600;
+        font-size: 18px;
+        @include desktop {
+            background-color: $bg__champagne;
+            color: $color__black;
+            font-weight: 400;
+        }
+    }
+    .wrapper__single-event {
+        @include desktop {
+            padding-bottom: 1rem;
+        }
+    }
+}
+.single_year-events {
+    @include desktop {
+        display: flex;
+        }
+}
+.year_round-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 2rem;
+    @include desktop {
+        margin-left: 10rem;
+        margin-right: 0;
+        width: 16rem;
+        text-align: left;
     }
 }
 
@@ -40,7 +79,8 @@
         color: $color__black;
         display: flex;
         align-items: center;
-        font-weight: 700;
+        font-weight: 600;
+        margin-right: 8rem;
     }
 }
 
@@ -55,7 +95,7 @@
 
 .single_event-tags {
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     @include desktop {
         text-align: left;
         font-size: 24px;
@@ -67,7 +107,7 @@
 .event-details {
     @include desktop {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     }
 }
 
@@ -91,7 +131,7 @@
 
 // button
 .event_calendar-btn {
-    padding-left: 8rem;
+    padding-left: 4rem;
 
 .calendar-btn {
         @include desktop {
@@ -230,3 +270,15 @@
     justify-content: flex-end;
 }
 
+// //ISF+
+.isf-plus-container1 {
+        background: $color__white;
+        @include desktop {
+            background: $bg__champagne;
+        }
+}
+.isf_plus-event {
+    @include desktop {
+        transform: translateY(20px);
+    }
+}
