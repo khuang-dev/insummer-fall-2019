@@ -67,17 +67,26 @@ get_header(); ?>
 					<h3 class="h3__left-border-pink title__down-memory-lane">Down Memory Lane</h2>
 				<section class="memory-lane-wrapper">
                 <?php 
-				$args = array( 'post_type' => 'events', 'order' => 'ASC', 'posts_per_page' => 6);
+				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 6);
    				$event_posts = get_posts( $args ); // returns an array of posts
 			    ?>
-
+	
+		  
 			<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>
                    <?php /* Content from your array of post results goes here */ ?>
-                   <article class="wrapper__single-event" style="background-image: url(<?php the_field('event_image');?>); background-size: cover; background-position: center;">
-						<div class="p__white artist-name"><p><?php the_title(); ?></p></div>
+                   <article class="wrapper__single-artist" style="background-image: url(<?php the_field('event_image');?>); background-size: cover; background-position: center;">
+						<div class="p__white event-name"></div>
+						<div class="event__date">
+                                            <?php $date = new DateTime(get_field('event_date')); ?>
+                                            <p class="thumbnail__date-day thumbnail__date-year"><?php echo $date->format('Y'); ?></p>
+                                        </div>
                     </article>
                     <?php endforeach; wp_reset_postdata(); ?>
 				</section>
+							
+
+
+	
 
 				
 				<section class="award-wrapper">
