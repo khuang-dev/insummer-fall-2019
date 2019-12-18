@@ -1528,6 +1528,14 @@ object {
   height: 3rem !important; }
 
 /* Front page */
+.page-contact-us {
+  margin-left: 1rem;
+  margin-right: 1rem; }
+  @media (min-width: 480px) {
+    .page-contact-us {
+      margin-left: 0;
+      margin-right: 0; } }
+
 .message-us-page .entry-title {
   display: none; }
 
@@ -1541,13 +1549,15 @@ object {
             justify-content: space-between; } }
 
 .contact-us-title h3 {
-  border-bottom: solid 2px #ed1651;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  position: relative; }
   @media (min-width: 480px) {
     .contact-us-title h3 {
       border-left: solid 8px #ed1651;
@@ -1579,6 +1589,8 @@ object {
   line-height: 2.3125rem;
   text-align: center;
   margin-bottom: 1rem; }
+  .contact-info-details p {
+    color: black !important; }
 
 .mobile-svg {
   max-width: 100px;
@@ -1631,6 +1643,10 @@ iframe {
   text-align: center;
   line-height: 2.5rem;
   margin-bottom: 1rem; }
+  @media (min-width: 480px) {
+    .send-us-message-form {
+      margin-left: 0;
+      margin-right: 0; } }
   .send-us-message-form .gform_title {
     font-family: 'Montserrat';
     font-weight: bold; }
@@ -1640,9 +1656,6 @@ iframe {
   .send-us-message-form_wrapper li ul {
     margin: 0;
     padding: 0px; }
-
-.contact-info-loop .contact-info-details a {
-  color: red; }
 
 @media (min-width: 480px) {
   .message-us-page {
@@ -1841,7 +1854,10 @@ iframe {
     min-width: 113px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    font-weight: 600;
+    color: #ed1651;
+    font-size: 20px; }
   .page-donate .donate_radio input[type='radio']:checked ~ label {
     border-color: #f58220; }
 
@@ -2316,9 +2332,9 @@ iframe {
         text-transform: uppercase;
         text-align: left; } }
   .our-sponsors h2 {
-    color: #191414;
+    color: #999999;
     text-align: center;
-    font-weight: 700; }
+    font-weight: 500; }
   @media (min-width: 480px) {
     .our-sponsors img {
       max-width: none; } }
@@ -2375,7 +2391,7 @@ iframe {
   color: #ed1651;
   margin: auto;
   display: block;
-  font-weight: 700; }
+  font-weight: 600; }
   @media (min-width: 480px) {
     .become-sponsor {
       color: #ffffff;
@@ -2537,7 +2553,7 @@ iframe {
 .page-become-a-sponsor .entry-title {
   color: #ed1651;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   border-left: none; }
   @media (min-width: 480px) {
     .page-become-a-sponsor .entry-title {
@@ -2556,7 +2572,7 @@ iframe {
   background: #ed1651;
   border-radius: 12px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   margin: auto;
   display: block;
   width: -webkit-fit-content;
@@ -2589,7 +2605,7 @@ iframe {
     background: #ed1651;
     border-radius: 12px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     margin: auto;
     display: block;
     width: -webkit-fit-content;
@@ -2890,9 +2906,7 @@ a:link {
   font-size: 2em; }
 
 p.member-text {
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 8%; }
+  margin: 3rem; }
 
 .curator {
   background-color: #ed1651;
@@ -3207,8 +3221,7 @@ p.member-text {
       flex-flow: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
-  border: solid 2px #191414; }
+          justify-content: space-between; }
   @media (min-width: 480px) {
     .accessibility-info-loop {
       max-width: 1100px;
@@ -3247,10 +3260,13 @@ p.member-text {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: solid 4px #ed1651; }
+  position: relative;
+  margin-bottom: 2rem; }
   @media (min-width: 480px) {
     .accessibility-about-title h3 {
+      position: unset;
       border-bottom: unset;
+      background: unset;
       border-right: solid 8px #ed1651;
       height: 49px;
       width: 256px;
@@ -3296,21 +3312,31 @@ p.member-text {
     width: 830px;
     max-width: 100%; } }
 
-.accessibility-about-info h5 {
+.accessibility-about-info p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  font-weight: normal; }
+  font-weight: normal;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  line-height: 2rem; }
   @media (min-width: 480px) {
-    .accessibility-about-info h5 {
-      height: 192px;
+    .accessibility-about-info p {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       width: 830px;
       color: #191414;
       font-family: 'Montserrat';
       font-size: 18px;
       line-height: 21px;
-      text-align: center; } }
+      text-align: center;
+      line-height: 2rem; } }
+
+a[href^='tel'] {
+  display: block;
+  margin: 0 auto; }
 
 @media (min-width: 480px) {
   .accessibility-icon-svg {
@@ -3351,6 +3377,14 @@ p.member-text {
   -webkit-transition: 0.4s;
   transition: 0.4s; }
 
+.accordion span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .accordion:hover {
@@ -3385,10 +3419,14 @@ p.member-text {
   border-radius: 50px;
   background-color: #fff2f2;
   width: 35px;
-  height: 35px; }
+  height: 35px;
+  margin-right: 1rem; }
 
 .page-year-round p {
   font-size: 18px; }
+
+.past-event-box {
+  padding-top: 2rem; }
 
 .events-title {
   width: auto;
@@ -3400,8 +3438,18 @@ p.member-text {
   @media (min-width: 480px) {
     .events-title {
       font-size: 40px;
-      margin-left: 7rem;
-      border-left: 8px #ed1651 solid; } }
+      margin-left: 7rem; } }
+
+.event-title {
+  width: auto;
+  color: #191414;
+  margin-bottom: 1.5rem;
+  margin-left: 1.25rem;
+  font-size: 1.2rem; }
+  @media (min-width: 480px) {
+    .event-title {
+      font-size: 40px;
+      margin-left: 7rem; } }
 
 @media (min-width: 480px) {
   .year-events {
@@ -3428,7 +3476,8 @@ p.member-text {
   @media (min-width: 480px) {
     .year-events-h1 {
       color: #191414;
-      font-size: 40px; } }
+      font-size: 40px;
+      font-weight: 600; } }
 
 .year-events-h2 {
   color: #ed1651;
@@ -3450,6 +3499,11 @@ p.member-text {
           -ms-flex-align: center;
               align-items: center;
       font-size: 18px; } }
+
+.past-event-container {
+  background: #fff2f2;
+  -webkit-transform: translateY(46px);
+          transform: translateY(46px); }
 
 .patron-title {
   color: #191414; }
@@ -3473,7 +3527,7 @@ p.member-text {
 .patron-title-price {
   padding-right: 20px; }
 
-/* Style the buttons that are used to open and close the accordion panel */
+/* The buttons that are used to open and close the accordion panel */
 .accordion-patron {
   text-transform: uppercase;
   display: -webkit-box;
@@ -3714,6 +3768,111 @@ p.member-text {
   text-transform: uppercase;
   text-align: right; }
 
+.memory-ln {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.title__down-memory-lane {
+  width: auto;
+  color: #191414;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  margin-left: 1.25rem;
+  font-size: 1.2rem; }
+  @media (min-width: 480px) {
+    .title__down-memory-lane {
+      margin-left: 6rem;
+      margin-bottom: 1.5rem;
+      margin-top: 3rem;
+      font-size: 2rem; } }
+
+.see-all {
+  text-align: right;
+  margin: 0 7rem;
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+.memory-lane-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 1.25rem;
+  grid-gap: 1rem;
+  margin-bottom: 2rem; }
+  @media (min-width: 480px) {
+    .memory-lane-wrapper {
+      margin: 0 6rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem;
+      margin-bottom: 2rem; } }
+
+.past-festivals .wrapper__single-event {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  .past-festivals .wrapper__single-event::before {
+    content: '';
+    display: block;
+    padding-bottom: 63%; }
+  .past-festivals .wrapper__single-event:nth-child(1) .event__date {
+    background-color: rgba(237, 22, 81, 0.75); }
+  .past-festivals .wrapper__single-event:nth-child(2) .event__date {
+    background-color: rgba(245, 130, 32, 0.75); }
+  .past-festivals .wrapper__single-event:nth-child(3) .event__date {
+    background-color: rgba(105, 200, 203, 0.75); }
+  .past-festivals .wrapper__single-event:nth-child(4) .event__date {
+    background-color: rgba(105, 200, 203, 0.75); }
+  .past-festivals .wrapper__single-event:nth-child(5) .event__date {
+    background-color: rgba(237, 22, 81, 0.75); }
+  .past-festivals .wrapper__single-event:nth-child(6) .event__date {
+    background-color: rgba(245, 130, 32, 0.75); }
+
+.event__date {
+  text-transform: uppercase;
+  height: 4rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff; }
+  @media (min-width: 480px) {
+    .event__date {
+      bottom: 0;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+      height: 9rem;
+      min-width: 15rem;
+      font-size: 2.5vw;
+      font-weight: 600;
+      padding: 1.5rem 0rem 0.5rem 0rem; }
+      .event__date p {
+        margin: 0 auto;
+        max-width: 71%; } }
+
 .award-wrapper {
   background-color: #fff2f2;
   padding: 3rem 1.25rem; }
@@ -3766,12 +3925,14 @@ p.member-text {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 1.25rem;
-  grid-gap: 1rem; }
+  grid-gap: 1rem;
+  margin-bottom: 2rem; }
   @media (min-width: 480px) {
     .featured-artist-wrapper {
       margin: 0 6rem;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 2rem; } }
+      grid-gap: 2rem;
+      margin-bottom: 2rem; } }
 
 .wrapper__single-artist {
   width: 100%;
@@ -3789,7 +3950,7 @@ p.member-text {
       -ms-flex-pack: end;
           justify-content: flex-end; }
   .wrapper__single-artist::before {
-    content: "";
+    content: '';
     display: block;
     padding-bottom: 63%; }
   .wrapper__single-artist:nth-child(1) .artist-name {
@@ -4004,6 +4165,16 @@ p.member-text {
       .thumbnail__date .thumbnail__date-month {
         font-size: 1rem;
         padding-top: 0.6rem; } }
+  .thumbnail__date .thumbnail__date-year {
+    font-weight: 700;
+    font-size: 1.2rem;
+    -webkit-transform: translateY(0.8rem);
+            transform: translateY(0.8rem); }
+    @media (min-width: 480px) {
+      .thumbnail__date .thumbnail__date-year {
+        font-size: 2rem;
+        -webkit-transform: translateY(0.9rem);
+                transform: translateY(0.9rem); } }
   .thumbnail__date p {
     padding: 0;
     margin: 0;
@@ -4572,7 +4743,7 @@ input {
   text-transform: uppercase;
   color: #ed1651;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.75rem;
   margin: 0 1.25rem; }
   @media (min-width: 480px) {
@@ -4623,10 +4794,12 @@ input {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      padding: 0 7.5rem; }
+      padding: 4rem 7.5rem; }
       .after-festival-meta p {
+        font-size: 50px;
         width: auto; }
       .after-festival-meta h4 {
+        font-size: 50px;
         margin: 0; }
       .after-festival-meta span {
         display: block; } }
@@ -4646,9 +4819,40 @@ input {
           -ms-flex-pack: justify;
               justify-content: space-between; }
       .after-festival-info p {
+        line-height: 2;
         width: 40vw; }
       .after-festival-info img {
-        width: 40vw; } }
+        width: 40vw;
+        display: block;
+        height: auto;
+        margin-bottom: 4rem; } }
+
+.after-festival-report {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.access-report-btn {
+  text-transform: uppercase;
+  border: 3px solid #ed1651;
+  text-align: center;
+  margin: auto;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 12px;
+  background: #ffffff;
+  font-weight: 600;
+  color: #ed1651; }
+  .access-report-btn:hover {
+    border: 3px solid #f58220;
+    color: #f58220; }
 
 @media (min-width: 480px) {
   .mobile-gallery {
@@ -4693,11 +4897,16 @@ input {
   display: block !important; }
 
 .after-festival-comment {
-  font-weight: 500;
-  color: gray;
+  font-weight: 600;
+  color: #999999;
   text-align: center;
   margin-bottom: 3rem;
-  font-size: 1.2rem; }
+  font-size: 25px; }
+
+.single-isf_event h1,
+.single-isf_event h2,
+.single-isf_event p {
+  font-family: 'Montserrat'; }
 
 .single-isf_event .entry-title {
   text-transform: uppercase;
@@ -4713,6 +4922,40 @@ input {
 
 .single-isf_event .entry-content {
   margin-top: 0; }
+
+.single-isf_event .isf-plus-description {
+  background-color: #ffffff;
+  margin-top: 0;
+  color: #999999;
+  font-weight: 600;
+  font-size: 18px; }
+  @media (min-width: 480px) {
+    .single-isf_event .isf-plus-description {
+      background-color: #fff2f2;
+      color: #191414;
+      font-weight: 400; } }
+
+@media (min-width: 480px) {
+  .single-isf_event .wrapper__single-event {
+    padding-bottom: 1rem; } }
+
+@media (min-width: 480px) {
+  .single_year-events {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.year_round-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 2rem; }
+  @media (min-width: 480px) {
+    .year_round-header {
+      margin-left: 10rem;
+      margin-right: 0;
+      width: 16rem;
+      text-align: left; } }
 
 .single_event-info {
   display: -webkit-box;
@@ -4744,7 +4987,8 @@ input {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      font-weight: 700; } }
+      font-weight: 600;
+      margin-right: 8rem; } }
 
 .single_event-details {
   display: grid;
@@ -4756,7 +5000,7 @@ input {
 
 .single_event-tags {
   text-align: center;
-  font-weight: 700; }
+  font-weight: 600; }
   @media (min-width: 480px) {
     .single_event-tags {
       text-align: left;
@@ -4766,7 +5010,7 @@ input {
 @media (min-width: 480px) {
   .event-details {
     font-size: 20px;
-    font-weight: 700; } }
+    font-weight: 600; } }
 
 .single_event-content {
   text-align: center;
@@ -4785,7 +5029,7 @@ input {
               box-shadow: 0 2px 2px 0 #cecece, -30px -30px 0 0 #ed1651; } }
 
 .event_calendar-btn {
-  padding-left: 8rem; }
+  padding-left: 4rem; }
   @media (min-width: 480px) {
     .event_calendar-btn .calendar-btn {
       border: 2px solid #cecece;
@@ -4915,7 +5159,18 @@ input {
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
-.page-header {
+.isf-plus-container1 {
+  background: #ffffff; }
+  @media (min-width: 480px) {
+    .isf-plus-container1 {
+      background: #fff2f2; } }
+
+@media (min-width: 480px) {
+  .isf_plus-event {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); } }
+
+.error404 .page-header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4923,15 +5178,15 @@ input {
   display: -ms-flexbox;
   display: flex;
   padding: 4rem; }
-  .page-header h1 {
+  .error404 .page-header h1 {
     color: black;
     font-size: 33px; }
     @media (min-width: 480px) {
-      .page-header h1 {
+      .error404 .page-header h1 {
         color: black;
         font-size: 50px; } }
 
-.page-content {
+.error404 .page-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4940,11 +5195,11 @@ input {
           justify-content: center;
   padding: 2rem;
   padding-bottom: 8rem; }
-  .page-content p {
+  .error404 .page-content p {
     color: #000;
     font-size: 22px; }
     @media (min-width: 480px) {
-      .page-content p {
+      .error404 .page-content p {
         color: #000;
         font-size: 37px; } }
 
@@ -4979,3 +5234,25 @@ input {
 .search-results .entry-summary p,
 .search-results .entry-title a:after {
   content: close-quote; }
+
+.search-no-results .page-title,
+.search-no-results .page-header {
+  display: none; }
+
+.search-no-results .page-content p {
+  max-width: 600px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 3.5rem;
+  text-align: center;
+  color: #191414;
+  font-size: 22px; }
+  @media (min-width: 480px) {
+    .search-no-results .page-content p {
+      color: #191414;
+      font-size: 37px; } }

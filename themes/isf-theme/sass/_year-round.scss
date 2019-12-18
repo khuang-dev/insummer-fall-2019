@@ -4,6 +4,9 @@
     }
 }
 
+.past-event-box {
+    padding-top: 2rem;
+}
 .events-title {
     width: auto;
     color: $color__black;
@@ -14,9 +17,21 @@
     @include desktop {
         font-size: 40px;
         margin-left: 7rem;
-        border-left: 8px $color__pink solid; 
     }
 }
+
+.event-title {
+    width: auto;
+    color: $color__black;
+    margin-bottom: 1.5rem;
+    margin-left: 1.25rem;
+    font-size: 1.2rem;
+    @include desktop {
+        font-size: 40px;
+        margin-left: 7rem;
+    }
+}
+
 
 .year-events {
     @include desktop {
@@ -43,6 +58,7 @@
     @include desktop {
         color: $color__black;
         font-size: 40px;
+        font-weight: 600;
     }
 }
 .year-events-h2 {
@@ -64,5 +80,8 @@
    }
 }
 
-
+.past-event-container {
+    background: $bg__champagne;
+    transform: translateY(46px);
+}
     

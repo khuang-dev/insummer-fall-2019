@@ -1,141 +1,132 @@
 .past-testimony {
-    margin: 2rem 1.25rem;
-    @include desktop {
+  margin: 2rem 1.25rem;
+  @include desktop {
     margin: 2rem 6rem;
-    }
+  }
 }
 .past-testimonial {
-    color: $color__pink;
-    font-weight: 600;
-    font-size: 1.2rem;
-    &::after {
-        content: '"';
-        color: $color__black;
-    }
-    &::before {
-        content: '"';
-        color: $color__black;
-    }
+  color: $color__pink;
+  font-weight: 600;
+  font-size: 1.2rem;
+  &::after {
+    content: '"';
+    color: $color__black;
+  }
+  &::before {
+    content: '"';
+    color: $color__black;
+  }
 }
 .past-testimony-wrapper {
-    display: flex;
+  display: flex;
 }
 .testimonial-author {
-    font-style: italic;
-    text-align: right;
+  font-style: italic;
+  text-align: right;
 }
 .testimonial-source {
-    font-style: italic;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: right;
+  font-style: italic;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: right;
 }
 
-.award-wrapper {
-    background-color: $bg__champagne;
-    padding: 3rem 1.25rem;
-    @include desktop {
-    padding: 3rem 6rem;
-    }
+.memory-ln {
+  display: flex;
+  flex-direction: column;
 }
-.award-description {
-    margin-top: 2rem;
-}
-.award-list {
-    text-align: center;
-    @include desktop {
-        text-align: left;
-    display: flex;
-    justify-content: space-between;
-    }
-    .award-one {
-        padding-bottom: 2rem;
-        @include desktop {
-            padding-bottom: 0;
-        }
-    }
-    .award-two {
-        display: none;
-        padding-bottom: 2rem;
-        @include desktop {
-            display: block;
-            padding-bottom: 0;
-        }
-    }
-    .award-three {
-        display: none;
-        padding-bottom: 2rem;
-        @include desktop {
-            display: block;
-            padding-bottom: 0;
-        }
-    }
-}
-.toggle-award {
-    color: $color__pink;
-    font-size: 1.25rem;
-    @include desktop {
-        display: none;
-    }
+.title__down-memory-lane {
+  width: auto;
+  color: $color__black;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  margin-left: 1.25rem;
+  font-size: 1.2rem;
+  @include desktop {
+    margin-left: 6rem;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
 }
 
-.featured-artist-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 1.25rem;
-    grid-gap: 1rem;
-    @include desktop {
+.see-all {
+  text-align: right;
+  margin: 0 7rem;
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.memory-lane-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 1.25rem;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+  @include desktop {
     margin: 0 6rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;
-    }
+    margin-bottom: 2rem;
+  }
 }
-.wrapper__single-artist {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
 
-    &::before {
-        content: "";
-        display: block;
-        padding-bottom: 63%;
+.past-festivals .wrapper__single-event {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  &::before {
+    content: '';
+    display: block;
+    padding-bottom: 63%;
+  }
+  &:nth-child(1) {
+    .event__date {
+      background-color: $color__pink-transparent;
     }
-    &:nth-child(1) {
-        .artist-name {
-        background-color: $color__pink-transparent;
-        }
+  }
+  &:nth-child(2) {
+    .event__date {
+      background-color: $color__orange-transparent;
     }
-    &:nth-child(2) {
-        .artist-name {
-            background-color: $color__orange-transparent;
-            }    }
-    &:nth-child(3) {
-        .artist-name {
-            background-color: $color__lightblue-transparent;
-            }    }
-    &:nth-child(4) {
-        .artist-name {
-            background-color: $color__lightblue-transparent;
-            }    }
-    &:nth-child(5) {
-        .artist-name {
-            background-color: $color__pink-transparent;
-            }    }
-    &:nth-child(6) {
-        .artist-name {
-            background-color: $color__orange-transparent;
-            }    }
+  }
+  &:nth-child(3) {
+    .event__date {
+      background-color: $color__lightblue-transparent;
+    }
+  }
+  &:nth-child(4) {
+    .event__date {
+      background-color: $color__lightblue-transparent;
+    }
+  }
+  &:nth-child(5) {
+    .event__date {
+      background-color: $color__pink-transparent;
+    }
+  }
+  &:nth-child(6) {
+    .event__date {
+      background-color: $color__orange-transparent;
+    }
+  }
 }
-.artist-name {
-    text-transform: uppercase;
-    height: 4rem;
-    font-size: 1.3rem;
-    font-weight: 600;
-    @include desktop {
+
+.event__date {
+  text-transform: uppercase;
+  height: 4rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color__white;
+  @include desktop {
     bottom: 0;
     margin: 0 auto;
     text-align: center;
@@ -146,8 +137,136 @@
     font-weight: 600;
     padding: 1.5rem 0rem 0.5rem 0rem;
     p {
-        margin: 0 auto;
-        max-width: 71%;
+      margin: 0 auto;
+      max-width: 71%;
     }
+  }
+}
+
+.award-wrapper {
+  background-color: $bg__champagne;
+  padding: 3rem 1.25rem;
+  @include desktop {
+    padding: 3rem 6rem;
+  }
+}
+.award-description {
+  margin-top: 2rem;
+}
+.award-list {
+  text-align: center;
+  @include desktop {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+  .award-one {
+    padding-bottom: 2rem;
+    @include desktop {
+      padding-bottom: 0;
     }
+  }
+  .award-two {
+    display: none;
+    padding-bottom: 2rem;
+    @include desktop {
+      display: block;
+      padding-bottom: 0;
+    }
+  }
+  .award-three {
+    display: none;
+    padding-bottom: 2rem;
+    @include desktop {
+      display: block;
+      padding-bottom: 0;
+    }
+  }
+}
+.toggle-award {
+  color: $color__pink;
+  font-size: 1.25rem;
+  @include desktop {
+    display: none;
+  }
+}
+
+.featured-artist-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 1.25rem;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+  @include desktop {
+    margin: 0 6rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+.wrapper__single-artist {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-bottom: 63%;
+  }
+  &:nth-child(1) {
+    .artist-name {
+      background-color: $color__pink-transparent;
+    }
+  }
+  &:nth-child(2) {
+    .artist-name {
+      background-color: $color__orange-transparent;
+    }
+  }
+  &:nth-child(3) {
+    .artist-name {
+      background-color: $color__lightblue-transparent;
+    }
+  }
+  &:nth-child(4) {
+    .artist-name {
+      background-color: $color__lightblue-transparent;
+    }
+  }
+  &:nth-child(5) {
+    .artist-name {
+      background-color: $color__pink-transparent;
+    }
+  }
+  &:nth-child(6) {
+    .artist-name {
+      background-color: $color__orange-transparent;
+    }
+  }
+}
+.artist-name {
+  text-transform: uppercase;
+  height: 4rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  @include desktop {
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 9rem;
+    min-width: 15rem;
+    font-size: 2.5vw;
+    font-weight: 600;
+    padding: 1.5rem 0rem 0.5rem 0rem;
+    p {
+      margin: 0 auto;
+      max-width: 71%;
+    }
+  }
 }

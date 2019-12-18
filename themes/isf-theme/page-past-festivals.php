@@ -17,6 +17,16 @@ get_header(); ?>
 					<h1 class="banner__title"><?php the_sub_field('banner_title');?></h1>
 					<p class="banner__description p__white"><?php the_sub_field('banner_description');?></p>
 				
+							<?php if ( have_rows('learn_more_button')):?>
+							<?php while ( have_rows('learn_more_button')) : the_row(); ?>
+							<button class="banner__btn">
+							<a class="banner__btn-label" href="<?php the_sub_field('page_link');?>"><?php the_sub_field('banner_button_label');?></a>
+							</button>
+							<?php endwhile; ?>
+							<?php else : ?>
+							<?php endif; ?>
+
+
 							<?php if ( have_rows('banner_button')):?>
 							<?php while ( have_rows('banner_button')) : the_row(); ?>
 							<button class="banner__btn">
@@ -64,8 +74,35 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 
+				<div class="memory-ln">
+					<h3 class="h3__left-border-pink title__down-memory-lane">Down Memory Lane</h2>
+					<a class="see-all">See All</a>
+				<section class="memory-lane-wrapper">
+				
+                <?php 
+				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 6);
+   				$event_posts = get_posts( $args ); // returns an array of posts
+			    ?>
+	
+		  
+			<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>
+                   <?php /* Content from your array of post results goes here */ ?>
+                   <article class="wrapper__single-event" style="background-image: url(<?php the_field('event_image');?>); background-size: cover; background-position: center;">
+						<div class="p__white event-name"></div>
+						<div class="event__date">
+                                            <?php $date = new DateTime(get_field('event_date')); ?>
+                                            <p class="thumbnail__date-day thumbnail__date-year"><?php echo $date->format('Y'); ?></p>
+                                        </div>
+                    </article>
+                    <?php endforeach; wp_reset_postdata(); ?>
+				</section>
+				</div>
+							
 
 
+	
+
+				
 				<section class="award-wrapper">
 					<div class="award-title">
 						<?php
@@ -108,7 +145,25 @@ get_header(); ?>
 					</div>
 					</div>
 					</section>
-					<section class="wrapper__featured">
+					
+
+				<h3 class="h3__left-border-pink title__featured-artists">Featured Artists</h2>
+				<section class="featured-artist-wrapper">
+				
+                <?php 
+				$args = array( 'post_type' => 'artist', 'order' => 'ASC', 'posts_per_page' => 6);
+   				$artist_posts = get_posts( $args ); // returns an array of posts
+			    ?>
+
+			<?php foreach ( $artist_posts as $post ) : setup_postdata( $post ); ?>
+                   <?php /* Content from your array of post results goes here */ ?>
+                   <article class="wrapper__single-artist" style="background-image: url(<?php the_field('artist_image');?>); background-size: cover; background-position: center;">
+						<div class="p__white artist-name"><p><?php the_title(); ?></p></div>
+                    </article>
+                    <?php endforeach; wp_reset_postdata(); ?>
+				</section>
+
+				<section class="wrapper__featured">
             <?php if ( have_rows('featured_content', 9)):?>
                             <?php while ( have_rows('featured_content', 9)) : the_row(); ?>
                                 <div class="wrapper__featured-content" style="background-image: url(<?php the_sub_field('featured_page_image');?>); background-size: cover;">
@@ -127,21 +182,6 @@ get_header(); ?>
                             <?php else : ?>
                             <?php endif; ?> 
 			</section>
-
-				<h3 class="h3__left-border-pink title__featured-artists">Featured Artists</h2>
-				<section class="featured-artist-wrapper">
-                <?php 
-				$args = array( 'post_type' => 'artist', 'order' => 'ASC', 'posts_per_page' => 6);
-   				$artist_posts = get_posts( $args ); // returns an array of posts
-			    ?>
-
-			<?php foreach ( $artist_posts as $post ) : setup_postdata( $post ); ?>
-                   <?php /* Content from your array of post results goes here */ ?>
-                   <article class="wrapper__single-artist" style="background-image: url(<?php the_field('artist_image');?>); background-size: cover; background-position: center;">
-						<div class="p__white artist-name"><p><?php the_title(); ?></p></div>
-                    </article>
-                    <?php endforeach; wp_reset_postdata(); ?>
-				</section>
 					<?php
 						wp_link_pages( array(
 							'before' => '<div class="page-links">' . esc_html( 'Pages:' ),

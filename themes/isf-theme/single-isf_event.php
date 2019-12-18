@@ -14,20 +14,13 @@ get_header(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
-				<?php //if ( has_post_thumbnail() ) : ?>
-					<?php// the_post_thumbnail( 'large' ); ?>
-				<?php //endif; ?>
-				<!-- <h1 class="hide-mobile year_round-head">YEAR ROUND EVENTS</h1>
-				<?php //the_title( '<h1 class="hide-mobile single_event-title h3__left-border-pink">', '</h1>' ); ?> -->
-				<section class="hide-mobile year-events">
-						<div class="year_round-head">
+				<section class="hide-mobile single_year-events">
+						<div class="year_round-header">
 							<h2 class="year-events-h1">Year Round Events</h2>
 							<h2 class="year-events-h2">ISF+</h2>
 						</div>
 						<?php the_title( '<h1 class="hide-mobile single_event-title h3__left-border-pink">', '</h1>' ); ?> 
-
-						<!-- <p class="year-content"><?php //the_field('page_about');?></p> -->
-					</section>	
+				</section>	
 
 			</header><!-- .entry-header -->
 
@@ -210,9 +203,29 @@ get_header(); ?>
 			</section>
 
 							<!-- ARTIST -->
+				<!-- <?php //if ( the_field('artist_name')!=null):?>
+					<?php// echo 'hello';
+					//echo get_field('artist_name');?>
+                    <?php //endif; ?>  -->
+				<?php //$artist = get_field_group('About Artists');
+				//echo '<pre>';
+				//var_dump ($artist);
+				//echo '</pre>';
+				?>
+
 			<section>
+
+
+
+			<?php
+			
+			$artist_name = get_field('artist_name');
+			$artist_description = get_field('artist_description');
+			if( $artist_name && $artist_description): ?>
+				
 				<div class="artist-container">
 				<section class="artist-container-info">
+				
 					<div class="artist-img">
 						<img class="artist-single_event"src="<?php the_field('artist_image');?>" />
 						
@@ -227,13 +240,13 @@ get_header(); ?>
 								<img class="hdide-mobile artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Twitter.svg" alt="icon-twitter">
 							</a>
 							<a class="hide-mobile" href="<?php get_field ('youtube_url', 'options'); ?>">
-								<img class="hide-mobile artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Youtube.svg" alt="icon-youtube">
+								<img class="hide-mobile artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/3x/Youtube3x.png" alt="icon-youtube">
 							</a>
 						</div>
 					</div>
 					</section>
 				<div class="about_artist-event">
-					<p class="h3__left-border-pink artist_event-name hide-mobile"><?php the_field('artist_name');?></p>
+					<p class="h3__left-border-pink artist_event-name hide-mobile"><?php echo $artist_name;?></p>
 
 					<div class="artist-info">
 						<div class="artist-testimonial hide-mobile">
@@ -254,16 +267,18 @@ get_header(); ?>
 							?>
 						</div>
 						<?php the_content(); ?>
-						<p class="h3__left-border-pink artist_event-name hide-desktop"><?php the_field('artist_name');?></p>
-						<?php the_field('artist_description');?>
+						<p class="h3__left-border-pink artist_event-name hide-desktop"><?php echo $artist_name;?></p>
+						<?php echo $artist_description;?>
 					</div>
 					</div>
 				</div>
 				</section>
+			
+			<?php endif; ?>
 
 				<!-- SPONSORS -->
 
-			<section>
+			<section class="hide-mobile">
                 <h3 class="h3__left-border-pink title__sponsor"><?php echo get_the_title(21); ?><h3>
                 <div class="wrapper__fp-sponsor">
                 <?php if ( have_rows('sponsor_images', 21)):?>
@@ -278,6 +293,13 @@ get_header(); ?>
 			</section>
 
 
+			<div class="isf_plus-event">
+			<p class="isf-plus-description" style="display:block"><?php echo get_field('isfplus_description');?></p>
+				<section class="isf-plus-container1 wrapper__upcoming-events grid-column-3 wrapper-isf-plus-event" id="content-output-isfplus">
+				</section>
+			</div>
+
+
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
@@ -288,11 +310,6 @@ get_header(); ?>
 		
 <?php endwhile ?>
 
-
-<p class="isf-plus-description"><?php the_field('isfplus_description');?></p>
-<section class="wrapper__upcoming-events grid-column-3 wrapper-isf-plus-event" id="content-output-isfplus">
-
-</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

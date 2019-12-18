@@ -17,6 +17,16 @@ get_header(); ?>
 					<h1 class="banner__title"><?php the_sub_field('banner_title');?></h1>
 					<p class="banner__description p__white"><?php the_sub_field('banner_description');?></p>
 				
+							<?php if ( have_rows('learn_more_button')):?>
+							<?php while ( have_rows('learn_more_button')) : the_row(); ?>
+							<button class="banner__btn">
+							<a class="banner__btn-label" href="<?php the_sub_field('page_link');?>"><?php the_sub_field('banner_button_label');?></a>
+							</button>
+							<?php endwhile; ?>
+							<?php else : ?>
+							<?php endif; ?>
+
+
 							<?php if ( have_rows('banner_button')):?>
 							<?php while ( have_rows('banner_button')) : the_row(); ?>
 							<button class="banner__btn">
@@ -26,6 +36,8 @@ get_header(); ?>
 							<?php else : ?>
 							<?php endif; ?>
 				</div>
+
+
 
 				<div class="banner__image-wrapper  hide-mobile">
 					<img class="banner__image banner_imgfit" src="<?php the_sub_field('banner_image'); ?>"/>
@@ -85,7 +97,7 @@ get_header(); ?>
                    <article class="wrapper__single-event">
 
                        <div class="wrapper__image-event">
-                            <img src="<?php the_field('event_image'); ?>">
+					   <a href="<?php echo get_the_permalink(); ?>"><img src="<?php the_field('event_image'); ?>"></a>
                             <div class="thumbnail__date">
                                 <?php $date = new DateTime(get_field('event_date')); ?>
                                 <p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
@@ -94,7 +106,7 @@ get_header(); ?>
                         </div>
                         
                         <div class="wrapper__info-event">
-							<p class="title__event"><?php the_title(); ?></p>
+						<a href="<?php echo get_the_permalink(); ?>"><p class="title__event"><?php the_title(); ?></a>
 							<div>
                             <p><?php the_field('event_date'); ?></p>
                             <?php if ( have_rows('event_time')):?>
@@ -122,70 +134,58 @@ get_header(); ?>
                         </article>
                     <?php endforeach; wp_reset_postdata(); ?>
 			<?php endwhile; // End of the loop. ?>
-			
-			<section>
-						<h3 class="events-title h3__left-border-pink">Past Events</h3>
+		</section>
 
-
-					
-						<?php 
-				
-
-
-				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 3,
-					'meta_query' => array(
-						'meta_key' => 'event_date',
-						'type' => 'DATETIME',
-						'meta_value' =>  date('Ymd'),
-						'meta_compare' => '<'
-					)
-				);
-
-				   $event_posts = get_posts( $args ); // returns an array of posts
-				   
-
-			    ?>
-
-			<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>
-                   <?php /* Content from your array of post results goes here */ ?>
-                   <article class="wrapper__single-event">
-				   <?php // var_dump(get_field('event_date')); ?>
-				
-                       <div class="wrapper__image-event">
-                            <img src="<?php the_field('event_image'); ?>">
-                            <div class="thumbnail__date">
-                                <?php $date = new DateTime(get_field('event_date')); ?>
-                                <p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
-                                <p class="thumbnail__date-day"><?php echo $date->format('d'); ?></p>
-                            </div>
-                        </div>
-                        
-                        <div class="wrapper__info-event">
-                            <p class="title__event"><?php the_title(); ?></p>
-                            <div>
-        
-                            </div>
-                        </div>
-
-                       
-
-                        </article>
-                    <?php endforeach; wp_reset_postdata(); ?>
-
-
-
-						</section>
-
-			</section>
-			<article class="no-post">
+			<article class="no-post"> 
 				<div class="no-post-bg" style="background-image: url(<?php the_field('no_post_image', 15);?>)">	
 					</div>
 				<p class="no-post-message"><?php the_field('no_post_message', 15);?></p>
-			</article>
-							
-							<section>
-						<h3 class="events-title h3__left-border-pink">Past Events</h3>
-						</section>
+			</article> 
+
+		<section class="past-event-container">
+			<div class="past-event-box">
+			<div class="event-title">
+				<h3 class= "h3__left-border-pink past-event-title">Past Events</h3>
+			</div>
+
+				<div class="grid-column-3 wrapper__upcoming-events">
+					<?php 
+					
+					$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => 3,
+							'meta_query' => array( array(
+									'key' => 'event_date',
+									'type' => 'DATE',
+									'value' =>  date('Ymd'),
+									'compare' => '<'
+								)
+							)
+						);
+
+						$event_posts = get_posts( $args ); // returns an array of posts
+
+						?>
+
+					<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>
+						<?php /* Content from your array of post results goes here */ ?>
+							<article class="wrapper__single-event">
+							<!-- <div class="grid-column-3"> -->
+									<div class="wrapper__image-event ">
+										<img src="<?php the_field('event_image'); ?>">
+										<div class="thumbnail__date">
+											<?php $date = new DateTime(get_field('event_date')); ?>
+											<p class="thumbnail__date-day thumbnail__date-year"><?php echo $date->format('Y'); ?></p>
+										</div>
+									</div>
+									<div class="wrapper__info-event">
+										<p class="title__event"><?php the_title(); ?></p>
+									</div>
+								<!-- </div> -->
+							</article>
+                    <?php endforeach; wp_reset_postdata(); ?>
+				</div>
+			</div>
+		</section>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

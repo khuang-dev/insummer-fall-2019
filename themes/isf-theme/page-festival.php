@@ -17,6 +17,15 @@ get_header(); ?>
 					<h1 class="banner__title"><?php the_sub_field('banner_title');?></h1>
 					<p class="banner__description p__white"><?php the_sub_field('banner_description');?></p>
 				
+							<?php if ( have_rows('learn_more_button')):?>
+							<?php while ( have_rows('learn_more_button')) : the_row(); ?>
+							<button class="banner__btn">
+							<a class="banner__btn-label" href="<?php the_sub_field('page_link');?>"><?php the_sub_field('banner_button_label');?></a>
+							</button>
+							<?php endwhile; ?>
+							<?php else : ?>
+							<?php endif; ?>
+
 							<?php if ( have_rows('banner_button')):?>
 							<?php while ( have_rows('banner_button')) : the_row(); ?>
 							<button class="banner__btn">
@@ -77,8 +86,8 @@ get_header(); ?>
 							<section class="wrapper__upcoming-events grid-column-3 remove-margin-bottom" id="content-output-isf">
 
 							<?php 
-				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => '-1');
-   				$event_posts = get_posts( $args ); // returns an array of posts
+				$args = array( 'post_type' => 'isf_event', 'order' => 'ASC', 'posts_per_page' => '-1',);
+				   $event_posts = get_posts( $args ); // returns an array of posts
 			    ?>
 
 			<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>
