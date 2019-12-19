@@ -149,6 +149,8 @@
         })
         // DESKTOP SCROLL NAV
         $(window).on('scroll', function () {
+            if ($('.history-media').length > 0) {
+
             const timelineOffset = $('.history-media').offset().top;
             const timelineOuterHeight = $('.history-media').outerHeight();
 
@@ -157,6 +159,7 @@
             } else {
                 $('.timeline-nav').css('display', 'none');
             }
+        }
         })
 
         // MOBILE TIMELINE 

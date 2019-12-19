@@ -61,3 +61,22 @@
     }
   }
 }
+
+.search-style {
+  .entry-title {
+    margin: 0 auto;
+    text-align: center;
+      &:hover {
+        font-weight: 600;
+    }
+    a{
+      border-bottom: 2px solid $color__pink;
+      margin: 0 auto;
+      display: inline-block;
+      &:hover {
+        border-bottom: 3px solid $color__pink;
+
+      }
+    }
+  }
+}

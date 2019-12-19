@@ -46,6 +46,9 @@
     width: 4.5rem;
     height: 4.5rem;
     border: none;
+    &:hover {
+      background-color: $bg__orange;
+    }
     .icon__scroll-up {
       color: $color__white;
       font-size: 2.5rem;

@@ -160,7 +160,7 @@ textarea {
     width: 25%;
   }
   .gform_button {
-    background: $btn__pink;
+    background-color: $btn__pink;
     height: 40px;
     font-size: 0;
     width: 100%;
@@ -168,6 +168,9 @@ textarea {
     background-size: 55px;
     background-repeat: no-repeat;
     background-position: center;
+    &:hover {
+      background-color: $btn__orange;
+    }
   }
 }
 //THIS IS THE POP UP NOTIFICATIONS

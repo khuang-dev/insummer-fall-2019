@@ -604,7 +604,7 @@ textarea {
   .form__signup .gform_footer {
     width: 25%; }
   .form__signup .gform_button {
-    background: #ed1651;
+    background-color: #ed1651;
     height: 40px;
     font-size: 0;
     width: 100%;
@@ -612,6 +612,8 @@ textarea {
     background-size: 55px;
     background-repeat: no-repeat;
     background-position: center; }
+    .form__signup .gform_button:hover {
+      background-color: #f58220; }
 
 .main-class-notifications {
   display: -webkit-box;
@@ -1046,6 +1048,8 @@ object {
     width: 4.5rem;
     height: 4.5rem;
     border: none; }
+    .icon__scroll-up-bg button:hover {
+      background-color: #f58220; }
     .icon__scroll-up-bg button .icon__scroll-up {
       color: #ffffff;
       font-size: 2.5rem; }
@@ -2553,6 +2557,9 @@ iframe {
 
 .remove-margin-bottom {
   margin-bottom: 0 !important; }
+
+.third-child-display {
+  display: block !important; }
 
 .page-become-a-sponsor .entry-title {
   color: #ed1651;
@@ -5262,3 +5269,15 @@ input {
     .search-no-results .page-content p {
       color: #191414;
       font-size: 37px; } }
+
+.search-style .entry-title {
+  margin: 0 auto;
+  text-align: center; }
+  .search-style .entry-title:hover {
+    font-weight: 600; }
+  .search-style .entry-title a {
+    border-bottom: 2px solid #ed1651;
+    margin: 0 auto;
+    display: inline-block; }
+    .search-style .entry-title a:hover {
+      border-bottom: 3px solid #ed1651; }
