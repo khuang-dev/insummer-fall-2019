@@ -1,3 +1,8 @@
+.page-past-festivals {
+  .wrapper__featured {
+    transform: translateY(25px);
+  }
+}
 .past-testimony {
   margin: 2rem 1.25rem;
   @include desktop {

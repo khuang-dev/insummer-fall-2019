@@ -1,77 +1,74 @@
-(function ($) {
+(function($) {
+  $(function() {
+    // VARIABLES
+    const timelineMobile = $('.timeline-mobile');
+    const january = $('.january');
+    const february = $('.february');
+    const march = $('.march');
+    const april = $('.april');
+    const may = $('.may');
+    const june = $('.june');
+    const july = $('.july');
+    const august = $('.august');
+    const september = $('.september');
+    const october = $('.october');
+    const november = $('.november');
+    const december = $('.december');
+    const yearBtn = $('.year-btn');
+    const yearBtnMobile = $('.year-btn-mobile');
 
-    $(function () {
+    //FUNCTIONS
+    function clearTimeline() {
+      january.empty();
+      february.empty();
+      march.empty();
+      april.empty();
+      may.empty();
+      june.empty();
+      july.empty();
+      august.empty();
+      september.empty();
+      october.empty();
+      november.empty();
+      december.empty();
+      $('.timeline-bullet-left').hide();
+      $('.timeline-bullet-right').hide();
+    }
+    function getMonthName(month) {
+      const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+      ];
+      return months[month];
+    }
+    function originalFontSize() {
+      $('.jan-font').removeClass('font-change');
+      $('.feb-font').removeClass('font-change');
+      $('.mar-font').removeClass('font-change');
+      $('.apr-font').removeClass('font-change');
+      $('.may-font').removeClass('font-change');
+      $('.jun-font').removeClass('font-change');
+      $('.jul-font').removeClass('font-change');
+      $('.aug-font').removeClass('font-change');
+      $('.sep-font').removeClass('font-change');
+      $('.oct-font').removeClass('font-change');
+      $('.nov-font').removeClass('font-change');
+      $('.dec-font').removeClass('font-change');
+    }
 
-        // VARIABLES 
-        const timelineMobile = $('.timeline-mobile');
-        const january = $('.january');
-        const february = $('.february');
-        const march = $('.march');
-        const april = $('.april');
-        const may = $('.may');
-        const june = $('.june');
-        const july = $('.july');
-        const august = $('.august');
-        const september = $('.september');
-        const october = $('.october');
-        const november = $('.november');
-        const december = $('.december');
-        const yearBtn = $('.year-btn');
-        const yearBtnMobile = $('.year-btn-mobile');
-
-        //FUNCTIONS 
-        function clearTimeline() {
-            january.empty();
-            february.empty();
-            march.empty();
-            april.empty();
-            may.empty();
-            june.empty();
-            july.empty();
-            august.empty();
-            september.empty();
-            october.empty();
-            november.empty();
-            december.empty();
-            $('.timeline-bullet-left').hide();
-            $('.timeline-bullet-right').hide();
-        }
-        function getMonthName(month) {
-            const months = [
-                'January', 
-                'February', 
-                'March', 
-                'April',
-                'May',
-                'June',
-                'July',
-                'August',
-                'September',
-                'October',
-                'November',
-                'December',
-            ];
-            return months[month];
-        }
-        function originalFontSize() {
-            $('.jan-font').removeClass('font-change');
-            $('.feb-font').removeClass('font-change');
-            $('.mar-font').removeClass('font-change');
-            $('.apr-font').removeClass('font-change');
-            $('.may-font').removeClass('font-change');
-            $('.jun-font').removeClass('font-change');
-            $('.jul-font').removeClass('font-change');
-            $('.aug-font').removeClass('font-change');
-            $('.sep-font').removeClass('font-change');
-            $('.oct-font').removeClass('font-change');
-            $('.nov-font').removeClass('font-change');
-            $('.dec-font').removeClass('font-change');
-
-        }
-
-        // DESKTOP TIMELINE 
-        yearBtn.on('click', function (e) {
-            const year = e.target.innerText;
+    // DESKTOP TIMELINE
+    yearBtn.on('click', function(e) {
+      const year = e.target.innerText;
 
             $.ajax({
                 method: 'GET',
@@ -194,5 +191,4 @@
             }
         })
     })// end of doc ready
-
 })(jQuery);

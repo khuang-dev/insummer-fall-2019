@@ -47,7 +47,6 @@ get_header(); ?>
 										// no rows found
 									endif;
 									?>
-								<p><?php //the_sub_field('news_source'); ?></p>
 							</div>
 
 						<?php endwhile; ?>
@@ -63,7 +62,7 @@ get_header(); ?>
 
 							<h2><?php the_sub_field('contact'); ?></h2>
 							<p><?php the_sub_field('contact_name'); ?></p>
-							<p><?php the_sub_field('contact_information'); ?></p>
+							<a href="contact-us"><p><?php the_sub_field('contact_information'); ?></p></a>
 
 					<?php
 						endwhile;
@@ -72,8 +71,6 @@ get_header(); ?>
 					endif;
 					?>
 					</div>
-					
-					<!-- <php the_content(); ?> -->
 					<?php
 						wp_link_pages( array(
 							'before' => '<div class="page-links">' . esc_html( 'Pages:' ),

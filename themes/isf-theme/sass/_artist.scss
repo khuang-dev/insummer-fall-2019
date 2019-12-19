@@ -10,44 +10,38 @@
     p {
         font-size: 18px;
     }
-}
-
-.artist-info {
-    padding-left: 1rem;
-    @include desktop {
-    padding-left: 8rem;
-    }
-}
-
-.artist-img {
-    img {
-        height: auto;
-        max-width: 80%;
-        margin: 2rem auto 2rem;
-        display: block;
+    .artist-container {
         padding-top: 1rem;
+        height: auto;
+        @include desktop {
+        height: auto;
+        }
     }
-    @include desktop {
-        padding: 3rem;
-        height: 22rem;
-        margin: 0;
+    .artist_img-box {
+        object-fit: cover;
+        height: auto;
+        width: auto;
+        @include desktop {
+            object-fit: cover;
+            height: auto;    
+            width: 45rem;
+        }
+        img {
+            height: auto;
+            @include desktop {
+                overflow: hidden;
+                height: 30rem;
+                }
+        }
+    }
+
+    .artist-img1 {
+        margin: 5rem 4rem auto 3rem;
+        max-width: 160rem;
+    }
+
+    .single-artist-info {
+        margin: 1rem 3rem;
     }
 }
 
-.artist-social {
-    @include desktop {
-    display: flex;
-    margin-left: 4rem;
-    justify-items: center;
-    justify-items: baseline;
-    width: 100%;
-    margin-top: -3rem;
-    a {
-        display: flex;
-
-    }
-    .artist-icon {
-        margin-right: 1rem;
-    }
-}
-}

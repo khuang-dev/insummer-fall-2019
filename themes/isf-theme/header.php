@@ -35,7 +35,7 @@
 
 					<section class="wrapper__desktop-header">
 					<div class="externalform__header">
-						<a class="link__header-signup">Sign Up for Newsletter</a>
+					<a href="sign-up-newsletter-form"class="link__header-signup">Sign Up for Newsletter</a>
 						<div class="desktop__search-login-wrapper">
 						<span class="search__desktop"><?php get_search_form();?></span>
 						<img class="icon__header btn__search-desktop" src="<?php echo get_template_directory_uri(); ?>/assets/01_Icons/SVG/Search.svg" alt="icon-search">
@@ -74,7 +74,7 @@
 					<span class="menu__primary"><!-- desktop navigation -->
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</span>
-					<a class="btn__donate btn__round-orange">DONATE</a>
+					<a class="btn__donate btn__round-orange" href="donate">DONATE</a>
 					</div>
 					</section>
 					

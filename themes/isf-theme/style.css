@@ -718,10 +718,16 @@ input[type='textarea'] {
   outline: none;
   background-color: white !important; }
 
-input:-internal-autofill-selected {
-  background-color: white !important; }
-  input:-internal-autofill-selected:focus, input:-internal-autofill-selected:hover, input:-internal-autofill-selected:active {
-    background-color: white !important; }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: white; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -1531,6 +1537,8 @@ object {
 
 .artist-archive-bg {
   background-color: rgba(105, 200, 203, 0.75) !important; }
+  .artist-archive-bg a {
+    color: #ffffff; }
 
 .archive-event-margin {
   height: 3rem !important; }
@@ -2323,7 +2331,7 @@ iframe {
   margin-left: 0.8rem; }
 
 .our-sponsors {
-  margin-left: 1rem; }
+  margin: 0 1.25rem; }
   @media (min-width: 480px) {
     .our-sponsors {
       margin-left: 8rem;
@@ -3076,6 +3084,9 @@ p.member-text {
   padding: 0;
   line-height: 1.3125rem; }
 
+.gfield_radio li label {
+  margin-left: 1rem; }
+
 .volunteer-form_wrapper .gfield_radio {
   display: block; }
 
@@ -3217,7 +3228,9 @@ p.member-text {
 
 .news-contact {
   padding-left: 2rem;
-  background: #fff2f2; }
+  background: #fff2f2;
+  -webkit-transform: translateY(21px);
+          transform: translateY(21px); }
   @media (min-width: 480px) {
     .news-contact {
       height: 12rem;
@@ -3747,6 +3760,10 @@ a[href^='tel'] {
   text-align: center;
   width: 100%; }
 
+.page-past-festivals .wrapper__featured {
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px); }
+
 .past-testimony {
   margin: 2rem 1.25rem; }
   @media (min-width: 480px) {
@@ -4009,41 +4026,37 @@ a[href^='tel'] {
 .single-artist p {
   font-size: 18px; }
 
-.artist-info {
-  padding-left: 1rem; }
+.single-artist .artist-container {
+  padding-top: 1rem;
+  height: auto; }
   @media (min-width: 480px) {
-    .artist-info {
-      padding-left: 8rem; } }
+    .single-artist .artist-container {
+      height: auto; } }
 
-.artist-img img {
+.single-artist .artist_img-box {
+  -o-object-fit: cover;
+     object-fit: cover;
   height: auto;
-  max-width: 80%;
-  margin: 2rem auto 2rem;
-  display: block;
-  padding-top: 1rem; }
+  width: auto; }
+  @media (min-width: 480px) {
+    .single-artist .artist_img-box {
+      -o-object-fit: cover;
+         object-fit: cover;
+      height: auto;
+      width: 45rem; } }
+  .single-artist .artist_img-box img {
+    height: auto; }
+    @media (min-width: 480px) {
+      .single-artist .artist_img-box img {
+        overflow: hidden;
+        height: 30rem; } }
 
-@media (min-width: 480px) {
-  .artist-img {
-    padding: 3rem;
-    height: 22rem;
-    margin: 0; } }
+.single-artist .artist-img1 {
+  margin: 5rem 4rem auto 3rem;
+  max-width: 160rem; }
 
-@media (min-width: 480px) {
-  .artist-social {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 4rem;
-    justify-items: center;
-    justify-items: baseline;
-    width: 100%;
-    margin-top: -3rem; }
-    .artist-social a {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-    .artist-social .artist-icon {
-      margin-right: 1rem; } }
+.single-artist .single-artist-info {
+  margin: 1rem 3rem; }
 
 .title__upcoming-event, .title__featured-artists {
   width: auto;
@@ -4329,6 +4342,9 @@ a[href^='tel'] {
 
 .wrapper_btn_sponsor {
   margin-bottom: 2rem; }
+
+.h2_title {
+  color: #ffffff; }
 
 .history-description {
   margin: 0 1.25rem;
@@ -4862,10 +4878,10 @@ input {
   border-radius: 12px;
   background: #ffffff;
   font-weight: 600;
-  color: #ed1651; }
+  color: #ed1651 !important; }
   .access-report-btn:hover {
     border: 3px solid #f58220;
-    color: #f58220; }
+    color: #f58220 !important; }
 
 @media (min-width: 480px) {
   .mobile-gallery {
@@ -5151,7 +5167,7 @@ input {
 
 .artist_event-name {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase; }
   @media (min-width: 480px) {
     .artist_event-name {
@@ -5171,6 +5187,41 @@ input {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+
+.artist-info {
+  padding: 0 2rem; }
+  @media (min-width: 480px) {
+    .artist-info {
+      padding-left: 8rem; } }
+
+.artist-img img {
+  height: auto;
+  max-width: 80%;
+  margin: 2rem auto 2rem;
+  display: block;
+  padding-top: 1rem; }
+
+@media (min-width: 480px) {
+  .artist-img {
+    padding: 3rem;
+    height: 22rem; } }
+
+@media (min-width: 480px) {
+  .artist-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 4rem;
+    justify-items: center;
+    justify-items: baseline;
+    width: 100%;
+    margin-top: -3rem; }
+    .artist-social a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .artist-social .artist-icon {
+      margin-right: 1rem; } }
 
 .isf-plus-container1 {
   background: #ffffff; }

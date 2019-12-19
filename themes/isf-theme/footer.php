@@ -35,12 +35,12 @@
 					<h4>Get in Touch</h4>
 					<span class=link__footer>
 						<a style="color: white;">Careers</a>
-						<a style="color: white;">In the News</a>
-						<a style="color: white;">Contact Us</a>
+						<a style="color: white;" href="in-the-news">In the News</a>
+						<a style="color: white;" href="contact-us">Contact Us</a>
 						
-						<a><img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/white-icon/Phone.png" alt="icon-phone">
+						<a href="contact-us"><img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/white-icon/Phone.png" alt="icon-phone">
 							<?php the_field('phone_number', 'option'); ?></a>
-						<a><img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/white-icon/Mail.png" alt="icon-envelope">
+						<a href="contact-us"><img class="icon__header" src="<?php echo get_template_directory_uri(); ?>/assets/white-icon/Mail.png" alt="icon-envelope">
 							<?php the_field('email_link', 'option'); ?></a>
 					</span>
 					</section>	

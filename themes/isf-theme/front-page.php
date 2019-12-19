@@ -68,7 +68,7 @@ get_header(); ?>
                    <article class="wrapper__single-event">
 
                        <div class="wrapper__image-event">
-                            <img src="<?php the_field('event_image'); ?>">
+					   <a href="<?php echo get_the_permalink(); ?>"><img src="<?php the_field('event_image'); ?>"></a>
                             <div class="thumbnail__date">
                                 <?php $date = new DateTime(get_field('event_date')); ?>
                                 <p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
@@ -77,7 +77,7 @@ get_header(); ?>
                         </div>
                         
                         <div class="wrapper__info-event">
-                            <p class="title__event"><?php the_title(); ?></p>
+						<a href="<?php echo get_the_permalink(); ?>"><p class="title__event"><?php the_title(); ?></a>
                             <div>
                             <p><?php the_field('event_date'); ?></p>
                             <?php if ( have_rows('event_time')):?>
@@ -131,15 +131,17 @@ get_header(); ?>
             <?php if ( have_rows('featured_content')):?>
                             <?php while ( have_rows('featured_content')) : the_row(); ?>
                                 <div class="wrapper__featured-content" style="background-image: url(<?php the_sub_field('featured_page_image');?>); background-size: cover;">
-                                <div class="wrapper__featured-text">
-                                <h2 class="h2__featured"><?php the_sub_field('featured_title')?></h2>
-                                <?php if ( have_rows('featured_description')):?>
-                                    <?php while ( have_rows('featured_description')) : the_row(); ?>
-                                    <p class="p__featured p__white"><?php the_sub_field('line_one');?></p>
-                                    <p class="p__featured p__white"><?php the_sub_field('line_two');?></p>
-                                <?php endwhile; ?>
-                                <?php else : ?>
-                                <?php endif; ?> 
+                                <div class="wrapper__featured-text"> 
+                                    <a class="h2_title" href="donate">
+                                        <h2 class="h2__featured"> <?php the_sub_field('featured_title')?></h2>
+                                        <?php if ( have_rows('featured_description')):?>
+                                            <?php while ( have_rows('featured_description')) : the_row(); ?>
+                                            <p class="p__featured p__white"><?php the_sub_field('line_one');?></p>
+                                            <p class="p__featured p__white"><?php the_sub_field('line_two');?></p>
+                                        <?php endwhile; ?>
+                                        <?php else : ?>
+                                        <?php endif; ?> 
+                                    </a>
                                 </div>
                                 </div>
                             <?php endwhile; ?>

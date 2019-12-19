@@ -76,7 +76,7 @@ get_header(); ?>
 
 				<div class="memory-ln">
 					<h3 class="h3__left-border-pink title__down-memory-lane">Down Memory Lane</h2>
-					<a class="see-all">See All</a>
+					<a class="see-all" href="history">See All</a>
 				<section class="memory-lane-wrapper past-festivals">
 				
                 <?php 
@@ -168,14 +168,16 @@ get_header(); ?>
                             <?php while ( have_rows('featured_content', 9)) : the_row(); ?>
                                 <div class="wrapper__featured-content" style="background-image: url(<?php the_sub_field('featured_page_image');?>); background-size: cover;">
                                 <div class="wrapper__featured-text">
-                                <h2 class="h2__featured"><?php the_sub_field('featured_title')?></h2>
-                                <?php if ( have_rows('featured_description')):?>
-                                    <?php while ( have_rows('featured_description')) : the_row(); ?>
-                                    <p class="p__featured p__white"><?php the_sub_field('line_one');?></p>
-                                    <p class="p__featured p__white"><?php the_sub_field('line_two');?></p>
-                                <?php endwhile; ?>
-                                <?php else : ?>
-                                <?php endif; ?> 
+								<a class="h2_title" href="donate">
+									<h2 class="h2__featured"><?php the_sub_field('featured_title')?></h2>
+									<?php if ( have_rows('featured_description')):?>
+										<?php while ( have_rows('featured_description')) : the_row(); ?>
+										<p class="p__featured p__white"><?php the_sub_field('line_one');?></p>
+										<p class="p__featured p__white"><?php the_sub_field('line_two');?></p>
+									<?php endwhile; ?>
+									<?php else : ?>
+									<?php endif; ?> 
+								</a>
                                 </div>
                                 </div>
                             <?php endwhile; ?>
