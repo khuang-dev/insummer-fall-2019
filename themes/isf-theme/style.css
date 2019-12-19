@@ -3796,11 +3796,14 @@ a[href^='tel'] {
       font-size: 2rem; } }
 
 .see-all {
-  text-align: right;
-  margin: 0 7rem;
-  display: block;
   font-weight: 600;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-align: right;
+  margin-right: 1.5rem; }
+  @media (min-width: 480px) {
+    .see-all {
+      margin: 0 6rem;
+      display: block; } }
 
 .memory-lane-wrapper {
   display: grid;
