@@ -15,10 +15,10 @@ get_header(); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
 				<div class="artist-container">
-					<div class="artist-img">
-						<div class="artist_img-event"><img src="<?php echo get_field('artist_image');?>" /></div>
+					<div class="artist-img1">
+						<div class="artist_img-box"><img src="<?php echo get_field('artist_image');?>" /></div>
 				
-						<div class="artist-social hide-mobile">
+						<div class="artist-social-media hide-mobile">
 							<a href="<?php the_field ('facebook_url', 'options'); ?>">
 								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebok">
 							</a>
@@ -34,7 +34,7 @@ get_header(); ?>
 						</div>
 					</div>
 
-					<div class="artist-info">
+					<div class="single-artist-info">
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 						<div class="artist-testimonial hide-mobile">

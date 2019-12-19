@@ -11,78 +11,97 @@
         font-size: 18px;
     }
     .artist-container {
+        padding-top: 1rem;
         height: auto;
         @include desktop {
         height: auto;
         }
     }
-
-    .artist-info {
-        padding: 0;
-        margin-left: 6rem;
-    }
-    .artist-img {
+    .artist_img-box {
         object-fit: cover;
-        height: 100%;
-        width: 100%;
+        height: auto;
+        width: auto;
+        @include desktop {
+            object-fit: cover;
+            height: auto;    
+            width: 45rem;
+        }
         img {
             height: auto;
-            max-width: 80%;
-            margin: 3rem auto;
-            display: block;
-            padding-top: 1rem;
-        }
-        @include desktop {
-            padding: 3rem;
-            height: 22rem;
-            margin-left: 7rem;
+            @include desktop {
+                overflow: hidden;
+                height: 30rem;
+                }
         }
     }
+
+    .artist-img1 {
+        margin: 5rem 4rem auto 3rem;
+        max-width: 160rem;
+    }
+
+    .single-artist-info {
+        margin: 1rem 3rem;
+    }
+    // .artist-info {
+    //     padding: 0;
+    //     margin-left: 6rem;
+    // }
+    // .artist-img {
+    //     object-fit: cover !important;
+    //     height: 100% !important;
+    //     width: 100% !important;
+    //     img {
+    //         margin: 3rem auto;
+    //         @include desktop {
+    //             padding: 3rem;
+    //             margin-left: 7rem;
+    //         }
+    
+    //     }
+    //     // @include desktop {
+    //     //     padding: 3rem;
+    //     //     margin-left: 7rem;
+    //     //     max-width: 0;
+    //     // }
+    // }
 }
 
-.artist-info {
-    padding: 0 2rem;
-    @include desktop {
-    padding-left: 8rem;
-    }
-}
+// .artist-info {
+//     padding: 0 2rem;
+//     @include desktop {
+//     padding-left: 8rem;
+//     }
+// }
 
-.artist-img {
-    img {
-        height: auto;
-        max-width: 80%;
-        margin: 2rem auto 2rem;
-        display: block;
-        padding-top: 1rem;
-    }
-    @include desktop {
-        padding: 3rem;
-        height: 22rem;
-    }
-}
+// .artist-img {
+//     img {
+//         height: auto;
+//         max-width: 80%;
+//         margin: 2rem auto 2rem;
+//         display: block;
+//         padding-top: 1rem;
+//     }
+//     @include desktop {
+//         padding: 3rem;
+//         height: 22rem;
+//     }
+// }
 
-.artist-social {
-    @include desktop {
-    display: flex;
-    margin-left: 4rem;
-    justify-items: center;
-    justify-items: baseline;
-    width: 100%;
-    margin-top: -3rem;
-    a {
-        display: flex;
+// .artist-social {
+//     @include desktop {
+//     display: flex;
+//     margin-left: 4rem;
+//     justify-items: center;
+//     justify-items: baseline;
+//     width: 100%;
+//     margin-top: -3rem;
+//     a {
+//         display: flex;
 
-    }
-    .artist-icon {
-        margin-right: 1rem;
-    }
-}
-}
-.single-artist {
-.artist_img-event {
-    img {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-    }
-}}
+//     }
+//     .artist-icon {
+//         margin-right: 1rem;
+//     }
+// }
+// }

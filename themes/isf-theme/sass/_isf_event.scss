@@ -249,7 +249,7 @@
 }
 .artist_event-name {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     @include desktop {
         font-size: 30px;
@@ -269,6 +269,46 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.artist-info {
+    padding: 0 2rem;
+    @include desktop {
+    padding-left: 8rem;
+    }
+}
+
+.artist-img {
+    img {
+        height: auto;
+        max-width: 80%;
+        margin: 2rem auto 2rem;
+        display: block;
+        padding-top: 1rem;
+    }
+    @include desktop {
+        padding: 3rem;
+        height: 22rem;
+    }
+}
+
+.artist-social {
+    @include desktop {
+    display: flex;
+    margin-left: 4rem;
+    justify-items: center;
+    justify-items: baseline;
+    width: 100%;
+    margin-top: -3rem;
+    a {
+        display: flex;
+
+    }
+    .artist-icon {
+        margin-right: 1rem;
+    }
+}
+}
+
 
 // //ISF+
 .isf-plus-container1 {

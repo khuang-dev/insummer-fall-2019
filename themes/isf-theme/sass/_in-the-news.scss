@@ -84,6 +84,7 @@
 .news-contact {
     padding-left: 2rem;
     background: $bg__champagne;
+    transform: translateY(21px);
     @include desktop {
         height: 12rem;
         padding-left: 10rem;

@@ -74,7 +74,7 @@
 					<span class="menu__primary"><!-- desktop navigation -->
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</span>
-					<a class="btn__donate btn__round-orange">DONATE</a>
+					<a class="btn__donate btn__round-orange" href="donate">DONATE</a>
 					</div>
 					</section>
 					

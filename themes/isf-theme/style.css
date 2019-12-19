@@ -3221,7 +3221,9 @@ p.member-text {
 
 .news-contact {
   padding-left: 2rem;
-  background: #fff2f2; }
+  background: #fff2f2;
+  -webkit-transform: translateY(21px);
+          transform: translateY(21px); }
   @media (min-width: 480px) {
     .news-contact {
       height: 12rem;
@@ -3751,7 +3753,7 @@ a[href^='tel'] {
   text-align: center;
   width: 100%; }
 
-.page-past-festivals .wrapper-featured {
+.page-past-festivals .wrapper__featured {
   -webkit-transform: translateY(25px);
           transform: translateY(25px); }
 
@@ -4015,72 +4017,36 @@ a[href^='tel'] {
   font-size: 18px; }
 
 .single-artist .artist-container {
+  padding-top: 1rem;
   height: auto; }
   @media (min-width: 480px) {
     .single-artist .artist-container {
       height: auto; } }
 
-.single-artist .artist-info {
-  padding: 0;
-  margin-left: 6rem; }
-
-.single-artist .artist-img {
+.single-artist .artist_img-box {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
-  width: 100%; }
-  .single-artist .artist-img img {
-    height: auto;
-    max-width: 80%;
-    margin: 3rem auto;
-    display: block;
-    padding-top: 1rem; }
-  @media (min-width: 480px) {
-    .single-artist .artist-img {
-      padding: 3rem;
-      height: 22rem;
-      margin-left: 7rem; } }
-
-.artist-info {
-  padding: 0 2rem; }
-  @media (min-width: 480px) {
-    .artist-info {
-      padding-left: 8rem; } }
-
-.artist-img img {
   height: auto;
-  max-width: 80%;
-  margin: 2rem auto 2rem;
-  display: block;
-  padding-top: 1rem; }
+  width: auto; }
+  @media (min-width: 480px) {
+    .single-artist .artist_img-box {
+      -o-object-fit: cover;
+         object-fit: cover;
+      height: auto;
+      width: 45rem; } }
+  .single-artist .artist_img-box img {
+    height: auto; }
+    @media (min-width: 480px) {
+      .single-artist .artist_img-box img {
+        overflow: hidden;
+        height: 30rem; } }
 
-@media (min-width: 480px) {
-  .artist-img {
-    padding: 3rem;
-    height: 22rem; } }
+.single-artist .artist-img1 {
+  margin: 5rem 4rem auto 3rem;
+  max-width: 160rem; }
 
-@media (min-width: 480px) {
-  .artist-social {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 4rem;
-    justify-items: center;
-    justify-items: baseline;
-    width: 100%;
-    margin-top: -3rem; }
-    .artist-social a {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-    .artist-social .artist-icon {
-      margin-right: 1rem; } }
-
-.single-artist .artist_img-event img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  width: 100%; }
+.single-artist .single-artist-info {
+  margin: 1rem 3rem; }
 
 .title__upcoming-event, .title__featured-artists {
   width: auto;
@@ -5191,7 +5157,7 @@ input {
 
 .artist_event-name {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase; }
   @media (min-width: 480px) {
     .artist_event-name {
@@ -5211,6 +5177,41 @@ input {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+
+.artist-info {
+  padding: 0 2rem; }
+  @media (min-width: 480px) {
+    .artist-info {
+      padding-left: 8rem; } }
+
+.artist-img img {
+  height: auto;
+  max-width: 80%;
+  margin: 2rem auto 2rem;
+  display: block;
+  padding-top: 1rem; }
+
+@media (min-width: 480px) {
+  .artist-img {
+    padding: 3rem;
+    height: 22rem; } }
+
+@media (min-width: 480px) {
+  .artist-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 4rem;
+    justify-items: center;
+    justify-items: baseline;
+    width: 100%;
+    margin-top: -3rem; }
+    .artist-social a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .artist-social .artist-icon {
+      margin-right: 1rem; } }
 
 .isf-plus-container1 {
   background: #ffffff; }
