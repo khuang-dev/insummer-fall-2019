@@ -3736,6 +3736,10 @@ a[href^='tel'] {
   text-align: center;
   width: 100%; }
 
+.page-past-festivals .wrapper-featured {
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px); }
+
 .past-testimony {
   margin: 2rem 1.25rem; }
   @media (min-width: 480px) {

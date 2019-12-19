@@ -95,7 +95,7 @@ get_header(); ?>
                    <article class="wrapper__single-event">
 
                        <div class="wrapper__image-event">
-                            <img src="<?php the_field('event_image'); ?>">
+					   <a href="<?php echo get_the_permalink(); ?>"><img src="<?php the_field('event_image'); ?>"></a>
                             <div class="thumbnail__date">
                                 <?php $date = new DateTime(get_field('event_date')); ?>
                                 <p class="thumbnail__date-month"><?php echo $date->format('M'); ?></p>
@@ -104,7 +104,7 @@ get_header(); ?>
                         </div>
                         
                         <div class="wrapper__info-event">
-                            <p class="title__event"><?php the_title(); ?></p>
+						<a href="<?php echo get_the_permalink(); ?>"><p class="title__event"><?php the_title(); ?></a>
                             <p><?php the_field('event_date'); ?></p>
                             <?php if ( have_rows('event_time')):?>
                                 <?php while ( have_rows('event_time')) : the_row(); ?>
