@@ -16,11 +16,8 @@ get_header(); ?>
 			<header class="entry-header">
 				<div class="artist-container">
 					<div class="artist-img">
-						<img src="<?php echo get_field('artist_image');?>" />
-						<!-- <php if ( has_post_thumbnail() ) : ?>
-							<php the_post_thumbnail( 'large' ); ?>
-						<php endif; ?> -->
-						
+						<div class="artist_img-event"><img src="<?php echo get_field('artist_image');?>" /></div>
+				
 						<div class="artist-social hide-mobile">
 							<a href="<?php the_field ('facebook_url', 'options'); ?>">
 								<img class="artist-icon icon__header" src="<?php echo get_template_directory_uri () ?>/assets/01_Icons/SVG/Facebook.svg" alt="icon-facebok">
@@ -45,9 +42,9 @@ get_header(); ?>
 								if( have_rows('testimonials') ):
 									while ( have_rows('testimonials') ) : the_row();
 							?>
-										<div class="testimonail-container">
-										<p><?php the_sub_field('testimony'); ?></p>
-										<p><?php the_sub_field('authors_name'); ?></p>
+										<div class="testimonial-container">
+											<p>"<?php the_sub_field('testimony'); ?>"</p> &nbsp
+											<p class="testimonial_author"> --<?php the_sub_field('authors_name'); ?></p>
 										</div>
 
 							<?php

@@ -103,6 +103,9 @@
 }
 .artist-archive-bg {
     background-color: $color__lightblue-transparent !important;
+    a {
+    color: $color__white;
+    }
 }
 .archive-event-margin {
     height: 3rem !important;

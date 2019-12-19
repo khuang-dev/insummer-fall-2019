@@ -29,7 +29,7 @@ get_header(); ?>
                    <?php /* Content from your array of post results goes here */ ?>
                    <article class="wrapper__single-artist" style="background-image: url(<?php the_field('artist_image');?>); background-size: cover; background-position: center;">
 						<div class="p__white artist-name artist-archive-bg">
-						<a href="<?php echo get_the_permalink(); ?>"><p style="color: $color__white"><?php the_title(); ?></p></a>
+						<a href="<?php echo get_the_permalink(); ?>"><p><?php the_title(); ?></p></a>
 						</div>
                     </article>
                     <?php endforeach; wp_reset_postdata(); ?>

@@ -10,10 +10,38 @@
     p {
         font-size: 18px;
     }
+    .artist-container {
+        height: auto;
+        @include desktop {
+        height: auto;
+        }
+    }
+
+    .artist-info {
+        padding: 0;
+        margin-left: 6rem;
+    }
+    .artist-img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        img {
+            height: auto;
+            max-width: 80%;
+            margin: 3rem auto;
+            display: block;
+            padding-top: 1rem;
+        }
+        @include desktop {
+            padding: 3rem;
+            height: 22rem;
+            margin-left: 7rem;
+        }
+    }
 }
 
 .artist-info {
-    padding-left: 1rem;
+    padding: 0 2rem;
     @include desktop {
     padding-left: 8rem;
     }
@@ -30,7 +58,6 @@
     @include desktop {
         padding: 3rem;
         height: 22rem;
-        margin: 0;
     }
 }
 
@@ -51,3 +78,11 @@
     }
 }
 }
+.single-artist {
+.artist_img-event {
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}}

@@ -203,19 +203,8 @@ get_header(); ?>
 			</section>
 
 							<!-- ARTIST -->
-				<!-- <?php //if ( the_field('artist_name')!=null):?>
-					<?php// echo 'hello';
-					//echo get_field('artist_name');?>
-                    <?php //endif; ?>  -->
-				<?php //$artist = get_field_group('About Artists');
-				//echo '<pre>';
-				//var_dump ($artist);
-				//echo '</pre>';
-				?>
 
 			<section>
-
-
 
 			<?php
 			
