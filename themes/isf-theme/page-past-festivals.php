@@ -76,7 +76,7 @@ get_header(); ?>
 
 				<div class="memory-ln">
 					<h3 class="h3__left-border-pink title__down-memory-lane">Down Memory Lane</h2>
-					<a class="see-all">See All</a>
+					<a class="see-all" href="history">See All</a>
 				<section class="memory-lane-wrapper past-festivals">
 				
                 <?php 
