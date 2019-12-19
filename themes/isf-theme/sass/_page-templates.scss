@@ -96,6 +96,10 @@
 .archive-title {
     text-transform: uppercase;
     border-bottom: 4px solid $color__pink;
+    color: $color__black;
+    text-align: center;
+    margin-right: 6rem;
+    margin-left: 6rem;
 }
 .artist-archive-bg {
     background-color: $color__lightblue-transparent !important;
