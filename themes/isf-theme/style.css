@@ -1525,7 +1525,11 @@ object {
 
 .archive-title {
   text-transform: uppercase;
-  border-bottom: 4px solid #ed1651; }
+  border-bottom: 4px solid #ed1651;
+  color: #191414;
+  text-align: center;
+  margin-right: 6rem;
+  margin-left: 6rem; }
 
 .artist-archive-bg {
   background-color: rgba(105, 200, 203, 0.75) !important; }
