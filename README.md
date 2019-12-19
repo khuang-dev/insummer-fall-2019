@@ -8,7 +8,7 @@ The project is built on base the Word Press custom Underscores Theme for the Non
 
 <img src="./themes/isf-theme/assets/Images_read_me/indian-summer-1.png"  />
 <img src="./themes/isf-theme/assets/Images_read_me/indian-summer-2.png"  />
-<img src=" ./themes/isf-theme/assets/Images_read_me/indian-summer-3.png"  />
+<img src="./themes/isf-theme/assets/Images_read_me/indian-summer-3.png"  />
 
 ## Installations
 
