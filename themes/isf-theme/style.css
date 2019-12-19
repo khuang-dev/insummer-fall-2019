@@ -3834,8 +3834,7 @@ a[href^='tel'] {
           justify-content: flex-end; }
   .past-festivals .wrapper__single-event::before {
     content: '';
-    display: block;
-    padding-bottom: 63%; }
+    display: block; }
   .past-festivals .wrapper__single-event:nth-child(1) .event__date {
     background-color: rgba(237, 22, 81, 0.75); }
   .past-festivals .wrapper__single-event:nth-child(2) .event__date {
