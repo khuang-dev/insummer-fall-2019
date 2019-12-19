@@ -3071,6 +3071,9 @@ p.member-text {
   padding: 0;
   line-height: 1.3125rem; }
 
+.gfield_radio li label {
+  margin-left: 1rem; }
+
 .volunteer-form_wrapper .gfield_radio {
   display: block; }
 
